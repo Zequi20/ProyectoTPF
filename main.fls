@@ -2,7 +2,7 @@ PWD /home/epereira/Documentos/tesis_ezequiel_v2_latex/tesis_v2
 INPUT /home/epereira/.TinyTeX/texmf.cnf
 INPUT /home/epereira/.TinyTeX/texmf-dist/web2c/texmf.cnf
 INPUT /home/epereira/.TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /home/epereira/Documentos/tesis_ezequiel_v2_latex/tesis_v2/main.tex
+INPUT main.tex
 OUTPUT main.log
 INPUT /home/epereira/.TinyTeX/texmf-dist/tex/latex/base/report.cls
 INPUT /home/epereira/.TinyTeX/texmf-dist/tex/latex/base/report.cls
@@ -741,6 +741,10 @@ INPUT ./figuras/fig4_2_mae_lt_profundidad.pdf
 INPUT ./figuras/fig4_2_mae_lt_profundidad.pdf
 INPUT ./figuras/fig4_2_mae_lt_profundidad.pdf
 INPUT ./figuras/fig4_2_mae_lt_profundidad.pdf
+INPUT ./figuras/fig4_errores_combinaciones.pdf
+INPUT ./figuras/fig4_errores_combinaciones.pdf
+INPUT ./figuras/fig4_errores_combinaciones.pdf
+INPUT ./figuras/fig4_errores_combinaciones.pdf
 INPUT ./figuras/fig4_3_ancho_intervalo.pdf
 INPUT ./figuras/fig4_3_ancho_intervalo.pdf
 INPUT ./figuras/fig4_3_ancho_intervalo.pdf
@@ -753,12 +757,16 @@ INPUT ./figuras/fig4_bland_altman_c.pdf
 INPUT ./figuras/fig4_bland_altman_c.pdf
 INPUT ./figuras/fig4_bland_altman_c.pdf
 INPUT ./figuras/fig4_bland_altman_c.pdf
+INPUT ./figuras/fig4_captura_R3_230.pdf
+INPUT ./figuras/fig4_captura_R3_230.pdf
+INPUT ./figuras/fig4_captura_R3_230.pdf
+INPUT ./figuras/fig4_captura_R3_230.pdf
+INPUT /home/epereira/.TinyTeX/texmf-dist/fonts/tfm/public/lm/ec-lmtt10.tfm
 INPUT ./capitulos/5-conclusiones.tex
 INPUT ./capitulos/5-conclusiones.tex
 INPUT ./capitulos/5-conclusiones.tex
 INPUT ./capitulos/5-conclusiones.tex
 INPUT capitulos/5-conclusiones.tex
-INPUT /home/epereira/.TinyTeX/texmf-dist/fonts/tfm/public/lm/ec-lmtt10.tfm
 INPUT ./anexos/anexos.tex
 INPUT ./anexos/anexos.tex
 INPUT ./anexos/anexos.tex

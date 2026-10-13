@@ -15,7 +15,7 @@ Situación de uso & Método recomendado & Error esperado en este montaje & Condi
 \midrule
 Se puede poner un marcador junto al pez, en su mismo plano & \Aprime{} (homografía con marcador coplanar) & $\approx$ 2--3~\% de LT (3,3~mm) & Coplanaridad dentro de $\pm 1$~cm; no requiere calibración \\
 No se puede poner un marcador junto al pez, pero se conoce su distancia al vidrio (riel, guía, tanque angosto) & C (puerto plano) & $< 1$~\% de LT (1,2~mm) & Calibración en aire y parámetros $d$, $t_g$ e índices del puerto \\
-Solo hay calibración bajo agua y el pez está en la zona calibrada & B (pinhole efectivo) & $\approx$ 10~\% con sesgo constante en este montaje; corregible con un patrón & Verificar la escala del plano de referencia \\
+Hay calibración bajo agua en el mismo tanque y se conoce la posición del pez en el marco de esa calibración (riel o guía) & B (pinhole efectivo) & $< 1$~\% de LT (1,1~mm) & Damero sumergido y referencia del plano; comprobado hasta 18~cm de la zona calibrada \\
 Marcador fijo en el vidrio y pez a distancia desconocida & Ninguno es aceptable (A) & 10--40~\% según la distancia & Solo sirve si el pez está pegado al vidrio \\
 No se sabe nada de la profundidad & C con intervalo $\IL$ & 56--82~\% de ancho: no utilizable & Hay que acotar $z$; con $\pm 1$~cm el ancho baja a 4--5~\% \\
 \bottomrule
@@ -30,7 +30,7 @@ No se sabe nada de la profundidad & C con intervalo $\IL$ & 56--82~\% de ancho: 
   \node[preg] (q1) at (0,0) {¿Se puede colocar un marcador coplanar con el pez?};
   \node[hoja,fill=metAp!15] (h1) at (6.3,0) {\Aprime\\ \normalfont error $\approx$ 2--3~\%};
   \node[preg] (q2) at (0,-2.2) {¿Se conoce la distancia pez--vidrio con $\pm 1$~cm?};
-  \node[hoja,fill=metC!15] (h2) at (6.3,-2.2) {C\\ \normalfont error $< 1$~\%};
+  \node[hoja,fill=metC!15] (h2) at (6.3,-2.2) {C, o B con calibración bajo agua\\ \normalfont error $< 1$~\%};
   \node[preg] (q3) at (0,-4.4) {¿Se puede acotar $z$ con una guía o una segunda vista?};
   \node[hoja,fill=metC!15] (h3) at (6.3,-4.4) {C con intervalo $\IL$\\ \normalfont ancho 4--17~\% según la cota};
   \node[hoja,fill=metA!15] (h4) at (0,-6.6) {No medir\\ \normalfont intervalo de 56--82~\%: no utilizable};
@@ -41,7 +41,7 @@ No se sabe nada de la profundidad & C con intervalo $\IL$ & 56--82~\% de ancho: 
   \draw[->] (q3) -- node[above,font=\footnotesize]{sí} (h3);
   \draw[->] (q3) -- node[right,font=\footnotesize]{no} (h4);
 \end{tikzpicture}
-\caption[Diagrama de decisión para la conversión métrica monocular a través de un vidrio plano]{Diagrama de decisión para la conversión métrica monocular a través de un vidrio plano. Cada hoja indica el error observado en este montaje (Capítulo~\ref{cap:resultados}). Fuente: elaboración propia.}
+\caption[Diagrama de decisión para la conversión métrica monocular a través de un vidrio plano]{Diagrama de decisión para la conversión métrica monocular a través de un vidrio plano. Cada hoja indica el error observado en este montaje (Capítulo~\ref{cap:resultados}); B requiere una calibración bajo agua en el mismo tanque. Fuente: elaboración propia.}
 \label{fig:5-1}
 \end{figure}
 
@@ -51,8 +51,8 @@ No se sabe nada de la profundidad & C con intervalo $\IL$ & 56--82~\% de ancho: 
 \begin{enumerate}
   \item \textbf{Conjunto de datos (objetivo 1).} Se construyó y documentó un conjunto de 72 imágenes de seis réplicas a cuatro profundidades, con referencias físicas de calibre, tabla maestra trazable por réplica, profundidad, repetición e imagen, y registro de exclusiones: se obtuvieron valores numéricos para 284 de los 288 registros y los cuatro restantes correspondieron a A y \Aprime{} en dos imágenes sin detección del marcador. Las repeticiones técnicas se resumieron por combinación réplica--profundidad. Objetivo cumplido.
   \item \textbf{Protocolo y repetibilidad del marcado (objetivo 2).} Se estableció y aplicó un protocolo de marcado manual único por imagen, con cuatro puntos definidos anatómicamente y reutilizados por las cuatro rutas. La repetibilidad del marcado \pend{se cuantificó en la Sección~\ref{sec:repetibilidad} con una variación de X~mm en LT / no se cuantificó en esta versión y queda como verificación inmediata}. Objetivo \pend{cumplido / cumplido parcialmente}.
-  \item \textbf{Implementación y validación de las rutas (objetivo 3).} Las cuatro rutas se implementaron en una aplicación propia de código abierto, con pruebas unitarias de sanidad para el módulo de puerto plano, y se evaluaron contra las referencias de calibre de las seis réplicas en 72 imágenes. C alcanzó un MAE de 1,22~mm (0,88~\%) en LT y 0,56~mm (1,62~\%) en PC; \Aprime{} obtuvo 3,29~mm (2,28~\%) y 1,03~mm (2,78~\%). La comprobación instrumental con barra patrón no se realizó. Objetivo cumplido en su validación contra referencias físicas; la comprobación con patrón queda como trabajo futuro.
-  \item \textbf{Comparación pareada según la separación (objetivo 4).} A mostró la mayor sensibilidad a la profundidad: su MAE de LT aumentó de 13,77~mm a 5~cm hasta 57,64~mm a 23~cm (2,43~mm por centímetro), como predice la geometría del puerto plano. B mantuvo un sesgo positivo casi constante y C se mantuvo entre 1,07 y 1,41~mm en las cuatro posiciones. C tuvo menor error que cada otro método en 6 de 6 réplicas ($p = 0{,}031$) y en 24 de 24 combinaciones. H1 se sostiene; H2 no se sostiene, y el comportamiento de B se interpreta como un error de escala del plano de referencia y no como degradación con la distancia. Objetivo cumplido.
+  \item \textbf{Implementación y validación de las rutas (objetivo 3).} Las cuatro rutas se implementaron en una aplicación propia de código abierto, con pruebas unitarias de sanidad para el módulo de puerto plano, y se evaluaron contra las referencias de calibre de las seis réplicas en 72 imágenes. B alcanzó un MAE de 1,08~mm (0,73~\%) en LT y 0,38~mm (1,26~\%) en PC; C, 1,22~mm (0,88~\%) y 0,56~mm (1,62~\%); y \Aprime, 3,29~mm (2,28~\%) y 1,03~mm (2,78~\%). La comprobación instrumental con barra patrón no se realizó. Objetivo cumplido en su validación contra referencias físicas; la comprobación con patrón queda como trabajo futuro.
+  \item \textbf{Comparación pareada según la separación (objetivo 4).} A mostró la mayor sensibilidad a la profundidad: su MAE de LT aumentó de 13,77~mm a 5~cm hasta 57,64~mm a 23~cm (2,43~mm por centímetro), como predice la geometría del puerto plano. B y C se mantuvieron entre 1,0 y 1,4~mm en las cuatro posiciones, sin tendencia con la separación. C tuvo menor error que A y \Aprime{} en 6 de 6 réplicas ($p = 0{,}031$) y en 24 de 24 combinaciones, pero no se diferenció de B (3 de 6 réplicas, $p = 1$). H1 se sostiene frente a A y \Aprime{} y no frente a B; H2 no se sostiene: hasta 18~cm de la zona de calibración, B no se degradó con la separación. Objetivo cumplido.
   \item \textbf{Intervalo por profundidad desconocida (objetivo 5).} El intervalo $\IL$ se calculó numéricamente con C sobre las 72 capturas y coincidió con la predicción geométrica del montaje (razón media 1,006): su ancho es de 56--82~\% de LT si $z$ se desconoce en toda la pecera, de 11--16~\% con $\pm 3$~cm y de 4--5~\% con $\pm 1$~cm. La cobertura empírica fue de 1,00 en toda la pecera y con $\pm 3$~cm, y de 0,81 con $\pm 1$~cm. H3 se sostiene. Objetivo cumplido.
   \item \textbf{Sensibilidad (objetivo 6).} La sensibilidad de C a la distancia cámara--vidrio y al índice del agua se cuantificó en la Tabla~\ref{tab:sensibilidad}: un error de $\pm 20$~\% en $d$ cambió la LT en 14~\% (cerca de 0,3~\% por milímetro), mientras que $\pm 0{,}01$ en $\mu_w$ la cambió en 0,23~\%. La sensibilidad a la repetibilidad del marcado no se cuantificó en esta versión. Objetivo cumplido parcialmente.
 \end{enumerate}
@@ -70,14 +70,14 @@ Objetivo & Resultado que lo sostiene & Grado & Pendiente \\
 1 & Tablas~\ref{tab:replicas} y~\ref{tab:registros}; repositorio & Cumplido & Publicar los datos con la etiqueta \texttt{\RepoTag} \\
 2 & Sección~\ref{sec:procedimiento}; Tabla~\ref{tab:repetibilidad} & \pend{Parcial} & Remarcado de doce imágenes \\
 3 & Tablas~\ref{tab:calibraciones} y~\ref{tab:agregados} & Cumplido & Comprobación con barra patrón \\
-4 & Tabla~\ref{tab:posiciones-mae}; Tabla~\ref{tab:hipotesis} & Cumplido & Recalcular B con las lecturas correctas del riel \\
+4 & Tabla~\ref{tab:posiciones-mae}; Tabla~\ref{tab:hipotesis} & Cumplido & --- \\
 5 & Tabla~\ref{tab:intervalo}; Figuras~\ref{fig:4-3} y~\ref{fig:4-Lz} & Cumplido & --- \\
 6 & Tablas~\ref{tab:sensibilidad} y~\ref{tab:repetibilidad} & Parcial & Efecto del remarcado sobre las medidas \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-En síntesis: a través de un vidrio plano, la escala de un marcador fijo no sirve para medir un pez a otra profundidad, porque el error crece 2,4~mm por cada centímetro de separación. Un marcador en el plano del pez reduce ese error a 2--3~\%, y el modelo refractivo de puerto plano a menos del 1~\% cuando la profundidad se conoce. Cuando no se conoce, la geometría acota la longitud a un intervalo demasiado ancho para morfometría, salvo que la profundidad se restrinja a $\pm 1$~cm. Por tanto, en un sistema monocular la profundidad, no la refracción, es la fuente de incertidumbre que hay que resolver, y este trabajo cuantifica cuánto.
+En síntesis: a través de un vidrio plano, la escala de un marcador fijo no sirve para medir un pez a otra profundidad, porque el error crece 2,4~mm por cada centímetro de separación. Un marcador en el plano del pez reduce ese error a 2--3~\%, y un modelo de cámara calibrado con la profundidad conocida, sea el pinhole efectivo calibrado bajo agua (B) o el puerto plano (C), a menos del 1~\%. Cuando no se conoce, la geometría acota la longitud a un intervalo demasiado ancho para morfometría, salvo que la profundidad se restrinja a $\pm 1$~cm. Por tanto, en un sistema monocular la profundidad, no la refracción, es la fuente de incertidumbre que hay que resolver, y este trabajo cuantifica cuánto.
 
 \section{Limitaciones}
 
@@ -89,17 +89,17 @@ La inferencia se realizó con una prueba de signos exacta sobre diferencias pare
 
 Para repetir el procedimiento se recomienda conservar la cámara, resolución, enfoque, iluminación, posición de la pecera y configuración del puerto durante todo el conjunto de capturas. También deben conservarse la imagen original, los puntos manuales, los archivos de calibración, la versión del programa y el registro de exclusiones. Se recomienda registrar una medida física sumergida independiente (barra patrón) para cada sesión y repetir la evaluación con posiciones laterales del encuadre.
 
-Para el uso práctico, la Tabla~\ref{tab:regla} resume la recomendación: la escala A debe interpretarse solo como una línea base, no como una corrección refractiva; B debe utilizarse dentro de la zona para la que se calibró y con su escala verificada contra un patrón; C debe conservar los parámetros físicos del puerto, los índices de refracción y el sistema de coordenadas documentados, y requiere conocer o acotar la profundidad para que su salida sea utilizable.
+Para el uso práctico, la Tabla~\ref{tab:regla} resume la recomendación: la escala A debe interpretarse solo como una línea base, no como una corrección refractiva; B debe utilizarse con la posición del pez expresada en el marco de su calibración, porque un error de 50~mm en esa posición produjo errores de 9 a 13~\%, y dentro del rango de distancias comprobado; C debe conservar los parámetros físicos del puerto, los índices de refracción y el sistema de coordenadas documentados, y requiere conocer o acotar la profundidad para que su salida sea utilizable.
 
 \section{Trabajos futuros}
 
-\paragraph{Verificaciones inmediatas sobre este mismo conjunto.} Remarcado de doce imágenes para cuantificar la repetibilidad del operador; comprobación con una barra patrón sumergida; y revisión del plano de referencia del riel y de la distancia de calibración de B para confirmar el origen de su sesgo constante.
+\paragraph{Verificaciones inmediatas sobre este mismo conjunto.} Remarcado de doce imágenes para cuantificar la repetibilidad del operador; comprobación con una barra patrón sumergida; y medición del desplazamiento entre el apoyo del carrito y el plano de simetría de cada réplica, que el procesamiento asumió nulo.
 
 \paragraph{Líneas de continuación.} Detección automática de los puntos anatómicos sobre el mismo protocolo pareado, que permitiría medir el error de localización por separado del geométrico; estimación de la profundidad con una guía, una segunda vista o una restricción de postura, de modo que el intervalo $\IL$ se reduzca al rango utilizable; evaluación con peces vivos, turbidez y posiciones fuera del centro del encuadre; incorporación explícita de la incertidumbre de los parámetros del puerto y de los índices de refracción en el intervalo; y publicación del artículo derivado con el conjunto de datos y el código.
 
 \section{Impacto potencial y aporte}
 
-El principal aporte del trabajo es un procedimiento trazable para comparar conversiones métricas monoculares en un montaje aire--vidrio--agua, junto con la cuantificación de lo que puede afirmarse sobre la longitud cuando la profundidad no se conoce. La ruta C presenta el mejor desempeño en el conjunto analizado y \Aprime{} constituye una alternativa más simple con menor error que la escala fija en el vidrio.
+El principal aporte del trabajo es un procedimiento trazable para comparar conversiones métricas monoculares en un montaje aire--vidrio--agua, junto con la cuantificación de lo que puede afirmarse sobre la longitud cuando la profundidad no se conoce. Las rutas B y C presentan el mejor desempeño en el conjunto analizado, con errores menores que el 1~\% cuando la profundidad se conoce, y \Aprime{} constituye una alternativa más simple con menor error que la escala fija en el vidrio.
 
 Para la Ingeniería Informática el trabajo aporta: (1) un módulo de trazado refractivo de puerto plano implementado desde las formulaciones de \textcite{Agrawal2012} y \textcite{Treibitz2012}, con pruebas unitarias de sanidad (con $\mu_g = \mu_w = 1$ y $t_g = 0$ reproduce la cámara pinhole) y evaluado contra referencias físicas; (2) una aplicación de escritorio de código abierto que mantiene la trazabilidad por imagen (puntos, calibración, versión y advertencias) y exporta un registro reproducible; (3) un procedimiento experimental pareado que aísla el efecto del modelo geométrico y que puede reutilizarse para evaluar detectores automáticos de puntos; y (4) evidencia cuantitativa sobre cuándo basta un marcador, cuándo una calibración bajo agua y cuándo se necesita el modelo físico, en este montaje.
 

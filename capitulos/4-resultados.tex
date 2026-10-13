@@ -52,7 +52,7 @@ Punto principal $(c_x, c_y)$ & (2027,3; 1549,0)~px & (2028,2; 1530,6)~px \\
 \end{tabular}
 \end{table}
 
-Ambos valores de RMS están por debajo de 0,5~px, umbral habitual para una calibración aceptable, y ninguna vista fue rechazada. La razón entre las focales efectivas, $f_{x,\mathrm{agua}}/f_{x,\mathrm{aire}} = 4502{,}3/3313{,}7 = 1{,}36$, es consistente con el índice de refracción del agua ($\mu_w = 1{,}333$): la calibración de B absorbe la refracción en una focal efectiva mayor, lo que explica por qué el modelo pinhole aproxima el sistema cerca de la distancia de calibración y se aparta de él al cambiar la profundidad.
+Ambos valores de RMS están por debajo de 0,5~px, umbral habitual para una calibración aceptable, y ninguna vista fue rechazada. La razón entre las focales efectivas, $f_{x,\mathrm{agua}}/f_{x,\mathrm{aire}} = 4502{,}3/3313{,}7 = 1{,}36$, es consistente con el índice de refracción del agua ($\mu_w = 1{,}333$): la calibración de B absorbe la refracción en una focal efectiva mayor. Para incidencia cercana a la normal, un puerto plano equivale en primer orden a una cámara pinhole con la focal multiplicada por $\mu_w$ y el centro de proyección desplazado, de modo que el modelo efectivo puede reproducir la escala a distintas profundidades si el plano de medición se ubica correctamente; los efectos no centrales que lo hacen depender de la distancia crecen con el ángulo de incidencia \parencite{Rofallski2022}.
 
 \subsection{Sensibilidad de C a los parámetros del montaje}
 \label{sec:sensibilidad}
@@ -78,7 +78,7 @@ C se recalculó sobre las 72 capturas con cada variante, conservando la distanci
 \section{Resultados agregados por método}
 \label{sec:agregados}
 
-Las métricas se calcularon según la Sección~\ref{sec:evaluacion} después de promediar las tres capturas de cada combinación réplica--profundidad, de modo que la comparación principal quedó formada por 24 combinaciones por método. La Tabla~\ref{tab:agregados} resume las diferencias entre las estimaciones promediadas y sus referencias físicas, y la Figura~\ref{fig:4-1} las presenta gráficamente. A presenta sesgo negativo en ambas medidas, mientras que \Aprime, B y C tienden a sobreestimar. C obtiene el menor MAE y MAPE en LT y PC; \Aprime{} presenta el segundo mejor comportamiento. B queda por encima de ambos en error medio, y A es el método más afectado.
+Las métricas se calcularon según la Sección~\ref{sec:evaluacion} después de promediar las tres capturas de cada combinación réplica--profundidad, de modo que la comparación principal quedó formada por 24 combinaciones por método. La Tabla~\ref{tab:agregados} resume las diferencias entre las estimaciones promediadas y sus referencias físicas, y la Figura~\ref{fig:4-1} las presenta gráficamente. A presenta sesgo negativo en ambas medidas, mientras que \Aprime{} y C tienden a sobreestimar; B tiene un sesgo prácticamente nulo en LT ($+0{,}05$~mm) y levemente negativo en PC ($-0{,}32$~mm). B y C obtienen los menores errores, con valores cercanos entre sí; \Aprime{} queda en tercer lugar y A es el método más afectado.
 
 \begin{table}[htbp]
 \centering\footnotesize
@@ -93,7 +93,7 @@ Método & $n$ & Sesgo LT & MAE LT & MAPE LT & Sesgo PC & MAE PC & MAPE PC & MAE 
 \midrule
 A       & 24 & $-37{,}43$ & 37,43 & 25,68 & $-9{,}07$ & 9,07 & 25,25 & 37,75 & 9,16 \\
 \Aprime & 24 & $+3{,}29$  & 3,29  & 2,28  & $+0{,}95$ & 1,03 & 2,78 & 3,33 & 1,03 \\
-B       & 24 & $+16{,}32$ & 16,32 & 11,24 & $+3{,}68$ & 3,68 & 9,96 & 16,32 & 3,68 \\
+B       & 24 & $+0{,}05$  & 1,08  & 0,73  & $-0{,}32$ & 0,38 & 1,26 & 1,35 & 0,54 \\
 C       & 24 & $+1{,}07$  & 1,22  & 0,88  & $+0{,}29$ & 0,56 & 1,62 & 1,34 & 0,58 \\
 \bottomrule
 \end{tabular}
@@ -111,9 +111,9 @@ C       & 24 & $+1{,}07$  & 1,22  & 0,88  & $+0{,}29$ & 0,56 & 1,62 & 1,34 & 0,5
 \label{fig:4-1}
 \end{figure}
 
-En LT, A subestimó en promedio 37,43~mm, mientras que B sobreestimó 16,32~mm. La homografía de \Aprime{} redujo el MAE a 3,29~mm y el modelo C a 1,22~mm. En PC se observó el mismo orden general: A alcanzó un MAE de 9,07~mm, B de 3,68~mm, \Aprime{} de 1,03~mm y C de 0,56~mm. La diferencia entre C y \Aprime{} fue menor en PC que en LT, pero C tuvo menor MAE de PC en 21 de las 24 combinaciones.
+En LT, A subestimó en promedio 37,43~mm. La homografía de \Aprime{} redujo el MAE a 3,29~mm, y las dos rutas que usan la profundidad conocida con un modelo de cámara calibrado lo llevaron a 1,08~mm (B) y 1,22~mm (C). En PC se observó el mismo orden: A alcanzó un MAE de 9,07~mm, \Aprime{} de 1,03~mm, C de 0,56~mm y B de 0,38~mm. Calculado sobre las capturas individuales, el MAE de LT de B y C fue prácticamente igual (1,35 y 1,34~mm).
 
-La comparación pareada de LT mostró que C tuvo menor error absoluto que A, \Aprime{} y B en las 24 combinaciones disponibles. Para PC, C fue mejor que A en las 24 combinaciones, que B en 23 y que \Aprime{} en 21; todas las excepciones corresponden a R5 (frente a B a 23~cm y frente a \Aprime{} a 5, 17 y 23~cm). Con la réplica como unidad experimental, C tuvo menor error absoluto medio de LT que cada uno de los otros tres métodos en las seis réplicas; la prueba de signos exacta de dos colas sobre las seis diferencias pareadas da $p = 2/2^{6} = 0{,}031$ para cada comparación. Los conteos sobre las 24 combinaciones se reportan como descriptivos porque las combinaciones de una misma réplica no son independientes. Para PC, C fue mejor que \Aprime{} en 5 de 6 réplicas ($p = 0{,}219$); la excepción fue R5, con un MAE de PC de 0,32~mm para \Aprime{} y 0,75~mm para C.
+En la comparación pareada de LT, C tuvo menor error absoluto que A y que \Aprime{} en las 24 combinaciones, y B fue mejor que A en las 24 y que \Aprime{} en 23 (la excepción fue R2 a 5~cm). Con la réplica como unidad experimental, tanto B como C tuvieron menor error absoluto medio de LT que A y que \Aprime{} en las seis réplicas; la prueba de signos exacta de dos colas sobre las seis diferencias pareadas da $p = 2/2^{6} = 0{,}031$ en cada una de esas cuatro comparaciones. Entre B y C no hubo diferencia: C tuvo menor error de LT en 10 de las 24 combinaciones y en 3 de las 6 réplicas (R2, R5 y R6; $p = 1$). Los conteos sobre las 24 combinaciones se reportan como descriptivos porque las combinaciones de una misma réplica no son independientes. Para PC, C fue mejor que A en las 24 combinaciones y que \Aprime{} en 21 (5 de 6 réplicas, $p = 0{,}219$; la excepción fue R5, con un MAE de PC de 0,32~mm para \Aprime{} y 0,75~mm para C), y B fue mejor que C en 16 de las 24 combinaciones y en 5 de las 6 réplicas ($p = 0{,}219$), de nuevo con R5 como excepción.
 
 \section{Comportamiento según la profundidad}
 \label{sec:profundidad}
@@ -128,10 +128,10 @@ La dependencia con la distancia al vidrio se aprecia con mayor claridad en la lo
 \toprule
 Distancia (cm) & Separación de la zona de B (cm) & A & \Aprime & B & C & B $-$ C \\
 \midrule
-5  & 0  & 13,77 & 3,44 & 19,43 & 1,09 & 18,33 \\
-11 & 6  & 32,02 & 3,18 & 17,45 & 1,41 & 16,04 \\
-17 & 12 & 46,29 & 3,44 & 15,26 & 1,29 & 13,96 \\
-23 & 18 & 57,64 & 3,11 & 13,16 & 1,07 & 12,09 \\
+5  & 0  & 13,77 & 3,44 & 1,18 & 1,09 & $+0{,}09$ \\
+11 & 6  & 32,02 & 3,18 & 1,10 & 1,41 & $-0{,}31$ \\
+17 & 12 & 46,29 & 3,44 & 1,01 & 1,29 & $-0{,}28$ \\
+23 & 18 & 57,64 & 3,11 & 1,04 & 1,07 & $-0{,}04$ \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -139,17 +139,24 @@ Distancia (cm) & Separación de la zona de B (cm) & A & \Aprime & B & C & B $-$ 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.9\textwidth]{fig4_2_mae_lt_profundidad.pdf}
-\caption[MAE de longitud total por método y profundidad]{Error absoluto medio de longitud total por método y distancia de la réplica al vidrio (datos de la Tabla~\ref{tab:posiciones-mae}). El error de A crece con la profundidad; el de B disminuye levemente; \Aprime{} y C se mantienen estables. Fuente: elaboración propia.}
+\caption[MAE de longitud total por método y profundidad]{Error absoluto medio de longitud total por método y distancia de la réplica al vidrio (datos de la Tabla~\ref{tab:posiciones-mae}). El error de A crece con la profundidad; \Aprime, B y C se mantienen estables, y las curvas de B y C casi se superponen. Fuente: elaboración propia.}
 \label{fig:4-2}
 \end{figure}
 
 El error de A aumentó de 13,77~mm a 5~cm hasta 57,64~mm a 23~cm, con una pendiente de 2,43~mm por centímetro de separación. Este comportamiento es compatible con una escala calculada en el plano del vidrio: al alejarse la réplica, la misma escala deja de representar adecuadamente su plano de medición. La predicción de primer orden de la ecuación~\eqref{eq:Dz} para una réplica de 140~mm da errores de $-19$, $-37$, $-50$ y $-60$~mm en las cuatro posiciones, frente a los $-14$, $-32$, $-46$ y $-58$~mm observados; la diferencia máxima, de 6~mm, es atribuible a que $d$ se midió desde el frente de la lente y a que las réplicas tienen longitudes distintas. Esta coincidencia es una verificación independiente del modelo óptico: el error de A es el que la geometría predice.
 
-\Aprime{} se mantuvo cerca de 3,1--3,5~mm en todas las posiciones, lo que indica que el marcador coplanar redujo la variación asociada a la perspectiva. B mostró una reducción del MAE de 19,43 a 13,16~mm, pero conservó un sesgo positivo; la diferencia B $-$ C disminuyó de 18,33 a 12,09~mm, con una pendiente de $-0{,}35$~mm por centímetro de separación. C permaneció entre 1,07 y 1,41~mm, sin una tendencia monótona con la profundidad.
+\Aprime{} se mantuvo cerca de 3,1--3,5~mm en todas las posiciones, lo que indica que el marcador coplanar redujo la variación asociada a la perspectiva. B permaneció entre 1,01 y 1,18~mm y C entre 1,07 y 1,41~mm, sin tendencia con la profundidad. La diferencia B $-$ C osciló entre $-0{,}31$ y $+0{,}09$~mm, con una pendiente de $-0{,}006$~mm por centímetro de separación: el error de B no aumentó al alejarse la réplica de la zona de calibración.
 
-Para PC se observó un patrón equivalente para A: el MAE pasó de 3,02~mm a 5~cm a 14,24~mm a 23~cm. \Aprime{} varió entre 0,75 y 1,34~mm, B entre 2,77 y 4,53~mm y C entre 0,48 y 0,62~mm.
+Para PC se observó un patrón equivalente para A: el MAE pasó de 3,02~mm a 5~cm a 14,24~mm a 23~cm. \Aprime{} varió entre 0,75 y 1,34~mm, B entre 0,25 y 0,48~mm y C entre 0,48 y 0,62~mm.
 
-\pendiente{Agregar, a partir del CSV maestro, una figura con el error con signo de cada una de las 24 combinaciones réplica--profundidad por método (puntos individuales, no promedios), para mostrar la dispersión además de la media.}
+La Figura~\ref{fig:4-errores} muestra el error con signo de cada combinación réplica--profundidad, además de su media por posición. La dispersión de A crece con la profundidad junto con su sesgo; en LT, la de \Aprime{} fue de 4 a 5~mm alrededor de un sesgo positivo, y la de B y C fue similar entre sí, de 3,4 a 4,8~mm. Esa dispersión se repite entre posiciones para una misma réplica: R4 tuvo el mayor error absoluto de LT en \Aprime, B y C en las cuatro posiciones (en B y C, entre $+2{,}1$ y $+4{,}3$~mm), y su referencia de LT es una de las dos con mayor desviación entre lecturas (2,9~mm; Tabla~\ref{tab:replicas}). Esto apunta a la referencia de calibre o al marcado de esa réplica más que a la conversión.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{fig4_errores_combinaciones.pdf}
+\caption[Error con signo por combinación réplica--profundidad]{Error con signo de LT (arriba) y PC (abajo) para cada una de las 24 combinaciones réplica--profundidad, después de promediar las repeticiones técnicas. A se presenta en un panel propio por su escala; \Aprime, B y C comparten un eje ampliado. Cada punto es una réplica y la línea horizontal, la media por posición. Fuente: elaboración propia.}
+\label{fig:4-errores}
+\end{figure}
 
 \section{Repetibilidad del marcado manual}
 \label{sec:repetibilidad}
@@ -194,6 +201,7 @@ Conocida con $\pm 3$~cm & 16,4 (16,7) & 14,2 (14,3) & 12,5 (12,5) & 11,1 (11,1) 
 Conocida con $\pm 1$~cm & 5,5 (5,6) & 4,7 (4,8) & 4,2 (4,2) & 3,7 (3,7) & 0,81 \\
 \midrule
 MAPE de \Aprime{} ($z$ conocida) & \multicolumn{4}{c}{2,3} & \\
+MAPE de B ($z$ conocida) & \multicolumn{4}{c}{0,7} & \\
 MAPE de C ($z$ conocida) & \multicolumn{4}{c}{0,9} & \\
 \bottomrule
 \end{tabular}
@@ -206,7 +214,7 @@ MAPE de C ($z$ conocida) & \multicolumn{4}{c}{0,9} & \\
 \label{fig:4-3}
 \end{figure}
 
-Con una sola cámara y sin información de profundidad, el intervalo abarca entre 56 y 82~\% de la longitud de la réplica: no es utilizable para morfometría. Si la profundidad se acota a $\pm 3$~cm (por ejemplo, con una guía o un tanque angosto), el ancho baja a 11--16~\%, todavía mayor que el error de \Aprime{} y de C con $z$ conocida. Solo cuando la profundidad se conoce con $\pm 1$~cm el ancho (4--5~\%) se vuelve comparable con el error de \Aprime{} (2,3~\%) y queda dentro de un orden de magnitud del de C (0,9~\%). La cobertura empírica fue completa (72 de 72 capturas) en toda la pecera y con $\pm 3$~cm, pero bajó a 0,81 (58 de 72) con $\pm 1$~cm: con una ventana tan estrecha, el propio error de C con $z$ conocida basta para que la LT de calibre quede fuera del intervalo en algunas capturas. Este es el resultado que responde la pregunta principal: el modelo refractivo elimina el error de conversión, pero la profundidad sigue siendo la fuente dominante de incertidumbre y debe medirse o acotarse, no asumirse.
+Con una sola cámara y sin información de profundidad, el intervalo abarca entre 56 y 82~\% de la longitud de la réplica: no es utilizable para morfometría. Si la profundidad se acota a $\pm 3$~cm (por ejemplo, con una guía o un tanque angosto), el ancho baja a 11--16~\%, todavía mayor que el error de \Aprime, B y C con $z$ conocida. Solo cuando la profundidad se conoce con $\pm 1$~cm el ancho (4--5~\%) se vuelve comparable con el error de \Aprime{} (2,3~\%) y queda dentro de un orden de magnitud del de B y C (0,7 y 0,9~\%). La cobertura empírica fue completa (72 de 72 capturas) en toda la pecera y con $\pm 3$~cm, pero bajó a 0,81 (58 de 72) con $\pm 1$~cm: con una ventana tan estrecha, el propio error de C con $z$ conocida basta para que la LT de calibre quede fuera del intervalo en algunas capturas. Este es el resultado que responde la pregunta principal: el modelo refractivo elimina el error de conversión, pero la profundidad sigue siendo la fuente dominante de incertidumbre y debe medirse o acotarse, no asumirse.
 
 \begin{figure}[htbp]
 \centering
@@ -228,33 +236,33 @@ La Tabla~\ref{tab:hipotesis} resume el contraste de las tres hipótesis con los 
 \toprule
 Hipótesis & Criterio & Valor observado & Veredicto \\
 \midrule
-H1 & Prueba de signos exacta por réplica, $p < 0{,}05$, para C frente a A, \Aprime{} y B en LT & C mejor en 6 de 6 réplicas frente a cada método ($p = 0{,}031$); 24 de 24 combinaciones (descriptivo) & Se sostiene \\
-H2 & Pendiente positiva de $\mathrm{MAE}_B - \mathrm{MAE}_C$ frente a la separación & Pendiente $-0{,}35$~mm/cm (18,3; 16,0; 14,0; 12,1~mm) & No se sostiene \\
+H1 & Prueba de signos exacta por réplica, $p < 0{,}05$, para C frente a A, \Aprime{} y B en LT & Frente a A y \Aprime: C mejor en 6 de 6 réplicas ($p = 0{,}031$) y en 24 de 24 combinaciones. Frente a B: C mejor en 3 de 6 réplicas ($p = 1$) y en 10 de 24 combinaciones & Se sostiene frente a A y \Aprime; no frente a B \\
+H2 & Pendiente positiva de $\mathrm{MAE}_B - \mathrm{MAE}_C$ frente a la separación & Pendiente $-0{,}006$~mm/cm ($+0{,}09$; $-0{,}31$; $-0{,}28$; $-0{,}04$~mm) & No se sostiene \\
 H3 & Cobertura $\geq 0{,}95$ y ancho predicho dentro de la mitad del observado & Cobertura 1,00 (72 de 72) en toda la pecera; ancho numérico 56--82~\%, razón predicho/numérico 1,006 & Se sostiene \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-\paragraph{H1 se sostiene.} C tuvo menor error absoluto de LT que A, \Aprime{} y B en las seis réplicas (prueba de signos exacta con la réplica como unidad, $p = 0{,}031$ en cada comparación) y en las 24 combinaciones réplica--profundidad (descriptivo); en PC fue mejor que A en 24 de 24 combinaciones, que B en 23 de 24 y que \Aprime{} en 21 de 24. La parte de H1 que, en el protocolo, preveía equivalencia entre B y C dentro de la zona de calibración no se evaluó formalmente porque el margen $\delta$ no se fijó antes de observar los datos; la diferencia observada a 5~cm fue de 19,43~mm (B) frente a 1,09~mm (C), de modo que, aun sin prueba de equivalencia, los datos no respaldan que B y C sean intercambiables en esa zona.
+\paragraph{H1 se sostiene parcialmente.} C tuvo menor error absoluto de LT que A y \Aprime{} en las seis réplicas (prueba de signos exacta con la réplica como unidad, $p = 0{,}031$ en cada comparación) y en las 24 combinaciones réplica--profundidad (descriptivo), pero no que B: cada ruta fue mejor en tres réplicas ($p = 1$) y C lo fue en 10 de las 24 combinaciones. En PC, C fue mejor que A en 24 de 24 combinaciones y que \Aprime{} en 21 de 24, mientras que B fue mejor que C en 16 de 24. La parte de H1 que, en el protocolo, preveía equivalencia entre B y C dentro de la zona de calibración no se evaluó formalmente porque el margen $\delta$ no se fijó antes de observar los datos; a 5~cm el MAE de LT fue de 1,18~mm (B) y 1,09~mm (C), una diferencia de 0,09~mm, menor que la desviación de las referencias de calibre (Tabla~\ref{tab:replicas}) y compatible con que ambas rutas sean intercambiables en esa zona.
 
-\paragraph{H2 no se sostiene.} La diferencia B $-$ C disminuyó con la separación (18,33; 16,04; 13,96 y 12,09~mm; pendiente $-0{,}35$~mm/cm). El sesgo positivo y casi constante de B ($+16{,}3$~mm en promedio) indica un error sistemático de escala del plano de referencia de B, y no la degradación con la distancia descrita por \textcite{Rofallski2022}; la interpretación se desarrolla en la Sección~\ref{sec:discusion}. Este resultado no debilita la conclusión principal: con o sin ese sesgo, C fue el método de menor error en las cuatro posiciones.
+\paragraph{H2 no se sostiene.} La diferencia B $-$ C no aumentó con la separación ($+0{,}09$; $-0{,}31$; $-0{,}28$ y $-0{,}04$~mm; pendiente $-0{,}006$~mm/cm), y el MAE de B se mantuvo entre 1,01 y 1,18~mm en las cuatro posiciones. Hasta 18~cm de separación de la zona de calibración, la degradación con la distancia descrita por \textcite{Rofallski2022} no fue detectable con la resolución de este experimento; la interpretación se desarrolla en la Sección~\ref{sec:discusion}.
 
 \paragraph{H3 se sostiene.} Con $z$ recorriendo toda la pecera, el intervalo $\IL$ contuvo la LT de calibre en las 72 capturas (cobertura 1,00), y el ancho predicho por la geometría del montaje difirió del calculado numéricamente en 0,6~\% en promedio, muy por debajo del margen de la mitad del ancho fijado en el criterio. La misma predicción reproduce el error de A dentro de 6~mm. Fuera del criterio de H3, la cobertura se mantuvo en 1,00 con $z$ acotada a $\pm 3$~cm y bajó a 0,81 con $\pm 1$~cm (Sección~\ref{sec:intervalo}).
 
 \section{Discusión de los resultados}
 \label{sec:discusion}
 
-La comparación se realizó sobre los mismos puntos anatómicos y las mismas imágenes, por lo que la diferencia observada se relaciona principalmente con la transformación geométrica de cada ruta. La escala de A utiliza una referencia fija en el vidrio y no compensa la separación entre ese plano y el pez; el aumento de su error con la profundidad es el resultado más claro del conjunto y coincide con la predicción de primer orden del modelo óptico. \Aprime{} reduce ese efecto al trasladar la referencia al plano aproximado de la réplica, aunque sigue dependiendo de la calidad del marcado y de la coplanaridad conseguida. Conviene precisar la atribución causal: la diferencia entre A y \Aprime{} incluye tanto la coplanaridad del marcador como la rectificación por homografía, y la ventaja de C incluye el modelo completo de interfaces y la información de profundidad, no «la refracción» como causa única.
+La comparación se realizó sobre los mismos puntos anatómicos y las mismas imágenes, por lo que la diferencia observada se relaciona principalmente con la transformación geométrica de cada ruta. La escala de A utiliza una referencia fija en el vidrio y no compensa la separación entre ese plano y el pez; el aumento de su error con la profundidad es el resultado más claro del conjunto y coincide con la predicción de primer orden del modelo óptico. \Aprime{} reduce ese efecto al trasladar la referencia al plano aproximado de la réplica, aunque sigue dependiendo de la calidad del marcado y de la coplanaridad conseguida. Conviene precisar la atribución causal: la diferencia entre A y \Aprime{} incluye tanto la coplanaridad del marcador como la rectificación por homografía, y la ventaja de B y C incluye la información de profundidad y, en C, el modelo completo de interfaces, no «la refracción» como causa única.
 
-B presentó un sesgo positivo casi constante ($+16{,}3$~mm en promedio) y un MAE que disminuyó levemente con la distancia. Este patrón no corresponde a la degradación con la separación de la zona de calibración prevista por \textcite{Rofallski2022}, sino a un error sistemático de escala: la calibración bajo agua compensó la refracción en el rango cubierto (la razón de focales de 1,36 lo muestra), pero el plano de referencia obtenido del riel (Tabla~\ref{tab:riel}, con un error relativo de escala informado de 0,813~\%) o la distancia nominal del carrito introducen una sobreestimación común a todas las posiciones. Un error de escala constante es corregible con una medida patrón, mientras que el error de A no lo es porque depende de $z$. La verificación de la referencia del riel y de la distancia de calibración queda como trabajo inmediato.
+B presentó un sesgo prácticamente nulo en LT ($+0{,}05$~mm) y un MAE de 1,08~mm (0,73~\%) que no cambió con la separación de la zona de calibración. La calibración bajo agua absorbió la refracción en una focal efectiva (razón 1,36) y, con el plano de medición trasladado a lo largo del riel hasta la profundidad de cada captura, el modelo pinhole efectivo reprodujo la escala en todo el rango estudiado. Este resultado es coherente con la equivalencia de primer orden entre un puerto plano y una cámara pinhole con focal escalada (Sección~\ref{sec:calibraciones}): los efectos no centrales que \textcite{Rofallski2022} asocian a la distancia crecen con el ángulo de incidencia, y en este montaje, con las réplicas en la zona central del encuadre, quedaron por debajo de la resolución que imponen el marcado manual y la referencia de calibre.
 
-\pendiente{Este párrafo, la Tabla~\ref{tab:agregados}, la Tabla~\ref{tab:posiciones-mae}, la comparación pareada, H1 y H2, el resumen, el abstract y las conclusiones deben rehacerse después de recalcular B. El CSV maestro registra que B colocó el plano de medición 50~mm más lejos de lo debido (separaciones de 50 a 230~mm en lugar de 0 a 180~mm). Con la geometría del riel del Anexo~\ref{anx:riel}, ese corrimiento predice una sobreestimación de 13,6; 11,7; 10,3 y 9,1~\% en las cuatro posiciones, frente a 13,3; 12,0; 10,5 y 9,1~\% observados, de modo que explica casi todo el sesgo de B. Una corrección geométrica provisional deja a B con un MAE de 1,08~mm en LT y 0,38~mm en PC, del orden de C o menor; el veredicto de H1 frente a B y la interpretación de H2 pueden cambiar.}
+B, al igual que C, necesita conocer la profundidad del plano de medición. En una ejecución preliminar, la lectura del riel se ingresó como distancia al vidrio, lo que alejó el plano 50~mm, y B sobreestimó la LT entre 13,3~\% (5~cm) y 9,1~\% (23~cm); el modelo de plano del riel predice esos valores dentro de 0,3 puntos porcentuales. La exactitud de B depende así de expresar la posición del pez en el mismo marco que la calibración, del mismo modo que la de C depende de la distancia $d$ (Tabla~\ref{tab:sensibilidad}).
 
-C obtuvo los errores medios más bajos porque incorpora las interfaces aire--vidrio--agua y evalúa la geometría en cada profundidad. Tres evidencias respaldan que ese resultado no es casual: la prueba de sanidad del módulo (con $\mu = 1$ y $t_g = 0$ reproduce la cámara pinhole), el error de 0,88~\% contra calibre en 72 imágenes y cuatro profundidades, y la coincidencia entre la predicción geométrica del error de A y lo observado. La ventaja de C se sostiene contra referencias físicas independientes del software (calibre) en 24 combinaciones; la comprobación complementaria con barra patrón, que permitiría separar un eventual error de implementación del error de marcado, queda como trabajo futuro.
+B y C alcanzaron errores del mismo orden por vías distintas. B ajusta empíricamente una cámara efectiva con un patrón observado a través del agua y requiere una referencia del plano de medición en el marco de esa calibración; C modela las interfaces aire--vidrio--agua con parámetros físicos medidos ($d$, $t_g$ e índices) y una calibración en aire, que no depende del tanque. En LT ninguna fue mejor que la otra con la réplica como unidad, y la diferencia de MAE (0,14~mm) es menor que la desviación de las referencias de calibre; en PC, B tuvo menor MAE en 5 de 6 réplicas, sin significación ($p = 0{,}219$). La elección entre ambas es, por tanto, práctica: B exige calibrar dentro del tanque y referenciar el plano, y C exige medir $d$ con cuidado; C es, además, la ruta sobre la que se construyó el intervalo $\IL$. Tres evidencias respaldan la exactitud de C: la prueba de sanidad del módulo (con $\mu = 1$ y $t_g = 0$ reproduce la cámara pinhole), el error de 0,88~\% contra calibre en 72 imágenes y cuatro profundidades, y la coincidencia entre la predicción geométrica del error de A y lo observado. La exactitud de B y C se sostiene contra referencias físicas independientes del software (calibre) en 24 combinaciones; la comprobación complementaria con barra patrón, que permitiría separar un eventual error de implementación del error de marcado, queda como trabajo futuro.
 
-Frente a los antecedentes, el error de C con profundidad conocida (MAE 1,22~mm; 0,88~\%) es menor que el informado por MorphoCal (MAE 7,5~mm, cámara sumergida y peces vivos; \citeauthor{Vijayalakshmi2026}, \citeyear{Vijayalakshmi2026}) y por \textcite{Seibold2026} (RMSE 6--9~mm, estéreo y peces vivos), pero las condiciones no son equivalentes: este trabajo usó réplicas rígidas, posturas controladas, puntos marcados a mano y una profundidad conocida por el soporte. La comparación válida no es entre cifras sino entre preguntas: los sistemas estéreo resuelven la profundidad con la segunda cámara; aquí se cuantificó qué se pierde al no tenerla.
+Frente a los antecedentes, el error de B y C con profundidad conocida (MAE 1,08 y 1,22~mm; 0,7--0,9~\%) es menor que el informado por MorphoCal (MAE 7,5~mm, cámara sumergida y peces vivos; \citeauthor{Vijayalakshmi2026}, \citeyear{Vijayalakshmi2026}) y por \textcite{Seibold2026} (RMSE 6--9~mm, estéreo y peces vivos), pero las condiciones no son equivalentes: este trabajo usó réplicas rígidas, posturas controladas, puntos marcados a mano y una profundidad conocida por el soporte. La comparación válida no es entre cifras sino entre preguntas: los sistemas estéreo resuelven la profundidad con la segunda cámara; aquí se cuantificó qué se pierde al no tenerla.
 
-La concordancia de C con el calibre se resume en la Figura~\ref{fig:4-BA}. Sobre las 24 combinaciones réplica--profundidad, C presentó en LT un sesgo de 1,07~mm con límites de acuerdo de $-1{,}73$ a 3,87~mm, y en PC un sesgo de 0,29~mm con límites de $-0{,}77$ a 1,35~mm. Sobre las 72 capturas individuales, que no son observaciones independientes, los límites fueron de $-2{,}42$ a 4,56~mm en LT y de $-1{,}01$ a 1,59~mm en PC.
+La concordancia de C con el calibre se resume en la Figura~\ref{fig:4-BA}. Sobre las 24 combinaciones réplica--profundidad, C presentó en LT un sesgo de 1,07~mm con límites de acuerdo de $-1{,}73$ a 3,87~mm, y en PC un sesgo de 0,29~mm con límites de $-0{,}77$ a 1,35~mm. Sobre las 72 capturas individuales, que no son observaciones independientes, los límites fueron de $-2{,}42$ a 4,56~mm en LT y de $-1{,}01$ a 1,59~mm en PC. Para B, sobre las 24 combinaciones, el sesgo fue de 0,05~mm con límites de $-2{,}80$ a 2,90~mm en LT, y de $-0{,}32$~mm con límites de $-1{,}24$ a 0,61~mm en PC: B tuvo menor sesgo que C, pero límites de acuerdo de LT algo más amplios.
 
 \begin{figure}[htbp]
 \centering
@@ -263,10 +271,17 @@ La concordancia de C con el calibre se resume en la Figura~\ref{fig:4-BA}. Sobre
 \label{fig:4-BA}
 \end{figure}
 
-\pendiente{Agregar una figura con una captura real (R3-REP1 a 23~cm) con los cuatro puntos marcados y, al pie, las cuatro estimaciones y la referencia, después de recalcular B.}
+La Figura~\ref{fig:4-captura} muestra una de las capturas procesadas, con los cuatro puntos marcados y las estimaciones de cada ruta.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.9\textwidth]{fig4_captura_R3_230.pdf}
+\caption[Captura real con los cuatro puntos anatómicos marcados]{Captura \texttt{R3-REP1-230.jpg} (réplica R3 a 23~cm del vidrio) con los cuatro puntos anatómicos marcados y el eje longitudinal. Referencia de calibre: LT 91,7~mm y PC 40,3~mm. Estimaciones de LT y PC: A, 55,4 y 24,5~mm; \Aprime, 93,7 y 41,6~mm; B, 91,7 y 40,1~mm; C, 92,6 y 40,7~mm. Fuente: elaboración propia.}
+\label{fig:4-captura}
+\end{figure}
 
 \section{Alcance de los resultados}
 
 Los resultados son válidos para las seis réplicas rígidas, la cámara Realme C71, la pecera de vidrio, las cuatro posiciones y las condiciones de iluminación utilizadas. No se generalizan directamente a peces vivos, movimiento, turbidez, oclusiones ni posiciones laterales que no fueron incluidas en la captura. Del mismo modo, las tres capturas técnicas no deben interpretarse como tres unidades experimentales independientes, y las 24 combinaciones réplica--profundidad no son 24 unidades: la unidad experimental es la réplica ($n = 6$).
 
-En conjunto, los datos respaldan una ventaja de C y, en segundo lugar, de \Aprime{} frente a A y B para las medidas analizadas, con la réplica como unidad y contra referencias físicas de calibre. La conclusión se limita al flujo de procesamiento, al montaje y a las referencias físicas registradas.
+En conjunto, los datos respaldan una ventaja de B y C, con la profundidad conocida, y en segundo lugar de \Aprime, frente a A para las medidas analizadas; entre B y C no se encontró diferencia en LT. Estas conclusiones se apoyan en la réplica como unidad y en referencias físicas de calibre. La conclusión se limita al flujo de procesamiento, al montaje y a las referencias físicas registradas.

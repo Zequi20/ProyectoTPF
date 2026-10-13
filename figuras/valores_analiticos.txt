@@ -8,5 +8,5 @@ Ancho relativo de I_L (% de LT):
   z conocida con ±3 cm: 16.7, 14.3, 12.5, 11.1
   z conocida con ±1 cm: 5.6, 4.8, 4.2, 3.7
 Pendiente MAE_A vs separacion: 2.43 mm/cm
-Diferencia B-C por separacion: [18.34 16.04 13.96 12.09]
-Pendiente (MAE_B - MAE_C) vs separacion: -0.35 mm/cm
+Diferencia B-C por separacion: [ 0.09 -0.31 -0.28 -0.04]
+Pendiente (MAE_B - MAE_C) vs separacion: -0.01 mm/cm

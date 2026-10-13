@@ -21,15 +21,17 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces MAE por método para longitud total y profundidad corporal}}{50}{figure.caption.38}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces MAE de longitud total por método y profundidad}}{52}{figure.caption.40}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Ancho relativo del intervalo por profundidad desconocida}}{54}{figure.caption.43}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Longitud estimada por C en función de la profundidad supuesta}}{55}{figure.caption.44}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Bland--Altman de C frente al calibre}}{58}{figure.caption.49}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Error con signo por combinación réplica--profundidad}}{53}{figure.caption.41}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Ancho relativo del intervalo por profundidad desconocida}}{55}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Longitud estimada por C en función de la profundidad supuesta}}{56}{figure.caption.45}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Bland--Altman de C frente al calibre}}{59}{figure.caption.50}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Captura real con los cuatro puntos anatómicos marcados}}{60}{figure.caption.51}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagrama de decisión para la conversión métrica monocular a través de un vidrio plano}}{60}{figure.caption.51}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagrama de decisión para la conversión métrica monocular a través de un vidrio plano}}{62}{figure.caption.53}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Vista conjunta de las capturas y sus identificadores}}{68}{figure.caption.57}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Vista conjunta de las capturas y sus identificadores}}{70}{figure.caption.59}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Parámetros visibles de la configuración del puerto plano}}{69}{figure.caption.58}%
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Parámetros visibles de la configuración del puerto plano}}{71}{figure.caption.60}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
