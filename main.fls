@@ -2,7 +2,7 @@ PWD /home/epereira/Documentos/tesis_ezequiel_v2_latex/tesis_v2
 INPUT /home/epereira/.TinyTeX/texmf.cnf
 INPUT /home/epereira/.TinyTeX/texmf-dist/web2c/texmf.cnf
 INPUT /home/epereira/.TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT main.tex
+INPUT /home/epereira/Documentos/tesis_ezequiel_v2_latex/tesis_v2/main.tex
 OUTPUT main.log
 INPUT /home/epereira/.TinyTeX/texmf-dist/tex/latex/base/report.cls
 INPUT /home/epereira/.TinyTeX/texmf-dist/tex/latex/base/report.cls
@@ -598,9 +598,9 @@ OUTPUT main.lof
 INPUT ./main.lot
 INPUT ./main.lot
 INPUT main.lot
-OUTPUT main.lot
 INPUT /home/epereira/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /home/epereira/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
+OUTPUT main.lot
 INPUT ./preliminares/resumen.tex
 INPUT ./preliminares/resumen.tex
 INPUT ./preliminares/resumen.tex
@@ -706,7 +706,6 @@ INPUT ./figuras/originales/fig3_1_replicas.png
 INPUT ./figuras/originales/fig3_1_replicas.png
 INPUT ./figuras/originales/fig3_1_replicas.png
 INPUT ./figuras/originales/fig3_1_replicas.png
-INPUT /home/epereira/.TinyTeX/texmf-dist/fonts/tfm/public/lm/ec-lmbx10.tfm
 INPUT ./figuras/originales/fig3_2_montaje_replica.png
 INPUT ./figuras/originales/fig3_2_montaje_replica.png
 INPUT ./figuras/originales/fig3_2_montaje_replica.png
@@ -745,6 +744,7 @@ INPUT ./figuras/fig4_errores_combinaciones.pdf
 INPUT ./figuras/fig4_errores_combinaciones.pdf
 INPUT ./figuras/fig4_errores_combinaciones.pdf
 INPUT ./figuras/fig4_errores_combinaciones.pdf
+INPUT /home/epereira/.TinyTeX/texmf-dist/fonts/tfm/public/lm/ec-lmbx10.tfm
 INPUT ./figuras/fig4_3_ancho_intervalo.pdf
 INPUT ./figuras/fig4_3_ancho_intervalo.pdf
 INPUT ./figuras/fig4_3_ancho_intervalo.pdf
@@ -780,6 +780,11 @@ INPUT ./figuras/originales/figB_1_flatport.png
 INPUT ./figuras/originales/figB_1_flatport.png
 INPUT ./figuras/originales/figB_1_flatport.png
 INPUT ./figuras/originales/figB_1_flatport.png
+INPUT ./anexos/tabla_maestra.tex
+INPUT ./anexos/tabla_maestra.tex
+INPUT ./anexos/tabla_maestra.tex
+INPUT ./anexos/tabla_maestra.tex
+INPUT anexos/tabla_maestra.tex
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out

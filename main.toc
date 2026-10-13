@@ -65,8 +65,8 @@
 \contentsline {section}{\numberline {4.5}Repetibilidad del marcado manual}{54}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Intervalo por profundidad desconocida}{54}{section.4.6}%
 \contentsline {section}{\numberline {4.7}Contraste de hipótesis}{56}{section.4.7}%
-\contentsline {paragraph}{H1 se sostiene parcialmente.}{57}{section*.47}%
-\contentsline {paragraph}{H2 no se sostiene.}{57}{section*.48}%
+\contentsline {paragraph}{H1 se sostiene parcialmente.}{56}{section*.47}%
+\contentsline {paragraph}{H2 no se sostiene.}{56}{section*.48}%
 \contentsline {paragraph}{H3 se sostiene.}{57}{section*.49}%
 \contentsline {section}{\numberline {4.8}Discusión de los resultados}{57}{section.4.8}%
 \contentsline {section}{\numberline {4.9}Alcance de los resultados}{59}{section.4.9}%
@@ -74,8 +74,8 @@
 \contentsline {section}{\numberline {5.1}Conclusiones por objetivo}{62}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Limitaciones}{64}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Recomendaciones}{64}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Trabajos futuros}{65}{section.5.4}%
-\contentsline {paragraph}{Verificaciones inmediatas sobre este mismo conjunto.}{65}{section*.55}%
+\contentsline {section}{\numberline {5.4}Trabajos futuros}{64}{section.5.4}%
+\contentsline {paragraph}{Verificaciones inmediatas sobre este mismo conjunto.}{64}{section*.55}%
 \contentsline {paragraph}{Líneas de continuación.}{65}{section*.56}%
 \contentsline {section}{\numberline {5.5}Impacto potencial y aporte}{65}{section.5.5}%
 \contentsline {chapter}{Referencias}{66}{section*.57}%
@@ -85,4 +85,4 @@
 \contentsline {chapter}{\numberline {D}Referencia geométrica del riel para B}{74}{chapter.D}%
 \contentsline {chapter}{\numberline {E}Repositorio de código y datos}{75}{chapter.E}%
 \contentsline {chapter}{\numberline {F}Tabla maestra de resultados}{76}{chapter.F}%
-\contentsline {chapter}{\numberline {G}Fichas de las réplicas}{77}{chapter.G}%
+\contentsline {chapter}{\numberline {G}Fichas de las réplicas}{79}{chapter.G}%

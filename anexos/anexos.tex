@@ -140,7 +140,11 @@ FishmeterTPF/
 \chapter{Tabla maestra de resultados}
 \label{anx:maestra}
 
-\pendiente{Incluir la tabla maestra (72 imágenes $\times$ 4 métodos: LT y PC estimadas y de referencia, error con signo y estado) en letra pequeña a dos columnas, o el enlace al CSV con su hash SHA-256.}
+La Tabla~\ref{tab:maestra} reproduce, para cada una de las 72 imágenes, las referencias de calibre y las estimaciones de LT y PC de los cuatro métodos; el error con signo de cada estimación es su diferencia con la referencia. Los guiones corresponden a los cuatro registros sin valor por falta de detección del ArUco (Sección~\ref{sec:conjunto}). La tabla se generó con \texttt{analysis/tabla\_maestra.py} a partir del CSV maestro, que conserva además los puntos marcados (con $\mathbf{p}_1$ y $\mathbf{p}_2$ invertidos respecto de la definición de la Sección~\ref{sec:medidas}), los parámetros de cada ruta y sus advertencias. Su huella SHA-256 figura a continuación de la tabla.
+
+\input{anexos/tabla_maestra}
+
+\noindent{\footnotesize SHA-256 del CSV maestro: \texttt{\MaestraSHA}}
 
 \chapter{Fichas de las réplicas}
 \label{anx:fichas}
@@ -229,6 +233,7 @@ R6 & 210 & 209 & 210 & 209,7 & 0,6 & 35 & 36 & 35 & 35,3 & 0,6 \\
 % B-13, B-14 & 3.2, Anexo D & Tabla~\ref{tab:posiciones} de correspondencia de posiciones (lecturas del riel completadas; desplazamiento al plano de simetría pendiente); residuo del riel aclarado como numérico. & Dos orígenes sin correspondencia; número vacío presentado como evidencia. \\
 % B-20, B-21, B-29 & 2.3, 2.2.7, 4.8 & Atribución causal precisada (coplanaridad + homografía; modelo completo + profundidad); CalibMar como antecedente, calibraciones con OpenCV y trazado propio. & Honestidad del instrumento y de la atribución. \\
 % Concordancia & Cap.~3 y 4; Anexos & Comprobación de las cifras contra el CSV maestro y los datos de $L(z)$: identificadores de los ArUco corregidos en la Figura~\ref{fig:3-esquema}; C frente a B en PC, 23 de 24 combinaciones; redondeos de la Tabla~\ref{tab:posiciones-mae}; MAE por captura en la Tabla~\ref{tab:agregados}; lado de los ArUco medido con calibre; lecturas de calibre en la Tabla~\ref{tab:lecturas-calibre}; redacción de la sensibilidad a $\mu_w$; Tablas~\ref{tab:sensibilidad} y~\ref{tab:intervalo} verificadas sin diferencias. Se detectó que B se ejecutó con el plano desplazado 50~mm; su recálculo queda pendiente. & Concordancia entre texto y datos. \\
+% Recálculo de B & Cap.~3, 4 y 5; Resumen; Abstract & B se volvió a ejecutar con la lectura del riel ($z - 50$~mm) en lugar de la distancia al vidrio; se rehicieron las Tablas~\ref{tab:agregados} y~\ref{tab:posiciones-mae}, la comparación pareada, H1 (ahora sostenida frente a A y \Aprime{} y no frente a B) y H2, la discusión, el resumen, el abstract y las conclusiones; se agregaron la Figura~\ref{fig:4-errores}, la Figura~\ref{fig:4-captura} y la Tabla~\ref{tab:maestra}. & Error de entrada detectado en la comprobación de concordancia. \\
 % No incorporado & Título & No se cambió el título propuesto por la revisión B. & El título está registrado y la Sección~\ref{sec:intervalo} responde la pregunta que enuncia; el cambio quedaba como contingencia si la corrida de $L(z)$ no se realizaba; la corrida se realizó. \\
 % No incorporado & Resumen & No se incluyeron en el resumen las tareas pendientes (comprobación instrumental), como proponía la revisión B. & El resumen informa hallazgos; las salvedades están en las Secciones~\ref{sec:conjunto} y~\ref{sec:limitaciones-metod}. \\
 % \end{longtable}

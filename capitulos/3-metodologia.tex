@@ -102,15 +102,18 @@ La iluminación se mantuvo fija mediante un foco de bajo consumo de 12~W ubicado
 \toprule
 Posición nominal (cm al vidrio) & Separación de la zona de calibración de B (cm) & Lectura del riel (mm) & Desplazamiento al plano de simetría (mm) \\
 \midrule
-5  & 0  & 0   & \pend{ } \\
-11 & 6  & 60  & \pend{ } \\
-17 & 12 & 120 & \pend{ } \\
-23 & 18 & 180 & \pend{ } \\
+5  & 0  & 0   & 10, compensado \\
+11 & 6  & 60  & 10, compensado \\
+17 & 12 & 120 & 10, compensado \\
+23 & 18 & 180 & 10, compensado \\
 \bottomrule
 \end{tabular}
-\end{table}
 
-\pendiente{Completar el desplazamiento entre el apoyo del carrito y el plano de simetría de cada réplica. El procesamiento de B y C asumió 0~mm sin medirlo; si no se mide, completar la columna con «0 (supuesto)» y declararlo en las limitaciones (Sección~\ref{sec:limitaciones-metod}).}
+\smallskip
+\begin{minipage}{0.9\textwidth}\footnotesize
+\emph{Nota.} El plano de simetría de la réplica estaba desplazado 10~mm respecto del apoyo del carrito. Ese desplazamiento se compensó físicamente al ubicar el carrito, corriéndolo 10~mm, de modo que el plano de simetría quedara en la posición nominal; por eso el procesamiento no aplicó ningún desplazamiento adicional.
+\end{minipage}
+\end{table}
 
 Se emplearon marcadores ArUco del diccionario \texttt{4X4\_50}, con los identificadores 0 y 1. El marcador id~1, utilizado por A, permaneció fijo en el vidrio. El marcador id~0, utilizado por \Aprime{}, se colocó en una base común con la réplica. Para aproximar la coplanaridad con el plano de simetría se utilizó un separador de isopor de longitud equivalente al eje de simetría, fijado con cinta impermeable de doble faz. La réplica se sujetó a la base mediante el alambre previsto en sus orificios. Ambos marcadores se midieron con calibre: cada uno ocupa un cuadrado de 70~mm de lado, incluido el margen blanco, y el cuadrado negro mide 60~mm. Como el detector ubica las esquinas en el borde exterior del cuadrado negro, el lado físico que corresponde es el de este último, y coincide con el valor $L_m = 60{,}0$~mm con el que se configuró el procesamiento. La Figura~\ref{fig:3-2} muestra la disposición de una réplica y del marcador coplanar dentro de la pecera.
 
@@ -214,7 +217,7 @@ Si $\mathbf{u}$ es el vector unitario del eje longitudinal y $\mathbf{n} = (-u_y
 \mathrm{PC} = \lvert (\mathbf{q}_4 - \mathbf{q}_3)\cdot\mathbf{n} \rvert,
 \label{eq:medidas}
 \end{equation}
-donde $\mathbf{q}_i$ son los puntos anatómicos ya convertidos a milímetros por la ruta correspondiente. Operacionalmente, LT es la proyección del segmento $\mathbf{p}_1$--$\mathbf{p}_2$ sobre el eje longitudinal; con los puntos sobre el eje coincide con la distancia euclídea, que es la convención usada con el calibre. La profundidad solo se aceptó cuando la sección marcada fue suficientemente perpendicular al eje. La aplicación conservó como diagnóstico el desvío de la sección y permitió descartar una profundidad no válida.
+donde $\mathbf{q}_i$ son los puntos anatómicos ya convertidos a milímetros por la ruta correspondiente. Operacionalmente, LT es la proyección del segmento $\mathbf{p}_1$--$\mathbf{p}_2$ sobre el eje longitudinal; con los puntos sobre el eje coincide con la distancia euclídea, que es la convención usada con el calibre. En los registros del experimento, los rótulos $\mathbf{p}_1$ y $\mathbf{p}_2$ quedaron invertidos respecto de esta definición: $\mathbf{p}_1$ se marcó en el extremo caudal y $\mathbf{p}_2$ en el hocico. Como LT se calcula con el valor absoluto de la proyección (ecuación~\ref{eq:medidas}), el orden de los puntos no afecta el resultado. La profundidad solo se aceptó cuando la sección marcada fue suficientemente perpendicular al eje. La aplicación conservó como diagnóstico el desvío de la sección y permitió descartar una profundidad no válida.
 
 La Tabla~\ref{tab:operacionalizacion} presenta la definición conceptual y operacional de las variables del estudio, separando los factores que se variaron, los resultados que se midieron y las condiciones que se mantuvieron fijas.
 
@@ -255,7 +258,7 @@ Cada método recibe la misma imagen, los mismos cuatro puntos y el mismo eje. So
   \end{equation}
   que difiere de la ecuación~\eqref{eq:escala-monkman} en el orden del promedio; para marcadores bien detectados ambas coinciden hasta la tercera cifra. Cada punto se transforma como $\mathbf{q}_i = k\,\mathbf{p}_i$ y las medidas se obtienen con la ecuación~\eqref{eq:medidas}. Es una línea de base que no corrige la diferencia de profundidad entre el vidrio y la réplica.
   \item[Método \Aprime.] Utiliza el ArUco montado aproximadamente en el plano de simetría de la réplica. Las cuatro esquinas del marcador en píxeles y sus coordenadas métricas $(0,0)$, $(L_m,0)$, $(L_m,L_m)$ y $(0,L_m)$ definen una homografía $\mathbf{H}$ de $3 \times 3$; cada punto anatómico se transforma como $\tilde{\mathbf{q}}_i = \mathbf{H}\,\tilde{\mathbf{p}}_i$ en milímetros sobre el plano del marcador, el eje longitudinal se transforma del mismo modo, y las medidas se calculan con la ecuación~\eqref{eq:medidas}. La homografía corrige la perspectiva dentro del plano del marcador, pero no la diferencia de escala de puntos fuera de ese plano.
-  \item[Método B.] Utiliza la calibración de cámara con el damero sumergido y un modelo pinhole efectivo (perfil \texttt{B-effective}, Anexo~\ref{anx:calibraciones}). Los píxeles se convierten en rayos con $\mathbf{K}_{\mathrm{agua}}$ y los coeficientes de distorsión efectivos (ecuaciones~\ref{eq:pinhole} y~\ref{eq:distorsion}, invertidas) y se intersecan con el plano $\pi_z$, paralelo al tablero de calibración, situado en la lectura del riel de cada captura más el desplazamiento al plano de simetría (Tabla~\ref{tab:posiciones}). La calibración se fijó en la posición más cercana al vidrio, de modo que B representa de forma empírica el comportamiento óptico de la zona calibrada. LT y PC se calculan en el espacio métrico tridimensional.
+  \item[Método B.] Utiliza la calibración de cámara con el damero sumergido y un modelo pinhole efectivo (perfil \texttt{B-effective}, Anexo~\ref{anx:calibraciones}). Los píxeles se convierten en rayos con $\mathbf{K}_{\mathrm{agua}}$ y los coeficientes de distorsión efectivos (ecuaciones~\ref{eq:pinhole} y~\ref{eq:distorsion}, invertidas) y se intersecan con el plano $\pi_z$, paralelo al tablero de calibración, situado en la lectura del riel de cada captura, que ya corresponde al plano de simetría de la réplica (Tabla~\ref{tab:posiciones}). La calibración se fijó en la posición más cercana al vidrio, de modo que B representa de forma empírica el comportamiento óptico de la zona calibrada. LT y PC se calculan en el espacio métrico tridimensional.
   \item[Método C.] Utiliza la calibración de cámara en aire (perfil \texttt{C-air}) y el modelo de puerto plano de la Sección~\ref{sec:puerto-plano}. Para cada punto se corrige la distorsión de lente, se obtiene el rayo en aire (ecuación~\ref{eq:va}), se aplican las dos refracciones (ecuaciones~\ref{eq:q1} a~\ref{eq:vw}) con los parámetros de la Tabla~\ref{tab:puerto} y se interseca el rayo en agua (ecuación~\ref{eq:rayo}) con el plano de la réplica, definido en el marco de la cámara física. Para estudiar el caso de profundidad desconocida, el mismo cálculo se repite sobre la grilla de profundidades físicamente admisibles y se expresa como el intervalo geométrico de la ecuación~\eqref{eq:IL}.
 \end{description}
 
