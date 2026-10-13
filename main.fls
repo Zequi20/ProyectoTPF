@@ -700,6 +700,7 @@ INPUT ./figuras/originales/fig3_6_instrumentos.png
 INPUT ./figuras/originales/fig3_6_instrumentos.png
 INPUT ./figuras/originales/fig3_6_instrumentos.png
 INPUT ./figuras/originales/fig3_6_instrumentos.png
+INPUT /home/epereira/.TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ectt0800.tfm
 INPUT ./capitulos/4-resultados.tex
 INPUT ./capitulos/4-resultados.tex
 INPUT ./capitulos/4-resultados.tex
@@ -752,7 +753,6 @@ INPUT ./figuras/originales/figB_1_flatport.png
 INPUT ./figuras/originales/figB_1_flatport.png
 INPUT ./figuras/originales/figB_1_flatport.png
 INPUT ./figuras/originales/figB_1_flatport.png
-INPUT /home/epereira/.TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ectt0800.tfm
 INPUT ./anexos/tabla_maestra.tex
 INPUT ./anexos/tabla_maestra.tex
 INPUT ./anexos/tabla_maestra.tex
@@ -762,6 +762,14 @@ INPUT ./figuras/fig3_1_replicas_tags.jpg
 INPUT ./figuras/fig3_1_replicas_tags.jpg
 INPUT ./figuras/fig3_1_replicas_tags.jpg
 INPUT ./figuras/fig3_1_replicas_tags.jpg
+INPUT ./figuras/estanque.png
+INPUT ./figuras/estanque.png
+INPUT ./figuras/estanque.png
+INPUT ./figuras/estanque.png
+INPUT ./figuras/tools-measure-manipulate.png
+INPUT ./figuras/tools-measure-manipulate.png
+INPUT ./figuras/tools-measure-manipulate.png
+INPUT ./figuras/tools-measure-manipulate.png
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out

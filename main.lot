@@ -11,23 +11,25 @@
 \contentsline {table}{\numberline {3.3}{\ignorespaces Parámetros del puerto plano utilizados por la ruta C.}}{37}{table.caption.24}%
 \contentsline {table}{\numberline {3.4}{\ignorespaces Referencia geométrica del riel utilizada por la ruta B.}}{37}{table.caption.25}%
 \contentsline {table}{\numberline {3.5}{\ignorespaces Operacionalización de las variables.}}{40}{table.caption.29}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces Recorrido de cada método en Fishmeter, desde los píxeles hasta la medición.}}{42}{table.caption.30}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Registros del CSV y su tratamiento en el análisis.}}{46}{table.caption.31}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Calibraciones de cámara utilizadas por las rutas B y C.}}{46}{table.caption.32}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Sensibilidad de la longitud total estimada por C a los parámetros medidos a mano: cambio medio con signo sobre las 72 capturas respecto de la configuración base ($d = 230$~mm, $\mu _w = 1{,}333$).}}{47}{table.caption.33}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Errores medios por método después de resumir las repeticiones técnicas.}}{48}{table.caption.34}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces MAE de longitud total (mm) por posición de la réplica.}}{49}{table.caption.36}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces Ancho relativo del intervalo $I_L$ (\% de la LT de calibre) según la profundidad de la réplica y el conocimiento disponible sobre $z$: cálculo numérico con C sobre las 72 capturas y, entre paréntesis, predicción geométrica de primer orden. La última columna indica la cobertura empírica.}}{52}{table.caption.39}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces Contraste de hipótesis.}}{54}{table.caption.42}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Registros del CSV y su tratamiento en el análisis.}}{48}{table.caption.37}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Calibraciones de cámara utilizadas por las rutas B y C.}}{48}{table.caption.38}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Sensibilidad de la longitud total estimada por C a los parámetros medidos a mano: cambio medio con signo sobre las 72 capturas respecto de la configuración base ($d = 230$~mm, $\mu _w = 1{,}333$).}}{49}{table.caption.39}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Errores medios por método después de resumir las repeticiones técnicas.}}{50}{table.caption.40}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces MAE de longitud total (mm) por posición de la réplica.}}{51}{table.caption.42}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Ancho relativo del intervalo $I_L$ (\% de la LT de calibre) según la profundidad de la réplica y el conocimiento disponible sobre $z$: cálculo numérico con C sobre las 72 capturas y, entre paréntesis, predicción geométrica de primer orden. La última columna indica la cobertura empírica.}}{54}{table.caption.45}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Contraste de hipótesis.}}{56}{table.caption.48}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Regla de decisión: qué conversión usar según la situación, con el error observado en este montaje.}}{60}{table.caption.48}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Matriz de cumplimiento de los objetivos específicos.}}{62}{table.caption.50}%
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Regla de decisión: qué conversión usar según la situación, con el error observado en este montaje.}}{62}{table.caption.54}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Matriz de cumplimiento de los objetivos específicos.}}{64}{table.caption.56}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {F.1}{\ignorespaces Tabla maestra: referencias de calibre y estimaciones por imagen y método.}}{76}{table.F.1}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {G.1}{\ignorespaces Lecturas de calibre de las réplicas (mm).}}{79}{table.caption.59}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {F.1}{\ignorespaces Tabla maestra: referencias de calibre y estimaciones por imagen y método.}}{78}{table.F.1}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {G.1}{\ignorespaces Lecturas de calibre de las réplicas (mm).}}{81}{table.caption.65}%
+\addvspace {10\p@ }
