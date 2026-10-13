@@ -1016,6 +1016,56 @@
       \verb 10.1007/s10452-023-10044-8
       \endverb
     \endentry
+    \entry{Torres2018}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=5fc8f89ea8d2d01e049fdfc06992c357}{%
+           family={Sanchez-Torres},
+           familyi={S\bibinithyphendelim T\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=02e5fce37c3abff30bc3cae5e8f6a4ec}{%
+           family={Ceballos-Arroyo},
+           familyi={C\bibinithyphendelim A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e0393b06cd2365048e33fe1b27eb113c}{%
+           family={Robles-Serrano},
+           familyi={R\bibinithyphendelim S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{18ac3ec9a07348f6c45274303c7317bb}
+      \strng{fullhash}{cc3a497e1b9e7678f46b563aadef7b32}
+      \strng{fullhashraw}{cc3a497e1b9e7678f46b563aadef7b32}
+      \strng{bibnamehash}{cc3a497e1b9e7678f46b563aadef7b32}
+      \strng{authorbibnamehash}{cc3a497e1b9e7678f46b563aadef7b32}
+      \strng{authornamehash}{18ac3ec9a07348f6c45274303c7317bb}
+      \strng{authorfullhash}{cc3a497e1b9e7678f46b563aadef7b32}
+      \strng{authorfullhashraw}{cc3a497e1b9e7678f46b563aadef7b32}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Engineering Letters}
+      \field{number}{4}
+      \field{title}{Automatic measurement of fish weight and size by processing underwater hatchery images}
+      \field{volume}{26}
+      \field{year}{2018}
+      \field{pages}{461\bibrangedash 472}
+      \range{pages}{12}
+      \verb{urlraw}
+      \verb https://www.engineeringletters.com/issues_v26/issue_4/EL_26_4_09.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.engineeringletters.com/issues_v26/issue_4/EL_26_4_09.pdf
+      \endverb
+    \endentry
     \entry{Seegraber2025}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=3b895fd1856f48bbe55442455a79c7d6}{%
@@ -1066,6 +1116,9 @@
       \field{year}{2025}
       \field{pages}{2087\bibrangedash 2095}
       \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/ICCVW69036.2025.00218
+      \endverb
     \endentry
     \entry{Seibold2026}{article}{}{}
       \name{author}{3}{}{%
@@ -1212,54 +1265,6 @@
       \range{pages}{1}
       \verb{doi}
       \verb 10.3389/fmars.2024.1437952
-      \endverb
-    \endentry
-    \entry{Torres2018}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=332d437d5525ad8e260f3b706d58d5f4}{%
-           family={Torres},
-           familyi={T\bibinitperiod},
-           given={G.\bibnamedelimi S.},
-           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=5d51fbbe9a20eec06ab91b787fb6856e}{%
-           family={Arroyo},
-           familyi={A\bibinitperiod},
-           given={A.\bibnamedelimi C.},
-           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f52cadfe2468b0d524912eb173403df6}{%
-           family={Serrano},
-           familyi={S\bibinitperiod},
-           given={S.\bibnamedelimi R.},
-           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{5b2e0794c05d7f98fb0d717027c0397e}
-      \strng{fullhash}{1a4dac9e8ebd25761135ce146ba6d408}
-      \strng{fullhashraw}{1a4dac9e8ebd25761135ce146ba6d408}
-      \strng{bibnamehash}{1a4dac9e8ebd25761135ce146ba6d408}
-      \strng{authorbibnamehash}{1a4dac9e8ebd25761135ce146ba6d408}
-      \strng{authornamehash}{5b2e0794c05d7f98fb0d717027c0397e}
-      \strng{authorfullhash}{1a4dac9e8ebd25761135ce146ba6d408}
-      \strng{authorfullhashraw}{1a4dac9e8ebd25761135ce146ba6d408}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Engineering Letters}
-      \field{number}{4}
-      \field{title}{Automatic measurement of fish weight and size by processing underwater hatchery images}
-      \field{volume}{26}
-      \field{year}{2018}
-      \verb{urlraw}
-      \verb https://www.engineeringletters.com/issues_v26/issue_4/EL_26_4_09.pdf
-      \endverb
-      \verb{url}
-      \verb https://www.engineeringletters.com/issues_v26/issue_4/EL_26_4_09.pdf
       \endverb
     \endentry
     \entry{Treibitz2012}{article}{}{}
@@ -2669,6 +2674,56 @@
       \verb 10.1007/s10452-023-10044-8
       \endverb
     \endentry
+    \entry{Torres2018}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=5fc8f89ea8d2d01e049fdfc06992c357}{%
+           family={Sanchez-Torres},
+           familyi={S\bibinithyphendelim T\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=02e5fce37c3abff30bc3cae5e8f6a4ec}{%
+           family={Ceballos-Arroyo},
+           familyi={C\bibinithyphendelim A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e0393b06cd2365048e33fe1b27eb113c}{%
+           family={Robles-Serrano},
+           familyi={R\bibinithyphendelim S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{18ac3ec9a07348f6c45274303c7317bb}
+      \strng{fullhash}{cc3a497e1b9e7678f46b563aadef7b32}
+      \strng{fullhashraw}{cc3a497e1b9e7678f46b563aadef7b32}
+      \strng{bibnamehash}{cc3a497e1b9e7678f46b563aadef7b32}
+      \strng{authorbibnamehash}{cc3a497e1b9e7678f46b563aadef7b32}
+      \strng{authornamehash}{18ac3ec9a07348f6c45274303c7317bb}
+      \strng{authorfullhash}{cc3a497e1b9e7678f46b563aadef7b32}
+      \strng{authorfullhashraw}{cc3a497e1b9e7678f46b563aadef7b32}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Engineering Letters}
+      \field{number}{4}
+      \field{title}{Automatic measurement of fish weight and size by processing underwater hatchery images}
+      \field{volume}{26}
+      \field{year}{2018}
+      \field{pages}{461\bibrangedash 472}
+      \range{pages}{12}
+      \verb{urlraw}
+      \verb https://www.engineeringletters.com/issues_v26/issue_4/EL_26_4_09.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.engineeringletters.com/issues_v26/issue_4/EL_26_4_09.pdf
+      \endverb
+    \endentry
     \entry{Seegraber2025}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=3b895fd1856f48bbe55442455a79c7d6}{%
@@ -2719,6 +2774,9 @@
       \field{year}{2025}
       \field{pages}{2087\bibrangedash 2095}
       \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/ICCVW69036.2025.00218
+      \endverb
     \endentry
     \entry{Seibold2026}{article}{}{}
       \name{author}{3}{}{%
@@ -2865,54 +2923,6 @@
       \range{pages}{1}
       \verb{doi}
       \verb 10.3389/fmars.2024.1437952
-      \endverb
-    \endentry
-    \entry{Torres2018}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=332d437d5525ad8e260f3b706d58d5f4}{%
-           family={Torres},
-           familyi={T\bibinitperiod},
-           given={G.\bibnamedelimi S.},
-           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=5d51fbbe9a20eec06ab91b787fb6856e}{%
-           family={Arroyo},
-           familyi={A\bibinitperiod},
-           given={A.\bibnamedelimi C.},
-           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f52cadfe2468b0d524912eb173403df6}{%
-           family={Serrano},
-           familyi={S\bibinitperiod},
-           given={S.\bibnamedelimi R.},
-           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{5b2e0794c05d7f98fb0d717027c0397e}
-      \strng{fullhash}{1a4dac9e8ebd25761135ce146ba6d408}
-      \strng{fullhashraw}{1a4dac9e8ebd25761135ce146ba6d408}
-      \strng{bibnamehash}{1a4dac9e8ebd25761135ce146ba6d408}
-      \strng{authorbibnamehash}{1a4dac9e8ebd25761135ce146ba6d408}
-      \strng{authornamehash}{5b2e0794c05d7f98fb0d717027c0397e}
-      \strng{authorfullhash}{1a4dac9e8ebd25761135ce146ba6d408}
-      \strng{authorfullhashraw}{1a4dac9e8ebd25761135ce146ba6d408}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Engineering Letters}
-      \field{number}{4}
-      \field{title}{Automatic measurement of fish weight and size by processing underwater hatchery images}
-      \field{volume}{26}
-      \field{year}{2018}
-      \verb{urlraw}
-      \verb https://www.engineeringletters.com/issues_v26/issue_4/EL_26_4_09.pdf
-      \endverb
-      \verb{url}
-      \verb https://www.engineeringletters.com/issues_v26/issue_4/EL_26_4_09.pdf
       \endverb
     \endentry
     \entry{Treibitz2012}{article}{}{}

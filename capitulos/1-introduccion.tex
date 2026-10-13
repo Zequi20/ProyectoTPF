@@ -1,6 +1,5 @@
-\chapter{Introducción y planteamiento del problema}
-
-\section{Introducción}
+\chapter{Introducción}
+\label{cap:introduccion}
 
 Quien cría peces necesita medirlos. La longitud y la forma del cuerpo indican cómo crece un lote, cuánto rendirá y qué ejemplares conviene seleccionar. Hoy esas medidas se toman casi siempre a mano: hay que sacar al pez del agua, sujetarlo y apoyarlo sobre una regla. Eso lleva tiempo, exige personal entrenado y somete al animal a un estrés que puede lastimarlo \parencite{Fernandes2020,Saleh2023,Torres2018}. Una cámara promete hacer lo mismo sin tocarlo. Pero encontrar al pez en la imagen es solo la mitad del trabajo: la otra mitad es convertir lo que se ve en milímetros reales.
 
@@ -15,19 +14,20 @@ En este trabajo pusimos a prueba cuatro maneras de pasar de píxeles a milímetr
 \label{fig:1-1}
 \end{figure}
 
-\section{Elección del tema}
 
 El tema nació de una pregunta concreta. Si queremos medir un pez en una pecera con una cámara común, ¿cómo pasamos de píxeles a milímetros? Las tres respuestas habituales son un marcador de escala, una calibración hecha bajo el agua o un modelo óptico explícito, y cada una entrega un número distinto para la misma fotografía. La bibliografía demuestra que la refracción afecta la medición. Lo que no dice es cuánto vale cada alternativa cuando se aplica a los mismos puntos y se compara contra una referencia física, en la situación más común de un laboratorio o de una instalación pequeña: una cámara del lado de afuera de un vidrio plano.
 
 Estudiamos, entonces, un flujo de medición con una sola cámara y puntos anatómicos marcados a mano sobre fotografías de réplicas rígidas tomadas a través de una pecera de vidrio. Comparamos cuatro rutas de conversión, A, \Aprime, B y C, sobre los mismos puntos de cada imagen, y evaluamos cada una contra la medida física de la réplica. El tema cruza visión por computadora, geometría proyectiva y metrología. Su aporte informático es doble: un procedimiento de medición monocular que declara de forma explícita cuánta incertidumbre agrega no conocer la profundidad, y un módulo de trazado refractivo implementado y verificado con experimentos.
 
-\section{Antecedentes}
+\section{Enunciado del problema}
+\label{sec:enunciado}
+
+\subsection{Planteamiento del problema}
 
 Varios trabajos muestran que es posible extraer de una imagen tanto los puntos anatómicos de un pez como una referencia de escala, ya sea con algoritmos o a mano \parencite{Correia2025,Saleh2023,Tseng2020}. Los primeros enfoques trabajaron fuera del agua o en montajes controlados. \textcite{Monkman2019} detectaron el pez junto con un marcador ArUco colocado a su lado, aproximadamente en el mismo plano; \textcite{Fernandes2020} segmentaron imágenes de tilapia para extraer medidas corporales; y \textcite{Saleh2023} localizaron puntos anatómicos para hacer morfometría. Estos estudios confirman que las imágenes contienen información morfométrica útil. También dejan claro que ubicar bien los puntos no basta para obtener una medida física exacta, y ninguno aborda lo que ocurre cuando la imagen se forma a través de una pared de vidrio y la escala cambia con la profundidad.
 
-Bajo el agua aparece un problema adicional: además de encontrar al pez, hay que recuperar su escala o su profundidad. \textcite{AlJubouri2017} lo resolvieron con dos cámaras ortogonales, y \textcite{Zhou2023} y \textcite{Seibold2026}, con visión estéreo y triangulación. MorphoCal trabaja con una sola cámara, pero sumergida, y proyecta los puntos sobre un plano de referencia definido con una calibración pinhole hecha bajo el agua \parencite{Vijayalakshmi2026}. \textcite{Yin2026} corrigieron la refracción en una interfaz aire--agua y analizaron qué pasa si se suponen distintas profundidades, pero trabajaron con una profundidad nominal y no entregaron un intervalo de longitud. Pinax y CalibMar modelan puertos planos, aunque no fueron pensados para medir peces \parencite{Luczynski2017,Seegraber2025}. En la bibliografía revisada no encontramos ninguna evaluación monocular que compare A, \Aprime, B y C sobre los mismos puntos y que, además, cuantifique el intervalo de longitud cuando la profundidad es desconocida. El Capítulo~\ref{cap:marco} desarrolla el estado del arte y compara estos enfoques en detalle.
+Bajo el agua aparece un problema adicional: además de encontrar al pez, hay que recuperar su escala o su profundidad. \textcite{AlJubouri2017} lo resolvieron con dos cámaras ortogonales, y \textcite{Zhou2023} y \textcite{Seibold2026}, con visión estéreo y triangulación. MorphoCal trabaja con una sola cámara, pero sumergida, y proyecta los puntos sobre un plano de referencia definido con una calibración pinhole hecha bajo el agua \parencite{Vijayalakshmi2026}. \textcite{Yin2026} corrigieron la refracción en una interfaz aire--agua y analizaron qué pasa si se suponen distintas profundidades, pero trabajaron con una profundidad nominal y no entregaron un intervalo de longitud. Pinax y CalibMar modelan puertos planos, aunque no fueron pensados para medir peces \parencite{Luczynski2017,Seegraber2025}. En la bibliografía revisada no encontramos ninguna evaluación monocular que compare A, \Aprime, B y C sobre los mismos puntos y que, además, cuantifique el intervalo de longitud cuando la profundidad es desconocida. La Sección~\ref{sec:antecedentes} desarrolla estos antecedentes y los compara en detalle.
 
-\section{Planteamiento del problema}
 
 Medir peces con imágenes permitiría manipularlos menos y seguirlos con más frecuencia. El obstáculo es físico. Cuando la escena atraviesa la interfaz aire--vidrio--agua, la cámara deja de comportarse como una cámara perspectiva simple. La refracción, sumada a la diferencia de profundidad entre el pez y el marcador de escala, puede producir una longitud aparente distinta de la real aunque los cuatro puntos anatómicos estén perfectamente marcados.
 
@@ -37,7 +37,10 @@ Acotamos el estudio a réplicas rígidas vistas de perfil y a dos medidas: la lo
 
 De esta brecha y de este recorte surgen las preguntas que guiaron la investigación.
 
-\section{Preguntas de investigación}
+\subsection{Formulación del problema}
+
+El problema se formula en una pregunta principal y tres preguntas secundarias.
+
 
 \paragraph{Pregunta principal.} ¿Qué intervalo de longitud puede garantizar C cuando $z$ es desconocida y en qué condiciones su ancho resulta utilizable para una medición morfométrica?
 
@@ -48,11 +51,14 @@ De esta brecha y de este recorte surgen las preguntas que guiaron la investigaci
   \item ¿Qué sensibilidad tiene la estimación de C a los parámetros geométricos del montaje medidos a mano (distancia cámara--vidrio e índice de refracción del agua)?
 \end{enumerate}
 
-\section{Objetivos}
+\section{Objetivos de la investigación}
 
-\paragraph{Objetivo general.} Evaluar una cadena monocular de estimación morfométrica de peces a través de una interfaz aire--vidrio--agua, comparando cuatro estrategias de conversión métrica sobre los mismos puntos anatómicos y cuantificando, con un modelo refractivo de puerto plano, el intervalo de longitud que induce una profundidad desconocida, todo ello validado frente a referencias físicas de réplicas rígidas.
+\subsection{Objetivo general}
 
-\paragraph{Objetivos específicos.}
+Evaluar una cadena monocular de estimación morfométrica de peces a través de una interfaz aire--vidrio--agua, comparando cuatro estrategias de conversión métrica sobre los mismos puntos anatómicos y cuantificando, con un modelo refractivo de puerto plano, el intervalo de longitud que induce una profundidad desconocida, todo ello validado frente a referencias físicas de réplicas rígidas.
+
+\subsection{Objetivos específicos}
+
 \begin{enumerate}
   \item Construir y documentar el conjunto de datos de réplicas, referencias físicas, posiciones, distancias, repeticiones y exclusiones.
   \item Establecer un protocolo reproducible para marcar a mano los cuatro puntos anatómicos y cuantificar la repetibilidad de ese marcado.
@@ -62,7 +68,7 @@ De esta brecha y de este recorte surgen las preguntas que guiaron la investigaci
   \item Evaluar la sensibilidad de las estimaciones a la repetibilidad del marcado manual y a las condiciones geométricas del montaje.
 \end{enumerate}
 
-La Tabla~\ref{tab:trazabilidad} conecta cada objetivo específico con la pregunta que responde, la hipótesis asociada cuando la hay, la sección donde aparece el resultado y la conclusión que lo cierra.
+La Tabla~\ref{tab:trazabilidad} conecta cada objetivo específico con la pregunta que responde, la hipótesis asociada cuando la hay (Sección~\ref{sec:hipotesis}), la sección donde aparece el resultado y la conclusión que lo cierra.
 
 \begin{table}[htbp]
 \centering\footnotesize
@@ -92,31 +98,10 @@ La contribución tiene cinco partes verificables: una salida monocular que decla
 
 Extender los resultados a peces vivos, agua turbia, movimiento, oclusiones o instalaciones productivas queda como limitación y como trabajo futuro. No es una capacidad que hayamos demostrado.
 
-\section{Hipótesis y variables}
+\section{Delimitación espacial y temporal}
+\label{sec:delimitacion}
 
-La unidad experimental es cada réplica rígida de pez. Una captura adicional de la misma réplica es una repetición técnica y no cuenta como unidad independiente. Fijamos los criterios de decisión de cada hipótesis en términos de las cantidades que efectivamente calculamos en el Capítulo~\ref{cap:resultados}.
-
-\subsection{Hipótesis de investigación}
-
-\begin{description}
-  \item[H1: comparación geométrica con profundidad conocida.] Con la profundidad conocida, el error absoluto de longitud total de C es menor que el de A, \Aprime{} y B. Criterio: prueba de signos exacta sobre las diferencias pareadas por réplica ($n = 6$, unidad experimental), con $p < 0{,}05$; el conteo por combinación réplica--profundidad se reporta como descriptivo. El protocolo preveía además evaluar la equivalencia entre B y C dentro de la zona de calibración de B con un margen $\delta$; no la evaluamos formalmente porque el margen no se fijó antes de observar los datos, y en su lugar informamos la diferencia observada.
-  \item[H2: dependencia con la distancia.] La diferencia $\mathrm{error}(B) - \mathrm{error}(C)$ aumenta con la separación respecto de la zona de calibración de B. Criterio: pendiente positiva de la diferencia de MAE de longitud total frente a la separación (0, 6, 12 y 18~cm).
-  \item[H3: intervalo por profundidad desconocida.] El intervalo calculado con C,
-  \begin{equation*}
-    \IL = \Big[\min_{z} L(z),\ \max_{z} L(z)\Big],
-  \end{equation*}
-  contiene la longitud física de la réplica cuando $z$ recorre el rango físicamente admisible, y su ancho relativo se puede predecir a partir de la geometría del montaje ($d$, $t_g$, índices y rango de $z$). Criterio: cobertura empírica objetivo $\geq 0{,}95$ sobre las capturas disponibles, y diferencia entre el ancho predicho y el observado menor que la mitad del ancho. El ancho relativo se reporta como predicción geométrica, no como intervalo de confianza.
-\end{description}
-
-\subsection{Variables}
-
-\begin{description}
-  \item[Independientes.] Método (A, \Aprime, B, C); distancia de la réplica al vidrio y separación respecto de la zona de calibración de B; rango de $z$ usado para el intervalo.
-  \item[Dependientes.] Error con signo, error absoluto y error porcentual de longitud total y de profundidad corporal sin aletas; ancho relativo y cobertura del intervalo.
-  \item[Controladas.] Cámara y sus ajustes, pecera, agua, iluminación, marcadores, soporte, protocolo de marcado manual, operador y unidades experimentales.
-\end{description}
-
-La Tabla~\ref{tab:operacionalizacion} del Capítulo~\ref{cap:metodologia} define cada variable en términos conceptuales y operacionales.
+Hicimos el experimento en \Ciudad, Paraguay, en un laboratorio doméstico. Empezamos a armar el montaje a mediados de agosto de 2026 y a comienzos de septiembre corrimos pruebas preliminares, entre ellas una comprobación del procedimiento con la réplica R1. Las capturas definitivas y las calibraciones de cámara son del 12 de octubre de 2026, como registran los perfiles de calibración (Anexo~\ref{anx:calibraciones}). La búsqueda de antecedentes cerró en septiembre de 2026, y el dato de producción acuícola de la justificación se consultó en octubre de 2026.
 
 \section{Alcance y limitaciones del diseño}
 
@@ -124,21 +109,16 @@ Lo que este trabajo puede defender es una evaluación comparativa del instrument
 
 Entre las limitaciones están la selección manual de los puntos y la repetibilidad del operador, cuyo efecto sobre las medidas anatómicas no cuantificamos en esta versión. El flujo no es automático: ubicar cada punto anatómico requirió siempre marcarlo a mano.
 
-\subsection{Delimitación espacial y temporal}
-\label{sec:delimitacion}
-
-Hicimos el experimento en \Ciudad, Paraguay, en un laboratorio doméstico. Empezamos a armar el montaje a mediados de agosto de 2026 y a comienzos de septiembre corrimos pruebas preliminares, entre ellas una comprobación del procedimiento con la réplica R1. Las capturas definitivas y las calibraciones de cámara son del 12 de octubre de 2026, como registran los perfiles de calibración (Anexo~\ref{anx:calibraciones}). La búsqueda de antecedentes cerró en septiembre de 2026, y el dato de producción acuícola de la justificación se consultó en octubre de 2026.
-
 \section{Estructura del documento}
 
-El documento tiene cinco capítulos.
+El documento tiene cinco capítulos, ordenados según la estructura que fija el reglamento de Proyecto Final de Carrera para una investigación.
 
 \begin{description}
-  \item[Capítulo I. Introducción y planteamiento del problema.] Presenta la motivación, los antecedentes, la brecha, las preguntas, los objetivos, la justificación, las hipótesis, las variables, el alcance, las limitaciones y la estructura.
-  \item[Capítulo II. Marco teórico y estado del arte.] Explica la morfometría, cómo se forma una imagen a través de una interfaz plana, las rutas A, \Aprime, B y C, el marcado manual de puntos, los marcadores ArUco y la evaluación de mediciones, y cierra con una síntesis de antecedentes.
-  \item[Capítulo III. Metodología.] Describe el diseño pareado, la población y la muestra, el montaje, los instrumentos, las calibraciones, la captura, el procesamiento de las imágenes, el análisis y la trazabilidad del experimento.
-  \item[Capítulo IV. Resultados y discusión.] Presenta los datos y las exclusiones, las calibraciones, la comparación entre A, \Aprime, B y C, el comportamiento según la profundidad, el intervalo por profundidad desconocida, el contraste de hipótesis y la discusión.
-  \item[Capítulo V. Conclusiones y recomendaciones.] Ofrece la regla de decisión que resume el aporte, una conclusión por objetivo, las limitaciones, las recomendaciones, el trabajo futuro y el impacto potencial, separado de lo efectivamente demostrado.
+  \item[Capítulo I. Introducción.] Presenta la motivación, el enunciado del problema con su planteamiento y sus preguntas, los objetivos, la justificación, la delimitación espacial y temporal, el alcance y la estructura del documento.
+  \item[Capítulo II. Marco teórico.] Reúne los antecedentes y la brecha de investigación; el marco referencial, que explica la morfometría, la formación de imágenes a través de una interfaz plana, las rutas A, \Aprime, B y C, el marcado manual, los marcadores ArUco y la evaluación de mediciones; y el marco conceptual, con las definiciones de los términos principales.
+  \item[Capítulo III. Marco metodológico.] Describe el tipo y el enfoque de la investigación, la población y la muestra, las variables con su definición conceptual y operacional, las hipótesis, los instrumentos y técnicas de recolección de datos, los métodos de conversión, el procedimiento, el análisis y la trazabilidad del experimento.
+  \item[Capítulo IV. Presentación, análisis e interpretación de resultados.] Presenta los datos y las exclusiones, las calibraciones, la comparación entre A, \Aprime, B y C, el comportamiento según la profundidad, el intervalo por profundidad desconocida, el contraste de hipótesis y la discusión.
+  \item[Capítulo V. Conclusiones y recomendaciones.] Ofrece la regla de decisión que resume el aporte, una conclusión por objetivo, el impacto potencial, las limitaciones, las recomendaciones y el trabajo futuro, separado de lo efectivamente demostrado.
 \end{description}
 
-Los anexos reúnen el registro visual de las capturas, los parámetros del puerto plano, los perfiles de calibración, la referencia geométrica del riel, el índice de los repositorios de código y datos, la tabla maestra de resultados y las fichas de las réplicas.
+Los anexos reúnen el registro visual de las capturas, los parámetros del puerto plano, los perfiles de calibración, la referencia geométrica del riel, el índice de los repositorios de código y datos, la tabla maestra de resultados, las fichas de las réplicas y las fotografías del montaje y de los instrumentos.

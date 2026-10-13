@@ -1,7 +1,9 @@
-\chapter{Marco teórico y estado del arte}
+\chapter{Marco teórico}
 \label{cap:marco}
 
-Para medir un pez desde una fotografía tomada a través de un vidrio hay que encadenar varios pasos, y cada uno puede introducir error. Primero hay que definir qué se mide y contra qué referencia física. Después hay que entender cómo se forma la imagen cuando la luz cruza agua, vidrio y aire. Luego se marcan los puntos anatómicos, se recupera la escala y, al final, se compara lo estimado con lo medido. Este capítulo recorre esa cadena eslabón por eslabón; la Figura~\ref{fig:2-1} la resume.
+Para medir un pez desde una fotografía tomada a través de un vidrio hay que encadenar varios pasos, y cada uno puede introducir error. Primero hay que definir qué se mide y contra qué referencia física. Después hay que entender cómo se forma la imagen cuando la luz cruza agua, vidrio y aire. Luego se marcan los puntos anatómicos, se recupera la escala y, al final, se compara lo estimado con lo medido. El marco referencial de este capítulo recorre esa cadena eslabón por eslabón; la Figura~\ref{fig:2-1} la resume.
+
+El capítulo tiene tres partes. Los antecedentes (Sección~\ref{sec:antecedentes}) revisan los trabajos previos y cierran con la brecha que aborda esta tesis; el marco referencial (Sección~\ref{sec:referencial}) desarrolla la teoría de cada eslabón; y el marco conceptual (Sección~\ref{sec:conceptual}) fija el sentido de los términos principales.
 
 \begin{figure}[htbp]
 \centering
@@ -10,9 +12,99 @@ Para medir un pez desde una fotografía tomada a través de un vidrio hay que en
 \label{fig:2-1}
 \end{figure}
 
-\section{Medición morfométrica de peces}
+\section{Antecedentes}
+\label{sec:antecedentes}
 
-\subsection{Morfometría y parámetros corporales}
+Hicimos una revisión narrativa estructurada de los trabajos sobre medición morfométrica con imágenes, marcado manual o localización de puntos anatómicos, recuperación de escala y formación de imágenes a través de medios refractivos. Empezamos con términos generales como «fish measurement», «morphometric analysis», «fish size estimation», «non-invasive measurement» e «image processing», y después sumamos combinaciones más específicas: «underwater fish length measurement», «fiducial marker fish measurement», «ArUco fish length», «flat-port camera», «air-glass-water refraction», «refractive camera calibration» y «refraction-aware fish measurement». Buscamos en Semantic Scholar y Google Scholar y completamos la búsqueda siguiendo referencias y revisando las fuentes originales. Como no aplicamos un protocolo exhaustivo de selección y exclusión, la llamamos revisión narrativa y no sistemática. La búsqueda cerró en septiembre de 2026. Incluimos trabajos en español o inglés que trataran al menos uno de estos temas: medición morfométrica de peces con imágenes, recuperación de escala o de puntos anatómicos, calibración de cámaras a través de interfaces aire--vidrio--agua, o modelos explícitos de refracción aplicables a un montaje acuático. Excluimos los trabajos sin relación con la medición de organismos acuáticos, la calibración óptica, el marcado de puntos o la estimación de escala, los duplicados y los documentos cuya fuente primaria no pudimos identificar. Además de los catorce trabajos que resume la Tabla~\ref{tab:antecedentes}, examinamos alrededor de veinte resultados que no incorporamos a esa matriz.
+
+Un primer grupo de antecedentes se ocupa de las medidas de referencia. \textcite{Petrtyl2014} compararon mediciones con calibrador digital y con análisis de imágenes en carpa prusiana: 18 caracteres morfométricos, dos investigadores y comparaciones dentro de cada observador y entre ambos. Los sesgos relativos medios fueron de $-4{,}27$~\% a $9{,}48$~\%, y varias comparaciones mostraron diferencias significativas. La lección es clara: tanto la medición manual como la digital pueden tener sesgo y variar entre repeticiones y observadores. Por eso obtuvimos el valor manual de referencia con un procedimiento controlado y no lo tratamos como una magnitud libre de incertidumbre.
+
+Sobre la automatización de la información anatómica, \textcite{Petrellis2021} combinó procesamiento de imágenes, detección de contornos, correspondencia de patrones y aprendizaje profundo para estimar la longitud, la profundidad corporal y el área en términos relativos, y para localizar aletas y otras regiones. El error en longitud fue de entre 1,9~\% y 13,2~\%. El método trabajó sobre todo con dimensiones relativas, y propuso la visión estéreo como camino para obtener dimensiones absolutas en peces inclinados u ocultos.
+
+\textcite{Saleh2023} propusieron MFLD-net, una red liviana que detecta 16 puntos anatómicos en imágenes de peces y, a partir de ellos, calcula la longitud total, la longitud estándar, la longitud cefálica y la profundidad corporal. El modelo logró una precisión promedio de detección $\mathrm{AP} = 0{,}967$ y errores absolutos medios de 9,25~mm en longitud total, 8,27~mm en longitud estándar, 6,57~mm en longitud cefálica y 7,62~mm en profundidad corporal. Nos sirvió sobre todo para definir los extremos anatómicos, aunque su montaje, con cámara industrial y cinta transportadora, no se parece a una adquisición a través de una pared de vidrio.
+
+Nosotros ubicamos los puntos a mano. Así evitamos atribuirle a un algoritmo una precisión que no evaluamos, y podemos mantener exactamente los mismos cuatro puntos al comparar las rutas geométricas. La incertidumbre de la referencia física se documenta con las tres lecturas de calibre de cada réplica (Tabla~\ref{tab:replicas}); la repetibilidad del marcado manual no la cuantificamos en esta versión.
+
+Un segundo grupo de trabajos se ocupa de recuperar la escala. Con tres redes regionales, \textcite{Monkman2019} detectaron al mismo tiempo el pez y un marcador ArUco de tamaño conocido. Calcularon la longitud total a partir del lado mayor de la región detectada y del promedio de las escalas de los cuatro lados del marcador, y reportaron una intersección sobre la unión media cercana al 93~\% y un sesgo porcentual medio de 2,2~\%. También identificaron las principales fuentes de error: la diferencia de profundidad entre marcador y pez, la distorsión de la lente y las orientaciones mayores a unos $20^{\circ}$. Este trabajo respalda el uso de ArUco, y a la vez advierte que el marcador da una escala válida solo si se controlan la coplanaridad y la orientación.
+
+En la misma línea, \textcite{Tseng2020} usaron una red convolucional para detectar la cabeza, la horquilla caudal y una placa de color de tamaño conocido. Después ubicaron los puntos del hocico y de la horquilla con procesamiento de imágenes y calcularon la longitud con la relación píxel--distancia de la placa. El clasificador acertó el 98,78~\% de las veces, pero la longitud tuvo un error absoluto medio de 5,36~cm y un error relativo absoluto medio de 4,26~\%. El contraste entre ambas cifras es instructivo: detectar muy bien no garantiza medir igual de bien.
+
+En un tanque de producción, \textcite{Correia2025} conectaron una cámara a una Raspberry Pi y usaron un modelo YOLOv8m-seg para segmentar camarones y una placa de alimentación de tamaño conocido. La placa dio la escala, y la segmentación permitió elegir individuos extendidos y aproximadamente coplanares. Obtuvieron un MAPE de 1,56~\% en longitud y de 0,15~\% en anchura. El trabajo integra captura acuática, segmentación y escala visual, pero no corrige la refracción de forma explícita y estudia otro organismo con otra geometría.
+
+Los sistemas estéreo ofrecen otro camino hacia las dimensiones físicas. \textcite{Marrable2023} combinaron la detección automática de cabeza y cola con un sistema estéreo BRUVS calibrado con estructuras tridimensionales. Al comparar 3954 mediciones automáticas con mediciones manuales obtuvieron un coeficiente de correlación de Pearson de $r = 0{,}99$. Es una asociación lineal muy fuerte, pero la correlación no mide concordancia ni descarta un sesgo entre métodos. \textcite{AlJubouri2017}, por su parte, midieron peces cebra a través de un tanque de vidrio con dos cámaras web ortogonales: despreciaron el efecto del vidrio y compensaron la distancia con la segunda vista.
+
+\textcite{ZhangX2025} usaron una cámara superior y otra lateral, una red basada en módulos Hourglass y transformaciones tridimensionales para medir siete variables fenotípicas de bagre de canal bajo el agua. El error relativo medio fue de alrededor de 3,7~\% en longitud total y de 9,6~\% considerando las siete variables juntas. Demuestran que es posible recuperar varias medidas en un montaje acuático, aunque no evalúan por separado el efecto de corregir la refracción.
+
+Los antecedentes ópticos cumplen otro papel. \textcite{Qiao2019} propusieron un método de estructura a partir del movimiento con un modelo refractivo, capaz de estimar la calibración, la pose de la cámara y la reconstrucción tridimensional a través de superficies que desvían la luz. Con simulaciones e imágenes reales mostraron que ignorar la refracción deforma la reconstrucción. Su objetivo, de todos modos, es reconstruir escenas, no medir peces.
+
+En la calibración fotogramétrica de interfaces planas, el modelo Pinax de \textcite{Luczynski2017} representa de forma explícita la refracción en una carcasa de puerto plano y corrige el camino de los rayos antes de reconstruir o medir. Es el pariente conceptual más cercano de la ruta C, aunque se pensó como corrección óptica general y no para comparar, en una misma captura monocular, una escala sin corregir, una calibración implícita y un modelo refractivo explícito. En la misma línea, \textcite{Rofallski2022} analizaron la distorsión que depende de la distancia cuando se aplican modelos de cámara convencionales a interfaces multimedia planas, y \textcite{Shortis2015} revisó las técnicas de calibración para medir bajo el agua. Ambos trabajos indican que la compensación implícita depende de la profundidad, y que la calidad de una calibración no se resume en un único número válido para toda la zona de trabajo.
+
+Tres trabajos recientes ayudan a ubicar con precisión el hueco que queremos llenar. MorphoCal \parencite{Vijayalakshmi2026} usa una sola cámara, pero sumergida, y proyecta los puntos sobre un plano de calibración fijo obtenido con un damero bajo el agua; reporta un MAE de 0,75~cm y un RMSE de 0,86~cm sobre 4810 muestras. \textcite{Yin2026} corrigieron la refracción en la superficie agua--aire con la ley de Snell, suponiendo una profundidad nominal (aproximadamente 0,8~m), y analizaron cuánto afecta ese supuesto, sin entregar un intervalo. \textcite{Zhou2023} resolvieron la profundidad con visión estéreo y corrigieron la refracción en la superficie. Ninguno de los tres trata una cámara ubicada del lado de afuera de un vidrio plano, ni compara sobre los mismos puntos una escala directa, una calibración implícita y un modelo explícito.
+
+\textcite{Seegraber2025} desarrollaron CalibMar, una herramienta abierta que integra la calibración de la cámara, del par estéreo y de la carcasa para puertos planos o en cúpula. En un puerto plano, el modelo estima la orientación y la posición de la interfaz y representa el camino no central de los rayos. Es un antecedente instrumental, pero no incluye marcado anatómico, referencia ArUco ni evaluación de medidas de peces.
+
+El antecedente ópticamente más cercano es el de \textcite{Seibold2026}, que midieron la longitud de pequeños peces de agua dulce en acuarios con una cámara estéreo. Su método combina YOLOv11-Pose, correspondencias restringidas por geometría epipolar refractiva y una triangulación tridimensional que tiene en cuenta las interfaces aire--vidrio--agua. Sus mejores resultados fueron un RMSE de 6,11~mm y 9,22~mm en dos escenas de prueba. El trabajo confirma que la refracción debe entrar en la cadena de medición, pero usa dos cámaras, no emplea un marcador ArUco y no compara, sobre las mismas observaciones, una cadena con y sin corrección.
+
+La Tabla~\ref{tab:antecedentes} resume las diferencias. Sus cifras no sirven para armar un ranking entre métodos: cambian la especie, el tamaño, la geometría, las medidas, los datos y hasta la definición de las métricas.
+
+\begin{landscape}
+\begin{footnotesize}
+\begin{longtable}{@{}p{2.2cm}p{2.8cm}p{2.6cm}p{3.0cm}p{3.0cm}p{3.2cm}p{3.6cm}@{}}
+\caption{Matriz comparativa de antecedentes relacionados con la medición morfométrica y la corrección refractiva.}
+\label{tab:antecedentes}\\
+\toprule
+Fuente & Objeto y medio & Geometría & Puntos o procedimiento & Escala y refracción & Medidas y resultados & Limitación frente a este trabajo \\
+\midrule
+\endfirsthead
+\multicolumn{7}{l}{\small Tabla~\ref{tab:antecedentes} (continuación)}\\
+\toprule
+Fuente & Objeto y medio & Geometría & Puntos o procedimiento & Escala y refracción & Medidas y resultados & Limitación frente a este trabajo \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\endlastfoot
+\textcite{Monkman2019} & Lubina europea; fotografías fuera del agua & Monocular; tres cámaras no especializadas & R-CNN para pez y marcador; longitud por región envolvente & ArUco de lado conocido; solo distorsión de lente & LT; mIoU $\approx$ 93~\%; sesgo porcentual medio 2,2~\% & Sin agua ni vidrio; sensible a paralaje, profundidad e inclinación \\
+\textcite{Tseng2020} & Peces cosechados; fuera del agua & Monocular & CNN para cabeza, horquilla y placa de color & Placa de dimensión conocida; sin refracción & LT; exactitud de clasificación 98,78~\%; MAE 5,36~cm & Fuera del agua; muestra que detectar bien no implica medir bien \\
+\textcite{Saleh2023} & Peces en cinta transportadora & Cámara industrial monocular en montaje fijo & MFLD-net; 16 puntos anatómicos & Calibración del montaje; sin refracción & LT, LE, cefálica y PC; AP 0,967; MAE 6,57--9,25~mm & Fuera del agua; geometría distinta de un tanque \\
+\textcite{Correia2025} & Camarones en tanque de producción & Monocular (Raspberry Pi) & YOLOv8m-seg para individuos y placa & Placa como referencia; sin corrección refractiva & Longitud y anchura; MAPE 1,56~\% y 0,15~\% & Objeto y geometría distintos; sin modelo refractivo \\
+\textcite{AlJubouri2017} & Peces cebra en tanque de vidrio & Dos cámaras web ortogonales & Procesamiento clásico & Compensación de distancia por la segunda vista; vidrio despreciado & Longitud; error $\approx$ 1~\% & Estéreo; no modela el vidrio ni compara rutas \\
+\textcite{Marrable2023} & Peces en estéreo-BRUVS & Estéreo calibrado & Detección profunda de cabeza y cola & Triangulación estéreo & Longitud; $r = 0{,}99$ frente a manual & Estéreo; correlación no es concordancia \\
+\textcite{ZhangX2025} & Bagre de canal en agua & Cámaras superior y lateral & Red Hourglass; puntos clave & Transformaciones 3D & Siete variables; ERM 3,7~\% (LT) & Dos vistas; no separa el efecto refractivo \\
+\textcite{Rofallski2022} & Interfaz plana; análisis fotogramétrico & Modelo convencional a distintas distancias & Patrones de calibración & Distorsión dependiente de la distancia & Error de reproyección & No mide peces; antecedente directo de la validez local de B \\
+\textcite{Luczynski2017} & Cámaras en carcasa de puerto plano & Modelo Pinax de rayos refractados & Patrones de calibración & Corrección refractiva explícita & Reconstrucción y corrección de imagen & Fundamento óptico de C; sin medidas de peces \\
+\textcite{Seegraber2025} & Patrones sintéticos y reales & Mono o estéreo con puerto plano o cúpula & Detección de patrones; optimización & Calibración explícita de cámara y carcasa & Parámetros de cámara y puerto & Herramienta de calibración; sin anatomía ni medidas \\
+\textcite{Vijayalakshmi2026} & Peces en estanques; cámara sumergida & Monocular & Detección y puntos clave (MorphoCal) & Pinhole calibrado bajo agua; proyección rayo--plano & Longitud; MAE 0,75~cm, RMSE 0,86~cm (4810 muestras) & Cámara sumergida; asume un plano de referencia fijo; no evalúa fuera de él \\
+\textcite{Yin2026} & \emph{Micropterus salmoides} en estanque & Monocular; seguimiento & Puntos clave y fusión de rasgos & Snell en la superficie agua--aire; profundidad nominal $\approx$ 0,8~m & Longitud; sensibilidad al error de profundidad & Interfaz agua--aire sin vidrio; no entrega un intervalo \\
+\textcite{Zhou2023} & Peces en agua & Estéreo & Puntos clave & Corrección de refracción en la superficie; compara calibrar en aire frente a bajo agua & Longitud; error $\approx$ 1~\% & Estéreo; la profundidad se resuelve con la segunda cámara \\
+\textcite{Seibold2026} & Peces de arroz en acuario & Estéreo externo a través de aire--vidrio--agua & YOLOv11-Pose; cinco puntos; asociación estéreo & Geometría epipolar y triangulación refractivas & Longitud boca--aleta caudal; RMSE 6,11 y 9,22~mm & Estéreo; sin ArUco; no compara la misma escena con y sin corrección \\
+\end{longtable}
+\end{footnotesize}
+\end{landscape}
+
+La matriz muestra que cada pieza de la cadena de medición ya fue demostrada, aunque en combinaciones distintas. El marcado de puntos anatómicos y los marcadores o patrones de tamaño conocido permiten recuperar la escala, y los modelos refractivos describen el camino de los rayos a través del puerto. Pero ubicar bien los puntos, o lograr una correlación alta, no garantiza acercarse a la medida física, porque el resultado final depende también de la escala, la profundidad, la orientación y el modelo óptico.
+
+No podemos afirmar que no existan sistemas que combinen medición de peces y refracción explícita: el trabajo estéreo de \textcite{Seibold2026} lo hace. Lo que distingue a este trabajo es evaluar una configuración monocular y controlada a través de un puerto plano, comparando A, \Aprime, B y C sobre las mismas escenas, con los mismos puntos anatómicos y la misma referencia de escala, y usar C para construir $L(z)$ cuando la profundidad es desconocida. Así estimamos el efecto de la geometría con MAE, MAPE y sesgo, sin dar por sentado que alguna ruta vaya a mejorar las cosas.
+
+\subsection{Síntesis del estado del arte y brecha de investigación}
+\label{sec:brecha}
+
+El estado del arte ya resolvió, por separado, varias piezas de la cadena: el marcado y la detección de puntos anatómicos, la recuperación de escala con marcadores o patrones, la calibración convencional de cámaras y el modelado explícito de la refracción en montajes acuáticos. También hay sistemas estéreo que combinan triangulación y refracción para medir peces.
+
+Lo que sigue abierto, para la configuración que estudiamos, es cuánto del error de una medición monocular a través de un puerto plano se debe a usar una escala constante, una calibración implícita o una corrección refractiva explícita. Falta, en concreto, una comparación pareada que mantenga fijos los puntos marcados, la referencia ArUco y las imágenes; que mida cómo cambia el error al alejarse del plano de calibración; y que diga qué se puede afirmar sobre la longitud cuando la profundidad no se conoce.
+
+Esta tesis puso a prueba esa diferencia con experimentos: las rutas A, \Aprime, B y C, la comparación contra una referencia manual y el análisis de cómo cambia el error con la profundidad. El marcado manual es la entrada común; la contribución central es la evaluación geométrica y metrológica de las alternativas de conversión y la medida del intervalo por profundidad desconocida.
+
+No presentamos como novedad un sistema automático de detección anatómica, ni un marcador nuevo, ni un modelo general de calibración refractiva. Tampoco pretendemos que una ruta sea mejor en cualquier circunstancia: lo que afirmamos vale para la configuración, las distancias y las condiciones de este experimento.
+
+\section{Marco referencial}
+\label{sec:referencial}
+
+El marco referencial reúne la teoría en que se apoya la medición: qué se mide y contra qué referencia, cómo se forma la imagen a través del vidrio, cómo se convierten los píxeles en milímetros y cómo se evalúa el resultado.
+
+\subsection{Medición morfométrica de peces}
+
+\subsubsection{Morfometría y parámetros corporales}
 
 La morfometría mide rasgos externos del tamaño y la forma de un organismo. En peces, esas medidas se toman con instrumentos manuales o analizando imágenes, y sirven para describir cómo varía el cuerpo y para obtener datos biométricos \parencite{Petrtyl2014}.
 
@@ -20,7 +112,7 @@ Aquí trabajamos con dos medidas: la longitud total y la profundidad corporal. D
 
 La longitud total resume el tamaño del pez: va desde la punta del hocico hasta el extremo posterior de la aleta caudal. La profundidad corporal es la distancia entre el perfil dorsal y el perfil ventral del cuerpo, en la sección donde esa separación es máxima, y deja afuera por completo las aletas dorsal, ventral, pectorales y caudal. Dicho de otro modo, las aletas pueden formar parte de la longitud total cuando son el extremo caudal, pero nunca entran en la profundidad corporal. La referencia física y las cuatro rutas, A, \Aprime, B y C, usan exactamente los mismos puntos para ambas medidas. Así evitamos la tentación de elegir, después de ver los datos, la medida que más favorezca a un método.
 
-\subsection{Puntos anatómicos y definición de las medidas}
+\subsubsection{Puntos anatómicos y definición de las medidas}
 \label{sec:puntos-def}
 
 Medir longitudes sobre un pez exige puntos anatómicos que cualquiera pueda volver a encontrar. La literatura no siempre usa los nombres de manera uniforme, sobre todo en el caso de la longitud estándar, así que fijamos estas definiciones \parencite{Howe2002,Saleh2023,Steeds2024}:
@@ -41,15 +133,15 @@ Estas definiciones valen igual para la medición con calibre y para la estimaci�
 
 Las medidas tomadas con calibre sobre las réplicas son la vara contra la que juzgamos cada estimación. Esa vara también tiene error: depende de la resolución del instrumento, de dónde se ubiquen los puntos anatómicos y de cuán repetible sea el procedimiento. Por eso usamos las mismas definiciones anatómicas en la medición física y en la digital.
 
-\subsection{Exactitud, repetibilidad e incertidumbre de la referencia}
+\subsubsection{Exactitud, repetibilidad e incertidumbre de la referencia}
 
 Dos personas que miden el mismo pez, o una misma persona que lo mide dos veces, rara vez obtienen el mismo número. Influyen dónde se ubica cada punto, la presión del instrumento, la posición del objeto, la resolución del calibre y la experiencia de quien mide \parencite{Petrtyl2014}. El valor manual, entonces, no es una verdad sin incertidumbre: es una referencia obtenida con un procedimiento controlado.
 
 Conviene distinguir dos ideas. La exactitud de la referencia dice cuán cerca está del valor real de la magnitud medida. La repetibilidad dice cuánto se dispersan las lecturas tomadas en las mismas condiciones. La resolución y la exactitud declaradas del instrumento, la variación entre repeticiones y la elección de los puntos anatómicos suman incertidumbre a la referencia, y hay que tenerla presente antes de sacar conclusiones de diferencias pequeñas entre el valor manual y el estimado.
 
-\section{Formación de imágenes en medios acuáticos}
+\subsection{Formación de imágenes en medios acuáticos}
 
-\subsection{Modelo geométrico convencional de cámara}
+\subsubsection{Modelo geométrico convencional de cámara}
 
 El modelo de cámara estenopeica, o \emph{pinhole}, imagina la cámara como una caja con un agujero diminuto: todos los rayos de la escena pasan por ese único punto, el centro de proyección, antes de llegar al plano de la imagen. Con este modelo, la relación entre un punto del espacio, expresado en coordenadas del mundo, y su proyección en la imagen se escribe así \parencite{Hartley2004,Zhang2000}:
 \begin{equation}
@@ -69,7 +161,7 @@ Los parámetros extrínsecos, la matriz de rotación $\mathbf{R}$ y el vector de
 
 El modelo pinhole es una idealización y no incluye la distorsión que agrega la lente. En una cámara común se lo completa con coeficientes de distorsión radial y tangencial. Cuando la imagen se forma a través de interfaces aire--vidrio--agua, en cambio, la refracción tuerce además la dirección de los rayos y puede romper el supuesto de un único centro de proyección \parencite{Treibitz2012,Seegraber2025}.
 
-\subsection{Distorsión óptica producida por la lente}
+\subsubsection{Distorsión óptica producida por la lente}
 
 Una lente real no se comporta como el agujero ideal: desplaza un poco la posición de los puntos en la imagen. La formulación habitual describe esos desplazamientos con una componente radial y otra tangencial \parencite{Brown1966,Weng1992}.
 
@@ -92,7 +184,7 @@ Todos estos coeficientes pertenecen al conjunto cámara--lente. En una calibraci
 
 La refracción en un puerto plano es otro fenómeno. Al cruzar las interfaces aire--vidrio--agua, los rayos dejan de converger, en general, en un único punto. El sistema pasa a ser una cámara axial no central, cuya geometría depende de la orientación y la posición de las interfaces, de sus espesores y de los índices de refracción de cada medio \parencite{Agrawal2012,JordtSedlazeck2012}.
 
-\subsection{Refracción en la interfaz aire--vidrio--agua}
+\subsubsection{Refracción en la interfaz aire--vidrio--agua}
 
 Un rayo de luz se desvía al pasar de un medio a otro con distinto índice de refracción. Es lo que hace que una cuchara parezca quebrada dentro de un vaso de agua. En una interfaz entre dos medios, la ley de Snell relaciona el ángulo de incidencia $\theta_1$, el ángulo refractado $\theta_2$ y los índices de refracción $n_1$ y $n_2$ \parencite{Hecht2017}:
 \begin{equation}
@@ -102,7 +194,7 @@ n_1 \sin\theta_1 = n_2 \sin\theta_2 .
 
 Los ángulos se miden respecto de la normal de la interfaz. En nuestro montaje, la luz que sale del objeto atraviesa primero el agua, después la pared transparente y por último el aire que está frente a la cámara; si recorremos el camino al revés, desde la cámara, el orden es aire, vidrio y agua. La ley de Snell se aplica en cada interfaz, teniendo en cuenta los índices, la orientación de las superficies y su geometría. Como señalan \textcite{Seegraber2025}, una carcasa o un puerto cambia el modelo de formación de la imagen: el camino de cada rayo depende de la forma y orientación del puerto, de dónde está la cámara respecto de él y de los medios que atraviesa.
 
-\subsection{Modelo refractivo de puerto plano}
+\subsubsection{Modelo refractivo de puerto plano}
 \label{sec:puerto-plano}
 
 Un puerto plano se modela con dos interfaces paralelas: una entre el aire y la pared transparente, y otra entre la pared y el agua. Para seguir el rayo que corresponde a un píxel conviene recorrerlo desde la cámara hacia la escena. Por el principio de reversibilidad óptica, ese camino es el mismo que recorre la luz desde el objeto hasta la cámara, solo que en sentido contrario \parencite{Agrawal2012,JordtSedlazeck2012}. La Figura~\ref{fig:2-3} muestra la geometría.
@@ -180,7 +272,7 @@ D(z) = d + \frac{t_g}{\mu_g} + \frac{z}{\mu_w},
 \end{equation}
 donde $z$ es la profundidad del objeto detrás de la cara interior del vidrio. La magnificación de un objeto a profundidad $z$ es proporcional a $1/D(z)$: cuanto más lejos está, más chico se ve. Esta relación no reemplaza al trazado completo, pero alcanza para predecir el signo y el orden de magnitud del error de una escala tomada en el vidrio, y también el ancho del intervalo que produce no conocer la profundidad. En el Capítulo~\ref{cap:resultados} contrastamos ambas predicciones con los datos.
 
-\subsection{Profundidad, inclinación y acortamiento aparente}
+\subsubsection{Profundidad, inclinación y acortamiento aparente}
 
 Que una imagen permita recuperar medidas físicas depende de cómo están ubicados la cámara, la pared transparente, el objeto y la referencia métrica. Detrás de una pared plana, la posición y el tamaño aparente del objeto cambian con su profundidad y con su ubicación en el campo de visión.
 
@@ -223,7 +315,7 @@ Una escala tomada de una referencia visual solo se puede trasladar al objeto si 
 
 La ubicación de la cámara, el tamaño y el material del tanque, las distancias de trabajo, la posición del marcador y las tolerancias de postura, inclinación y diferencia de profundidad son decisiones del diseño experimental. El Capítulo~\ref{cap:metodologia} detalla esos valores y el esquema del montaje.
 
-\subsection{Profundidad conocida y profundidad desconocida}
+\subsubsection{Profundidad conocida y profundidad desconocida}
 \label{sec:z-desconocida}
 
 La profundidad $z$ es la distancia entre el objeto y la referencia geométrica del montaje, medida desde la cara interna del vidrio o en el sistema de coordenadas de la calibración. Decimos que es conocida cuando un soporte fija y mide la posición de la réplica. En ese caso, cada rayo se interseca con el plano del objeto, se obtiene una estimación puntual y podemos comparar A, \Aprime, B y C contra la referencia física.
@@ -236,13 +328,13 @@ Decimos que es desconocida cuando una sola imagen no permite saber a qué distan
 
 La forma abreviada $[L(z_{\min}), L(z_{\max})]$ solo es equivalente si $L(z)$ es monótona en el rango. En la aproximación de primer orden de la ecuación~\eqref{eq:Dz}, $L(z)$ es proporcional a $D(z)$ y, por lo tanto, crece con $z$; en el Capítulo~\ref{cap:resultados} lo verificamos con el trazado completo. El intervalo propaga solo la incertidumbre de no conocer la profundidad. No incluye la de calibración, postura, marcado manual o referencia física, y no debe llamarse intervalo de confianza.
 
-\subsection{Calibración y corrección refractiva}
+\subsubsection{Calibración y corrección refractiva}
 
 CalibMar, el software de \textcite{Seegraber2025}, calibra cámaras y carcasas con puertos planos o en cúpula, y estima tanto los parámetros intrínsecos como los de la geometría refractiva. Aquí funciona como antecedente instrumental: los perfiles de calibración los obtuvimos con la rutina \texttt{calibrateCamera} de OpenCV \parencite{Zhang2000}, y la ruta C usa el trazado de rayos implementado en nuestra propia aplicación (Sección~\ref{sec:metodos}).
 
 Para medir el efecto geométrico aplicamos las cuatro rutas, A, \Aprime, B y C, a la misma escena. Si la imagen, el criterio de marcado, los puntos anatómicos y la referencia física no cambian, las diferencias de error se pueden atribuir con más claridad al tratamiento geométrico. Una advertencia: lo que entrega una herramienta de calibración no es, automáticamente, una «corrección refractiva», ni puede convertirse sin verificar en coeficientes de distorsión de lente. C necesita parámetros, unidades, un sistema de coordenadas y un trazado coherentes con la geometría del montaje, y por eso documentamos los parámetros que consume, sus unidades y el sistema de coordenadas que usa.
 
-\section{Estrategias de conversión métrica A, \Aprime, B y C}
+\subsection{Estrategias de conversión métrica A, \Aprime, B y C}
 \label{sec:rutas}
 
 El experimento compara cuatro rutas geométricas aplicadas a los mismos puntos de cada imagen. La Figura~\ref{fig:2-4} las muestra lado a lado.
@@ -290,7 +382,7 @@ El experimento compara cuatro rutas geométricas aplicadas a los mismos puntos d
 
 El marcado manual, la imagen y la referencia física son los mismos para las cuatro rutas. Por eso, una diferencia entre métodos no puede atribuirse a otra elección de puntos ni a una imagen rectificada. El intervalo por profundidad tampoco incluye por sí solo las incertidumbres de lente, calibración, postura, marcado o referencia; de esas contribuciones documentamos por separado la calidad de las calibraciones, la repetibilidad de las referencias de calibre y la sensibilidad de C a los parámetros del puerto (Capítulo~\ref{cap:resultados}). La repetibilidad del marcado manual no la cuantificamos en esta versión.
 
-\section{Marcado manual de puntos anatómicos}
+\subsection{Marcado manual de puntos anatómicos}
 
 En este proyecto no usamos ninguna red neuronal ni detector automático de puntos anatómicos. Marcamos a mano los cuatro puntos de cada captura sobre la imagen original, con una regla anatómica fija: $\mathbf{p}_1$ y $\mathbf{p}_2$ son los extremos de la longitud total, y $\mathbf{p}_3$ y $\mathbf{p}_4$, los de la profundidad corporal, sin incluir ninguna aleta.
 
@@ -298,9 +390,9 @@ Marcamos cada captura una sola vez y reutilizamos las mismas coordenadas en A, \
 
 Separamos la incertidumbre de ubicar los puntos a mano de la incertidumbre geométrica por profundidad. Dejamos registrados los casos en que el contorno, la postura o la visibilidad de una aleta complicaron la ubicación de un punto, y el motivo de cada exclusión. Gracias a esa separación, las diferencias entre A, \Aprime, B y C se pueden atribuir al tratamiento geométrico, porque los puntos anatómicos son siempre los mismos.
 
-\section{Recuperación de la escala física}
+\subsection{Recuperación de la escala física}
 
-\subsection{Marcadores fiduciales ArUco}
+\subsubsection{Marcadores fiduciales ArUco}
 
 Los marcadores ArUco son cuadrados con un borde negro y una matriz interna de celdas blancas y negras, algo así como un código QR muy simple. Ese patrón binario identifica a cada marcador. Al detectarlo, el algoritmo entrega su identificador y la posición de sus cuatro esquinas en la imagen. Si conocemos el tamaño real del marcador, esas esquinas conectan la imagen con el mundo físico \parencite{GarridoJurado2014}.
 
@@ -308,7 +400,7 @@ Esa información se puede aprovechar de tres maneras. En una escena frontal y ca
 
 El diccionario, el identificador, el tamaño físico, la forma de cálculo elegida y las reglas para aceptar o descartar una detección son parámetros del sistema; el Capítulo~\ref{cap:metodologia} los documenta.
 
-\subsection{Conversión entre píxeles y unidades físicas}
+\subsubsection{Conversión entre píxeles y unidades físicas}
 
 En una escena frontal y casi plana, el tamaño conocido del marcador da una escala local. Sea $L_m$ la longitud física de su lado y sean $p_i$, con $i = 1, \ldots, 4$, las longitudes en píxeles de sus cuatro lados detectados. Cada una se calcula a partir de dos esquinas consecutivas:
 \begin{equation}
@@ -334,102 +426,41 @@ Si $d_f$ es la distancia en píxeles entre dos puntos anatómicos, la longitud f
 
 Además, las esquinas del marcador y los puntos anatómicos tienen que estar en el mismo sistema de coordenadas y en la misma condición de corrección de la imagen. El Capítulo~\ref{cap:metodologia} indica en qué etapa del procesamiento obtenemos la escala y cómo revisamos el marcado.
 
-\subsection{Homografía, perspectiva y pose}
+\subsubsection{Homografía, perspectiva y pose}
 
 Una homografía endereza solo el plano que la define. No recupera la posición en el espacio de puntos que estén fuera de ese plano, ni corrige la diferencia de escala que aparece cuando el marcador y el pez están a distinta profundidad. Con refracción, además, la homografía es una aproximación: puede ajustar bien las correspondencias del plano de referencia sin representar el camino de todos los rayos aire--vidrio--agua. La Sección~\ref{sec:metodos} presenta la homografía que usa \Aprime.
 
-\section{Estimación y evaluación morfométrica}
+\subsection{Estimación y evaluación morfométrica}
 
 Para evaluar una medición conviene separar tres propiedades. La exactitud dice cuán cerca está una estimación de la referencia física. La repetibilidad dice cuánto se dispersan las repeticiones técnicas en las mismas condiciones. Y la concordancia dice si dos procedimientos dan valores intercambiables, que es mucho más que estar correlacionados \parencite{Bland1986,Lin1989}. Examinamos las tres sobre las mismas réplicas, con errores con signo y absolutos, métricas agregadas y análisis pareados.
 
 Tratamos la referencia manual como una medición controlada que también tiene incertidumbre. Por eso leemos MAE, RMSE y MAPE como diferencias respecto de esa referencia, y usamos el sesgo para detectar tendencias sistemáticas. Las repeticiones de una misma réplica se resumieron antes de cualquier comparación inferencial, porque no son unidades experimentales independientes. Las definiciones, fórmulas, agregaciones y criterios de decisión están en el Capítulo~\ref{cap:metodologia}.
 
-\subsection{Trazabilidad de la medición}
+\subsubsection{Trazabilidad de la medición}
 
 Un resultado reproducible necesita más que el número estimado. Debe identificar la imagen de origen, el modo de corrección, el perfil de calibración, el marcador usado, el protocolo de marcado, el operador, la unidad y las advertencias de calidad. Con esa información se puede reconstruir el camino completo, desde la captura hasta la comparación con la referencia, y distinguir si un error viene de la adquisición, la corrección, el marcado o la conversión métrica.
 
 Qué datos mínimos entrega cada medición, cómo se estructura el archivo JSON y qué evidencias se conservan para inspeccionarla son decisiones de diseño e implementación. El Capítulo~\ref{cap:metodologia} las define y describe la trazabilidad efectiva entre los datos de entrada, los resultados y las evidencias.
 
-\section{Antecedentes y trabajos relacionados}
-\label{sec:antecedentes}
+\section{Marco conceptual}
+\label{sec:conceptual}
 
-Hicimos una revisión narrativa estructurada de los trabajos sobre medición morfométrica con imágenes, marcado manual o localización de puntos anatómicos, recuperación de escala y formación de imágenes a través de medios refractivos. Empezamos con términos generales como «fish measurement», «morphometric analysis», «fish size estimation», «non-invasive measurement» e «image processing», y después sumamos combinaciones más específicas: «underwater fish length measurement», «fiducial marker fish measurement», «ArUco fish length», «flat-port camera», «air-glass-water refraction», «refractive camera calibration» y «refraction-aware fish measurement». Buscamos en Semantic Scholar y Google Scholar y completamos la búsqueda siguiendo referencias y revisando las fuentes originales. Como no aplicamos un protocolo exhaustivo de selección y exclusión, la llamamos revisión narrativa y no sistemática. La búsqueda cerró en septiembre de 2026. Incluimos trabajos en español o inglés que trataran al menos uno de estos temas: medición morfométrica de peces con imágenes, recuperación de escala o de puntos anatómicos, calibración de cámaras a través de interfaces aire--vidrio--agua, o modelos explícitos de refracción aplicables a un montaje acuático. Excluimos los trabajos sin relación con la medición de organismos acuáticos, la calibración óptica, el marcado de puntos o la estimación de escala, los duplicados y los documentos cuya fuente primaria no pudimos identificar. Además de los catorce trabajos que resume la Tabla~\ref{tab:antecedentes}, examinamos alrededor de veinte resultados que no incorporamos a esa matriz.
+Esta sección fija el sentido con que usamos los términos principales del trabajo. Las definiciones resumen lo desarrollado en el marco referencial y en el Capítulo~\ref{cap:metodologia}.
 
-Un primer grupo de antecedentes se ocupa de las medidas de referencia. \textcite{Petrtyl2014} compararon mediciones con calibrador digital y con análisis de imágenes en carpa prusiana: 18 caracteres morfométricos, dos investigadores y comparaciones dentro de cada observador y entre ambos. Los sesgos relativos medios fueron de $-4{,}27$~\% a $9{,}48$~\%, y varias comparaciones mostraron diferencias significativas. La lección es clara: tanto la medición manual como la digital pueden tener sesgo y variar entre repeticiones y observadores. Por eso obtuvimos el valor manual de referencia con un procedimiento controlado y no lo tratamos como una magnitud libre de incertidumbre.
-
-Sobre la automatización de la información anatómica, \textcite{Petrellis2021} combinó procesamiento de imágenes, detección de contornos, correspondencia de patrones y aprendizaje profundo para estimar la longitud, la profundidad corporal y el área en términos relativos, y para localizar aletas y otras regiones. El error en longitud fue de entre 1,9~\% y 13,2~\%. El método trabajó sobre todo con dimensiones relativas, y propuso la visión estéreo como camino para obtener dimensiones absolutas en peces inclinados u ocultos.
-
-\textcite{Saleh2023} propusieron MFLD-net, una red liviana que detecta 16 puntos anatómicos en imágenes de peces y, a partir de ellos, calcula la longitud total, la longitud estándar, la longitud cefálica y la profundidad corporal. El modelo logró una precisión promedio de detección $\mathrm{AP} = 0{,}967$ y errores absolutos medios de 9,25~mm en longitud total, 8,27~mm en longitud estándar, 6,57~mm en longitud cefálica y 7,62~mm en profundidad corporal. Nos sirvió sobre todo para definir los extremos anatómicos, aunque su montaje, con cámara industrial y cinta transportadora, no se parece a una adquisición a través de una pared de vidrio.
-
-Nosotros ubicamos los puntos a mano. Así evitamos atribuirle a un algoritmo una precisión que no evaluamos, y podemos mantener exactamente los mismos cuatro puntos al comparar las rutas geométricas. La incertidumbre de la referencia física se documenta con las tres lecturas de calibre de cada réplica (Tabla~\ref{tab:replicas}); la repetibilidad del marcado manual no la cuantificamos en esta versión.
-
-Un segundo grupo de trabajos se ocupa de recuperar la escala. Con tres redes regionales, \textcite{Monkman2019} detectaron al mismo tiempo el pez y un marcador ArUco de tamaño conocido. Calcularon la longitud total a partir del lado mayor de la región detectada y del promedio de las escalas de los cuatro lados del marcador, y reportaron una intersección sobre la unión media cercana al 93~\% y un sesgo porcentual medio de 2,2~\%. También identificaron las principales fuentes de error: la diferencia de profundidad entre marcador y pez, la distorsión de la lente y las orientaciones mayores a unos $20^{\circ}$. Este trabajo respalda el uso de ArUco, y a la vez advierte que el marcador da una escala válida solo si se controlan la coplanaridad y la orientación.
-
-En la misma línea, \textcite{Tseng2020} usaron una red convolucional para detectar la cabeza, la horquilla caudal y una placa de color de tamaño conocido. Después ubicaron los puntos del hocico y de la horquilla con procesamiento de imágenes y calcularon la longitud con la relación píxel--distancia de la placa. El clasificador acertó el 98,78~\% de las veces, pero la longitud tuvo un error absoluto medio de 5,36~cm y un error relativo absoluto medio de 4,26~\%. El contraste entre ambas cifras es instructivo: detectar muy bien no garantiza medir igual de bien.
-
-En un tanque de producción, \textcite{Correia2025} conectaron una cámara a una Raspberry Pi y usaron un modelo YOLOv8m-seg para segmentar camarones y una placa de alimentación de tamaño conocido. La placa dio la escala, y la segmentación permitió elegir individuos extendidos y aproximadamente coplanares. Obtuvieron un MAPE de 1,56~\% en longitud y de 0,15~\% en anchura. El trabajo integra captura acuática, segmentación y escala visual, pero no corrige la refracción de forma explícita y estudia otro organismo con otra geometría.
-
-Los sistemas estéreo ofrecen otro camino hacia las dimensiones físicas. \textcite{Marrable2023} combinaron la detección automática de cabeza y cola con un sistema estéreo BRUVS calibrado con estructuras tridimensionales. Al comparar 3954 mediciones automáticas con mediciones manuales obtuvieron un coeficiente de correlación de Pearson de $r = 0{,}99$. Es una asociación lineal muy fuerte, pero la correlación no mide concordancia ni descarta un sesgo entre métodos. \textcite{AlJubouri2017}, por su parte, midieron peces cebra a través de un tanque de vidrio con dos cámaras web ortogonales: despreciaron el efecto del vidrio y compensaron la distancia con la segunda vista.
-
-\textcite{ZhangX2025} usaron una cámara superior y otra lateral, una red basada en módulos Hourglass y transformaciones tridimensionales para medir siete variables fenotípicas de bagre de canal bajo el agua. El error relativo medio fue de alrededor de 3,7~\% en longitud total y de 9,6~\% considerando las siete variables juntas. Demuestran que es posible recuperar varias medidas en un montaje acuático, aunque no evalúan por separado el efecto de corregir la refracción.
-
-Los antecedentes ópticos cumplen otro papel. \textcite{Qiao2019} propusieron un método de estructura a partir del movimiento con un modelo refractivo, capaz de estimar la calibración, la pose de la cámara y la reconstrucción tridimensional a través de superficies que desvían la luz. Con simulaciones e imágenes reales mostraron que ignorar la refracción deforma la reconstrucción. Su objetivo, de todos modos, es reconstruir escenas, no medir peces.
-
-En la calibración fotogramétrica de interfaces planas, el modelo Pinax de \textcite{Luczynski2017} representa de forma explícita la refracción en una carcasa de puerto plano y corrige el camino de los rayos antes de reconstruir o medir. Es el pariente conceptual más cercano de la ruta C, aunque se pensó como corrección óptica general y no para comparar, en una misma captura monocular, una escala sin corregir, una calibración implícita y un modelo refractivo explícito. En la misma línea, \textcite{Rofallski2022} analizaron la distorsión que depende de la distancia cuando se aplican modelos de cámara convencionales a interfaces multimedia planas, y \textcite{Shortis2015} revisó las técnicas de calibración para medir bajo el agua. Ambos trabajos indican que la compensación implícita depende de la profundidad, y que la calidad de una calibración no se resume en un único número válido para toda la zona de trabajo.
-
-Tres trabajos recientes ayudan a ubicar con precisión el hueco que queremos llenar. MorphoCal \parencite{Vijayalakshmi2026} usa una sola cámara, pero sumergida, y proyecta los puntos sobre un plano de calibración fijo obtenido con un damero bajo el agua; reporta un MAE de 0,75~cm y un RMSE de 0,86~cm sobre 4810 muestras. \textcite{Yin2026} corrigieron la refracción en la superficie agua--aire con la ley de Snell, suponiendo una profundidad nominal (aproximadamente 0,8~m), y analizaron cuánto afecta ese supuesto, sin entregar un intervalo. \textcite{Zhou2023} resolvieron la profundidad con visión estéreo y corrigieron la refracción en la superficie. Ninguno de los tres trata una cámara ubicada del lado de afuera de un vidrio plano, ni compara sobre los mismos puntos una escala directa, una calibración implícita y un modelo explícito.
-
-\textcite{Seegraber2025} desarrollaron CalibMar, una herramienta abierta que integra la calibración de la cámara, del par estéreo y de la carcasa para puertos planos o en cúpula. En un puerto plano, el modelo estima la orientación y la posición de la interfaz y representa el camino no central de los rayos. Es un antecedente instrumental, pero no incluye marcado anatómico, referencia ArUco ni evaluación de medidas de peces.
-
-El antecedente ópticamente más cercano es el de \textcite{Seibold2026}, que midieron la longitud de pequeños peces de agua dulce en acuarios con una cámara estéreo. Su método combina YOLOv11-Pose, correspondencias restringidas por geometría epipolar refractiva y una triangulación tridimensional que tiene en cuenta las interfaces aire--vidrio--agua. Sus mejores resultados fueron un RMSE de 6,11~mm y 9,22~mm en dos escenas de prueba. El trabajo confirma que la refracción debe entrar en la cadena de medición, pero usa dos cámaras, no emplea un marcador ArUco y no compara, sobre las mismas observaciones, una cadena con y sin corrección.
-
-La Tabla~\ref{tab:antecedentes} resume las diferencias. Sus cifras no sirven para armar un ranking entre métodos: cambian la especie, el tamaño, la geometría, las medidas, los datos y hasta la definición de las métricas.
-
-\begin{landscape}
-\begin{footnotesize}
-\begin{longtable}{@{}p{2.2cm}p{2.8cm}p{2.6cm}p{3.0cm}p{3.0cm}p{3.2cm}p{3.6cm}@{}}
-\caption{Matriz comparativa de antecedentes relacionados con la medición morfométrica y la corrección refractiva.}
-\label{tab:antecedentes}\\
-\toprule
-Fuente & Objeto y medio & Geometría & Puntos o procedimiento & Escala y refracción & Medidas y resultados & Limitación frente a este trabajo \\
-\midrule
-\endfirsthead
-\multicolumn{7}{l}{\small Tabla~\ref{tab:antecedentes} (continuación)}\\
-\toprule
-Fuente & Objeto y medio & Geometría & Puntos o procedimiento & Escala y refracción & Medidas y resultados & Limitación frente a este trabajo \\
-\midrule
-\endhead
-\bottomrule
-\endfoot
-\endlastfoot
-\textcite{Monkman2019} & Lubina europea; fotografías fuera del agua & Monocular; tres cámaras no especializadas & R-CNN para pez y marcador; longitud por región envolvente & ArUco de lado conocido; solo distorsión de lente & LT; mIoU $\approx$ 93~\%; sesgo porcentual medio 2,2~\% & Sin agua ni vidrio; sensible a paralaje, profundidad e inclinación \\
-\textcite{Tseng2020} & Peces cosechados; fuera del agua & Monocular & CNN para cabeza, horquilla y placa de color & Placa de dimensión conocida; sin refracción & LT; exactitud de clasificación 98,78~\%; MAE 5,36~cm & Fuera del agua; muestra que detectar bien no implica medir bien \\
-\textcite{Saleh2023} & Peces en cinta transportadora & Cámara industrial monocular en montaje fijo & MFLD-net; 16 puntos anatómicos & Calibración del montaje; sin refracción & LT, LE, cefálica y PC; AP 0,967; MAE 6,57--9,25~mm & Fuera del agua; geometría distinta de un tanque \\
-\textcite{Correia2025} & Camarones en tanque de producción & Monocular (Raspberry Pi) & YOLOv8m-seg para individuos y placa & Placa como referencia; sin corrección refractiva & Longitud y anchura; MAPE 1,56~\% y 0,15~\% & Objeto y geometría distintos; sin modelo refractivo \\
-\textcite{AlJubouri2017} & Peces cebra en tanque de vidrio & Dos cámaras web ortogonales & Procesamiento clásico & Compensación de distancia por la segunda vista; vidrio despreciado & Longitud; error $\approx$ 1~\% & Estéreo; no modela el vidrio ni compara rutas \\
-\textcite{Marrable2023} & Peces en estéreo-BRUVS & Estéreo calibrado & Detección profunda de cabeza y cola & Triangulación estéreo & Longitud; $r = 0{,}99$ frente a manual & Estéreo; correlación no es concordancia \\
-\textcite{ZhangX2025} & Bagre de canal en agua & Cámaras superior y lateral & Red Hourglass; puntos clave & Transformaciones 3D & Siete variables; ERM 3,7~\% (LT) & Dos vistas; no separa el efecto refractivo \\
-\textcite{Rofallski2022} & Interfaz plana; análisis fotogramétrico & Modelo convencional a distintas distancias & Patrones de calibración & Distorsión dependiente de la distancia & Error de reproyección & No mide peces; antecedente directo de la validez local de B \\
-\textcite{Luczynski2017} & Cámaras en carcasa de puerto plano & Modelo Pinax de rayos refractados & Patrones de calibración & Corrección refractiva explícita & Reconstrucción y corrección de imagen & Fundamento óptico de C; sin medidas de peces \\
-\textcite{Seegraber2025} & Patrones sintéticos y reales & Mono o estéreo con puerto plano o cúpula & Detección de patrones; optimización & Calibración explícita de cámara y carcasa & Parámetros de cámara y puerto & Herramienta de calibración; sin anatomía ni medidas \\
-\textcite{Vijayalakshmi2026} & Peces en estanques; cámara sumergida & Monocular & Detección y puntos clave (MorphoCal) & Pinhole calibrado bajo agua; proyección rayo--plano & Longitud; MAE 0,75~cm, RMSE 0,86~cm (4810 muestras) & Cámara sumergida; asume un plano de referencia fijo; no evalúa fuera de él \\
-\textcite{Yin2026} & \emph{Micropterus salmoides} en estanque & Monocular; seguimiento & Puntos clave y fusión de rasgos & Snell en la superficie agua--aire; profundidad nominal $\approx$ 0,8~m & Longitud; sensibilidad al error de profundidad & Interfaz agua--aire sin vidrio; no entrega un intervalo \\
-\textcite{Zhou2023} & Peces en agua & Estéreo & Puntos clave & Corrección de refracción en la superficie; compara calibrar en aire frente a bajo agua & Longitud; error $\approx$ 1~\% & Estéreo; la profundidad se resuelve con la segunda cámara \\
-\textcite{Seibold2026} & Peces de arroz en acuario & Estéreo externo a través de aire--vidrio--agua & YOLOv11-Pose; cinco puntos; asociación estéreo & Geometría epipolar y triangulación refractivas & Longitud boca--aleta caudal; RMSE 6,11 y 9,22~mm & Estéreo; sin ArUco; no compara la misma escena con y sin corrección \\
-\end{longtable}
-\end{footnotesize}
-\end{landscape}
-
-La matriz muestra que cada pieza de la cadena de medición ya fue demostrada, aunque en combinaciones distintas. El marcado de puntos anatómicos y los marcadores o patrones de tamaño conocido permiten recuperar la escala, y los modelos refractivos describen el camino de los rayos a través del puerto. Pero ubicar bien los puntos, o lograr una correlación alta, no garantiza acercarse a la medida física, porque el resultado final depende también de la escala, la profundidad, la orientación y el modelo óptico.
-
-No podemos afirmar que no existan sistemas que combinen medición de peces y refracción explícita: el trabajo estéreo de \textcite{Seibold2026} lo hace. Lo que distingue a este trabajo es evaluar una configuración monocular y controlada a través de un puerto plano, comparando A, \Aprime, B y C sobre las mismas escenas, con los mismos puntos anatómicos y la misma referencia de escala, y usar C para construir $L(z)$ cuando la profundidad es desconocida. Así estimamos el efecto de la geometría con MAE, MAPE y sesgo, sin dar por sentado que alguna ruta vaya a mejorar las cosas.
-
-\section{Síntesis del estado del arte y brecha de investigación}
-
-El estado del arte ya resolvió, por separado, varias piezas de la cadena: el marcado y la detección de puntos anatómicos, la recuperación de escala con marcadores o patrones, la calibración convencional de cámaras y el modelado explícito de la refracción en montajes acuáticos. También hay sistemas estéreo que combinan triangulación y refracción para medir peces.
-
-Lo que sigue abierto, para la configuración que estudiamos, es cuánto del error de una medición monocular a través de un puerto plano se debe a usar una escala constante, una calibración implícita o una corrección refractiva explícita. Falta, en concreto, una comparación pareada que mantenga fijos los puntos marcados, la referencia ArUco y las imágenes; que mida cómo cambia el error al alejarse del plano de calibración; y que diga qué se puede afirmar sobre la longitud cuando la profundidad no se conoce.
-
-Esta tesis puso a prueba esa diferencia con experimentos: las rutas A, \Aprime, B y C, la comparación contra una referencia manual y el análisis de cómo cambia el error con la profundidad. El marcado manual es la entrada común; la contribución central es la evaluación geométrica y metrológica de las alternativas de conversión y la medida del intervalo por profundidad desconocida.
-
-No presentamos como novedad un sistema automático de detección anatómica, ni un marcador nuevo, ni un modelo general de calibración refractiva. Tampoco pretendemos que una ruta sea mejor en cualquier circunstancia: lo que afirmamos vale para la configuración, las distancias y las condiciones de este experimento.
+\begin{description}
+  \item[Morfometría.] Medición de las dimensiones y de la forma externa del cuerpo de un organismo. En este trabajo se reduce a dos medidas: la longitud total y la profundidad corporal.
+  \item[Punto anatómico.] Lugar del cuerpo que puede ubicarse de forma repetible en la réplica y en la imagen. Usamos cuatro, de $\mathbf{p}_1$ a $\mathbf{p}_4$ (Sección~\ref{sec:puntos-def}).
+  \item[Longitud total (LT).] Distancia entre el extremo anterior del hocico y el punto más posterior de la aleta caudal, medida sobre el eje longitudinal del pez.
+  \item[Profundidad corporal (PC).] Distancia entre el perfil dorsal y el ventral en una misma sección transversal del cuerpo, sin incluir las aletas.
+  \item[Réplica rígida.] Modelo de pez impreso en PLA cuyas dimensiones no cambian. Sus medidas con calibre son la referencia física de cada estimación.
+  \item[Conversión métrica.] Transformación que lleva las coordenadas de un punto de la imagen, en píxeles, a milímetros. A, \Aprime, B y C son cuatro conversiones distintas (Sección~\ref{sec:rutas}).
+  \item[Marcador ArUco.] Cuadrado de lado conocido con un código binario que un detector localiza automáticamente en la imagen. Sus esquinas sirven como referencia de escala.
+  \item[Homografía.] Transformación proyectiva entre dos planos, representada por una matriz de $3 \times 3$. Corrige la perspectiva de los puntos que pertenecen al plano que la define.
+  \item[Calibración de cámara.] Estimación de los parámetros intrínsecos de la cámara y de los coeficientes de distorsión de la lente a partir de imágenes de un patrón conocido, como un damero.
+  \item[Modelo pinhole efectivo.] Modelo de cámara pinhole calibrado con el patrón bajo el agua. Incorpora de forma empírica el efecto de la refracción, sin representarla explícitamente, y es la base del método B.
+  \item[Refracción e índice de refracción.] La refracción es el cambio de dirección de la luz al pasar de un medio a otro. El índice de refracción de cada medio fija cuánto se desvía, según la ley de Snell (ecuación~\ref{eq:snell}).
+  \item[Puerto plano.] Pared transparente y plana que separa la cámara del agua. Se modela como dos interfaces paralelas, aire--vidrio y vidrio--agua (Sección~\ref{sec:puerto-plano}).
+  \item[Profundidad $z$.] Distancia entre el plano de simetría de la réplica y la cara interna del vidrio. Es conocida cuando un soporte la fija, y desconocida cuando una sola imagen no permite saberla (Sección~\ref{sec:z-desconocida}).
+  \item[Intervalo geométrico $\IL$.] Rango de longitudes compatibles con todas las profundidades admisibles (ecuación~\ref{eq:IL}). Expresa la incertidumbre por no conocer $z$ y no es un intervalo de confianza estadístico.
+  \item[Exactitud y repetibilidad.] La exactitud indica cuán cerca está una medida del valor real; la repetibilidad, cuánto se dispersan las lecturas tomadas en las mismas condiciones.
+\end{description}

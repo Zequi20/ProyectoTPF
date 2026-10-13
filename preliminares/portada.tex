@@ -15,7 +15,7 @@
 
 \vspace{0.9cm}
 
-\includegraphics{logo.png}
+\includegraphics[height=7cm,keepaspectratio]{logo.png}
 
 \vspace{1.1cm}
 
@@ -40,8 +40,15 @@
 \endgroup
 \clearpage
 
+% ---------- Guarda (hoja en blanco) ----------
+\setcounter{page}{2}
+\thispagestyle{empty}
+\null
+\clearpage
+
 % ---------- Portadilla ----------
 \thispagestyle{plain}
+\phantomsection\addcontentsline{toc}{chapter}{Portada}
 \vspace*{2cm}
 \begin{center}
 {\large \Autor}

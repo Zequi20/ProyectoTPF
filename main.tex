@@ -6,12 +6,17 @@
 
 % ---------- Idioma y codificación ----------
 \usepackage[utf8]{inputenc}
+% Vocales nasales del guaraní que inputenc no trae definidas (Ñemombyky)
+\DeclareUnicodeCharacter{1EBD}{\~e}
+\DeclareUnicodeCharacter{1EF9}{\~y}
 \usepackage[T1]{fontenc}
 \usepackage[english,spanish,es-tabla,es-lcroman,es-nodecimaldot,es-noshorthands]{babel}
 \usepackage{csquotes}
 
 % ---------- Página ----------
-\usepackage[top=2.5cm,bottom=2.5cm,left=3cm,right=2.5cm]{geometry}
+% El margen superior deja lugar al membrete: empieza a 1 cm del borde y el texto, a 4,5 cm
+\usepackage[top=4.5cm,bottom=2.5cm,left=3cm,right=2.5cm,
+            headheight=2.9cm,headsep=0.6cm,footskip=1.2cm]{geometry}
 \usepackage{setspace}
 \onehalfspacing
 \setlength{\parindent}{1.25cm}
@@ -27,6 +32,10 @@
 \sisetup{output-decimal-marker={,},group-separator={\,},per-mode=symbol}
 \newcommand{\Aprime}{A$'$}
 \newcommand{\IL}{I_L}
+
+% ---------- Numeración e índice hasta subsubsecciones (marco referencial) ----------
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
 
 % ---------- Figuras y tablas ----------
 \usepackage{graphicx}
@@ -72,6 +81,26 @@
 \makenoidxglossaries
 \input{preliminares/acronimos}
 
+% ---------- Membrete institucional en todas las páginas, salvo la tapa ----------
+% Igual que el formato de referencia: logo y datos del campus centrados arriba,
+% sin línea, y número de página abajo a la derecha.
+\usepackage{fancyhdr}
+\newcommand{\membrete}{\includegraphics[width=7.4cm]{header.png}}
+\fancypagestyle{membrete}{%
+  \fancyhf{}%
+  \fancyhead[C]{\membrete}%
+  \fancyfoot[R]{\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}}
+% Las páginas de inicio de capítulo, índices y preliminares usan «plain»
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyhead[C]{\membrete}%
+  \fancyfoot[R]{\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}}
+\pagestyle{membrete}
+
 % ---------- Hipervínculos (sin recuadros) ----------
 \usepackage[hidelinks]{hyperref}
 \hypersetup{pdftitle={Estimación morfométrica monocular de peces a través de una interfaz aire–vidrio–agua},
@@ -88,20 +117,27 @@
 % ================= PRELIMINARES =================
 \pagenumbering{roman}
 \input{preliminares/portada}
-\input{preliminares/ficha}
 \input{preliminares/advertencia}
 \input{preliminares/aprobacion}
 \input{preliminares/dedicatoria}
 \input{preliminares/agradecimientos}
 
+% Índices en el orden del reglamento (Res. 31/2020): contenido, cuadros, figuras
+\clearpage
+\phantomsection\addcontentsline{toc}{chapter}{\contentsname}
 \tableofcontents
-\listoffigures
+\clearpage
+\phantomsection\addcontentsline{toc}{chapter}{\listtablename}
 \listoftables
+\clearpage
+\phantomsection\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
 \clearpage
 \glsaddall
 \printnoidxglossary[type=\acronymtype,title={Lista de acrónimos}]
 \clearpage
 \input{preliminares/resumen}
+\input{preliminares/nemombyky}
 \input{preliminares/abstract}
 
 % ================= CUERPO =================

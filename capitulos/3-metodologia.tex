@@ -1,12 +1,17 @@
-\chapter{Metodología}
+\chapter{Marco metodológico}
 \label{cap:metodologia}
 
 Este capítulo cuenta cómo medimos réplicas rígidas de peces a partir de fotografías tomadas a través de una pecera. La investigación es aplicada, cuantitativa y usa un diseño experimental pareado. Pareado significa que cada imagen, con sus mismos puntos anatómicos, pasó por los cuatro métodos de conversión métrica: cualquier diferencia entre ellos se debe al método y no a la foto.
 
-\section{Tipo de investigación, enfoque, población y muestra}
+\section{Tipo y enfoque de la investigación}
 \label{sec:diseno}
 
-Se trata de una investigación aplicada, cuantitativa y experimental, con diseño pareado: cada unidad experimental recibe los cuatro tratamientos (A, \Aprime, B y C) sobre la misma observación. La población objetivo son las imágenes de peces tomadas a través de un vidrio plano con una cámara externa. La muestra no es probabilística: son las 72 imágenes de las seis réplicas rígidas disponibles, fotografiadas a cuatro profundidades con tres capturas por condición.
+Por su finalidad, la investigación es aplicada: evalúa un procedimiento de medición concreto para resolver un problema práctico. Es experimental, porque manipulamos de forma controlada el método de conversión y la distancia de la réplica al vidrio, con un diseño pareado: cada unidad experimental recibe los cuatro tratamientos (A, \Aprime, B y C) sobre la misma observación. El enfoque es cuantitativo: las variables de resultado son errores en milímetros y en porcentaje, y las comparaciones se hacen con estadísticos descriptivos y pruebas exactas (Sección~\ref{sec:evaluacion}).
+
+\section{Población y muestra}
+\label{sec:muestra}
+
+La población objetivo son las imágenes de peces tomadas a través de un vidrio plano con una cámara externa. La muestra no es probabilística: son las 72 imágenes de las seis réplicas rígidas disponibles, fotografiadas a cuatro profundidades con tres capturas por condición.
 
 La unidad experimental es una réplica rígida de pez, y la unidad de observación, una medición obtenida de una fotografía. Usamos seis réplicas, R1--R6, impresas en PLA y de tamaños distintos (Figura~\ref{fig:3-1}). La especie que imitan no es una variable del estudio: buscamos variedad de formas y longitudes. Medimos con calibre las dimensiones de referencia de cada réplica y las registramos en el archivo maestro del experimento (Tabla~\ref{tab:replicas}).
 
@@ -43,7 +48,64 @@ No variamos de forma planificada la posición de la réplica dentro del encuadre
 
 Incluimos las capturas en las que la réplica se veía completa y bien enfocada. Las que no cumplían estas condiciones las descartamos y anotamos el motivo en la tabla maestra. La muestra refleja las réplicas disponibles y el tiempo destinado al experimento; por eso leemos los resultados como una evaluación experimental del montaje, no como una generalización a todos los peces.
 
-\section{Montaje e instrumentos de recolección de datos}
+\section{Variables: definición conceptual y operacional}
+\label{sec:variables}
+
+Las variables del estudio son de tres tipos:
+
+\begin{description}
+  \item[Independientes.] Método (A, \Aprime, B, C); distancia de la réplica al vidrio y separación respecto de la zona de calibración de B; rango de $z$ usado para el intervalo.
+  \item[Dependientes.] Error con signo, error absoluto y error porcentual de longitud total y de profundidad corporal sin aletas; ancho relativo y cobertura del intervalo.
+  \item[Controladas.] Cámara y sus ajustes, pecera, agua, iluminación, marcadores, soporte, protocolo de marcado manual, operador y unidades experimentales.
+\end{description}
+
+La Tabla~\ref{tab:operacionalizacion} define cada variable en términos conceptuales y operacionales, y separa lo que variamos, lo que medimos y lo que mantuvimos fijo.
+
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{Operacionalización de las variables.}
+\label{tab:operacionalizacion}
+\begin{tabularx}{\textwidth}{@{}p{2.3cm} p{1.3cm} X X p{1.2cm}@{}}
+\toprule
+Variable & Tipo & Definición conceptual & Definición operacional & Unidad \\
+\midrule
+\multicolumn{5}{@{}l}{\emph{Factores variados}}\\
+Método & Nominal & Ruta de conversión píxel--milímetro & A, \Aprime, B o C aplicados a los mismos puntos (Sección~\ref{sec:metodos}) & --- \\
+Distancia al vidrio & Nominal & Profundidad $z$ del plano de simetría de la réplica & Posición del carrito: 5, 11, 17 o 23~cm; separación de la zona de B: 0, 6, 12 o 18~cm & cm \\
+Rango de $z$ & Nominal & Conocimiento disponible sobre la profundidad & Toda la pecera (0--30~cm); $\pm 3$~cm; $\pm 1$~cm & cm \\
+\multicolumn{5}{@{}l}{\emph{Resultados medidos}}\\
+LT y PC estimadas & Razón & Longitud total y profundidad corporal de la réplica & Salida de Fishmeter por método, ecuación~\eqref{eq:medidas} & mm \\
+LT y PC de referencia & Razón & Dimensión física de la réplica & Media de tres lecturas con calibre analógico, registradas al milímetro & mm \\
+Error con signo, EA, EPA & Razón & Diferencia entre estimación y referencia & Ecuaciones~\eqref{eq:errores} & mm, mm, \% \\
+Ancho relativo de $\IL$ & Razón & Extensión del intervalo por profundidad desconocida & $(\max_z L - \min_z L)/\mathrm{LT}_{\mathrm{ref}}$ & \% \\
+Cobertura de $\IL$ & Razón & Fracción de capturas cuya referencia cae en $\IL$ & Conteo sobre las capturas disponibles & --- \\
+\multicolumn{5}{@{}l}{\emph{Condiciones fijas}}\\
+Cámara, pecera, agua, luz, marcadores, soporte, operador & --- & Condiciones del montaje & Registradas en las Secciones~\ref{sec:montaje} y~\ref{sec:procedimiento} & --- \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Hipótesis}
+\label{sec:hipotesis}
+
+Planteamos tres hipótesis de investigación. Fijamos sus criterios de decisión en términos de las cantidades que efectivamente calculamos en el Capítulo~\ref{cap:resultados}, con la réplica como unidad experimental y los estadísticos de la Sección~\ref{sec:evaluacion}.
+
+\begin{description}
+  \item[H1: comparación geométrica con profundidad conocida.] Con la profundidad conocida, el error absoluto de longitud total de C es menor que el de A, \Aprime{} y B. Criterio: prueba de signos exacta sobre las diferencias pareadas por réplica ($n = 6$, unidad experimental), con $p < 0{,}05$; el conteo por combinación réplica--profundidad se reporta como descriptivo. El protocolo preveía además evaluar la equivalencia entre B y C dentro de la zona de calibración de B con un margen $\delta$; no la evaluamos formalmente porque el margen no se fijó antes de observar los datos, y en su lugar informamos la diferencia observada.
+  \item[H2: dependencia con la distancia.] La diferencia $\mathrm{error}(B) - \mathrm{error}(C)$ aumenta con la separación respecto de la zona de calibración de B. Criterio: pendiente positiva de la diferencia de MAE de longitud total frente a la separación (0, 6, 12 y 18~cm).
+  \item[H3: intervalo por profundidad desconocida.] El intervalo calculado con C,
+  \begin{equation*}
+    \IL = \Big[\min_{z} L(z),\ \max_{z} L(z)\Big],
+  \end{equation*}
+  contiene la longitud física de la réplica cuando $z$ recorre el rango físicamente admisible, y su ancho relativo se puede predecir a partir de la geometría del montaje ($d$, $t_g$, índices y rango de $z$). Criterio: cobertura empírica objetivo $\geq 0{,}95$ sobre las capturas disponibles, y diferencia entre el ancho predicho y el observado menor que la mitad del ancho. El ancho relativo se reporta como predicción geométrica, no como intervalo de confianza.
+\end{description}
+
+\section{Instrumentos y técnicas de recolección de datos}
+\label{sec:instrumentos}
+
+Recolectamos los datos con tres grupos de instrumentos y técnicas: el montaje físico, con la cámara, la pecera, los marcadores y el damero (Sección~\ref{sec:montaje}); la aplicación Fishmeter, con la que procesamos las imágenes (Sección~\ref{sec:software}); y la medición de las réplicas con calibre junto con el marcado manual de los puntos anatómicos (Sección~\ref{sec:medidas}).
+
+\subsection{Montaje e instrumentos}
 \label{sec:montaje}
 
 El ensayo se hizo en una pecera de aproximadamente $30 \times 30 \times 30$~cm, de vidrio \emph{float} de 4,0~mm de espesor, medido con calibre, llena de agua clara de la canilla. Para el modelo óptico adoptamos $\mu_a = 1{,}000$, $\mu_g = 1{,}500$ y $\mu_w = 1{,}333$, valores tabulados y no medidos en nuestra agua. La Figura~\ref{fig:3-esquema} muestra el esquema acotado del montaje, y el Anexo~\ref{anx:montaje} reúne fotografías de la pecera y de los instrumentos.
@@ -174,7 +236,7 @@ Supuesto & Planos de las réplicas paralelos al tablero \\
 \end{tabular}
 \end{table}
 
-\section{Software utilizado}
+\subsection{Software utilizado}
 \label{sec:software}
 
 Procesamos las imágenes con Fishmeter, una aplicación propia escrita en Python 3.12. El código fuente y la documentación de uso están en el repositorio público \url{\RepoURL}, etiqueta \texttt{\RepoTag}. La aplicación usa OpenCV 5.0.0 para detectar marcadores, calibrar y aplicar transformaciones geométricas; NumPy 2.5.3 para el cálculo vectorial; PyYAML 6.0.3 para los archivos de configuración; y Tkinter, de la biblioteca estándar, para la interfaz gráfica.
@@ -190,7 +252,7 @@ Desde la interfaz se carga la fotografía, se detectan los marcadores, se cargan
 \label{fig:3-4}
 \end{figure}
 
-\section{Medidas físicas, puntos anatómicos y variables}
+\subsection{Medidas físicas y puntos anatómicos}
 \label{sec:medidas}
 
 Para cada réplica conservamos las medidas físicas de referencia de la longitud total y de la profundidad corporal (Tabla~\ref{tab:replicas}). La referencia y la imagen siguieron la misma convención anatómica, la de la Sección~\ref{sec:puntos-def}. La longitud total va desde el extremo anterior del hocico ($\mathbf{p}_1$) hasta el punto más posterior de la aleta caudal sobre el eje longitudinal ($\mathbf{p}_2$); si la cola tiene dos lóbulos, $\mathbf{p}_2$ es el extremo del lóbulo más largo. La profundidad corporal va del perfil dorsal ($\mathbf{p}_3$) al perfil ventral ($\mathbf{p}_4$) en una misma sección transversal, sin incluir las aletas.
@@ -219,31 +281,6 @@ Si $\mathbf{u}$ es el vector unitario del eje longitudinal y $\mathbf{n} = (-u_y
 \end{equation}
 donde $\mathbf{q}_i$ son los puntos anatómicos ya convertidos a milímetros por cada ruta. En la práctica, LT es la proyección del segmento $\mathbf{p}_1$--$\mathbf{p}_2$ sobre el eje longitudinal; si los puntos están sobre el eje, coincide con la distancia en línea recta, que es lo que mide el calibre. Una aclaración sobre los datos: en los registros del experimento, los rótulos $\mathbf{p}_1$ y $\mathbf{p}_2$ quedaron invertidos respecto de esta definición, de modo que $\mathbf{p}_1$ se marcó en el extremo caudal y $\mathbf{p}_2$ en el hocico. Como LT se calcula con el valor absoluto de la proyección (ecuación~\ref{eq:medidas}), el orden de los puntos no cambia el resultado. Solo aceptamos la profundidad corporal cuando la sección marcada era lo bastante perpendicular al eje; la aplicación guardó ese desvío como diagnóstico y permitió descartar una profundidad no válida.
 
-La Tabla~\ref{tab:operacionalizacion} define cada variable en términos conceptuales y operacionales, y separa lo que variamos, lo que medimos y lo que mantuvimos fijo.
-
-\begin{table}[htbp]
-\centering\footnotesize
-\caption{Operacionalización de las variables.}
-\label{tab:operacionalizacion}
-\begin{tabularx}{\textwidth}{@{}p{2.3cm} p{1.3cm} X X p{1.2cm}@{}}
-\toprule
-Variable & Tipo & Definición conceptual & Definición operacional & Unidad \\
-\midrule
-\multicolumn{5}{@{}l}{\emph{Factores variados}}\\
-Método & Nominal & Ruta de conversión píxel--milímetro & A, \Aprime, B o C aplicados a los mismos puntos (Sección~\ref{sec:metodos}) & --- \\
-Distancia al vidrio & Nominal & Profundidad $z$ del plano de simetría de la réplica & Posición del carrito: 5, 11, 17 o 23~cm; separación de la zona de B: 0, 6, 12 o 18~cm & cm \\
-Rango de $z$ & Nominal & Conocimiento disponible sobre la profundidad & Toda la pecera (0--30~cm); $\pm 3$~cm; $\pm 1$~cm & cm \\
-\multicolumn{5}{@{}l}{\emph{Resultados medidos}}\\
-LT y PC estimadas & Razón & Longitud total y profundidad corporal de la réplica & Salida de Fishmeter por método, ecuación~\eqref{eq:medidas} & mm \\
-LT y PC de referencia & Razón & Dimensión física de la réplica & Media de tres lecturas con calibre analógico, registradas al milímetro & mm \\
-Error con signo, EA, EPA & Razón & Diferencia entre estimación y referencia & Ecuaciones~\eqref{eq:errores} & mm, mm, \% \\
-Ancho relativo de $\IL$ & Razón & Extensión del intervalo por profundidad desconocida & $(\max_z L - \min_z L)/\mathrm{LT}_{\mathrm{ref}}$ & \% \\
-Cobertura de $\IL$ & Razón & Fracción de capturas cuya referencia cae en $\IL$ & Conteo sobre las capturas disponibles & --- \\
-\multicolumn{5}{@{}l}{\emph{Condiciones fijas}}\\
-Cámara, pecera, agua, luz, marcadores, soporte, operador & --- & Condiciones del montaje & Registradas en las Secciones~\ref{sec:montaje} y~\ref{sec:procedimiento} & --- \\
-\bottomrule
-\end{tabularx}
-\end{table}
 
 \section{Métodos de conversión métrica}
 \label{sec:metodos}
