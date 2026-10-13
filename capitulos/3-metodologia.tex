@@ -264,6 +264,58 @@ Los cuatro métodos reciben la misma imagen, los mismos cuatro puntos y el mismo
 
 Teníamos prevista una prueba complementaria con una barra patrón sumergida, pensada para separar un posible error de implementación del error de marcado. No la hicimos como validación separada; solo hubo una comprobación preliminar con la réplica R1 (de unos 160~mm de largo), durante las pruebas de comienzos de septiembre de 2026 (Sección~\ref{sec:delimitacion}). La validación métrica de las cuatro rutas es, entonces, la comparación directa con las longitudes y profundidades medidas con calibre en las seis réplicas y las cuatro posiciones (Capítulo~\ref{cap:resultados}). A lo largo del documento distinguimos la «comprobación instrumental con patrón» (barra sumergida, no realizada) de la «validación externa» (otras cámaras, montajes o condiciones, fuera del alcance).
 
+\subsection{Implementación en Fishmeter}
+\label{sec:implementacion}
+
+En Fishmeter, los cuatro métodos comparten el principio y el final del cálculo. Todos parten de los mismos cuatro puntos y del mismo eje longitudinal marcados en la imagen; en todas las capturas, ese eje se indicó como la dirección horizontal de la imagen, $(1, 0)$. Todos terminan, también, en la misma operación: proyectar los segmentos $\mathbf{p}_1$--$\mathbf{p}_2$ y $\mathbf{p}_3$--$\mathbf{p}_4$ sobre los ejes anatómicos. Lo que cambia es el camino que lleva los píxeles a un espacio métrico. A y \Aprime{} llegan a un plano bidimensional en milímetros; B y C, a un plano ubicado en el espacio tridimensional de la cámara. La Tabla~\ref{tab:recorridos} resume ese camino con los nombres de las funciones del repositorio (Sección~\ref{sec:software}).
+
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{Recorrido de cada método en Fishmeter, desde los píxeles hasta la medición.}
+\label{tab:recorridos}
+\begin{tabularx}{\textwidth}{@{}p{1.1cm} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{1.9cm} >{\raggedright\arraybackslash\scriptsize\ttfamily}p{5.4cm}@{}}
+\toprule
+Método & Conversión de los puntos & Espacio de medición & \normalfont\footnotesize Funciones principales \\
+\midrule
+A & Escala uniforme $k$ tomada del ArUco fijo en el vidrio & Plano 2D & measure\_a $\rightarrow$ measure\_direct $\rightarrow$ scale\_points $\rightarrow$ measure\_projected\_morphometry \\
+\Aprime & Homografía $\mathbf{H}$ entre las esquinas del ArUco coplanar y un cuadrado de lado $L_m$ & Plano 2D & measure\_a\_prime $\rightarrow$ measure\_direct $\rightarrow$ marker\_plane\_homography $\rightarrow$ transform\_points\_homography $\rightarrow$ measure\_projected\_morphometry \\
+B & Rayo del modelo pinhole efectivo intersecado con el plano $\pi_z$ ubicado con el riel & Plano en el espacio 3D & measure\_b $\rightarrow$ intersect\_image\_points\_with\_plane $\rightarrow$ intersect\_ray\_plane $\rightarrow$ measure\_projected\_morphometry\_3d \\
+C & Rayo en aire refractado en las interfaces aire--vidrio y vidrio--agua, e intersecado con el plano de la réplica & Plano en el espacio 3D & measure\_c $\rightarrow$ \_trace\_to\_plane $\rightarrow$ trace\_refracted\_ray $\rightarrow$ intersect\_ray\_line\_plane $\rightarrow$ measure\_projected\_morphometry\_3d \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{Método A.} La función \texttt{measure\_direct} calcula el factor $k$ de la ecuación~\eqref{eq:escala-impl} y multiplica por él las coordenadas de los cuatro puntos, $\mathbf{q}_i = k\,\mathbf{p}_i$. Como una escala uniforme no cambia las direcciones, el eje marcado en la imagen sirve sin modificaciones en el plano métrico. Cada resultado de A sale con una advertencia automática: la escala viene del plano del vidrio y no corrige la separación entre planos, la perspectiva ni la refracción.
+
+\paragraph{Método \Aprime.} La misma función calcula con OpenCV la homografía que lleva las cuatro esquinas detectadas del marcador al cuadrado métrico de lado $L_m$, y la aplica a los cuatro puntos. Una homografía no conserva las direcciones de la imagen, así que el eje se transforma como una recta: Fishmeter toma $\mathbf{p}_1$ y un segundo punto desplazado sobre el eje, transforma ambos y usa como eje métrico la dirección que los une. Lo mismo se hace en B y en C.
+
+\paragraph{Método B.} Primero se ubica el plano de medición. El plano de referencia que guarda la calibración del riel, con un punto $\mathbf{P}_{\mathrm{ref}}$ y una normal $\mathbf{s}$, se traslada a lo largo de la dirección del riel la diferencia entre la lectura de la captura y la de calibración, $z_{\mathrm{riel}} - z_{\mathrm{ref}}$ (Tablas~\ref{tab:posiciones} y~\ref{tab:riel}); así se obtiene un punto $\mathbf{P}_0$ del plano $\pi_z$. La normal no cambia, porque suponemos que los planos de las réplicas son paralelos al tablero. Después, cada punto se corrige de distorsión con $\mathbf{K}_{\mathrm{agua}}$ y los coeficientes del perfil \texttt{B-effective}, se convierte en un rayo $\mathbf{r} = (x, y, 1)^{\mathsf{T}}$ que sale del centro de la cámara y se interseca con el plano:
+\begin{equation}
+\mathbf{P} = \lambda\,\mathbf{r}, \qquad \lambda = \frac{\mathbf{s}\cdot\mathbf{P}_0}{\mathbf{s}\cdot\mathbf{r}} .
+\label{eq:interseccion-b}
+\end{equation}
+La refracción no aparece en ningún paso: queda absorbida, de forma empírica, en la calibración hecha bajo el agua.
+
+\paragraph{Método C.} Cada punto se corrige de distorsión con la calibración en aire (perfil \texttt{C-air}) y da la dirección $\mathbf{v}_a$ de la ecuación~\eqref{eq:va}. La función \texttt{trace\_refracted\_ray} sigue ese rayo hasta la cara exterior del vidrio ($\mathbf{q}_1$), lo refracta con la ley de Snell vectorial ($\mathbf{v}_g$), lo lleva hasta la cara interior ($\mathbf{q}_2$) y lo vuelve a refractar al entrar en el agua ($\mathbf{v}_w$); son las ecuaciones~\eqref{eq:q1} a~\eqref{eq:vw}, en ese orden. En cada interfaz comprueba que el punto calculado quede sobre el plano del vidrio, con una tolerancia de $10^{-6}$~mm. El rayo en el agua (ecuación~\ref{eq:rayo}) se interseca después con el plano de la réplica, que en C es paralelo al vidrio ($\mathbf{s} = \mathbf{n}_\pi$) y contiene el punto $\mathbf{P}_0$ ubicado a $d + t_g + z$ del centro de la cámara sobre esa normal:
+\begin{equation}
+\mathbf{P} = \mathbf{q}_2 + \lambda\,\mathbf{v}_w, \qquad \lambda = \frac{\mathbf{s}\cdot(\mathbf{P}_0 - \mathbf{q}_2)}{\mathbf{s}\cdot\mathbf{v}_w} .
+\label{eq:interseccion-c}
+\end{equation}
+Los dos puntos que definen el eje se trazan de la misma forma, de modo que los puntos anatómicos y el eje quedan en el mismo sistema de coordenadas.
+
+\paragraph{Medición final.} A y \Aprime{} aplican directamente la ecuación~\eqref{eq:medidas}. En B y C, el eje transformado $\mathbf{a}$ se proyecta primero sobre el plano de medición, para quitarle cualquier componente fuera de él, y la dirección dorsoventral se obtiene con el producto vectorial:
+\begin{equation}
+\mathbf{u} = \frac{\mathbf{a} - (\mathbf{a}\cdot\mathbf{s})\,\mathbf{s}}{\lVert \mathbf{a} - (\mathbf{a}\cdot\mathbf{s})\,\mathbf{s} \rVert}, \qquad
+\mathbf{n} = \mathbf{s} \times \mathbf{u} .
+\label{eq:ejes-3d}
+\end{equation}
+Con esos ejes, LT y PC salen de la misma ecuación~\eqref{eq:medidas}, con los puntos tridimensionales $\mathbf{P}_i$ en lugar de $\mathbf{q}_i$. En los cuatro métodos, la profundidad corporal se valida con el ángulo de la sección,
+\begin{equation}
+\theta = \arctan\frac{\lvert (\mathbf{q}_4 - \mathbf{q}_3)\cdot\mathbf{u} \rvert}{\lvert (\mathbf{q}_4 - \mathbf{q}_3)\cdot\mathbf{n} \rvert},
+\label{eq:angulo-seccion}
+\end{equation}
+que mide cuánto se aparta el segmento $\mathbf{p}_3$--$\mathbf{p}_4$ de la perpendicular al eje. Si $\theta$ supera $5^{\circ}$, Fishmeter no informa la PC y deja una advertencia; en nuestros datos ningún registro superó ese umbral. Las distancias euclidianas $\lVert \mathbf{q}_2 - \mathbf{q}_1 \rVert$ y $\lVert \mathbf{q}_4 - \mathbf{q}_3 \rVert$ se guardan con cada resultado, pero solo como diagnóstico.
+
 \section{Procedimiento por imagen y trazabilidad}
 \label{sec:procedimiento}
 

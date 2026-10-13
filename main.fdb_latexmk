@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1791911042.58443 "main.bcf" "main.bbl" "main" 1791911059.25357 0
-  "main.bcf" 1791911059.01028 143922 d14d311b54be701d28e7a71948edab4a "pdflatex"
+["biber main"] 1791911042.58443 "main.bcf" "main.bbl" "main" 1791911662.36137 0
+  "main.bcf" 1791911662.14348 143922 d14d311b54be701d28e7a71948edab4a "pdflatex"
   "referencias.bib" 1791909732.12597 12607 f588c3e8c4bd8f77fa4e3afe74fbe4b5 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1791911054.29935 "/home/epereira/Documentos/tesis_ezequiel_v2_latex/tesis_v2/main.tex" "main.pdf" "main" 1791911059.25394 0
+["pdflatex"] 1791911657.51464 "/home/epereira/Documentos/tesis_ezequiel_v2_latex/tesis_v2/main.tex" "main.pdf" "main" 1791911662.36173 0
   "/home/epereira/.TinyTeX/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/home/epereira/.TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbx1095.tfm" 1136768653 3584 21b378cca2e40816b0e6d74a4dc98f04 ""
   "/home/epereira/.TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -368,21 +368,21 @@
   "figuras/originales/fig3_6_instrumentos.png" 1791865747 338965 4e0a118be4bfb65067dd2136365c2e2f ""
   "figuras/originales/figA_1_capturas.png" 1791865747 226084 0d172935dfcfbfb0a8325cbbcf29406e ""
   "figuras/originales/figB_1_flatport.png" 1791865747 29381 5806e160f75a6fadc7a74c368536e5a4 ""
-  "main.aux" 1791911058.98828 53182 9a7d56379041eef7d86720ed54cc4117 "pdflatex"
+  "main.aux" 1791911662.12348 53182 9a7d56379041eef7d86720ed54cc4117 "pdflatex"
   "main.bbl" 1791911043.96911 137584 44b7e6d6a4b0f891e96187101a2a98c7 "biber main"
-  "main.lof" 1791911059.01194 3783 323936c7a272e34b2ea021ec85ad5c81 "pdflatex"
-  "main.lot" 1791911059.01194 3248 331a2940e79ac3782a9a45c01949fdb6 "pdflatex"
-  "main.out" 1791911059.00528 15885 0ca9ee73ee737a26ddf2cd257bfbc609 "pdflatex"
-  "main.run.xml" 1791911059.01194 2528 e0220515ffd0b3fffe562fcc6f811a5e "pdflatex"
+  "main.lof" 1791911662.14601 3783 323936c7a272e34b2ea021ec85ad5c81 "pdflatex"
+  "main.lot" 1791911662.14601 3248 331a2940e79ac3782a9a45c01949fdb6 "pdflatex"
+  "main.out" 1791911662.13948 15885 0ca9ee73ee737a26ddf2cd257bfbc609 "pdflatex"
+  "main.run.xml" 1791911662.14601 2528 e0220515ffd0b3fffe562fcc6f811a5e "pdflatex"
   "main.tex" 1791894618.60089 4015 7338a7ec89f8d65ea281362191878939 ""
-  "main.toc" 1791911059.01194 7592 c72fe97fdaf2cc1b2c596083548841e1 "pdflatex"
+  "main.toc" 1791911662.14601 7592 c72fe97fdaf2cc1b2c596083548841e1 "pdflatex"
   "preliminares/abstract.tex" 1791909725.0638 2295 3dd1115a1f055354b539f3e06a03d1be ""
   "preliminares/acronimos.tex" 1791865989 852 0091b1e11a0c597da114b2c972e68a21 ""
   "preliminares/advertencia.tex" 1791894591.4853 866 a65eae820bd4aadc48ad62868eac28ac ""
-  "preliminares/agradecimientos.tex" 1791911042.28339 1445 d475fd41d103eb5b91a8dc4a3c2100f8 ""
+  "preliminares/agradecimientos.tex" 1791911298.41321 1563 297e2a260e67e7a835b01e08e17db837 ""
   "preliminares/aprobacion.tex" 1791894592.53913 920 1025c2209bf41a34e1af975ec7bf0c1b ""
   "preliminares/datos.tex" 1791910170.78328 1415 5de3c5543fc75dbefa5e501e304dd3b6 ""
-  "preliminares/dedicatoria.tex" 1791894593.59315 398 2c97a71170c660bf61c3babce52dd3f7 ""
+  "preliminares/dedicatoria.tex" 1791911657.26376 435 aa77c6b3959eea27f8e2094c99357376 ""
   "preliminares/ficha.tex" 1791894590.43033 567 b7f46ebe8d85b5a49ccf8a384b55d4f5 ""
   "preliminares/portada.tex" 1791894589.35609 1127 e5daa6f8eb46456afa8ebb8736bf5121 ""
   "preliminares/resumen.tex" 1791910260.12014 2399 9acd0f82a2bcac29e0b7e17e5063ea43 ""
