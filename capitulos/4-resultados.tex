@@ -84,6 +84,7 @@ Calculamos las métricas como indica la Sección~\ref{sec:evaluacion}, después 
 \centering\footnotesize
 \caption{Errores medios por método después de resumir las repeticiones técnicas.}
 \label{tab:agregados}
+\setlength{\tabcolsep}{3.3pt}
 \begin{tabular}{@{}lccccccccc@{}}
 \toprule
  & & \multicolumn{6}{c}{Promedio por combinación} & \multicolumn{2}{c}{Por captura} \\
@@ -158,26 +159,27 @@ Los promedios esconden la dispersión, así que la Figura~\ref{fig:4-errores} mu
 \label{fig:4-errores}
 \end{figure}
 
-\section{Repetibilidad del marcado manual}
-\label{sec:repetibilidad}
-
-\pendiente{Volver a marcar los cuatro puntos en doce imágenes (una por réplica a 5 y a 23~cm) sin consultar el marcado anterior, y completar la Tabla~\ref{tab:repetibilidad} con la diferencia media y máxima en píxeles por punto y su efecto en milímetros sobre LT y PC calculado con C. Cerrar con: «La repetibilidad del marcado introduce una variación de X~mm en LT, inferior/comparable al MAE de C y muy inferior a la diferencia entre métodos, por lo que las conclusiones de las Secciones~\ref{sec:agregados} y~\ref{sec:profundidad} no dependen del operador».}
-
-\begin{table}[htbp]
-\centering\footnotesize
-\caption{Repetibilidad del marcado manual sobre doce imágenes remarcadas.}
-\label{tab:repetibilidad}
-\begin{tabular}{@{}p{3cm}p{2cm}p{2.2cm}p{3.2cm}p{1.6cm}@{}}
-\toprule
-Punto & Diferencia media (px) & Diferencia máxima (px) & Efecto medio en la medida (mm, con C) & Medida afectada \\
-\midrule
-$\mathbf{p}_1$ (hocico) & \pend{ } & \pend{ } & \pend{ } & LT \\
-$\mathbf{p}_2$ (extremo caudal) & \pend{ } & \pend{ } & \pend{ } & LT \\
-$\mathbf{p}_3$ (perfil dorsal) & \pend{ } & \pend{ } & \pend{ } & PC \\
-$\mathbf{p}_4$ (perfil ventral) & \pend{ } & \pend{ } & \pend{ } & PC \\
-\bottomrule
-\end{tabular}
-\end{table}
+% Sección de repetibilidad del marcado: retirada por ahora a pedido del autor.
+% \section{Repetibilidad del marcado manual}
+% \label{sec:repetibilidad}
+%
+% \pendiente{Volver a marcar los cuatro puntos en doce imágenes (una por réplica a 5 y a 23~cm) sin consultar el marcado anterior, y completar la Tabla~\ref{tab:repetibilidad} con la diferencia media y máxima en píxeles por punto y su efecto en milímetros sobre LT y PC calculado con C. Cerrar con: «La repetibilidad del marcado introduce una variación de X~mm en LT, inferior/comparable al MAE de C y muy inferior a la diferencia entre métodos, por lo que las conclusiones de las Secciones~\ref{sec:agregados} y~\ref{sec:profundidad} no dependen del operador».}
+%
+% \begin{table}[htbp]
+% \centering\footnotesize
+% \caption{Repetibilidad del marcado manual sobre doce imágenes remarcadas.}
+% \label{tab:repetibilidad}
+% \begin{tabular}{@{}p{3cm}p{2cm}p{2.2cm}p{3.2cm}p{1.6cm}@{}}
+% \toprule
+% Punto & Diferencia media (px) & Diferencia máxima (px) & Efecto medio en la medida (mm, con C) & Medida afectada \\
+% \midrule
+% $\mathbf{p}_1$ (hocico) & \pend{ } & \pend{ } & \pend{ } & LT \\
+% $\mathbf{p}_2$ (extremo caudal) & \pend{ } & \pend{ } & \pend{ } & LT \\
+% $\mathbf{p}_3$ (perfil dorsal) & \pend{ } & \pend{ } & \pend{ } & PC \\
+% $\mathbf{p}_4$ (perfil ventral) & \pend{ } & \pend{ } & \pend{ } & PC \\
+% \bottomrule
+% \end{tabular}
+% \end{table}
 
 \section{Intervalo por profundidad desconocida}
 \label{sec:intervalo}
@@ -232,7 +234,7 @@ La Tabla~\ref{tab:hipotesis} enfrenta las tres hipótesis con los criterios fija
 \centering\small
 \caption{Contraste de hipótesis.}
 \label{tab:hipotesis}
-\begin{tabularx}{\textwidth}{@{}p{1.5cm} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{2.4cm}@{}}
+\begin{tabularx}{\textwidth}{@{}p{1.65cm} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{2.4cm}@{}}
 \toprule
 Hipótesis & Criterio & Valor observado & Veredicto \\
 \midrule

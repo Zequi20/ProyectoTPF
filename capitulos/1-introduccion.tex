@@ -73,11 +73,11 @@ La Tabla~\ref{tab:trazabilidad} conecta cada objetivo específico con la pregunt
 Obj. & Qué produce & Pregunta & Hipótesis & Resultado & Conclusión \\
 \midrule
 1 & Conjunto de datos documentado & --- & --- & §\ref{sec:conjunto} & §\ref{sec:conclusiones}, c.~1 \\
-2 & Protocolo y repetibilidad del marcado & S2 & --- & §\ref{sec:repetibilidad} & §\ref{sec:conclusiones}, c.~2 \\
+2 & Protocolo y repetibilidad del marcado & S2 & --- & §\ref{sec:procedimiento} & §\ref{sec:conclusiones}, c.~2 \\
 3 & Rutas A, \Aprime, B y C implementadas y validadas & S1 & H1 & §\ref{sec:calibraciones}, §\ref{sec:agregados} & §\ref{sec:conclusiones}, c.~3 \\
 4 & Comparación pareada por separación & S1 & H1, H2 & §\ref{sec:profundidad}, §\ref{sec:contraste} & §\ref{sec:conclusiones}, c.~4 \\
 5 & Intervalo $\IL$, ancho y cobertura & Principal & H3 & §\ref{sec:intervalo} & §\ref{sec:conclusiones}, c.~5 \\
-6 & Sensibilidad a marcado y geometría & S2, S3 & --- & §\ref{sec:sensibilidad}, §\ref{sec:repetibilidad} & §\ref{sec:conclusiones}, c.~6 \\
+6 & Sensibilidad a marcado y geometría & S2, S3 & --- & §\ref{sec:sensibilidad} & §\ref{sec:conclusiones}, c.~6 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -88,7 +88,7 @@ Medir peces de forma repetible ayuda a seguir su crecimiento, estimar el rendimi
 
 Para la informática, el interés está en encontrar el límite métrico de un procedimiento con una sola cámara cuando la escena atraviesa un puerto plano. Mantuvimos fijos la imagen y los cuatro puntos marcados a mano, comparamos A, \Aprime, B y C sobre las mismas observaciones e hicimos explícita la incertidumbre geométrica que agrega la profundidad. El resultado es más que una interfaz o una promesa de medición sin intervención humana: es evidencia para decidir cuándo alcanza con una escala directa, cuándo conviene una calibración pinhole y cuándo hace falta un modelo refractivo.
 
-La contribución tiene cinco partes verificables: una salida monocular que declara la incertidumbre atribuible a la profundidad; evidencia comparativa de A, \Aprime, B y C en un montaje controlado; una implementación propia del modelo de puerto plano, basada en formulaciones publicadas y evaluada contra referencias físicas; un protocolo reproducible de marcado manual con réplicas rígidas; y un análisis de la repetibilidad de los puntos anatómicos. Informamos el error de cada ruta y el ancho relativo del intervalo $[\min_z L(z), \max_z L(z)]$ sobre el rango físicamente admisible. Ese intervalo, por sí solo, no cubre los errores de calibración, postura, marcado manual o referencia física; esas fuentes las medimos y reportamos por separado.
+La contribución tiene cinco partes verificables: una salida monocular que declara la incertidumbre atribuible a la profundidad; evidencia comparativa de A, \Aprime, B y C en un montaje controlado; una implementación propia del modelo de puerto plano, basada en formulaciones publicadas y evaluada contra referencias físicas; un protocolo reproducible de marcado manual con réplicas rígidas; y un análisis de la sensibilidad de C a los parámetros del montaje medidos a mano. Informamos el error de cada ruta y el ancho relativo del intervalo $[\min_z L(z), \max_z L(z)]$ sobre el rango físicamente admisible. Ese intervalo, por sí solo, no cubre los errores de calibración, postura, marcado manual o referencia física. De esas fuentes informamos por separado la calidad de las calibraciones, la repetibilidad de las referencias de calibre y la sensibilidad de C a la distancia cámara--vidrio y al índice del agua; la repetibilidad del marcado manual no la cuantificamos en esta versión.
 
 Extender los resultados a peces vivos, agua turbia, movimiento, oclusiones o instalaciones productivas queda como limitación y como trabajo futuro. No es una capacidad que hayamos demostrado.
 
@@ -122,7 +122,7 @@ La Tabla~\ref{tab:operacionalizacion} del Capítulo~\ref{cap:metodologia} define
 
 Lo que este trabajo puede defender es una evaluación comparativa del instrumento, acompañada de una medida de cuánta incertidumbre geométrica agrega no conocer la profundidad. No ofrecemos un sistema listo para operar en una instalación productiva. Los resultados valen para réplicas rígidas, una cámara monocular, el rango de índices de refracción considerado, la postura de perfil y las condiciones controladas que describe la metodología.
 
-Entre las limitaciones contamos la selección manual de los puntos, la repetibilidad del operador y su posible efecto sobre las medidas anatómicas. Documentamos estas fuentes de variación dentro de la pecera. El flujo no es automático: ubicar cada punto anatómico requirió siempre marcarlo a mano.
+Entre las limitaciones están la selección manual de los puntos y la repetibilidad del operador, cuyo efecto sobre las medidas anatómicas no cuantificamos en esta versión. El flujo no es automático: ubicar cada punto anatómico requirió siempre marcarlo a mano.
 
 \subsection{Delimitación espacial y temporal}
 \label{sec:delimitacion}

@@ -1,22 +1,43 @@
-\thispagestyle{empty}
+% ---------- Hoja de calificación / mesa examinadora ----------
+\thispagestyle{plain}
 \begin{center}
-{\large \Universidad\\[2pt] \Campus\\[2pt] \Unidad\\[2pt] \Carrera\par}
-\vspace{1.2cm}
-{\large \Autor\par}
-\vspace{1.2cm}
-{\large\bfseries \Titulo\par}
+  \vspace*{0.6cm}
+  {\Large \Universidad\par}
+  \vspace{0.35cm}
+  {\large \Campus\par}
+  \vspace{0.55cm}
+  {\normalsize \Unidad\par}
+  \vspace{0.25cm}
+  {\normalsize \Carrera\par}
+  \vspace{0.25cm}
+  {\normalsize \Autor\par}
+
+  \vspace{1.0cm}
+  {\bfseries\large \Titulo\par}
 \end{center}
-\vspace{1.5cm}
-\noindent Calificación: \rule{4cm}{0.4pt}\hfill Mesa Examinadora
-\vspace{1.5cm}
-\begin{flushright}
-\rule{6cm}{0.4pt}\\[2pt]
-\rule{6cm}{0.4pt}\\[2pt]
-\rule{6cm}{0.4pt}\\[12pt]
-\end{flushright}
-\vspace{1cm}
+
+\vspace{1.1cm}
+\noindent
+\begin{minipage}[t]{0.47\textwidth}
+  \raggedright
+  {\large \textbf{Calificación:}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.46\textwidth}
+  \raggedleft
+  {\normalsize Mesa Examinadora\par}
+  \vspace{1.2cm}
+  \rule{\linewidth}{0.5pt}\par
+  \vspace{1.05cm}
+  \rule{\linewidth}{0.5pt}\par
+  \vspace{1.05cm}
+  \rule{\linewidth}{0.5pt}\par
+\end{minipage}
+
+\vfill
 \begin{center}
-Directora: \Directora\\[1.5cm]
-\Ciudad, \Fecha
+  {\large \textbf{Directora: \Directora}\par}
+  \vspace{0.95cm}
+  {\normalsize \Ciudad, \Fecha\par}
 \end{center}
 \clearpage

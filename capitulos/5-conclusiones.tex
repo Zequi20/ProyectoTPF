@@ -50,7 +50,7 @@ No se sabe nada de la profundidad & C con intervalo $\IL$ & 56--82~\% de ancho: 
 
 \begin{enumerate}
   \item \textbf{Conjunto de datos (objetivo 1).} Construimos y documentamos un conjunto de 72 imágenes de seis réplicas a cuatro profundidades, con referencias físicas de calibre, una tabla maestra que permite rastrear cada valor por réplica, profundidad, repetición e imagen, y un registro de exclusiones. Obtuvimos valores numéricos para 284 de los 288 registros; los cuatro restantes corresponden a A y \Aprime{} en dos imágenes en las que no se detectó el marcador. Resumimos las repeticiones técnicas por combinación réplica--profundidad. Objetivo cumplido.
-  \item \textbf{Protocolo y repetibilidad del marcado (objetivo 2).} Definimos y aplicamos un protocolo de marcado manual único por imagen, con cuatro puntos anatómicos que comparten las cuatro rutas. La repetibilidad del marcado \pend{se cuantificó en la Sección~\ref{sec:repetibilidad} con una variación de X~mm en LT / no se cuantificó en esta versión y queda como verificación inmediata}. Objetivo \pend{cumplido / cumplido parcialmente}.
+  \item \textbf{Protocolo y repetibilidad del marcado (objetivo 2).} Definimos y aplicamos un protocolo de marcado manual único por imagen, con cuatro puntos anatómicos que comparten las cuatro rutas. No cuantificamos en esta versión la repetibilidad del marcado, que queda como verificación inmediata. Objetivo cumplido parcialmente.
   \item \textbf{Implementación y validación de las rutas (objetivo 3).} Implementamos las cuatro rutas en una aplicación propia de código abierto, con pruebas unitarias de sanidad para el módulo de puerto plano, y las evaluamos contra las referencias de calibre de las seis réplicas en 72 imágenes. B logró un MAE de 1,08~mm (0,73~\%) en LT y de 0,38~mm (1,26~\%) en PC; C, de 1,22~mm (0,88~\%) y 0,56~mm (1,62~\%); y \Aprime, de 3,29~mm (2,28~\%) y 1,03~mm (2,78~\%). No hicimos la comprobación instrumental con barra patrón. Objetivo cumplido en cuanto a la validación contra referencias físicas; la comprobación con patrón queda como trabajo futuro.
   \item \textbf{Comparación pareada según la separación (objetivo 4).} A fue la ruta más sensible a la profundidad: su MAE de LT pasó de 13,77~mm a 5~cm a 57,64~mm a 23~cm (2,43~mm por centímetro), tal como predice la geometría del puerto plano. B y C se mantuvieron entre 1,0 y 1,4~mm en las cuatro posiciones, sin tendencia con la separación. C superó a A y \Aprime{} en 6 de 6 réplicas ($p = 0{,}031$) y en 24 de 24 combinaciones, pero no se diferenció de B (3 de 6 réplicas, $p = 1$). H1 se sostiene frente a A y \Aprime{} y no frente a B. H2 no se sostiene: hasta 18~cm de la zona de calibración, B no se degradó con la separación. Objetivo cumplido.
   \item \textbf{Intervalo por profundidad desconocida (objetivo 5).} Calculamos el intervalo $\IL$ con C sobre las 72 capturas, y coincidió con la predicción geométrica del montaje (razón media 1,006). Su ancho es de 56--82~\% de LT si $z$ es desconocida en toda la pecera, de 11--16~\% con $\pm 3$~cm y de 4--5~\% con $\pm 1$~cm. La cobertura empírica fue de 1,00 en toda la pecera y con $\pm 3$~cm, y de 0,81 con $\pm 1$~cm. H3 se sostiene. Objetivo cumplido.
@@ -63,16 +63,16 @@ La Tabla~\ref{tab:cumplimiento} resume el grado de cumplimiento de cada objetivo
 \centering\small
 \caption{Matriz de cumplimiento de los objetivos específicos.}
 \label{tab:cumplimiento}
-\begin{tabularx}{\textwidth}{@{}p{1.4cm} X p{1.8cm} X@{}}
+\begin{tabularx}{\textwidth}{@{}p{1.6cm} X p{1.8cm} X@{}}
 \toprule
 Objetivo & Resultado que lo sostiene & Grado & Pendiente \\
 \midrule
 1 & Tablas~\ref{tab:replicas} y~\ref{tab:registros}; repositorio & Cumplido & Publicar los datos con la etiqueta \texttt{\RepoTag} \\
-2 & Sección~\ref{sec:procedimiento}; Tabla~\ref{tab:repetibilidad} & \pend{Parcial} & Remarcado de doce imágenes \\
+2 & Sección~\ref{sec:procedimiento} & Parcial & Remarcado de doce imágenes \\
 3 & Tablas~\ref{tab:calibraciones} y~\ref{tab:agregados} & Cumplido & Comprobación con barra patrón \\
 4 & Tabla~\ref{tab:posiciones-mae}; Tabla~\ref{tab:hipotesis} & Cumplido & --- \\
 5 & Tabla~\ref{tab:intervalo}; Figuras~\ref{fig:4-3} y~\ref{fig:4-Lz} & Cumplido & --- \\
-6 & Tablas~\ref{tab:sensibilidad} y~\ref{tab:repetibilidad} & Parcial & Efecto del remarcado sobre las medidas \\
+6 & Tabla~\ref{tab:sensibilidad} & Parcial & Efecto del remarcado sobre las medidas \\
 \bottomrule
 \end{tabularx}
 \end{table}

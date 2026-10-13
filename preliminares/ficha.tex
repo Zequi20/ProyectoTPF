@@ -1,11 +1,28 @@
-\thispagestyle{empty}
-\vspace*{\fill}
+% ---------- Ficha bibliográfica en recuadro ----------
+\thispagestyle{plain}
+\vspace*{0.35\textheight}
+
 \begin{center}
-\fbox{\parbox{10cm}{\small
-\Autor. (\Anio). \emph{\Titulo}. \Universidad, \Unidad, \Campus. Cantidad de páginas: \pageref{LastPage}.\\[4pt]
-Tutora: \Tutora\\
-PROYECTO FINAL DE CARRERA\\[4pt]
-Palabras clave: \PalabrasClave.}}
+  \setlength{\fboxrule}{0.8pt}
+  \setlength{\fboxsep}{12pt}
+
+  \fbox{%
+    \parbox{0.78\textwidth}{%
+      \large
+      \setlength{\parskip}{6pt}
+
+      \textbf{\Autor}. (\Anio).
+      \textit{\Titulo}.
+      \Universidad, \Unidad, \Campus.
+      Cantidad de páginas: \pageref{LastPage}.
+
+      \textbf{Tutora:} \Tutora\\
+      PROYECTO FINAL DE CARRERA
+
+      \textbf{Palabras clave:} \PalabrasClave.
+    }%
+  }
 \end{center}
-\vspace*{\fill}
+
+\vfill
 \clearpage

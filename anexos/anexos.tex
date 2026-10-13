@@ -1,3 +1,8 @@
+\chapter*{Anexos}
+\addcontentsline{toc}{chapter}{Anexos}
+
+Los anexos reúnen el material de respaldo del experimento: el registro visual de las capturas, la configuración del puerto plano, los perfiles de calibración, la referencia geométrica del riel, la estructura del repositorio, la tabla maestra de resultados y las fichas de las réplicas. Los archivos completos se conservan junto con el proyecto; aquí se muestran sus campos principales para facilitar la lectura y la trazabilidad.
+
 \chapter{Registro visual de capturas}
 \label{anx:capturas}
 
@@ -144,12 +149,19 @@ La Tabla~\ref{tab:maestra} reproduce, para cada una de las 72 imágenes, las ref
 
 \input{anexos/tabla_maestra}
 
-\noindent{\footnotesize SHA-256 del CSV maestro: \texttt{\MaestraSHA}}
+\noindent{\footnotesize SHA-256 del CSV maestro:\\ \texttt{\MaestraSHA}}
 
 \chapter{Fichas de las réplicas}
 \label{anx:fichas}
 
-Las seis réplicas están impresas en PLA. La Tabla~\ref{tab:lecturas-calibre} reproduce las tres lecturas de calibre de cada medida, registradas al milímetro, con su media y su desviación estándar muestral; las medias son las referencias de la Tabla~\ref{tab:replicas}.
+Las seis réplicas están impresas en PLA. La Figura~\ref{fig:G-1} las muestra juntas, cada una con su identificador, y la Tabla~\ref{tab:lecturas-calibre} reproduce las tres lecturas de calibre de cada medida, registradas al milímetro, con su media y su desviación estándar muestral; las medias son las referencias de la Tabla~\ref{tab:replicas}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.55\textwidth]{fig3_1_replicas_tags.jpg}
+\caption[Réplicas utilizadas en el experimento con su identificador]{Las seis réplicas impresas en PLA, con el identificador (R1--R6) que se usa en todo el documento. Fuente: elaboración propia.}
+\label{fig:G-1}
+\end{figure}
 
 \begin{table}[htbp]
 \centering\footnotesize
@@ -171,7 +183,6 @@ R6 & 210 & 209 & 210 & 209,7 & 0,6 & 35 & 36 & 35 & 35,3 & 0,6 \\
 \end{tabular}
 \end{table}
 
-\pendiente{Completar una ficha por réplica (R1--R6) con fotografía, origen del modelo STL y escala de impresión.}
 
 % ---------------------------------------------------------------------------
 % Registro de cambios: comentado para la entrega. Para mostrarlo de nuevo,

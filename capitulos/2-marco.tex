@@ -249,7 +249,7 @@ El experimento compara cuatro rutas geométricas aplicadas a los mismos puntos d
 
 \begin{figure}[htbp]
 \centering
-\begin{tikzpicture}[scale=0.62,>=Stealth,font=\scriptsize]
+\begin{tikzpicture}[scale=0.6,>=Stealth,font=\scriptsize]
 \foreach \x/\lab/\col/\txt in {0/A/metA/{escala del marcador\\en el vidrio},
                                6.4/\Aprime/metAp/{homografía del marcador\\coplanar con la réplica},
                                12.8/B/metB/{pinhole efectivo\\calibrado bajo el agua},
@@ -288,7 +288,7 @@ El experimento compara cuatro rutas geométricas aplicadas a los mismos puntos d
   \item[C: puerto plano explícito.] Seguimos cada rayo a través de las interfaces con la ley de Snell y recuperamos las dimensiones para una profundidad supuesta. Si recorremos una grilla de valores admisibles de $z$, obtenemos $L(z)$ y, cuando $z$ es desconocida, el intervalo geométrico $[\min_z L(z), \max_z L(z)]$. C no aísla «la refracción» como única causa: incorpora el modelo completo de interfaces y la información de profundidad, y así lo tendremos en cuenta al interpretar sus resultados.
 \end{description}
 
-El marcado manual, la imagen y la referencia física son los mismos para las cuatro rutas. Por eso, una diferencia entre métodos no puede atribuirse a otra elección de puntos ni a una imagen rectificada. El intervalo por profundidad tampoco incluye por sí solo las incertidumbres de lente, calibración, postura, marcado o referencia; esas contribuciones las documentamos por separado, en el protocolo de repetibilidad y en la comparación geométrica.
+El marcado manual, la imagen y la referencia física son los mismos para las cuatro rutas. Por eso, una diferencia entre métodos no puede atribuirse a otra elección de puntos ni a una imagen rectificada. El intervalo por profundidad tampoco incluye por sí solo las incertidumbres de lente, calibración, postura, marcado o referencia; de esas contribuciones documentamos por separado la calidad de las calibraciones, la repetibilidad de las referencias de calibre y la sensibilidad de C a los parámetros del puerto (Capítulo~\ref{cap:resultados}). La repetibilidad del marcado manual no la cuantificamos en esta versión.
 
 \section{Marcado manual de puntos anatómicos}
 
@@ -361,7 +361,7 @@ Sobre la automatización de la información anatómica, \textcite{Petrellis2021}
 
 \textcite{Saleh2023} propusieron MFLD-net, una red liviana que detecta 16 puntos anatómicos en imágenes de peces y, a partir de ellos, calcula la longitud total, la longitud estándar, la longitud cefálica y la profundidad corporal. El modelo logró una precisión promedio de detección $\mathrm{AP} = 0{,}967$ y errores absolutos medios de 9,25~mm en longitud total, 8,27~mm en longitud estándar, 6,57~mm en longitud cefálica y 7,62~mm en profundidad corporal. Nos sirvió sobre todo para definir los extremos anatómicos, aunque su montaje, con cámara industrial y cinta transportadora, no se parece a una adquisición a través de una pared de vidrio.
 
-Nosotros ubicamos los puntos a mano. Así evitamos atribuirle a un algoritmo una precisión que no evaluamos, y podemos mantener exactamente los mismos cuatro puntos al comparar las rutas geométricas. La repetibilidad del marcado y la incertidumbre de la referencia física se documentan junto con las calibraciones.
+Nosotros ubicamos los puntos a mano. Así evitamos atribuirle a un algoritmo una precisión que no evaluamos, y podemos mantener exactamente los mismos cuatro puntos al comparar las rutas geométricas. La incertidumbre de la referencia física se documenta con las tres lecturas de calibre de cada réplica (Tabla~\ref{tab:replicas}); la repetibilidad del marcado manual no la cuantificamos en esta versión.
 
 Un segundo grupo de trabajos se ocupa de recuperar la escala. Con tres redes regionales, \textcite{Monkman2019} detectaron al mismo tiempo el pez y un marcador ArUco de tamaño conocido. Calcularon la longitud total a partir del lado mayor de la región detectada y del promedio de las escalas de los cuatro lados del marcador, y reportaron una intersección sobre la unión media cercana al 93~\% y un sesgo porcentual medio de 2,2~\%. También identificaron las principales fuentes de error: la diferencia de profundidad entre marcador y pez, la distorsión de la lente y las orientaciones mayores a unos $20^{\circ}$. Este trabajo respalda el uso de ArUco, y a la vez advierte que el marcador da una escala válida solo si se controlan la coplanaridad y la orientación.
 
@@ -422,7 +422,7 @@ Fuente & Objeto y medio & Geometría & Puntos o procedimiento & Escala y refracc
 
 La matriz muestra que cada pieza de la cadena de medición ya fue demostrada, aunque en combinaciones distintas. El marcado de puntos anatómicos y los marcadores o patrones de tamaño conocido permiten recuperar la escala, y los modelos refractivos describen el camino de los rayos a través del puerto. Pero ubicar bien los puntos, o lograr una correlación alta, no garantiza acercarse a la medida física, porque el resultado final depende también de la escala, la profundidad, la orientación y el modelo óptico.
 
-No podemos afirmar que no existan sistemas que combinen medición de peces y refracción explícita: el trabajo estéreo de \textcite{Seibold2026} lo hace. Lo que distingue a este trabajo es evaluar una configuración monocular y controlada a través de un puerto plano, comparando A, \Aprime, B y C sobre las mismas escenas, con los mismos puntos anatómicos y la misma referencia de escala, y usar C para construir $L(z)$ cuando la profundidad es desconocida. Así estimamos el efecto de la geometría con MAE, MAPE, sesgo y medidas de repetibilidad, sin dar por sentado que alguna ruta vaya a mejorar las cosas.
+No podemos afirmar que no existan sistemas que combinen medición de peces y refracción explícita: el trabajo estéreo de \textcite{Seibold2026} lo hace. Lo que distingue a este trabajo es evaluar una configuración monocular y controlada a través de un puerto plano, comparando A, \Aprime, B y C sobre las mismas escenas, con los mismos puntos anatómicos y la misma referencia de escala, y usar C para construir $L(z)$ cuando la profundidad es desconocida. Así estimamos el efecto de la geometría con MAE, MAPE y sesgo, sin dar por sentado que alguna ruta vaya a mejorar las cosas.
 
 \section{Síntesis del estado del arte y brecha de investigación}
 

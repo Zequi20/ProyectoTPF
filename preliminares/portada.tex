@@ -1,31 +1,74 @@
+% ---------- Carátula: una página, márgenes de 2,5 cm ----------
+\begingroup
+\newgeometry{top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm}
+\pagestyle{empty}\thispagestyle{empty}
+
 \begin{titlepage}
 \centering
-{\large \Universidad\\ \Campus\\ \Unidad\\ \Carrera\par}
-\vspace{2.5cm}
-{\large\bfseries PROYECTO FINAL DE CARRERA\par}
-\vspace{1.5cm}
-{\Large\bfseries \TituloMay\par}
-\vspace{2cm}
+\begin{spacing}{1.1}
+
+{\large
+\Universidad\\
+\Campus\\
+\Unidad\\
+\Carrera\par}
+
+\vspace{0.9cm}
+
+\includegraphics{logo.png}
+
+\vspace{1.1cm}
+
+{\bfseries\large PROYECTO FINAL DE CARRERA\par}
+
+\vspace{0.7cm}
+
+{\bfseries\Large \TituloMay\par}
+
+\vspace{0.7cm}
+
 {\large \Autor\par}
+
 \vfill
+
 {\large \Ciudad, \Fecha\par}
+
+\end{spacing}
 \end{titlepage}
-\thispagestyle{empty}
+
+\restoregeometry
+\endgroup
+\clearpage
+
+% ---------- Portadilla ----------
+\thispagestyle{plain}
+\vspace*{2cm}
 \begin{center}
-{\large \Autor\par}
-\vspace{2cm}
-{\Large\bfseries \TituloMay\par}
-\vspace{2.5cm}
+{\large \Autor}
 \end{center}
-\begin{flushleft}
-\hspace{3cm}\parbox{11cm}{PROYECTO FINAL DE CARRERA presentado como requisito para optar al título de Ingeniero en Informática, \Universidad, \Campus, \Unidad.}
-\end{flushleft}
-\vspace{2cm}
-\begin{flushright}
-Tutora: \Tutora
-\end{flushright}
-\vfill
+
+\vspace{2.2cm}
+
 \begin{center}
-\Ciudad\\[4pt] \Anio
+{\Large\textbf{\TituloMay}}
+\end{center}
+
+\vspace{3.2cm}
+
+PROYECTO FINAL DE CARRERA presentado como requisito para optar al título de Ingeniero en Informática, \Universidad, \Campus, \Unidad.
+
+\vspace{1.8cm}
+
+\noindent\hfill
+\begin{minipage}{0.65\textwidth}
+  \raggedleft
+  \textbf{Tutora:} \Tutora
+\end{minipage}
+
+\vfill
+
+\begin{center}
+\Ciudad\\[1.2ex]
+\Anio
 \end{center}
 \clearpage

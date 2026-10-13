@@ -2,38 +2,39 @@
 \babel@toc {english}{}\relax 
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Configuración conceptual de cámara, vidrio, agua y rayos refractados}}{2}{figure.caption.9}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Configuración conceptual de cámara, vidrio, agua y rayos refractados}}{2}{figure.caption.6}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Flujo teórico simplificado de la investigación}}{10}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Puntos anatómicos y medidas morfométricas consideradas}}{12}{figure.caption.16}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Modelo refractivo de puerto plano}}{15}{figure.caption.17}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Escala aparente de un marcador según su profundidad}}{18}{figure.caption.19}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Las cuatro rutas de conversión métrica lado a lado}}{20}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Flujo teórico simplificado de la investigación}}{10}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Puntos anatómicos y medidas morfométricas consideradas}}{12}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Modelo refractivo de puerto plano}}{15}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Escala aparente de un marcador según su profundidad}}{18}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Las cuatro rutas de conversión métrica lado a lado}}{20}{figure.caption.17}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Réplicas de peces impresas en PLA utilizadas en el experimento}}{32}{figure.caption.21}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Esquema acotado del montaje experimental}}{34}{figure.caption.23}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Montaje de una réplica junto con el marcador ArUco coplanar}}{36}{figure.caption.25}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Damero y marcador ArUco colocados dentro de la pecera}}{36}{figure.caption.26}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Interfaz de Fishmeter para la marcación y comparación de métodos}}{38}{figure.caption.29}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Puntos anatómicos empleados para la longitud total y la profundidad corporal}}{39}{figure.caption.30}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Instrumentos y disposición utilizados para medir físicamente una réplica}}{39}{figure.caption.31}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Flujo de procesamiento por imagen}}{43}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Réplicas de peces impresas en PLA utilizadas en el experimento}}{32}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Esquema acotado del montaje experimental}}{34}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Montaje de una réplica junto con el marcador ArUco coplanar}}{36}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Damero y marcador ArUco colocados dentro de la pecera}}{36}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Interfaz de Fishmeter para la marcación y comparación de métodos}}{38}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Puntos anatómicos empleados para la longitud total y la profundidad corporal}}{39}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Instrumentos y disposición utilizados para medir físicamente una réplica}}{39}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Flujo de procesamiento por imagen}}{43}{figure.caption.30}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces MAE por método para longitud total y profundidad corporal}}{48}{figure.caption.38}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces MAE de longitud total por método y profundidad}}{50}{figure.caption.40}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Error con signo por combinación réplica--profundidad}}{51}{figure.caption.41}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Ancho relativo del intervalo por profundidad desconocida}}{53}{figure.caption.44}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Longitud estimada por C en función de la profundidad supuesta}}{54}{figure.caption.45}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Bland--Altman de C frente al calibre}}{57}{figure.caption.50}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Captura real con los cuatro puntos anatómicos marcados}}{58}{figure.caption.51}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces MAE por método para longitud total y profundidad corporal}}{48}{figure.caption.35}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces MAE de longitud total por método y profundidad}}{50}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Error con signo por combinación réplica--profundidad}}{51}{figure.caption.38}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Ancho relativo del intervalo por profundidad desconocida}}{53}{figure.caption.40}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Longitud estimada por C en función de la profundidad supuesta}}{54}{figure.caption.41}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Bland--Altman de C frente al calibre}}{57}{figure.caption.46}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Captura real con los cuatro puntos anatómicos marcados}}{58}{figure.caption.47}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagrama de decisión para la conversión métrica monocular a través de un vidrio plano}}{59}{figure.caption.53}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagrama de decisión para la conversión métrica monocular a través de un vidrio plano}}{60}{figure.caption.49}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Vista conjunta de las capturas y sus identificadores}}{68}{figure.caption.59}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Vista conjunta de las capturas y sus identificadores}}{70}{figure.caption.56}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Parámetros visibles de la configuración del puerto plano}}{69}{figure.caption.60}%
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Parámetros visibles de la configuración del puerto plano}}{71}{figure.caption.57}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {G.1}{\ignorespaces Réplicas utilizadas en el experimento con su identificador}}{80}{figure.caption.58}%

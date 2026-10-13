@@ -7,15 +7,17 @@
 % ---------- Idioma y codificación ----------
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[english,spanish,es-tabla,es-nodecimaldot,es-noshorthands]{babel}
-\usepackage{lmodern}
+\usepackage[english,spanish,es-tabla,es-lcroman,es-nodecimaldot,es-noshorthands]{babel}
 \usepackage{csquotes}
 
 % ---------- Página ----------
-\usepackage[top=3cm,bottom=2cm,left=3cm,right=2cm]{geometry}
+\usepackage[top=2.5cm,bottom=2.5cm,left=3cm,right=2.5cm]{geometry}
 \usepackage{setspace}
 \onehalfspacing
-\setlength{\parskip}{4pt}
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0.3em}
+\setlength{\emergencystretch}{2em}
+\usepackage{ragged2e}
 \usepackage{emptypage}
 \usepackage{lastpage}
 
@@ -32,7 +34,6 @@
 \usepackage{booktabs,longtable,array,multirow,makecell,tabularx}
 \usepackage{pdflscape}
 \usepackage{caption}
-\captionsetup{font=small,labelfont=bf,justification=justified}
 \usepackage{float}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,fit}
@@ -46,7 +47,7 @@
 % ---------- Listados ----------
 \usepackage{listings}
 \renewcommand{\lstlistingname}{Listado}
-\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true,frame=single,
+\lstset{basicstyle=\ttfamily\scriptsize,breaklines=true,frame=single,
         columns=fullflexible,keepspaces=true}
 
 % ---------- Recuadros de pendientes ----------
@@ -67,7 +68,7 @@
 \addbibresource{referencias.bib}
 
 % ---------- Acrónimos ----------
-\usepackage[acronym,nomain,nonumberlist,nopostdot]{glossaries}
+\usepackage[acronym,toc,nomain,nonumberlist]{glossaries}
 \makenoidxglossaries
 \input{preliminares/acronimos}
 
@@ -75,6 +76,9 @@
 \usepackage[hidelinks]{hyperref}
 \hypersetup{pdftitle={Estimación morfométrica monocular de peces a través de una interfaz aire–vidrio–agua},
             pdfauthor={Cipriano Ezequiel Pereira López}}
+
+% ---------- Anexos rotulados «Anexo A», «Anexo B», ... ----------
+\addto\captionsspanish{\renewcommand{\appendixname}{Anexo}}
 
 % ---------- Datos ----------
 \input{preliminares/datos}
