@@ -1,7 +1,7 @@
 \chapter{Registro visual de capturas}
 \label{anx:capturas}
 
-La Figura~\ref{fig:A-1} presenta una vista conjunta de las capturas utilizadas en el flujo de trabajo. Las etiquetas visibles siguen el patrón de identificación de la réplica, la repetición y la distancia nominal de la réplica al vidrio en milímetros, por ejemplo \texttt{R1-REP1-50.jpg}. La imagen permite comprobar la organización visual del conjunto y la correspondencia entre las posiciones de captura. Las 72 imágenes originales forman parte del repositorio (Anexo~\ref{anx:repositorio}).
+La Figura~\ref{fig:A-1} reúne en una sola vista las capturas del experimento. Cada etiqueta indica la réplica, la repetición y la distancia nominal de la réplica al vidrio en milímetros; por ejemplo, \texttt{R1-REP1-50.jpg}. La vista permite revisar de un vistazo cómo se organizó el conjunto y que cada captura corresponda a su posición. Las 72 imágenes originales forman parte del repositorio (Anexo~\ref{anx:repositorio}).
 
 \begin{figure}[htbp]
 \centering
@@ -13,7 +13,7 @@ La Figura~\ref{fig:A-1} presenta una vista conjunta de las capturas utilizadas e
 \chapter{Configuración del puerto plano}
 \label{anx:flatport}
 
-La Figura~\ref{fig:B-1} reproduce la configuración utilizada para el modelo del puerto plano, cuyos valores se resumen en la Tabla~\ref{tab:puerto}: unidades en milímetros, normal de cámara $(0, 0, 1)$, distancia de la interfaz de 230~mm, espesor del vidrio de 4~mm e índices de refracción de 1,000 para aire, 1,500 para vidrio y 1,333 para agua. También registra que la distancia de la lente es una aproximación medida desde el frente de la lente y que las condiciones del agua corresponden a 22~\si{\celsius}, salinidad 0 y presión 0~dbar.
+La Figura~\ref{fig:B-1} reproduce la configuración del modelo de puerto plano, resumida en la Tabla~\ref{tab:puerto}: unidades en milímetros, normal de cámara $(0, 0, 1)$, distancia de la interfaz de 230~mm, vidrio de 4~mm de espesor e índices de refracción de 1,000 para el aire, 1,500 para el vidrio y 1,333 para el agua. El archivo deja constancia de que la distancia de la lente se midió desde su frente, como aproximación, y de que el agua estaba a 22~\si{\celsius}, con salinidad 0 y presión 0~dbar.
 
 \begin{figure}[htbp]
 \centering
@@ -25,7 +25,7 @@ La Figura~\ref{fig:B-1} reproduce la configuración utilizada para el modelo del
 \chapter{Parámetros de calibración de cámara}
 \label{anx:calibraciones}
 
-Los archivos \texttt{calibration\_B.yaml} y \texttt{calibration\_C\_air.yaml} contienen los perfiles de calibración utilizados por las rutas B y C. Ambos emplean el modelo de cámara de OpenCV, una resolución de $4096 \times 3072$ píxeles y un tablero con $4 \times 4$ esquinas interiores y cuadros de 20~mm. Sus indicadores de calidad se presentan en la Tabla~\ref{tab:calibraciones}. Los siguientes listados reproducen la cabecera y los campos de resumen de cada archivo; los informes individuales de las vistas permanecen en los YAML completos del repositorio.
+Los archivos \texttt{calibration\_B.yaml} y \texttt{calibration\_C\_air.yaml} guardan los perfiles de calibración de las rutas B y C. Los dos usan el modelo de cámara de OpenCV, una resolución de $4096 \times 3072$ píxeles y un tablero de $4 \times 4$ esquinas interiores con cuadros de 20~mm. La Tabla~\ref{tab:calibraciones} presenta sus indicadores de calidad. Los listados que siguen reproducen la cabecera y el resumen de cada archivo; los informes de cada vista quedan en los YAML completos del repositorio.
 
 \begin{lstlisting}[caption={Cabecera y resumen del perfil B.},label={lst:calB}]
 schema: fish_morphometry.b_calibration.v1
@@ -96,7 +96,7 @@ views:
 \chapter{Referencia geométrica del riel para B}
 \label{anx:riel}
 
-El archivo \texttt{rail\_reference\_B.yaml} documenta el plano de referencia utilizado por B. El plano se obtuvo a partir de dos posiciones del riel, 0 y 180~mm, con un error de reproyección de 0,270~px (umbral de 1,0~px). El ajuste informa un residuo lineal de $1{,}62 \times 10^{-13}$~mm (residuo numérico de una recta por dos puntos, que no representa la incertidumbre física), una dispersión de la normal de $0{,}337^{\circ}$ (umbral de $1{,}0^{\circ}$) y un error relativo de escala de 0,813~\% (umbral de 5~\%). El archivo también registra que los planos de las réplicas se consideran paralelos al tablero, mientras que el riel no se considera perpendicular al tablero. Los valores principales se resumen en la Tabla~\ref{tab:riel}.
+El archivo \texttt{rail\_reference\_B.yaml} documenta el plano de referencia de B, obtenido a partir de dos posiciones del riel, 0 y 180~mm, con un error de reproyección de 0,270~px (umbral de 1,0~px). El ajuste informa un residuo lineal de $1{,}62 \times 10^{-13}$~mm, que es el residuo numérico de una recta por dos puntos y no representa la incertidumbre física; una dispersión de la normal de $0{,}337^{\circ}$ (umbral de $1{,}0^{\circ}$); y un error relativo de escala de 0,813~\% (umbral de 5~\%). El archivo registra además dos supuestos: los planos de las réplicas son paralelos al tablero, y el riel no es necesariamente perpendicular a él. La Tabla~\ref{tab:riel} resume los valores principales.
 
 \begin{lstlisting}[caption={Cabecera y plano de referencia del riel para B.},label={lst:riel}]
 plane_point_camera_mm:
@@ -117,7 +117,7 @@ rail_direction_camera:
 \chapter{Repositorio de código y datos}
 \label{anx:repositorio}
 
-El código de la aplicación, los datos del experimento y los scripts que regeneran las tablas y figuras del Capítulo~\ref{cap:resultados} se encuentran en \url{\RepoURL}, etiqueta \texttt{\RepoTag}. Hash completo del commit de referencia:\par\noindent{\footnotesize\texttt{\RepoCommit}}\par La estructura del repositorio es la siguiente:
+El código de la aplicación, los datos del experimento y los scripts que regeneran las tablas y figuras del Capítulo~\ref{cap:resultados} están en \url{\RepoURL}, etiqueta \texttt{\RepoTag}. Hash completo del commit de referencia:\par\noindent{\footnotesize\texttt{\RepoCommit}}\par El repositorio tiene esta estructura:
 
 \begin{lstlisting}
 FishmeterTPF/
@@ -140,7 +140,7 @@ FishmeterTPF/
 \chapter{Tabla maestra de resultados}
 \label{anx:maestra}
 
-La Tabla~\ref{tab:maestra} reproduce, para cada una de las 72 imágenes, las referencias de calibre y las estimaciones de LT y PC de los cuatro métodos; el error con signo de cada estimación es su diferencia con la referencia. Los guiones corresponden a los cuatro registros sin valor por falta de detección del ArUco (Sección~\ref{sec:conjunto}). La tabla se generó con \texttt{analysis/tabla\_maestra.py} a partir del CSV maestro, que conserva además los puntos marcados (con $\mathbf{p}_1$ y $\mathbf{p}_2$ invertidos respecto de la definición de la Sección~\ref{sec:medidas}), los parámetros de cada ruta y sus advertencias. Su huella SHA-256 figura a continuación de la tabla.
+La Tabla~\ref{tab:maestra} reproduce, para cada una de las 72 imágenes, las referencias de calibre y las estimaciones de LT y PC de los cuatro métodos; el error con signo de cada estimación es su diferencia con la referencia. Los guiones marcan los cuatro registros sin valor, en los que no se detectó el ArUco (Sección~\ref{sec:conjunto}). Generamos la tabla con \texttt{analysis/tabla\_maestra.py} a partir del CSV maestro, que guarda además los puntos marcados (con $\mathbf{p}_1$ y $\mathbf{p}_2$ invertidos respecto de la definición de la Sección~\ref{sec:medidas}), los parámetros de cada ruta y sus advertencias. Su huella SHA-256 figura a continuación de la tabla.
 
 \input{anexos/tabla_maestra}
 
@@ -149,7 +149,7 @@ La Tabla~\ref{tab:maestra} reproduce, para cada una de las 72 imágenes, las ref
 \chapter{Fichas de las réplicas}
 \label{anx:fichas}
 
-Las seis réplicas se imprimieron en PLA. La Tabla~\ref{tab:lecturas-calibre} reproduce las tres lecturas de calibre de cada medida, registradas al milímetro, con su media y su desviación estándar muestral; las medias son las referencias de la Tabla~\ref{tab:replicas}.
+Las seis réplicas están impresas en PLA. La Tabla~\ref{tab:lecturas-calibre} reproduce las tres lecturas de calibre de cada medida, registradas al milímetro, con su media y su desviación estándar muestral; las medias son las referencias de la Tabla~\ref{tab:replicas}.
 
 \begin{table}[htbp]
 \centering\footnotesize

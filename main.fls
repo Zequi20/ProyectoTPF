@@ -2,7 +2,7 @@ PWD /home/epereira/Documentos/tesis_ezequiel_v2_latex/tesis_v2
 INPUT /home/epereira/.TinyTeX/texmf.cnf
 INPUT /home/epereira/.TinyTeX/texmf-dist/web2c/texmf.cnf
 INPUT /home/epereira/.TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /home/epereira/Documentos/tesis_ezequiel_v2_latex/tesis_v2/main.tex
+INPUT main.tex
 OUTPUT main.log
 INPUT /home/epereira/.TinyTeX/texmf-dist/tex/latex/base/report.cls
 INPUT /home/epereira/.TinyTeX/texmf-dist/tex/latex/base/report.cls
