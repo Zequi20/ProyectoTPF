@@ -1,0 +1,477 @@
+schema: fish_morphometry.b_calibration.v1
+profile_id: B-effective
+profile_hash: eb245104cb46caded48e9e9f827dda11db985c7b22ec5cb63a27572da14caf4e
+calibration_context_hash: 1e3531dcf0d9ff8d00b322b41d2dd074b41cb822a1324cd5545635303ca81ba6
+model: OPENCV
+camera_matrix:
+- - 4502.32284117
+  - 0.0
+  - 2027.2736574393155
+- - 0.0
+  - 4504.395746404586
+  - 1549.0026630316365
+- - 0.0
+  - 0.0
+  - 1.0
+distortion_coefficients:
+- 0.4454686711747631
+- -3.4668133596510753
+- -0.008336348094703296
+- 0.004790603340447537
+- 8.25240238252019
+resolution:
+- 4096
+- 3072
+calibration_rail_position_mm: 0.0
+created_at_utc: '2026-10-12T04:07:10.722788+00:00'
+versions:
+  opencv: 5.0.0
+  fish_morphometry: 0.1.0
+source: opencv_calibrateCamera
+board:
+  inner_corners:
+  - 4
+  - 4
+  square_size_mm: 20.0
+rms_px: 0.4353568098178903
+views:
+  received: 35
+  accepted: 35
+  rejected: 0
+  reports:
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233427.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.5101279415081512
+    board_center_normalized:
+    - 0.19856517016887665
+    - 0.33063486218452454
+    board_area_fraction: 0.051515780831948264
+    tilt_degrees: 1.0280960703979283
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 896.4303359971382
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233437.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.4651937184970957
+    board_center_normalized:
+    - 0.211503267288208
+    - 0.49738672375679016
+    board_area_fraction: 0.047998030961804584
+    tilt_degrees: 3.4068444248604646
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 803.2198030268773
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233509.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.42417555838968085
+    board_center_normalized:
+    - 0.25968649983406067
+    - 0.6925690770149231
+    board_area_fraction: 0.04489670110344098
+    tilt_degrees: 2.7331422483391394
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 799.5811279979534
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233517.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.36648194610680807
+    board_center_normalized:
+    - 0.29467374086380005
+    - 0.39003685116767883
+    board_area_fraction: 0.04364674583047101
+    tilt_degrees: 4.299648537970383
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 764.2865409725346
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233519.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.43414300612642837
+    board_center_normalized:
+    - 0.2962998151779175
+    - 0.5104959011077881
+    board_area_fraction: 0.04505700300014848
+    tilt_degrees: 7.0207704205339
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 748.9066090201959
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233524.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.37070562487587827
+    board_center_normalized:
+    - 0.32553356885910034
+    - 0.6848430633544922
+    board_area_fraction: 0.04296094433592342
+    tilt_degrees: 3.4718020165695638
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 762.5836370280012
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233533.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.41894330783725237
+    board_center_normalized:
+    - 0.4473876655101776
+    - 0.41858580708503723
+    board_area_fraction: 0.04605446979672223
+    tilt_degrees: 2.231803331814108
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 760.8849030220881
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233538.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.35169470786459106
+    board_center_normalized:
+    - 0.47885632514953613
+    - 0.5426227450370789
+    board_area_fraction: 0.04555478119928461
+    tilt_degrees: 3.861260229658694
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 772.2858779598027
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233545.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.4248576832434131
+    board_center_normalized:
+    - 0.46348750591278076
+    - 0.6924740672111511
+    board_area_fraction: 0.04724959262716529
+    tilt_degrees: 1.5875845507810207
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 796.7579260002822
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233602.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.5379534700993377
+    board_center_normalized:
+    - 0.6108041405677795
+    - 0.3688487112522125
+    board_area_fraction: 0.048106839628220634
+    tilt_degrees: 4.067098087171564
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 784.3639189959504
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233609.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.4107393799975205
+    board_center_normalized:
+    - 0.5265995264053345
+    - 0.5061812996864319
+    board_area_fraction: 0.05127577224044444
+    tilt_degrees: 9.152367391345498
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 763.7156740529463
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233623.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.6549359739518957
+    board_center_normalized:
+    - 0.7943624258041382
+    - 0.2919194996356964
+    board_area_fraction: 0.062274888344799294
+    tilt_degrees: 1.3282050796775702
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 768.822962010745
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233630.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.38162788058714076
+    board_center_normalized:
+    - 0.7941386103630066
+    - 0.36998996138572693
+    board_area_fraction: 0.050083954453230106
+    tilt_degrees: 34.0811605636002
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 770.9048460237682
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233635.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.4572309612085905
+    board_center_normalized:
+    - 0.5452066659927368
+    - 0.3683653175830841
+    board_area_fraction: 0.04342363758675649
+    tilt_degrees: 32.81654678241272
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 744.9197079986334
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233700.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.2992280932016012
+    board_center_normalized:
+    - 0.545430064201355
+    - 0.6744573712348938
+    board_area_fraction: 0.03375422444796842
+    tilt_degrees: 37.77765101906248
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 748.7911030184478
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233718.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.35567116199273746
+    board_center_normalized:
+    - 0.48371440172195435
+    - 0.4638732373714447
+    board_area_fraction: 0.039214580155855806
+    tilt_degrees: 26.249464806106698
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 731.3659570063464
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233737.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.48854166641780944
+    board_center_normalized:
+    - 0.2896330952644348
+    - 0.45039233565330505
+    board_area_fraction: 0.04406585634256066
+    tilt_degrees: 20.54940287993059
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 757.2076100041158
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233743.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.4593452952357825
+    board_center_normalized:
+    - 0.2768881320953369
+    - 0.6898136734962463
+    board_area_fraction: 0.03423946966333732
+    tilt_degrees: 30.107412262265846
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 761.8753020069562
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233752.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.5126636342012536
+    board_center_normalized:
+    - 0.22643570601940155
+    - 0.3819561004638672
+    board_area_fraction: 0.0449572891960881
+    tilt_degrees: 37.88746206353628
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 750.0147360260598
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233758.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.3598082101250648
+    board_center_normalized:
+    - 0.2527952790260315
+    - 0.5501759648323059
+    board_area_fraction: 0.037157518716301574
+    tilt_degrees: 40.971393584967046
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 749.1547259851359
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233802.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.5607175641191271
+    board_center_normalized:
+    - 0.2509627938270569
+    - 0.6805717945098877
+    board_area_fraction: 0.03728989908957322
+    tilt_degrees: 39.27323284728055
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 740.765617985744
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233806.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.24918638052226624
+    board_center_normalized:
+    - 0.43162786960601807
+    - 0.5256645679473877
+    board_area_fraction: 0.03322756093494483
+    tilt_degrees: 34.20179917286204
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 758.7147610029206
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233809.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.43461427014565474
+    board_center_normalized:
+    - 0.4336993098258972
+    - 0.3937835991382599
+    board_area_fraction: 0.035815516139860414
+    tilt_degrees: 33.20930089478916
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 755.7765899691731
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233813.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.2617496933209008
+    board_center_normalized:
+    - 0.43882569670677185
+    - 0.6712207794189453
+    board_area_fraction: 0.03395100430457395
+    tilt_degrees: 33.74541237339866
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 739.7875299793668
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233817.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.3923784732128738
+    board_center_normalized:
+    - 0.5623023509979248
+    - 0.6677948832511902
+    board_area_fraction: 0.0336979924086395
+    tilt_degrees: 28.192172136394106
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 804.7185990144499
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233823.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.5582592837096032
+    board_center_normalized:
+    - 0.6900647878646851
+    - 0.3411593437194824
+    board_area_fraction: 0.036342743562039224
+    tilt_degrees: 32.0596911378871
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 780.673781002406
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233828.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.5940323228590391
+    board_center_normalized:
+    - 0.795406699180603
+    - 0.32664886116981506
+    board_area_fraction: 0.03636735006111991
+    tilt_degrees: 31.001410182939363
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 772.5193739752285
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233833.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.6213012793067187
+    board_center_normalized:
+    - 0.7559961080551147
+    - 0.3283277451992035
+    board_area_fraction: 0.04546491074880995
+    tilt_degrees: 22.739408497856505
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 789.9973230087198
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233839.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.24568035951374653
+    board_center_normalized:
+    - 0.46413183212280273
+    - 0.3571401536464691
+    board_area_fraction: 0.043969339206693846
+    tilt_degrees: 21.224599202355694
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 756.1956939753145
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233843.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.4181067031962503
+    board_center_normalized:
+    - 0.21039380133152008
+    - 0.331259161233902
+    board_area_fraction: 0.04703070052748267
+    tilt_degrees: 18.922592059210693
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 759.5587549731135
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233848.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.4016164149453481
+    board_center_normalized:
+    - 0.23131543397903442
+    - 0.572414755821228
+    board_area_fraction: 0.045356608322512315
+    tilt_degrees: 13.340202640557585
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 760.9734570141882
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233851.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.3138428547831531
+    board_center_normalized:
+    - 0.463064044713974
+    - 0.549037754535675
+    board_area_fraction: 0.041880114856779116
+    tilt_degrees: 16.694977611734487
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 750.2584409667179
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233855.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.3293407362540438
+    board_center_normalized:
+    - 0.5278396606445312
+    - 0.4647834002971649
+    board_area_fraction: 0.044824871507293786
+    tilt_degrees: 19.50105499722773
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 755.2190920105204
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233858.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.39306110512687664
+    board_center_normalized:
+    - 0.2654210329055786
+    - 0.4768373966217041
+    board_area_fraction: 0.04378903564971903
+    tilt_degrees: 18.247088327500162
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 747.7592090144753
+  - image_id: /home/epereira/Imágenes/TEST6/agua/IMG20261011233901.jpg
+    accepted: true
+    rejection_reason: null
+    reprojection_error_px: 0.37575904028112356
+    board_center_normalized:
+    - 0.4606347680091858
+    - 0.6152625679969788
+    board_area_fraction: 0.03788770825038649
+    tilt_degrees: 19.953490325374798
+    detector_method: SB
+    detected_corner_count: 16
+    detection_time_ms: 754.6148409601301
+source_metadata:
+  calibration_zone: nearest_to_glass
+  minimum_usable_views: 15
+  rms_target_px: 0.7
+  maximum_per_view_error_px: 1.5
+  minimum_center_span_fraction: 0.2
+  center_span_fraction:
+  - 0.5968415290117264
+  - 0.4006495773792267
+  minimum_tilt_span_degrees: 10.0
+  tilt_span_degrees: 78.20140237829405
+  tilt_span_definition: maximum_pairwise_board_normal_angle
+limitations:
+- Modelo pinhole efectivo a través de vidrio y agua.
+- D_B no es una corrección física de la refracción.
+- La validez métrica depende de la posición del rail.

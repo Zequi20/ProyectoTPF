@@ -1,0 +1,54 @@
+schema: fish_morphometry.rail_plane_reference.v1
+reference_id: IMG20261012000552-rail-reference
+reference_hash: 1f0659fd92c5986fa9c96a027933d06ed2f853323bcd44f451de8808b4b7a413
+metric_validation_status: PENDING_VALIDATION
+reference_image_id: IMG20261012000552.jpg | IMG20261012000724.jpg
+calibration_profile_hash: eb245104cb46caded48e9e9f827dda11db985c7b22ec5cb63a27572da14caf4e
+calibration_context_hash: 1e3531dcf0d9ff8d00b322b41d2dd074b41cb822a1324cd5545635303ca81ba6
+plane_point_camera_mm:
+- -34.117491789288806
+- -28.291160700295567
+- 365.1469994117171
+plane_normal_camera:
+- -0.03972877728543376
+- -0.042783728187314775
+- 0.9982941334385363
+z_ref_mm: 0.0
+rail_direction_camera:
+- 0.02095849070805215
+- -0.04478647483729878
+- 0.998776708448334
+positive_direction: posición de rail creciente
+assumptions:
+  rail_perpendicular_to_board: false
+  replica_planes_parallel_to_board: true
+board:
+  inner_corners:
+  - 4
+  - 4
+  square_size_mm: 20.0
+solve_pnp:
+  rvec:
+  - 0.048148714098905934
+  - -0.03559323940697728
+  - -0.030959243431434507
+  tvec_mm:
+  - -34.117491789288806
+  - -28.291160700295567
+  - 365.1469994117171
+  reprojection_error_px: 0.2702659014133474
+  maximum_reprojection_error_px: 1.0
+rail_fit:
+  direction_source: multi_position_fit
+  positions_used_mm:
+  - 0.0
+  - 180.0
+  residual_mm: 1.6173629035293455e-13
+  maximum_residual_mm: 1.0
+  normal_spread_degrees: 0.3366024500414321
+  maximum_normal_spread_degrees: 1.0
+  scale_norm: 1.0081299420012777
+  scale_relative_error: 0.008129942001277701
+  maximum_scale_relative_error: 0.05
+  scale_check_status: PASS
+created_at_utc: '2026-10-12T04:31:18.139061+00:00'

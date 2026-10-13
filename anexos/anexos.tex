@@ -1,12 +1,12 @@
 \chapter*{Anexos}
 \addcontentsline{toc}{chapter}{Anexos}
 
-Los anexos reúnen el material de respaldo del experimento: el registro visual de las capturas, la configuración del puerto plano, los perfiles de calibración, la referencia geométrica del riel, la estructura del repositorio, la tabla maestra de resultados y las fichas de las réplicas. Los archivos completos se conservan junto con el proyecto; aquí se muestran sus campos principales para facilitar la lectura y la trazabilidad.
+Los anexos reúnen el material de respaldo del experimento: el registro visual de las capturas, la configuración del puerto plano, los perfiles de calibración, la referencia geométrica del riel, la estructura de los repositorios de código y datos, la tabla maestra de resultados y las fichas de las réplicas. Los archivos completos están publicados con los datos del experimento (Anexo~\ref{anx:repositorio}); aquí se muestran sus campos principales para facilitar la lectura y la trazabilidad.
 
 \chapter{Registro visual de capturas}
 \label{anx:capturas}
 
-La Figura~\ref{fig:A-1} reúne en una sola vista las capturas del experimento. Cada etiqueta indica la réplica, la repetición y la distancia nominal de la réplica al vidrio en milímetros; por ejemplo, \texttt{R1-REP1-50.jpg}. La vista permite revisar de un vistazo cómo se organizó el conjunto y que cada captura corresponda a su posición. Las 72 imágenes originales forman parte del repositorio (Anexo~\ref{anx:repositorio}).
+La Figura~\ref{fig:A-1} reúne en una sola vista las capturas del experimento. Cada etiqueta indica la réplica, la repetición y la distancia nominal de la réplica al vidrio en milímetros; por ejemplo, \texttt{R1-REP1-50.jpg}. La vista permite revisar de un vistazo cómo se organizó el conjunto y que cada captura corresponda a su posición. Las 72 imágenes originales están publicadas en el repositorio de datos (Anexo~\ref{anx:repositorio}).
 
 \begin{figure}[htbp]
 \centering
@@ -30,7 +30,7 @@ La Figura~\ref{fig:B-1} reproduce la configuración del modelo de puerto plano, 
 \chapter{Parámetros de calibración de cámara}
 \label{anx:calibraciones}
 
-Los archivos \texttt{calibration\_B.yaml} y \texttt{calibration\_C\_air.yaml} guardan los perfiles de calibración de las rutas B y C. Los dos usan el modelo de cámara de OpenCV, una resolución de $4096 \times 3072$ píxeles y un tablero de $4 \times 4$ esquinas interiores con cuadros de 20~mm. La Tabla~\ref{tab:calibraciones} presenta sus indicadores de calidad. Los listados que siguen reproducen la cabecera y el resumen de cada archivo; los informes de cada vista quedan en los YAML completos del repositorio.
+Los archivos \texttt{calibration\_B.yaml} y \texttt{calibration\_C\_air.yaml} guardan los perfiles de calibración de las rutas B y C. Los dos usan el modelo de cámara de OpenCV, una resolución de $4096 \times 3072$ píxeles y un tablero de $4 \times 4$ esquinas interiores con cuadros de 20~mm. La Tabla~\ref{tab:calibraciones} presenta sus indicadores de calidad. Los listados que siguen reproducen la cabecera y el resumen de cada archivo; los informes de cada vista quedan en los YAML completos, publicados con los datos (Anexo~\ref{anx:repositorio}).
 
 \begin{lstlisting}[caption={Cabecera y resumen del perfil B.},label={lst:calB}]
 schema: fish_morphometry.b_calibration.v1
@@ -122,25 +122,33 @@ rail_direction_camera:
 \chapter{Repositorio de código y datos}
 \label{anx:repositorio}
 
-El código de la aplicación, los datos del experimento y los scripts que regeneran las tablas y figuras del Capítulo~\ref{cap:resultados} están en \url{\RepoURL}, etiqueta \texttt{\RepoTag}. Hash completo del commit de referencia:\par\noindent{\footnotesize\texttt{\RepoCommit}}\par El repositorio tiene esta estructura:
+El trabajo está publicado en dos repositorios. El código de Fishmeter está en \url{\RepoURL}, etiqueta \texttt{\RepoTag}, que corresponde al commit\par\noindent{\footnotesize\texttt{\RepoCommit}}\par
+\noindent Los datos del experimento y los scripts que regeneran las tablas y figuras del Capítulo~\ref{cap:resultados} están en el repositorio de este documento, \url{\DatosURL}. La estructura de ambos es la siguiente:
 
 \begin{lstlisting}
-FishmeterTPF/
-  src/fish_morphometry/   aplicacion Fishmeter (calibracion, geometria,
-                          metodos A, A', B y C, interfaz, validacion)
-  tests/                  pruebas unitarias e integracion (pytest)
-  calibrations/           air/, water_pinhole/, flatport/ (YAML)
-  data/raw/               72 imagenes JPG originales
-  data/annotations/       puntos anatomicos (JSON por imagen)
-  data/references/        replicas.csv (medidas de calibre x3)
-  results/master.csv      tabla maestra (288 registros)
-  results/L_z.csv         L(z) por imagen (grilla de profundidades)
-  analysis/make_figures.py  regenera tablas y figuras del Capitulo 4
-  docs/                   guia de uso y notas de desarrollo
-  README.md               instalacion, ejecucion y reproduccion
+FishmeterTPF/                     codigo (etiqueta v1.0-tesis)
+  src/fish_morphometry/           aplicacion Fishmeter (calibracion, geometria,
+                                  metodos A, A', B y C, interfaz, validacion)
+  tests/                          pruebas unitarias e integracion (pytest)
+  docs/                           guia de uso y notas de desarrollo
+  README.md                       instalacion y ejecucion
+
+ProyectoTPF/                      datos y analisis
+  datos/imagenes/                 72 imagenes JPG originales
+  datos/calibraciones/            perfiles B y C, puerto plano y riel (YAML)
+  datos/referencias/replicas.csv  tres lecturas de calibre por medida
+  datos/resultados_json/          un JSON por imagen y metodo (puntos y parametros)
+  datos/derivados/                L(z), intervalos y sensibilidad de C
+  datos/SHA256SUMS                huellas de todos los archivos de datos
+  datos/README.md                 contenido y convenciones de los datos
+  anexos/csv-maestro-re-run.csv   tabla maestra (288 registros)
+  analysis/reproducir_capitulo4.py  Tablas 4.3 a 4.6, pruebas de signos,
+                                  Bland-Altman y Figuras 4.5 y 4.6
+  analysis/make_figures.py        Figuras 4.1 a 4.4 y 4.7
+  analysis/tabla_maestra.py       tabla del Anexo F
 \end{lstlisting}
 
-%\pendiente{Publicar en el repositorio las 72 imágenes, los JSON de puntos, \texttt{replicas.csv}, los tres YAML, \texttt{master.csv} y \texttt{L\_z.csv}; mover las notas internas de desarrollo a \texttt{docs/dev/}; agregar \texttt{requirements.txt} congelado; crear la etiqueta \texttt{v1.0-tesis} y actualizar el hash en la Sección~\ref{sec:software} y en este anexo. Hasta entonces, no debe afirmarse que las tablas se reproducen desde el repositorio.}
+Para reproducir el Capítulo~\ref{cap:resultados} hay que instalar Fishmeter en la etiqueta indicada y ejecutar, desde la raíz de ProyectoTPF, los tres scripts de \texttt{analysis/} en el orden del listado. El primero recalcula C desde los puntos marcados con el perfil \texttt{C-air} y la configuración del puerto plano; los otros dos leen la tabla maestra, los resultados del primero y, para la Figura~\ref{fig:4-captura}, la imagen original.
 
 \chapter{Tabla maestra de resultados}
 \label{anx:maestra}

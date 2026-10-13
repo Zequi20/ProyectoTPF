@@ -111,7 +111,7 @@ Posición nominal (cm al vidrio) & Separación de la zona de calibración de B (
 
 \smallskip
 \begin{minipage}{0.9\textwidth}\footnotesize
-\emph{Nota.} El plano de simetría de la réplica quedaba 10~mm corrido respecto del apoyo del carrito. Compensamos ese desplazamiento en el montaje, corriendo el carrito 10~mm para que el plano de simetría quedara en la posición nominal; por eso el procesamiento no aplicó ningún desplazamiento adicional.
+\emph{Nota.} El plano de simetría de la réplica quedaba 10~mm corrido respecto del apoyo del carrito. Compensamos ese desplazamiento físicamente en el montaje, corriendo el carrito 10~mm para que el plano de simetría quedara en la posición nominal; por eso el procesamiento no aplicó ningún desplazamiento adicional, y el registro de datos consigna un desplazamiento de réplica de 0~mm.
 \end{minipage}
 \end{table}
 
@@ -177,7 +177,7 @@ Supuesto & Planos de las réplicas paralelos al tablero \\
 \section{Software utilizado}
 \label{sec:software}
 
-Procesamos las imágenes con Fishmeter, una aplicación propia escrita en Python 3.12. El código fuente y la documentación de uso están en el repositorio público \url{\RepoURL}. La aplicación usa OpenCV 5.0.0 para detectar marcadores, calibrar y aplicar transformaciones geométricas; NumPy 2.5.3 para el cálculo vectorial; PyYAML 6.0.3 para los archivos de configuración; y Tkinter, de la biblioteca estándar, para la interfaz gráfica.
+Procesamos las imágenes con Fishmeter, una aplicación propia escrita en Python 3.12. El código fuente y la documentación de uso están en el repositorio público \url{\RepoURL}, etiqueta \texttt{\RepoTag}. La aplicación usa OpenCV 5.0.0 para detectar marcadores, calibrar y aplicar transformaciones geométricas; NumPy 2.5.3 para el cálculo vectorial; PyYAML 6.0.3 para los archivos de configuración; y Tkinter, de la biblioteca estándar, para la interfaz gráfica.
 \\
 El módulo refractivo (\texttt{refractive\_port.py} y \texttt{snells\_law.py}) implementa las ecuaciones~\eqref{eq:va} a~\eqref{eq:rayo} e incluye pruebas unitarias de sanidad. Con $\mu_g = \mu_w = 1$ y $t_g = 0$, es decir, sin vidrio ni agua, reproduce la cámara pinhole; y un rayo que viaja sobre el eje óptico no se desvía. Las pruebas de integración verifican que los cuatro métodos reciban las mismas coordenadas y que cada imagen produzca un registro trazable.
 
@@ -301,7 +301,7 @@ Las 72 imágenes siguieron exactamente la misma secuencia, la de la Figura~\ref{
 \label{fig:3-flujo}
 \end{figure}
 
-La tabla maestra guarda, para cada estimación, la réplica y la imagen, la distancia al vidrio, la repetición, el método, la medida, la referencia física, el valor estimado, el error, el estado de los puntos y del marcador, y el motivo de exclusión si lo hubo. Gracias a eso, cada número puede rastrearse hasta la fotografía original y sus coordenadas manuales. Los archivos de datos (imágenes, puntos, calibraciones y tabla maestra) y el script que regenera las tablas y figuras del Capítulo~\ref{cap:resultados} forman parte del repositorio (Anexo~\ref{anx:repositorio}).
+La tabla maestra guarda, para cada estimación, la réplica y la imagen, la distancia al vidrio, la repetición, el método, la medida, la referencia física, el valor estimado, el error, el estado de los puntos y del marcador, y el motivo de exclusión si lo hubo. Gracias a eso, cada número puede rastrearse hasta la fotografía original y sus coordenadas manuales. Los archivos de datos (imágenes, puntos, calibraciones y tabla maestra) y los scripts que regeneran las tablas y figuras del Capítulo~\ref{cap:resultados} están publicados (Anexo~\ref{anx:repositorio}).
 
 \section{Evaluación de las estimaciones}
 \label{sec:evaluacion}

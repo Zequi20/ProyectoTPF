@@ -1,0 +1,77 @@
+{
+  "method": "A",
+  "image_id": "R6-REP2-230",
+  "units": "mm",
+  "points_source": "shared_annotation",
+  "body_depth_selection": "manual_section_not_automatically_verified_global_max",
+  "marker_id": 1,
+  "marker_role": "glass",
+  "marker_plane": "glass_inner_surface",
+  "marker_side_mm": 60.0,
+  "marker_side_px": 829.1568726599285,
+  "scale_mm_per_px": 0.07236266378341712,
+  "points_px": {
+    "p1": [
+      1178.3462912,
+      1066.3944192
+    ],
+    "p2": [
+      2924.8544768,
+      940.5652991999999
+    ],
+    "p3": [
+      2222.7279872,
+      839.9020032
+    ],
+    "p4": [
+      2222.7279872,
+      1131.8255616
+    ]
+  },
+  "points_metric_mm": {
+    "p1": [
+      85.26827649054212,
+      77.16714081708196
+    ],
+    "p2": [
+      211.6502611201008,
+      68.06181051235872
+    ],
+    "p3": [
+      160.84251801974506,
+      60.777546268580124
+    ],
+    "p4": [
+      160.84251801974506,
+      81.90191257553805
+    ]
+  },
+  "metric_transform": "uniform_scale_approximation",
+  "scale_is_global": true,
+  "longitudinal_axis_px": [
+    1.0,
+    0.0
+  ],
+  "longitudinal_axis_metric": [
+    1.0,
+    0.0
+  ],
+  "normal_axis_metric": [
+    -0.0,
+    1.0
+  ],
+  "maximum_depth_section_angle_degrees": 5.0,
+  "total_length_mm": 126.38198462955867,
+  "body_depth_mm": 21.124366306957924,
+  "total_length_euclidean_mm": 126.70956190779019,
+  "body_depth_euclidean_mm": 21.124366306957924,
+  "body_depth_section_offset_mm": 0.0,
+  "body_depth_section_angle_degrees": 0.0,
+  "body_depth_valid": true,
+  "quality": {
+    "status": "WARNING",
+    "warnings": [
+      "La escala de A proviene del plano del vidrio y solo aproxima el plano del pez; la separación entre planos, la perspectiva y la refracción no están corregidas."
+    ]
+  }
+}

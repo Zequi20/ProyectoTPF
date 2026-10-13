@@ -1,0 +1,300 @@
+{
+  "method": "C",
+  "image_id": "R5-REP2-50",
+  "replica_id": "R5",
+  "repetition": "2",
+  "calibration_profile_id": "C-air",
+  "calibration_profile_hash": "fb98aea6af6ba57d663f5884b4034bfff3413c62cc376bef82256a7c1f412a55",
+  "calibration_profile": "C-air",
+  "points_source": "shared_annotation",
+  "body_depth_selection": "manual_section_not_automatically_verified_global_max",
+  "units": "mm",
+  "points_px": {
+    "p1": [
+      1161.00841472,
+      878.7817267199998
+    ],
+    "p2": [
+      2872.28444672,
+      725.2702003199998
+    ],
+    "p3": [
+      2097.17706752,
+      571.7586739199999
+    ],
+    "p4": [
+      2097.17706752,
+      886.3314739199999
+    ]
+  },
+  "rays": {
+    "q1_camera_mm": {
+      "p1": [
+        -59.39458938987468,
+        -44.64324066651206,
+        230.0
+      ],
+      "p2": [
+        57.94412043799661,
+        -55.208764910528174,
+        230.0
+      ],
+      "p3": [
+        4.766293873269177,
+        -65.81656482129841,
+        230.0
+      ],
+      "p4": [
+        4.771680089985041,
+        -44.4281134035209,
+        230.0
+      ]
+    },
+    "q2_camera_mm": {
+      "p1": [
+        -60.064087428438945,
+        -45.146460949174326,
+        234.0
+      ],
+      "p2": [
+        58.594419234789456,
+        -55.82836519304783,
+        234.0
+      ],
+      "p3": [
+        4.820333414229498,
+        -66.56278338127332,
+        234.0
+      ],
+      "p4": [
+        4.826432851927732,
+        -44.93790489642745,
+        234.0
+      ]
+    },
+    "v_air": {
+      "p1": [
+        -0.2457329371196663,
+        -0.18470225594980383,
+        0.9515778477148338
+      ],
+      "p2": [
+        0.23793689149858704,
+        -0.2267046562617824,
+        0.9444527698584069
+      ],
+      "p3": [
+        0.019919381965923598,
+        -0.2750617836875399,
+        0.9612201794473131
+      ],
+      "p4": [
+        0.02036566014092495,
+        -0.18962039391065208,
+        0.9816462428493238
+      ]
+    },
+    "v_glass": {
+      "p1": [
+        -0.1638219580797775,
+        -0.12313483729986921,
+        0.9787748351352533
+      ],
+      "p2": [
+        0.15862459433239134,
+        -0.15113643750785494,
+        0.9757028314657689
+      ],
+      "p3": [
+        0.013279587977282398,
+        -0.18337452245835995,
+        0.9829534256801398
+      ],
+      "p4": [
+        0.013577106760616632,
+        -0.12641359594043472,
+        0.9918847034476433
+      ]
+    },
+    "v_water": {
+      "p1": [
+        -0.1843457892870715,
+        -0.13856133229542675,
+        0.973045418860108
+      ],
+      "p2": [
+        0.1784972929471771,
+        -0.17007100994882404,
+        0.9691308312016065
+      ],
+      "p3": [
+        0.01494327229251583,
+        -0.20634792474684172,
+        0.9783645703754116
+      ],
+      "p4": [
+        0.015278064621849176,
+        -0.14225085814752597,
+        0.9897127230149682
+      ]
+    }
+  },
+  "points_camera_mm": {
+    "p1": [
+      -69.53670739632425,
+      -52.26644371718052,
+      284.0
+    ],
+    "p2": [
+      67.80356247945653,
+      -64.60277440970418,
+      284.0
+    ],
+    "p3": [
+      5.584019709961869,
+      -77.10833720624795,
+      284.0
+    ],
+    "p4": [
+      5.59827624984362,
+      -52.12437703322014,
+      284.0
+    ]
+  },
+  "longitudinal_axis_px": [
+    1.0,
+    0.0
+  ],
+  "longitudinal_axis_camera": [
+    0.9999584670478605,
+    -0.009113955194805285,
+    0.0
+  ],
+  "normal_axis_camera": [
+    0.009113955194805285,
+    0.9999584670478605,
+    -0.0
+  ],
+  "maximum_depth_section_angle_degrees": 5.0,
+  "geometry": {
+    "normal": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "port_normal_camera": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "measurement_plane_point_camera_mm": [
+      0.0,
+      0.0,
+      284.0
+    ],
+    "measurement_plane_normal_camera": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "interface_distance_mm": 230.0,
+    "glass_thickness_mm": 4.0,
+    "n_air": 1.0,
+    "n_glass": 1.5,
+    "n_water": 1.333,
+    "flat_port_hash": "7fb847f91f22158172e35c8445b6f659053fed69350b33da0d25b84af469e634",
+    "measurement_plane_id": "c-explicit-plane",
+    "measurement_plane_hash": "f3a1a05de1965ddb7219a9fe8cf6e2d956e4514d81d2ce11f6ea887605569ccc",
+    "units": "mm"
+  },
+  "measurements": {
+    "total_length_mm": 137.44699849412518,
+    "body_depth_mm": 24.983052448871405,
+    "total_length_euclidean_mm": 137.89320064639736,
+    "body_depth_euclidean_mm": 24.983964240615805,
+    "body_depth_section_offset_mm": 0.21344674584021328,
+    "body_depth_section_angle_degrees": 0.4895038411523675,
+    "body_depth_valid": true
+  },
+  "total_length_mm": 137.44699849412518,
+  "body_depth_mm": 24.983052448871405,
+  "total_length_euclidean_mm": 137.89320064639736,
+  "body_depth_euclidean_mm": 24.983964240615805,
+  "body_depth_section_offset_mm": 0.21344674584021328,
+  "body_depth_section_angle_degrees": 0.4895038411523675,
+  "body_depth_valid": true,
+  "calibration_context_hash": "623631f83c66f4b1615fd73e2f4db719880ccaa11c117bc705674d1a0df96ef8",
+  "flat_port_hash": "7fb847f91f22158172e35c8445b6f659053fed69350b33da0d25b84af469e634",
+  "measurement_plane_id": "c-explicit-plane",
+  "measurement_plane_hash": "f3a1a05de1965ddb7219a9fe8cf6e2d956e4514d81d2ce11f6ea887605569ccc",
+  "validation_record_hash": null,
+  "quality": {
+    "status": "PENDING_VALIDATION",
+    "warnings": [
+      "C usa el modelo explícito aire–vidrio–agua y requiere validación física sumergida.",
+      "El estado inicial es PENDING_VALIDATION hasta cumplir el protocolo físico.",
+      "La distancia de interfaz proviene de una aproximación lente–vidrio; registre su incertidumbre."
+    ]
+  },
+  "exclusion_reason": null,
+  "metadata": {
+    "points_source": "shared_annotation",
+    "port_source": "/home/epereira/Imágenes/TEST6/flat_port.yaml",
+    "lens_distance_approximation": true,
+    "port_uncertainty_note": "Distancia medida desde el frente de la lente",
+    "port_parameter_standard_deviations": null,
+    "water_conditions": {
+      "temperature_c": 22.0,
+      "salinity_ppt": 0.0,
+      "pressure_dbar": 0.0
+    },
+    "normal_was_normalized": false,
+    "measurement_plane": {
+      "plane_id": "c-explicit-plane",
+      "source": "explicit",
+      "point_camera_mm": [
+        0.0,
+        0.0,
+        284.0
+      ],
+      "normal_camera": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "coordinate_frame": "physical_camera_refractive",
+      "plane_hash": "f3a1a05de1965ddb7219a9fe8cf6e2d956e4514d81d2ce11f6ea887605569ccc",
+      "units": "mm"
+    },
+    "interface_residuals_mm": {
+      "p1": {
+        "first_interface_mm": 0.0,
+        "second_interface_mm": 0.0
+      },
+      "p2": {
+        "first_interface_mm": 0.0,
+        "second_interface_mm": 0.0
+      },
+      "p3": {
+        "first_interface_mm": 0.0,
+        "second_interface_mm": 0.0
+      },
+      "p4": {
+        "first_interface_mm": 0.0,
+        "second_interface_mm": 0.0
+      }
+    },
+    "interface_tolerance_mm": 1e-06,
+    "minimum_plane_incidence_cosine": 0.0001,
+    "calibration_context_hash": "623631f83c66f4b1615fd73e2f4db719880ccaa11c117bc705674d1a0df96ef8",
+    "flat_port_hash": "7fb847f91f22158172e35c8445b6f659053fed69350b33da0d25b84af469e634",
+    "measurement_plane_hash": "f3a1a05de1965ddb7219a9fe8cf6e2d956e4514d81d2ce11f6ea887605569ccc",
+    "measurement_convention": "projected_anatomical_axes",
+    "axis_mapping": "refractive_local_probe_at_p1",
+    "algorithm_version": "c_refractive_projected_anatomical_axes.v1",
+    "app_version": "0.1.0",
+    "coordinate_convention": "X derecha, Y abajo, Z cámara hacia pecera",
+    "uses_aruco": false,
+    "uses_global_scale": false
+  }
+}

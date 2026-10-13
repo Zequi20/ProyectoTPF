@@ -1,0 +1,139 @@
+{
+  "method": "B",
+  "image_id": "R6-REP2-110",
+  "replica_id": "R6",
+  "repetition": "2",
+  "capture_rail_position_mm": 110.0,
+  "delta_z_mm": 110.0,
+  "delta_rail_mm": 110.0,
+  "replica_plane_offset_mm": 0.0,
+  "replica_plane_offset_direction": "rail",
+  "units": "mm",
+  "points_source": "shared_annotation",
+  "body_depth_selection": "manual_section_not_automatically_verified_global_max",
+  "points_px": {
+    "p1": [
+      910.1715046400001,
+      967.8505574399998
+    ],
+    "p2": [
+      3159.3670246399997,
+      829.4385254399998
+    ],
+    "p3": [
+      2247.10590464,
+      669.0063974399998
+    ],
+    "p4": [
+      2247.10590464,
+      1049.6394854399998
+    ]
+  },
+  "points_camera_mm": {
+    "p1": [
+      -114.95329027166575,
+      -59.39613811755739,
+      470.5817673627799
+    ],
+    "p2": [
+      117.61407169274634,
+      -74.51234136331097,
+      479.189340129793
+    ],
+    "p3": [
+      22.71928652724352,
+      -91.10219276540035,
+      474.70185560154687
+    ],
+    "p4": [
+      23.04208449143191,
+      -52.33480037297314,
+      476.37614967088984
+    ]
+  },
+  "longitudinal_axis_px": [
+    1.0,
+    0.0
+  ],
+  "longitudinal_axis_camera": [
+    0.9991442242257544,
+    -0.01320791372107923,
+    0.03919655866848535
+  ],
+  "normal_axis_camera": [
+    0.011508407870765132,
+    0.9989970488532639,
+    0.04327184917183015
+  ],
+  "maximum_depth_section_angle_degrees": 5.0,
+  "total_length_mm": 232.90537718937844,
+  "body_depth_mm": 38.80467528284088,
+  "total_length_euclidean_mm": 233.21699715199196,
+  "body_depth_euclidean_mm": 38.80487304533728,
+  "body_depth_section_offset_mm": 0.12388808668243821,
+  "body_depth_section_angle_degrees": 0.1829222981597084,
+  "body_depth_valid": true,
+  "calibration_profile_id": "B-effective",
+  "calibration_profile_hash": "eb245104cb46caded48e9e9f827dda11db985c7b22ec5cb63a27572da14caf4e",
+  "calibration_context_hash": "1e3531dcf0d9ff8d00b322b41d2dd074b41cb822a1324cd5545635303ca81ba6",
+  "rail_reference_id": "IMG20261012000552-rail-reference",
+  "rail_reference_hash": "1f0659fd92c5986fa9c96a027933d06ed2f853323bcd44f451de8808b4b7a413",
+  "validation_record_hash": null,
+  "quality": {
+    "status": "PENDING_VALIDATION",
+    "warnings": [
+      "B es una aproximación pinhole efectiva a través de agua y vidrio; D_B no corrige físicamente la refracción.",
+      "La captura está separada +110.000 mm de la zona de calibración; la exactitud debe comprobarse físicamente en esta posición."
+    ]
+  },
+  "exclusion_reason": null,
+  "metadata": {
+    "model": "OPENCV",
+    "resolution": [
+      4096,
+      3072
+    ],
+    "calibration_rms_px": 0.4353568098178903,
+    "calibration_rail_position_mm": 0.0,
+    "calibration_context_hash": "1e3531dcf0d9ff8d00b322b41d2dd074b41cb822a1324cd5545635303ca81ba6",
+    "measurement_plane_point_camera_mm": [
+      -31.81205781140307,
+      -33.21767293239843,
+      475.01243734103383
+    ],
+    "measurement_plane_normal_camera": [
+      -0.03972877728543377,
+      -0.04278372818731478,
+      0.9982941334385365
+    ],
+    "rail_direction_camera": [
+      0.02095849070805215,
+      -0.04478647483729878,
+      0.998776708448334
+    ],
+    "rail_direction_source": "multi_position_fit",
+    "rail_positions_used_mm": [
+      0.0,
+      180.0
+    ],
+    "rail_fit_residual_mm": 1.6173629035293455e-13,
+    "rail_normal_spread_degrees": 0.3366024500414321,
+    "rail_scale_norm": 1.0081299420012777,
+    "rail_scale_relative_error": 0.008129942001277701,
+    "rail_scale_check_status": "PASS",
+    "maximum_rail_scale_relative_error": 0.05,
+    "rail_reference_metric_validation_status": "PENDING_VALIDATION",
+    "rail_positive_direction": "posición de rail creciente",
+    "reference_image_id": "IMG20261012000552.jpg | IMG20261012000724.jpg",
+    "reference_reprojection_error_px": 0.2702659014133474,
+    "replica_planes_parallel_to_board": true,
+    "rail_perpendicular_to_board": false,
+    "uses_aruco": false,
+    "points_source": "shared_annotation",
+    "measurement_convention": "projected_anatomical_axes",
+    "algorithm_version": "b_projected_anatomical_axes.v1",
+    "app_version": "0.1.0",
+    "replica_plane_offset_direction": "rail",
+    "ray_model": "cv2.undistortPoints(P=None) -> (x,y,1)"
+  }
+}

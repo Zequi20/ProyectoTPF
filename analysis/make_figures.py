@@ -1,5 +1,6 @@
 """Regenera las figuras del Capítulo 4 a partir del CSV maestro y de la estimación
-geométrica de primer orden del intervalo I_L.
+geométrica de primer orden del intervalo I_L. El ancho numérico de I_L se lee de
+datos/derivados/intervalos_L_z.csv, que escribe analysis/reproducir_capitulo4.py.
 
 Las repeticiones técnicas se promedian por combinación réplica--posición antes de
 calcular los errores (Sección 3.7); los registros sin valor (ArUco no detectado)
@@ -137,10 +138,9 @@ fig.savefig(OUT / "fig4_errores_combinaciones.png", dpi=200)
 plt.close(fig)
 
 # ---------- Figura 4.6: captura real con los cuatro puntos marcados ----------
-# Las imágenes originales no se versionan con el libro; la figura se regenera solo
-# si están disponibles (ruta configurable con FISHMETER_IMAGES).
+# Las imágenes originales están en datos/imagenes (ruta configurable con FISHMETER_IMAGES).
 import os
-IMAGES = Path(os.environ.get("FISHMETER_IMAGES", Path.home() / "Imágenes/TEST6/Repeticiones"))
+IMAGES = Path(os.environ.get("FISHMETER_IMAGES", ROOT / "datos" / "imagenes"))
 CAPTURE = "R3-REP1-230.jpg"
 if (IMAGES / CAPTURE).exists():
     with open(CSV, encoding="utf-8") as fh:
@@ -202,12 +202,18 @@ with open(OUT / "valores_analiticos.txt", "w", encoding="utf-8") as f:
     f.write(f"Pendiente (MAE_B - MAE_C) vs separacion: {np.polyfit([0,6,12,18], diff_BC, 1)[0]:.2f} mm/cm\n")
 
 # Ancho numérico de I_L (% de la LT de calibre): media por posición de la corrida de
-# L(z) con C sobre las 72 capturas (Fishmeter, outputs/tesis_pendientes/datos/intervalos_L_z.csv)
-num = {
-    "z desconocida en toda la pecera (0–30 cm)": [81.78, 71.01, 62.41, 55.55],
-    "z conocida con ±3 cm": [16.36, 14.20, 12.48, 11.11],
-    "z conocida con ±1 cm": [5.45, 4.73, 4.16, 3.70],
-}
+# L(z) con C sobre las 72 capturas (analysis/reproducir_capitulo4.py)
+INTERVALS = ROOT / "datos" / "derivados" / "intervalos_L_z.csv"
+if not INTERVALS.exists():
+    raise SystemExit(f"Falta {INTERVALS}: ejecutar antes analysis/reproducir_capitulo4.py")
+with open(INTERVALS, encoding="utf-8") as fh:
+    _iv = list(csv.DictReader(fh))
+num = {label: [float(np.mean([float(r["ancho_num_pct"]) for r in _iv
+                              if r["escenario"] == key and int(r["position_mm"]) == int(z)]))
+               for z in z_true]
+       for key, label in (("0-30 cm", "z desconocida en toda la pecera (0–30 cm)"),
+                          ("+-3 cm", "z conocida con ±3 cm"),
+                          ("+-1 cm", "z conocida con ±1 cm"))}
 
 # ---------- Figura 4.4: ancho relativo del intervalo ----------
 fig, ax = plt.subplots(figsize=(6.4, 3.6))

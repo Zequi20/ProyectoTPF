@@ -1,0 +1,76 @@
+{
+  "method": "A_PRIME",
+  "image_id": "R2-REP3-50",
+  "units": "mm",
+  "points_source": "shared_annotation",
+  "body_depth_selection": "manual_section_not_automatically_verified_global_max",
+  "marker_id": 0,
+  "marker_role": "coplanar",
+  "marker_plane": "replica_symmetry_plane",
+  "marker_side_mm": 60.0,
+  "marker_side_px": 732.0344936379645,
+  "scale_mm_per_px": 0.08196335080034309,
+  "points_px": {
+    "p1": [
+      1217.2156928000002,
+      915.3631027199999
+    ],
+    "p2": [
+      2882.18660864,
+      732.155904
+    ],
+    "p3": [
+      2239.95478016,
+      591.2272896
+    ],
+    "p4": [
+      2239.95478016,
+      937.5090278399999
+    ]
+  },
+  "points_metric_mm": {
+    "p1": [
+      96.80592156525736,
+      97.6692854094682
+    ],
+    "p2": [
+      -39.79932185037314,
+      111.6595097838123
+    ],
+    "p3": [
+      12.952767370823064,
+      123.59997406914262
+    ],
+    "p4": [
+      13.185946712293461,
+      95.19431077537833
+    ]
+  },
+  "metric_transform": "planar_homography",
+  "scale_is_global": false,
+  "longitudinal_axis_px": [
+    1.0,
+    0.0
+  ],
+  "longitudinal_axis_metric": [
+    -0.9999690176622485,
+    -0.007871703474957236
+  ],
+  "normal_axis_metric": [
+    0.007871703474957236,
+    -0.9999690176622485
+  ],
+  "maximum_depth_section_angle_degrees": 5.0,
+  "total_length_mm": 136.4908841680174,
+  "body_depth_mm": 28.40661873854261,
+  "total_length_euclidean_mm": 137.3197688123897,
+  "body_depth_euclidean_mm": 28.406620350967422,
+  "body_depth_section_offset_mm": 0.009571158571292981,
+  "body_depth_section_angle_degrees": 0.019304901279562997,
+  "body_depth_valid": true,
+  "quality": {
+    "status": "OK",
+    "warnings": []
+  },
+  "coplanarity_error_mm": 0.0
+}

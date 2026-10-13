@@ -1,0 +1,157 @@
+{
+  "method": "B",
+  "image_id": "R4-REP2-110",
+  "replica_id": "R4",
+  "repetition": "2",
+  "capture_rail_position_mm": 60.0,
+  "delta_z_mm": 60.0,
+  "delta_rail_mm": 60.0,
+  "replica_plane_offset_mm": 0.0,
+  "replica_plane_offset_direction": "rail",
+  "units": "mm",
+  "points_source": "shared_annotation",
+  "body_depth_selection": "manual_section_not_automatically_verified_global_max",
+  "points_px": {
+    "p1": [
+      1323.48379136,
+      842.6260070399996
+    ],
+    "p2": [
+      2895.84447488,
+      931.2097075199996
+    ],
+    "p3": [
+      2279.78510336,
+      597.0075647999996
+    ],
+    "p4": [
+      2279.78510336,
+      1060.0587263999994
+    ]
+  },
+  "points_camera_mm": {
+    "p1": [
+      -65.1161002951003,
+      -65.06564750171569,
+      422.32904223437987
+    ],
+    "p2": [
+      80.98914791983148,
+      -57.46773142398805,
+      428.4691665098882
+    ],
+    "p3": [
+      23.31662320588356,
+      -88.05210566341759,
+      424.8632428411907
+    ],
+    "p4": [
+      23.707723563056533,
+      -45.890507609641816,
+      426.6857200341551
+    ]
+  },
+  "longitudinal_axis_px": [
+    1.0,
+    0.0
+  ],
+  "longitudinal_axis_camera": [
+    0.9991320704169196,
+    -0.014218546151930033,
+    0.03915276247884675
+  ],
+  "normal_axis_camera": [
+    0.012519190061819353,
+    0.9989831758081412,
+    0.043311480377339236
+  ],
+  "maximum_depth_section_angle_degrees": 5.0,
+  "total_length_mm": 146.11081065470265,
+  "body_depth_mm": 42.20255756579319,
+  "total_length_euclidean_mm": 146.4314618201625,
+  "body_depth_euclidean_mm": 42.2027811057092,
+  "body_depth_section_offset_mm": 0.1373607015044534,
+  "body_depth_section_angle_degrees": 0.18648539637936282,
+  "body_depth_valid": true,
+  "calibration_profile_id": "B-effective",
+  "calibration_profile_hash": "eb245104cb46caded48e9e9f827dda11db985c7b22ec5cb63a27572da14caf4e",
+  "calibration_context_hash": "1e3531dcf0d9ff8d00b322b41d2dd074b41cb822a1324cd5545635303ca81ba6",
+  "rail_reference_id": "IMG20261012000552-rail-reference",
+  "rail_reference_hash": "1f0659fd92c5986fa9c96a027933d06ed2f853323bcd44f451de8808b4b7a413",
+  "validation_record_hash": null,
+  "quality": {
+    "status": "PENDING_VALIDATION",
+    "warnings": [
+      "B es una aproximación pinhole efectiva a través de agua y vidrio; D_B no corrige físicamente la refracción.",
+      "La captura está separada +60.000 mm de la zona de calibración; la exactitud debe comprobarse físicamente en esta posición."
+    ]
+  },
+  "exclusion_reason": null,
+  "metadata": {
+    "model": "OPENCV",
+    "resolution": [
+      4096,
+      3072
+    ],
+    "calibration_rms_px": 0.4353568098178903,
+    "calibration_rail_position_mm": 0.0,
+    "calibration_context_hash": "1e3531dcf0d9ff8d00b322b41d2dd074b41cb822a1324cd5545635303ca81ba6",
+    "measurement_plane_point_camera_mm": [
+      -32.85998234680568,
+      -30.978349190533493,
+      425.07360191861716
+    ],
+    "measurement_plane_normal_camera": [
+      -0.03972877728543377,
+      -0.04278372818731478,
+      0.9982941334385365
+    ],
+    "rail_direction_camera": [
+      0.02095849070805215,
+      -0.04478647483729878,
+      0.998776708448334
+    ],
+    "rail_direction_source": "multi_position_fit",
+    "rail_positions_used_mm": [
+      0.0,
+      180.0
+    ],
+    "rail_fit_residual_mm": 1.6173629035293455e-13,
+    "rail_normal_spread_degrees": 0.3366024500414321,
+    "rail_scale_norm": 1.0081299420012777,
+    "rail_scale_relative_error": 0.008129942001277701,
+    "rail_scale_check_status": "PASS",
+    "maximum_rail_scale_relative_error": 0.05,
+    "rail_reference_metric_validation_status": "PENDING_VALIDATION",
+    "rail_positive_direction": "posición de rail creciente",
+    "reference_image_id": "IMG20261012000552.jpg | IMG20261012000724.jpg",
+    "reference_reprojection_error_px": 0.2702659014133474,
+    "replica_planes_parallel_to_board": true,
+    "rail_perpendicular_to_board": false,
+    "uses_aruco": false,
+    "points_source": "shared_annotation",
+    "measurement_convention": "projected_anatomical_axes",
+    "algorithm_version": "b_projected_anatomical_axes.v1",
+    "app_version": "0.1.0",
+    "replica_plane_offset_direction": "rail",
+    "ray_model": "cv2.undistortPoints(P=None) -> (x,y,1)"
+  },
+  "re_run": {
+    "reason": "La posición de riel original era la distancia absoluta desde el vidrio; B requiere la coordenada del riel con origen en D1.",
+    "rail_origin_from_glass_mm": 50.0,
+    "capture_rail_position_original_mm": 110.0,
+    "capture_rail_position_mm": 60.0,
+    "unchanged_inputs": [
+      "points_px",
+      "longitudinal_axis_px",
+      "maximum_depth_section_angle_degrees",
+      "replica_plane_offset_mm",
+      "replica_plane_offset_direction",
+      "calibration_profile",
+      "rail_reference"
+    ],
+    "source_json_file": "R4-REP2-110_B.json",
+    "source_json_sha256": "80b80a71361a3ebabb4d7a0f9c95de6f53143a91814f42ef701641d6d14d7283",
+    "script": "outputs/tesis_pendientes/scripts/re_run_b.py"
+  }
+}

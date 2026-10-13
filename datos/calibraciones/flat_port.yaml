@@ -1,0 +1,15 @@
+flat_port:
+  units: "mm"
+  normal_camera: [0.0, 0.0, 1.0]
+  interface_distance_mm: 230.0
+  glass_thickness_mm: 4.0
+  refractive_indices:
+    air: 1.000
+    glass: 1.500
+    water: 1.333
+  lens_distance_approximation: true
+  uncertainty_note: "Distancia medida desde el frente de la lente"
+  water_conditions:
+    temperature_c: 22.0
+    salinity_ppt: 0.0
+    pressure_dbar: 0.0
