@@ -1,0 +1,26 @@
+\documentclass[border=4pt]{standalone}
+\usepackage[utf8]{inputenc}\usepackage[T1]{fontenc}\usepackage{lmodern}
+\usepackage[english,spanish,es-noshorthands]{babel}
+\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,fit}
+\usepackage{xcolor}
+\definecolor{metA}{HTML}{C0392B}\definecolor{metAp}{HTML}{E67E22}\definecolor{metB}{HTML}{2E86C1}\definecolor{metC}{HTML}{1E8449}
+\newcommand{\Aprime}{A$'$}\newcommand{\IL}{I_L}
+\begin{document}
+\begin{tikzpicture}[>=Stealth,font=\small,
+  preg/.style={draw,rounded corners=3pt,fill=gray!8,text width=5.2cm,align=center,minimum height=9mm},
+  hoja/.style={draw,rounded corners=3pt,text width=4.6cm,align=center,minimum height=9mm,font=\small\bfseries}]
+  \node[preg] (q1) at (0,0) {¿Se puede colocar un marcador coplanar con el pez?};
+  \node[hoja,fill=metAp!15] (h1) at (6.3,0) {\Aprime\\ \normalfont error $\approx$ 2--3~\%};
+  \node[preg] (q2) at (0,-2.2) {¿Se conoce la distancia pez--vidrio con $\pm 1$~cm?};
+  \node[hoja,fill=metC!15] (h2) at (6.3,-2.2) {C\\ \normalfont error $< 1$~\%};
+  \node[preg] (q3) at (0,-4.4) {¿Se puede acotar $z$ con una guía o una segunda vista?};
+  \node[hoja,fill=metC!15] (h3) at (6.3,-4.4) {C con intervalo $\IL$\\ \normalfont ancho 4--17~\% según la cota};
+  \node[hoja,fill=metA!15] (h4) at (0,-6.6) {No medir\\ \normalfont intervalo de 56--83~\%: no utilizable};
+  \draw[->] (q1) -- node[above,font=\footnotesize]{sí} (h1);
+  \draw[->] (q1) -- node[right,font=\footnotesize]{no} (q2);
+  \draw[->] (q2) -- node[above,font=\footnotesize]{sí} (h2);
+  \draw[->] (q2) -- node[right,font=\footnotesize]{no} (q3);
+  \draw[->] (q3) -- node[above,font=\footnotesize]{sí} (h3);
+  \draw[->] (q3) -- node[right,font=\footnotesize]{no} (h4);
+\end{tikzpicture}
+\end{document}

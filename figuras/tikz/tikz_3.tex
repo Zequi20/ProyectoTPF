@@ -1,0 +1,45 @@
+\documentclass[border=4pt]{standalone}
+\usepackage[utf8]{inputenc}\usepackage[T1]{fontenc}\usepackage{lmodern}
+\usepackage[english,spanish,es-noshorthands]{babel}
+\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,fit}
+\usepackage{xcolor}
+\definecolor{metA}{HTML}{C0392B}\definecolor{metAp}{HTML}{E67E22}\definecolor{metB}{HTML}{2E86C1}\definecolor{metC}{HTML}{1E8449}
+\newcommand{\Aprime}{A$'$}\newcommand{\IL}{I_L}
+\begin{document}
+\begin{tikzpicture}[scale=0.34,>=Stealth,font=\scriptsize]
+  % pecera (vista superior): vidrio frontal en x=0, interior de 0 a 30 cm
+  \fill[cyan!8] (0,0) rectangle (30,30);
+  \draw[gray!60!black,line width=1.5pt] (0,0) rectangle (30,30);
+  \node[gray!60!black,font=\scriptsize] at (15,28.3) {pecera $30 \times 30 \times 30$ cm (vista superior)};
+  \draw[line width=2.5pt,gray!70!black] (0,0) -- (0,30);
+  \node[rotate=90,gray!70!black,font=\scriptsize] at (-1.6,22.5) {vidrio frontal, $t_g = 4$ mm};
+  % cámara (distancia comprimida, con corte)
+  \node[draw,fill=white,minimum width=1.0cm,minimum height=0.7cm] (cam) at (-9.5,15) {};
+  \fill (-8.6,15) circle (2pt);
+  \node[above=2pt,font=\scriptsize,align=center] at (cam.north) {cámara\\(Realme C71)};
+  \draw[->,thick] (-8.6,15) -- (0,15);
+  \draw[thick] (-5.2,14.2) -- (-4.6,15.8); \draw[thick] (-4.8,14.2) -- (-4.2,15.8);
+  \draw[<->] (-8.6,12.3) -- (0,12.3) node[midway,below,font=\scriptsize,align=center] {$d = 230$ mm\\(no a escala)};
+  % ArUco 1 en el vidrio
+  \fill[metA] (0.3,19) rectangle (1.1,22);
+  \node[metA,right,font=\scriptsize,align=left] at (1.3,20.5) {ArUco id 0 (A),\\fijo en el vidrio};
+  % riel
+  \draw[very thick,black!60] (2,15) -- (28,15);
+  \node[black!60,below,font=\scriptsize] at (25.5,14.6) {riel con carrito};
+  \foreach \p/\lab in {5/5,11/11,17/17,23/23}{
+    \draw[metC,very thick] (\p,13.4) -- (\p,16.6);
+    \node[metC,above,font=\scriptsize] at (\p,16.7) {\lab\,cm};
+  }
+  % réplica en 11 cm
+  \draw[metC,line width=2.5pt] (11,9) -- (11,21);
+  \node[metC,left,align=right,font=\scriptsize] at (10.5,10.2) {réplica\\(plano de simetría)};
+  % ArUco 2 coplanar
+  \fill[metAp] (10.6,6.2) rectangle (11.4,8.6);
+  \node[metAp,right,font=\scriptsize,align=left] at (11.7,7.4) {ArUco id 1 (\Aprime),\\en el carrito};
+  % lámpara
+  \node[draw,circle,fill=yellow!40,minimum size=0.5cm] at (15,32.5) {};
+  \node[above,font=\scriptsize] at (15,33.2) {foco 12 W (techo)};
+  \draw[dashed] (0,15) -- (30,15);
+  \draw[<->,thick] (0.2,3.5) -- (11,3.5) node[midway,below,font=\scriptsize] {$z$ (desde la cara interna del vidrio)};
+\end{tikzpicture}
+\end{document}

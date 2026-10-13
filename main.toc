@@ -1,0 +1,88 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{Agradecimientos}{\es@scroman {vi}}{chapter*.1}%
+\contentsline {chapter}{Resumen}{\es@scroman {xvi}}{chapter*.7}%
+\contentsline {chapter}{Abstract}{\es@scroman {xvii}}{chapter*.8}%
+\babel@toc {english}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\numberline {1}Introducción y planteamiento del problema}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introducción}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Elección del tema}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Antecedentes}{3}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Planteamiento del problema}{3}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Preguntas de investigación}{4}{section.1.5}%
+\contentsline {paragraph}{Pregunta principal.}{4}{section*.10}%
+\contentsline {paragraph}{Preguntas secundarias.}{4}{section*.11}%
+\contentsline {section}{\numberline {1.6}Objetivos}{5}{section.1.6}%
+\contentsline {paragraph}{Objetivo general.}{5}{section*.12}%
+\contentsline {paragraph}{Objetivos específicos.}{5}{section*.13}%
+\contentsline {section}{\numberline {1.7}Justificación}{5}{section.1.7}%
+\contentsline {section}{\numberline {1.8}Hipótesis y variables}{6}{section.1.8}%
+\contentsline {subsection}{\numberline {1.8.1}Hipótesis de investigación}{7}{subsection.1.8.1}%
+\contentsline {subsection}{\numberline {1.8.2}Variables}{7}{subsection.1.8.2}%
+\contentsline {section}{\numberline {1.9}Alcance y limitaciones del diseño}{8}{section.1.9}%
+\contentsline {subsection}{\numberline {1.9.1}Delimitación espacial y temporal}{8}{subsection.1.9.1}%
+\contentsline {section}{\numberline {1.10}Estructura del documento}{8}{section.1.10}%
+\contentsline {chapter}{\numberline {2}Marco teórico y estado del arte}{10}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Medición morfométrica de peces}{11}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Morfometría y parámetros corporales}{11}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Puntos anatómicos y definición de las medidas}{11}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Exactitud, repetibilidad e incertidumbre de la referencia}{12}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Formación de imágenes en medios acuáticos}{13}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Modelo geométrico convencional de cámara}{13}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Distorsión óptica producida por la lente}{14}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Refracción en la interfaz aire--vidrio--agua}{15}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Modelo refractivo de puerto plano}{15}{subsection.2.2.4}%
+\contentsline {paragraph}{Aproximación de primer orden.}{18}{section*.18}%
+\contentsline {subsection}{\numberline {2.2.5}Profundidad, inclinación y acortamiento aparente}{18}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.6}Profundidad conocida y profundidad desconocida}{18}{subsection.2.2.6}%
+\contentsline {subsection}{\numberline {2.2.7}Calibración y corrección refractiva}{19}{subsection.2.2.7}%
+\contentsline {section}{\numberline {2.3}Estrategias de conversión métrica A, A$'$, B y C}{20}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Marcado manual de puntos anatómicos}{21}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Recuperación de la escala física}{22}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Marcadores fiduciales ArUco}{22}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Conversión entre píxeles y unidades físicas}{22}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Homografía, perspectiva y pose}{23}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}Estimación y evaluación morfométrica}{24}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Trazabilidad de la medición}{24}{subsection.2.6.1}%
+\contentsline {section}{\numberline {2.7}Antecedentes y trabajos relacionados}{24}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Síntesis del estado del arte y brecha de investigación}{31}{section.2.8}%
+\contentsline {chapter}{\numberline {3}Metodología}{33}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Tipo de investigación, enfoque, población y muestra}{33}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Montaje e instrumentos de recolección de datos}{35}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Software utilizado}{39}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Medidas físicas, puntos anatómicos y variables}{40}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Métodos de conversión métrica}{42}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Procedimiento por imagen y trazabilidad}{44}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Evaluación de las estimaciones}{45}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Alcance y limitaciones metodológicas}{46}{section.3.8}%
+\contentsline {section}{\numberline {3.9}Cuestiones éticas y uso de herramientas}{46}{section.3.9}%
+\contentsline {chapter}{\numberline {4}Resultados y discusión}{47}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Composición del conjunto y control de calidad}{47}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Calibraciones}{48}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Sensibilidad de C a los parámetros del montaje}{49}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}Resultados agregados por método}{49}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Comportamiento según la profundidad}{51}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Repetibilidad del marcado manual}{52}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Intervalo por profundidad desconocida}{53}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Contraste de hipótesis}{54}{section.4.7}%
+\contentsline {paragraph}{H1 se sostiene.}{54}{section*.46}%
+\contentsline {paragraph}{H2 no se sostiene.}{56}{section*.47}%
+\contentsline {paragraph}{H3 se sostiene.}{56}{section*.48}%
+\contentsline {section}{\numberline {4.8}Discusión de los resultados}{56}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Alcance de los resultados}{58}{section.4.9}%
+\contentsline {chapter}{\numberline {5}Conclusiones y recomendaciones}{59}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Conclusiones por objetivo}{60}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Limitaciones}{62}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Recomendaciones}{62}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Trabajos futuros}{62}{section.5.4}%
+\contentsline {paragraph}{Verificaciones inmediatas sobre este mismo conjunto.}{62}{section*.53}%
+\contentsline {paragraph}{Líneas de continuación.}{63}{section*.54}%
+\contentsline {section}{\numberline {5.5}Impacto potencial y aporte}{63}{section.5.5}%
+\contentsline {chapter}{Referencias}{64}{section*.55}%
+\contentsline {chapter}{\numberline {A}Registro visual de capturas}{68}{chapter.A}%
+\contentsline {chapter}{\numberline {B}Configuración del puerto plano}{69}{chapter.B}%
+\contentsline {chapter}{\numberline {C}Parámetros de calibración de cámara}{70}{chapter.C}%
+\contentsline {chapter}{\numberline {D}Referencia geométrica del riel para B}{72}{chapter.D}%
+\contentsline {chapter}{\numberline {E}Repositorio de código y datos}{73}{chapter.E}%
+\contentsline {chapter}{\numberline {F}Tabla maestra de resultados}{74}{chapter.F}%
+\contentsline {chapter}{\numberline {G}Fichas de las réplicas}{75}{chapter.G}%

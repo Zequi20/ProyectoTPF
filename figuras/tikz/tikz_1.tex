@@ -1,0 +1,36 @@
+\documentclass[border=4pt]{standalone}
+\usepackage[utf8]{inputenc}\usepackage[T1]{fontenc}\usepackage{lmodern}
+\usepackage[english,spanish,es-noshorthands]{babel}
+\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,fit}
+\usepackage{xcolor}
+\definecolor{metA}{HTML}{C0392B}\definecolor{metAp}{HTML}{E67E22}\definecolor{metB}{HTML}{2E86C1}\definecolor{metC}{HTML}{1E8449}
+\newcommand{\Aprime}{A$'$}\newcommand{\IL}{I_L}
+\begin{document}
+\begin{tikzpicture}[scale=0.9,>=Stealth,font=\small]
+  % vidrio
+  \fill[gray!25] (2.0,-0.3) rectangle (2.3,3.3);
+  \node[gray!70!black,above] at (2.15,3.3) {vidrio};
+  \fill[cyan!8] (2.3,-0.3) rectangle (9.2,3.3);
+  % cámara
+  \node[draw,fill=white,minimum width=0.9cm,minimum height=0.6cm] (cam) at (0.2,1.5) {};
+  \fill (0.65,1.5) circle (1.5pt);
+  \node[below] at (0.2,1.2) {cámara};
+  % marcador en el vidrio
+  \draw[very thick,metA] (2.35,1.0) -- (2.35,2.0);
+  \node[metA,left,align=right] at (1.95,2.5) {marcador\\en el vidrio};
+  % marcador coplanar y pez
+  \draw[very thick,metAp] (6.2,0.5) -- (6.2,1.5);
+  \draw[very thick,metC] (6.2,1.7) -- (6.2,2.9);
+  \node[metAp,below,align=center] at (6.2,0.45) {marcador\\coplanar};
+  \node[metC,right] at (6.3,2.3) {réplica (LT)};
+  % rayos extremos del marcador en vidrio
+  \draw[metA] (0.65,1.5) -- (2.35,1.0);
+  \draw[metA] (0.65,1.5) -- (2.35,2.0);
+  % rayos de la réplica: aire hasta vidrio, luego quebrados
+  \draw[metC] (0.65,1.5) -- (2.0,1.62) -- (2.3,1.645) -- (6.2,1.7);
+  \draw[metC] (0.65,1.5) -- (2.0,2.33) -- (2.3,2.40) -- (6.2,2.9);
+  % anotación
+  \draw[<->] (2.3,-0.15) -- (6.2,-0.15) node[midway,below] {$z$ (profundidad desconocida)};
+  \node[align=left,font=\footnotesize] at (7.9,0.6) {misma longitud,\\distinto tamaño\\aparente};
+\end{tikzpicture}
+\end{document}

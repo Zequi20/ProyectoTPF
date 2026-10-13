@@ -1,0 +1,237 @@
+\chapter{Registro visual de capturas}
+\label{anx:capturas}
+
+La Figura~\ref{fig:A-1} presenta una vista conjunta de las capturas utilizadas en el flujo de trabajo. Las etiquetas visibles siguen el patrón de identificación de la réplica, la repetición y la distancia nominal de la réplica al vidrio en milímetros, por ejemplo \texttt{R1-REP1-50.jpg}. La imagen permite comprobar la organización visual del conjunto y la correspondencia entre las posiciones de captura. Las 72 imágenes originales forman parte del repositorio (Anexo~\ref{anx:repositorio}).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figA_1_capturas.png}
+\caption[Vista conjunta de las capturas y sus identificadores]{Vista conjunta de las capturas y sus identificadores. Fuente: elaboración propia.}
+\label{fig:A-1}
+\end{figure}
+
+\chapter{Configuración del puerto plano}
+\label{anx:flatport}
+
+La Figura~\ref{fig:B-1} reproduce la configuración utilizada para el modelo del puerto plano, cuyos valores se resumen en la Tabla~\ref{tab:puerto}: unidades en milímetros, normal de cámara $(0, 0, 1)$, distancia de la interfaz de 230~mm, espesor del vidrio de 4~mm e índices de refracción de 1,000 para aire, 1,500 para vidrio y 1,333 para agua. También registra que la distancia de la lente es una aproximación medida desde el frente de la lente y que las condiciones del agua corresponden a 22~\si{\celsius}, salinidad 0 y presión 0~dbar.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.6\textwidth]{figB_1_flatport.png}
+\caption[Parámetros visibles de la configuración del puerto plano]{Parámetros visibles de la configuración del puerto plano. Fuente: Fishmeter.}
+\label{fig:B-1}
+\end{figure}
+
+\chapter{Parámetros de calibración de cámara}
+\label{anx:calibraciones}
+
+Los archivos \texttt{calibration\_B.yaml} y \texttt{calibration\_C\_air.yaml} contienen los perfiles de calibración utilizados por las rutas B y C. Ambos emplean el modelo de cámara de OpenCV, una resolución de $4096 \times 3072$ píxeles y un tablero con $4 \times 4$ esquinas interiores y cuadros de 20~mm. Sus indicadores de calidad se presentan en la Tabla~\ref{tab:calibraciones}. Los siguientes listados reproducen la cabecera y los campos de resumen de cada archivo; los informes individuales de las vistas permanecen en los YAML completos del repositorio.
+
+\begin{lstlisting}[caption={Cabecera y resumen del perfil B.},label={lst:calB}]
+schema: fish_morphometry.b_calibration.v1
+profile_id: B-effective
+profile_hash: eb245104cb46caded48e9e9f827dda11db985c7b22ec5cb63a27572da14caf4e
+calibration_context_hash: 1e3531dcf0d9ff8d00b322b41d2dd074b41cb822a1324cd5545635303ca81ba6
+model: OPENCV
+camera_matrix:
+- [4502.32284117, 0.0, 2027.2736574393155]
+- [0.0, 4504.395746404586, 1549.0026630316365]
+- [0.0, 0.0, 1.0]
+distortion_coefficients:
+- 0.4454686711747631
+- -3.4668133596510753
+- -0.008336348094703296
+- 0.004790603340447537
+- 8.25240238252019
+resolution: [4096, 3072]
+calibration_rail_position_mm: 0.0
+created_at_utc: '2026-10-12T04:07:10.722788+00:00'
+versions:
+  opencv: 5.0.0
+  fish_morphometry: 0.1.0
+source: opencv_calibrateCamera
+board:
+  inner_corners: [4, 4]
+  square_size_mm: 20.0
+rms_px: 0.4353568098178903
+views:
+  received: 35
+  accepted: 35
+  rejected: 0
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Cabecera y resumen del perfil C en aire.},label={lst:calC}]
+schema: fish_morphometry.air_calibration.v1
+profile_id: C-air
+profile_hash: fb98aea6af6ba57d663f5884b4034bfff3413c62cc376bef82256a7c1f412a55
+calibration_context_hash: 623631f83c66f4b1615fd73e2f4db719880ccaa11c117bc705674d1a0df96ef8
+model: OPENCV
+camera_matrix:
+- [3313.72125140631, 0.0, 2028.1975106019397]
+- [0.0, 3313.6744263215105, 1530.5739559303083]
+- [0.0, 0.0, 1.0]
+distortion_coefficients:
+- 0.18564347583186028
+- -0.829350911254369
+- -0.0011635185172718578
+- -0.0015902497923188043
+- 1.0012733784385703
+resolution: [4096, 3072]
+board:
+  inner_corners: [4, 4]
+  square_size_mm: 20.0
+  units: mm
+rms_px: 0.3745461951579489
+created_at_utc: '2026-10-12T04:12:38.034127+00:00'
+versions:
+  opencv: 5.0.0
+  fish_morphometry: 0.1.0
+source: opencv_calibrateCamera_air
+views:
+  received: 36
+  accepted: 36
+  rejected: 0
+\end{lstlisting}
+
+\chapter{Referencia geométrica del riel para B}
+\label{anx:riel}
+
+El archivo \texttt{rail\_reference\_B.yaml} documenta el plano de referencia utilizado por B. El plano se obtuvo a partir de dos posiciones del riel, 0 y 180~mm, con un error de reproyección de 0,270~px (umbral de 1,0~px). El ajuste informa un residuo lineal de $1{,}62 \times 10^{-13}$~mm (residuo numérico de una recta por dos puntos, que no representa la incertidumbre física), una dispersión de la normal de $0{,}337^{\circ}$ (umbral de $1{,}0^{\circ}$) y un error relativo de escala de 0,813~\% (umbral de 5~\%). El archivo también registra que los planos de las réplicas se consideran paralelos al tablero, mientras que el riel no se considera perpendicular al tablero. Los valores principales se resumen en la Tabla~\ref{tab:riel}.
+
+\begin{lstlisting}[caption={Cabecera y plano de referencia del riel para B.},label={lst:riel}]
+plane_point_camera_mm:
+- -34.117491789288806
+- -28.291160700295567
+- 365.1469994117171
+plane_normal_camera:
+- -0.03972877728543376
+- -0.042783728187314775
+- 0.9982941334385363
+z_ref_mm: 0.0
+rail_direction_camera:
+- 0.02095849070805215
+- -0.04478647483729878
+- 0.998776708448334
+\end{lstlisting}
+
+\chapter{Repositorio de código y datos}
+\label{anx:repositorio}
+
+El código de la aplicación, los datos del experimento y los scripts que regeneran las tablas y figuras del Capítulo~\ref{cap:resultados} se encuentran en \url{\RepoURL}, etiqueta \texttt{\RepoTag}. Hash completo del commit de referencia:\par\noindent{\footnotesize\texttt{\RepoCommit}}\par La estructura del repositorio es la siguiente:
+
+\begin{lstlisting}
+FishmeterTPF/
+  src/fish_morphometry/   aplicacion Fishmeter (calibracion, geometria,
+                          metodos A, A', B y C, interfaz, validacion)
+  tests/                  pruebas unitarias e integracion (pytest)
+  calibrations/           air/, water_pinhole/, flatport/ (YAML)
+  data/raw/               72 imagenes JPG originales
+  data/annotations/       puntos anatomicos (JSON por imagen)
+  data/references/        replicas.csv (medidas de calibre x3)
+  results/master.csv      tabla maestra (288 registros)
+  results/L_z.csv         L(z) por imagen (grilla de profundidades)
+  analysis/make_figures.py  regenera tablas y figuras del Capitulo 4
+  docs/                   guia de uso y notas de desarrollo
+  README.md               instalacion, ejecucion y reproduccion
+\end{lstlisting}
+
+%\pendiente{Publicar en el repositorio las 72 imágenes, los JSON de puntos, \texttt{replicas.csv}, los tres YAML, \texttt{master.csv} y \texttt{L\_z.csv}; mover las notas internas de desarrollo a \texttt{docs/dev/}; agregar \texttt{requirements.txt} congelado; crear la etiqueta \texttt{v1.0-tesis} y actualizar el hash en la Sección~\ref{sec:software} y en este anexo. Hasta entonces, no debe afirmarse que las tablas se reproducen desde el repositorio.}
+
+\chapter{Tabla maestra de resultados}
+\label{anx:maestra}
+
+\pendiente{Incluir la tabla maestra (72 imágenes $\times$ 4 métodos: LT y PC estimadas y de referencia, error con signo y estado) en letra pequeña a dos columnas, o el enlace al CSV con su hash SHA-256.}
+
+\chapter{Fichas de las réplicas}
+\label{anx:fichas}
+
+Las seis réplicas se imprimieron en PLA. La Tabla~\ref{tab:lecturas-calibre} reproduce las tres lecturas de calibre de cada medida, registradas al milímetro, con su media y su desviación estándar muestral; las medias son las referencias de la Tabla~\ref{tab:replicas}.
+
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{Lecturas de calibre de las réplicas (mm).}
+\label{tab:lecturas-calibre}
+\begin{tabular}{@{}lccccc@{\hspace{1.2em}}ccccc@{}}
+\toprule
+ & \multicolumn{5}{c}{Longitud total (LT)} & \multicolumn{5}{c}{Profundidad corporal (PC)} \\
+\cmidrule(lr){2-6}\cmidrule(l){7-11}
+Réplica & 1 & 2 & 3 & Media & Desv. & 1 & 2 & 3 & Media & Desv. \\
+\midrule
+R1 & 160 & 157 & 159 & 158,7 & 1,5 & 45 & 45 & 45 & 45,0 & 0,0 \\
+R2 & 131 & 136 & 136 & 134,3 & 2,9 & 28 & 27 & 27 & 27,3 & 0,6 \\
+R3 & 91  & 92  & 92  & 91,7  & 0,6 & 41 & 40 & 40 & 40,3 & 0,6 \\
+R4 & 141 & 146 & 141 & 142,7 & 2,9 & 43 & 42 & 43 & 42,7 & 0,6 \\
+R5 & 137 & 138 & 137 & 137,3 & 0,6 & 25 & 26 & 26 & 25,7 & 0,6 \\
+R6 & 210 & 209 & 210 & 209,7 & 0,6 & 35 & 36 & 35 & 35,3 & 0,6 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\pendiente{Completar una ficha por réplica (R1--R6) con fotografía, origen del modelo STL y escala de impresión.}
+
+% ---------------------------------------------------------------------------
+% Registro de cambios: comentado para la entrega. Para mostrarlo de nuevo,
+% seleccionar las líneas siguientes y quitar el comentario (Ctrl+/).
+% ---------------------------------------------------------------------------
+% \chapter{Registro de cambios de esta versión}
+% \label{anx:cambios}
+%
+% Esta versión del documento incorpora las observaciones de dos revisiones independientes realizadas el 13 de octubre de 2026 sobre la versión anterior del libro (77 páginas). El registro siguiente permite justificar cada cambio y lo que no se incorporó, conforme al artículo 17 del Reglamento de Proyecto Final. La numeración A-$n$ y B-$n$ remite a las correcciones de cada revisión.
+%
+% \begin{footnotesize}
+% \begin{longtable}{@{}p{1.6cm}p{2.0cm}p{6.0cm}p{5.0cm}@{}}
+% \caption{Registro de cambios respecto de la versión anterior.}
+% \label{tab:registro-cambios}\\
+% \toprule
+% Ref. & Ubicación anterior & Cambio realizado & Motivo \\
+% \midrule
+% \endfirsthead
+% \toprule
+% Ref. & Ubicación anterior & Cambio realizado & Motivo \\
+% \midrule
+% \endhead
+% \bottomrule
+% \endfoot
+% \endlastfoot
+% A-1, B-26 & Cap.~1 y 2 & Los verbos en futuro que describían acciones realizadas pasaron a pretérito; las definiciones a presente; lo no realizado se declara como pendiente. & El documento informa una investigación concluida. \\
+% A-2, A-6, B-01 & Título, 1.5, 1.6, 4.6 & Se agregó la Sección~\ref{sec:intervalo} con la estimación geométrica del ancho de $\IL$ y su verificación contra el error de A; la corrida numérica de $L(z)$ sobre las 72 capturas, su ancho y su cobertura se incorporaron a la Tabla~\ref{tab:intervalo} y a la Figura~\ref{fig:4-Lz}. & El título y la pregunta principal prometían el intervalo y ninguna sección lo trataba. Se mantiene el título. \\
+% A-3, B-04/05 & 1.8, 4.4 & H1 y H2 reescritas con criterios coincidentes con lo calculado; nueva Sección~\ref{sec:contraste} con tabla de veredictos; H2 declarada no sostenida e interpretada. & No existía contraste de hipótesis; los datos refutaban H2 sin decirlo. \\
+% A-4, B-03 & 1.6, Cap.~4 & Secciones~\ref{sec:repetibilidad} y~\ref{sec:sensibilidad} creadas con sus tablas; matriz de cumplimiento en la Tabla~\ref{tab:cumplimiento}. & Objetivos 2, 5 y 6 sin resultado. \\
+% A-5, B-27 & pp.~8, 11, 19, 27, 30, 54, 62 & Eliminadas las frases de proceso («D7 del informe», «2-antecedente.tex», «carpeta anexo/», fila «pendiente de verificación»). & Texto dirigido al autor, no al lector. \\
+% A-7, B-12 & pp.~42--48 & Reemplazado «requiere comprobación física independiente / resultados exploratorios» por la descripción del estado interno del software y la validación contra calibre; distinción entre comprobación con patrón y validación externa. & La comparación contra calibre es la validación física. \\
+% A-8, B-07 & pp.~42--49 & Las cinco menciones a la advertencia de unidad de PC de R1 y R2 se concentraron en un recuadro pendiente de la Sección~\ref{sec:conjunto}, que se retiró al corregir los valores en la Tabla~\ref{tab:replicas}. & Es una tarea de medición, no una limitación. \\
+% B-08 & 4.3 & La inferencia se hizo con la réplica como unidad (prueba de signos, $n = 6$, $p = 0{,}031$); los conteos 24/24 pasan a descriptivos. & Las 24 combinaciones son medidas repetidas de seis réplicas. \\
+% B-09, B-10 & 3.7, 4.1 & Se aclara que las métricas describen la estimación promedio por condición y que el pareamiento no es idéntico en dos combinaciones; el recálculo con la intersección de las 70 imágenes comunes no cambió ningún valor en más de 0,01. & Rigor del diseño pareado. \\
+% A-9, B-23 & 3.3, Anexo E & Hash completo del commit y etiqueta prevista; Anexo~\ref{anx:repositorio} con el árbol del repositorio; publicación de datos pendiente. & Reproducibilidad. \\
+% A-10, B-15 & Cap.~3 & Tabla~\ref{tab:replicas} de réplicas y referencias (media y desviación de tres lecturas; origen del modelo pendiente); lado físico de los ArUco verificado con calibre (cuadrado negro de 60~mm; 70~mm con el margen blanco). & El lector debe conocer contra qué se comparó. \\
+% A-11 & Cap.~4 & Figuras~\ref{fig:4-1}, \ref{fig:4-2} y~\ref{fig:4-3} generadas por script desde las tablas. & El capítulo no tenía figuras. \\
+% A-12, B-24 & Resumen & Resumen y abstract reescritos con hallazgos y conclusión (menos de 350 palabras), sin tareas pendientes. & Anexo I del reglamento. \\
+% A-13, B-18 & Cap.~1 & 1.2 ampliado; Sección~\ref{sec:conclusiones}; nueva 1.9.1 de delimitación; Tabla~\ref{tab:trazabilidad}. & Estructura del Anexo I y trazabilidad. \\
+% A-14, B-22 & Cap.~3 & 3.1 renombrada con tipo, enfoque, población y muestra; Tabla~\ref{tab:operacionalizacion}; Tablas~\ref{tab:puerto} y~\ref{tab:riel} subidas desde los anexos. & Marco metodológico del Anexo I. \\
+% A-15 & 4.5 & Párrafo sobre B reescrito: sesgo constante como error de escala, con la razón de focales 1,36. & Convertir una contradicción en un hallazgo interpretado. \\
+% A-16, B-43 & 5.5 & Párrafo con el aporte a la Ingeniería Informática; Tabla~\ref{tab:regla} y Figura~\ref{fig:5-1}. & Explicitar el aporte de la carrera. \\
+% A-17 & 5.4 & Trabajos futuros separados en verificaciones inmediatas y líneas de continuación. & Evitar leer el trabajo futuro como lista de incumplimientos. \\
+% A-18, B-28 & 2.7, Tabla 2.1 & Párrafo y filas de MorphoCal, Yin y Zhou con los datos verificados de las fuentes primarias. & Una fila «pendiente de verificación» es inadmisible en la versión final. \\
+% A-19, B-16/17 & 2.5, 3.4, 3.5 & Definición operacional de $\mathbf{p}_2$ y de LT; fórmula implementada de la escala (ecuación~\ref{eq:escala-impl}); homografía de \Aprime{} y plano de B formulados; nombres de funciones retirados del cuerpo. & Coherencia texto--código y rigor. \\
+% A-20, B-45 & 3.2 & Efecto de medir $d$ desde el frente de la lente acotado analíticamente y calculado numéricamente (Tabla~\ref{tab:sensibilidad}). & Pregunta previsible de la mesa. \\
+% A-21 & 2.2 & Orden «aire--vidrio--agua» unificado en todo el documento. & Concordancia. \\
+% A-22 & 4.2 & Fórmulas definidas una sola vez en la Sección~\ref{sec:evaluacion}. & Concisión. \\
+% A-23 & 1.1 & Introducción reducida a tres párrafos; el estado del arte queda en 2.7. & Concisión. \\
+% A-24/25/26/27, B-38/39/41 & Preliminares & Orden según el Anexo I; numeración romana única; tildes; «Tutora: Ing. Evelyn Giménez»; «para optar al título de Ingeniero en Informática»; \texttt{hidelinks}. & Formato. \\
+% A-28 & Acrónimos & Lista reducida a las siglas usadas. & Rúbrica, ítem 5. \\
+% A-29 a A-33, B-36, B-42 & varias & Erratas («La Los», «no se se», «çorrección»), cita parentética, cita narrativa de CalibMar, «Petrellis (2021) combinó», concordancia de $\mathbf{n}_\pi$, lados de $\Pi_1$ y $\Pi_2$, «Listado». & Corrección y uniformidad. \\
+% A-34, A-36, B-30/33 & Referencias & Hartley y Zisserman, Brown, Hecht, Shortis, Bland y Altman y Lin agregados; Genovese, Huai, Waleed, Rojtberg y Markvorsen retirados; Weng, Tseng, Correia, Torres, Marrable, Qiao, Steeds, Petrellis y Saleh corregidos. Pendientes: DOI de Seegräber (2025) y páginas de Torres (2018). & APA 7 y pertinencia. \\
+% A-35 & Figuras & Leyenda completa de la Figura~\ref{fig:2-3}; fuente en todas las figuras. & Formato. \\
+% A-37 & 2.7 & Se indicó el número de trabajos seleccionados (catorce, Tabla~\ref{tab:antecedentes}) y de resultados adicionales examinados (alrededor de veinte). & Trazabilidad de la búsqueda. \\
+% A-38 & 3.3 & Versiones de Python, OpenCV, NumPy y PyYAML. & Reproducibilidad. \\
+% A-39 & 3.8, 5.2 & Limitaciones metodológicas y de resultados separadas. & Concisión. \\
+% §6 de A & 3.9 & Nueva Sección~\ref{sec:etica} de cuestiones éticas y uso de herramientas. & Anexo I; transparencia. \\
+% B-13, B-14 & 3.2, Anexo D & Tabla~\ref{tab:posiciones} de correspondencia de posiciones (lecturas del riel completadas; desplazamiento al plano de simetría pendiente); residuo del riel aclarado como numérico. & Dos orígenes sin correspondencia; número vacío presentado como evidencia. \\
+% B-20, B-21, B-29 & 2.3, 2.2.7, 4.8 & Atribución causal precisada (coplanaridad + homografía; modelo completo + profundidad); CalibMar como antecedente, calibraciones con OpenCV y trazado propio. & Honestidad del instrumento y de la atribución. \\
+% Concordancia & Cap.~3 y 4; Anexos & Comprobación de las cifras contra el CSV maestro y los datos de $L(z)$: identificadores de los ArUco corregidos en la Figura~\ref{fig:3-esquema}; C frente a B en PC, 23 de 24 combinaciones; redondeos de la Tabla~\ref{tab:posiciones-mae}; MAE por captura en la Tabla~\ref{tab:agregados}; lado de los ArUco medido con calibre; lecturas de calibre en la Tabla~\ref{tab:lecturas-calibre}; redacción de la sensibilidad a $\mu_w$; Tablas~\ref{tab:sensibilidad} y~\ref{tab:intervalo} verificadas sin diferencias. Se detectó que B se ejecutó con el plano desplazado 50~mm; su recálculo queda pendiente. & Concordancia entre texto y datos. \\
+% No incorporado & Título & No se cambió el título propuesto por la revisión B. & El título está registrado y la Sección~\ref{sec:intervalo} responde la pregunta que enuncia; el cambio quedaba como contingencia si la corrida de $L(z)$ no se realizaba; la corrida se realizó. \\
+% No incorporado & Resumen & No se incluyeron en el resumen las tareas pendientes (comprobación instrumental), como proponía la revisión B. & El resumen informa hallazgos; las salvedades están en las Secciones~\ref{sec:conjunto} y~\ref{sec:limitaciones-metod}. \\
+% \end{longtable}
+% \end{footnotesize}
+%
+% Los recuadros «PENDIENTE» distribuidos en el cuerpo del documento (\thependcount{} en total) señalan los puntos que requieren datos o cálculos no disponibles al preparar esta versión. Deben resolverse y eliminarse antes de la entrega definitiva.

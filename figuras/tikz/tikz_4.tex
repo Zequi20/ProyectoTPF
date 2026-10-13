@@ -1,0 +1,25 @@
+\documentclass[border=4pt]{standalone}
+\usepackage[utf8]{inputenc}\usepackage[T1]{fontenc}\usepackage{lmodern}
+\usepackage[english,spanish,es-noshorthands]{babel}
+\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,fit}
+\usepackage{xcolor}
+\definecolor{metA}{HTML}{C0392B}\definecolor{metAp}{HTML}{E67E22}\definecolor{metB}{HTML}{2E86C1}\definecolor{metC}{HTML}{1E8449}
+\newcommand{\Aprime}{A$'$}\newcommand{\IL}{I_L}
+\begin{document}
+\begin{tikzpicture}[>=Stealth,font=\small,node distance=4mm,
+  caja/.style={draw,rounded corners=2pt,fill=gray!8,minimum height=8mm,text width=2.5cm,align=center},
+  met/.style={draw,rounded corners=2pt,minimum height=7mm,text width=1.6cm,align=center,font=\small\bfseries}]
+  \node[caja] (a) {Imagen JPG original};
+  \node[caja,right=of a] (b) {Control de visibilidad y enfoque};
+  \node[caja,right=of b] (c) {Marcado manual de $\mathbf{p}_1\ldots\mathbf{p}_4$ y eje};
+  \node[caja,right=of c] (d) {Registro CSV y JSON por imagen};
+  \node[met,fill=metA!15,below=9mm of b] (mA) {A};
+  \node[met,fill=metAp!15,right=2mm of mA] (mAp) {\Aprime};
+  \node[met,fill=metB!15,right=2mm of mAp] (mB) {B};
+  \node[met,fill=metC!15,right=2mm of mB] (mC) {C};
+  \node[caja,below=9mm of mAp.south east,text width=5cm] (e) {LT y PC en mm; comparación con la referencia de calibre; advertencias y exclusiones};
+  \draw[->] (a) -- (b); \draw[->] (b) -- (c); \draw[->] (c) -- (d);
+  \foreach \m in {mA,mAp,mB,mC}{\draw[->] (c.south) -- (\m.north); \draw[->] (\m.south) -- (e.north);}
+  \draw[->] (e.east) -| (d.south);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,332 @@
+\chapter{Metodología}
+\label{cap:metodologia}
+
+Este capítulo describe el procedimiento utilizado para estimar medidas morfométricas de réplicas rígidas de peces a partir de fotografías tomadas a través de una pecera. La investigación tiene un enfoque cuantitativo, es de tipo aplicado y utiliza un diseño experimental pareado. La comparación es pareada porque una misma imagen y los mismos puntos anatómicos se procesaron con los cuatro métodos de conversión métrica estudiados.
+
+\section{Tipo de investigación, enfoque, población y muestra}
+\label{sec:diseno}
+
+La investigación es aplicada, de enfoque cuantitativo y de carácter experimental, con diseño pareado: cada unidad experimental recibe los cuatro tratamientos (A, \Aprime, B y C) sobre la misma observación. La población objetivo son las imágenes de peces obtenidas a través de un vidrio plano con una cámara externa. La muestra es no probabilística y está formada por las 72 imágenes de las seis réplicas rígidas disponibles, fotografiadas a cuatro profundidades con tres capturas por condición.
+
+La unidad experimental es una réplica rígida de pez y la unidad de observación es una medición obtenida de una fotografía. Se utilizaron seis réplicas, identificadas como R1--R6, impresas en PLA y de tamaños diferentes (Figura~\ref{fig:3-1}). La especie que representan no constituye una variable del estudio; se buscó disponer de formas y longitudes variadas. Las dimensiones de referencia de cada réplica se midieron con calibre y se registraron en el archivo maestro del experimento (Tabla~\ref{tab:replicas}).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{fig3_1_replicas.png}
+\caption[Réplicas de peces impresas en PLA utilizadas en el experimento]{Réplicas de peces impresas en PLA utilizadas en el experimento. Fuente: elaboración propia.}
+\label{fig:3-1}
+\end{figure}
+
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{Réplicas y referencias físicas medidas con calibre.}
+\label{tab:replicas}
+\begin{tabular}{@{}lp{1.6cm}p{1.5cm}p{1.6cm}p{1.5cm}@{}}
+\toprule
+Réplica & LT media (mm) & Desv. LT (mm) & PC media (mm) & Desv. PC (mm) \\
+\midrule
+R1 & 158,7 & 1,5 & 45,0 & 0,0 \\
+R2 & 134,3 & 2,9 & 27,3 & 0,6 \\
+R3 & 91,7 & 0,6 & 40,3 & 0,6 \\
+R4 & 142,7 & 2,9 & 42,7 & 0,6 \\
+R5 & 137,3 & 0,6 & 25,7 & 0,6 \\
+R6 & 209,7 & 0,6 & 35,3 & 0,6 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Cada medida de referencia se tomó tres veces con un calibre digital de resolución 0,01~mm y las lecturas se registraron al milímetro; la media se usó como referencia y la desviación estándar muestral entre lecturas como repetibilidad de la referencia (Tabla~\ref{tab:replicas}). La mayor desviación fue de 2,9~mm, en la LT de R2 y R4; en PC no superó 0,6~mm. Ambas son menores que el MAE de A, \Aprime{} y B, pero del mismo orden o mayores que el de C (1,22~mm en LT y 0,56~mm en PC; Tabla~\ref{tab:agregados}), por lo que el error de C queda en el orden de la repetibilidad de la referencia.
+
+Cada réplica se ubicó con su plano de simetría a cuatro distancias nominales de la cara interna del vidrio: 5, 11, 17 y 23~cm. Estas posiciones se eligieron por los límites físicos de la pecera y por la zona en la que la imagen mantuvo un enfoque aceptable. En cada combinación de réplica y distancia se tomaron tres fotografías técnicas. Entre repeticiones no se movieron la cámara ni la pecera; se volvió a colocar la réplica en la posición indicada y se realizó una nueva captura. El orden de captura fue por réplica: se completaron sus cuatro distancias y repeticiones antes de continuar con la siguiente.
+
+No se varió de forma planificada la posición de la réplica dentro del encuadre. Por tanto, el diseño contempló únicamente la variación de profundidad. El experimento produjo $6 \times 4 \times 3 = 72$ imágenes originales. Las repeticiones de una misma réplica se consideran repeticiones técnicas y no réplicas independientes; en consecuencia, el número de unidades experimentales es $n = 6$ y el número de combinaciones réplica--profundidad es 24.
+
+Se incluyeron las capturas en las que la réplica se observó completamente y la imagen presentó un enfoque aceptable. Las capturas que no cumplieron estas condiciones se descartaron y el motivo se registró en la tabla maestra. La selección de la muestra responde a la disponibilidad de réplicas y al tiempo destinado al experimento, por lo que los resultados se interpretan como una evaluación experimental del montaje y no como una generalización a toda la población de peces.
+
+\section{Montaje e instrumentos de recolección de datos}
+\label{sec:montaje}
+
+El ensayo se realizó en una pecera de aproximadamente $30 \times 30 \times 30$~cm, construida con vidrio \emph{float} de 4,0~mm de espesor, medido con calibre. Se utilizó agua clara de la canilla. Para el modelo óptico se adoptaron los valores $\mu_a = 1{,}000$, $\mu_g = 1{,}500$ y $\mu_w = 1{,}333$; estos son valores tabulados y no mediciones directas del índice del agua. La Figura~\ref{fig:3-esquema} presenta el esquema acotado del montaje.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[scale=0.34,>=Stealth,font=\scriptsize]
+  % pecera (vista superior): vidrio frontal en x=0, interior de 0 a 30 cm
+  \fill[cyan!8] (0,0) rectangle (30,30);
+  \draw[gray!60!black,line width=1.5pt] (0,0) rectangle (30,30);
+  \node[gray!60!black,font=\scriptsize] at (15,28.3) {pecera $30 \times 30 \times 30$ cm (vista superior)};
+  \draw[line width=2.5pt,gray!70!black] (0,0) -- (0,30);
+  \node[rotate=90,gray!70!black,font=\scriptsize] at (-1.6,22.5) {vidrio frontal, $t_g = 4$ mm};
+  % cámara (distancia comprimida, con corte)
+  \node[draw,fill=white,minimum width=1.0cm,minimum height=0.7cm] (cam) at (-9.5,15) {};
+  \fill (-8.6,15) circle (2pt);
+  \node[above=2pt,font=\scriptsize,align=center] at (cam.north) {cámara\\(Realme C71)};
+  \draw[->,thick] (-8.6,15) -- (0,15);
+  \draw[thick] (-5.2,14.2) -- (-4.6,15.8); \draw[thick] (-4.8,14.2) -- (-4.2,15.8);
+  \draw[<->] (-8.6,12.3) -- (0,12.3) node[midway,below,font=\scriptsize,align=center] {$d = 230$ mm\\(no a escala)};
+  % ArUco 1 en el vidrio
+  \fill[metA] (0.3,19) rectangle (1.1,22);
+  \node[metA,right,font=\scriptsize,align=left] at (1.3,20.5) {ArUco id 1 (A),\\fijo en el vidrio};
+  % riel
+  \draw[very thick,black!60] (2,15) -- (28,15);
+  \node[black!60,below,font=\scriptsize] at (25.5,14.6) {riel con carrito};
+  \foreach \p/\lab in {5/5,11/11,17/17,23/23}{
+    \draw[metC,very thick] (\p,13.4) -- (\p,16.6);
+    \node[metC,above,font=\scriptsize] at (\p,16.7) {\lab\,cm};
+  }
+  % réplica en 11 cm
+  \draw[metC,line width=2.5pt] (11,9) -- (11,21);
+  \node[metC,left,align=right,font=\scriptsize] at (10.5,10.2) {réplica\\(plano de simetría)};
+  % ArUco 2 coplanar
+  \fill[metAp] (10.6,6.2) rectangle (11.4,8.6);
+  \node[metAp,right,font=\scriptsize,align=left] at (11.7,7.4) {ArUco id 0 (\Aprime),\\en el carrito};
+  % lámpara
+  \node[draw,circle,fill=yellow!40,minimum size=0.5cm] at (15,32.5) {};
+  \node[above,font=\scriptsize] at (15,33.2) {foco 12 W (techo)};
+  \draw[dashed] (0,15) -- (30,15);
+  \draw[<->,thick] (0.2,3.5) -- (11,3.5) node[midway,below,font=\scriptsize] {$z$ (desde la cara interna del vidrio)};
+\end{tikzpicture}
+\caption[Esquema acotado del montaje experimental]{Esquema acotado del montaje experimental en vista superior: cámara a $d = 230$~mm del vidrio frontal de 4~mm, marcador ArUco fijo en el vidrio (ruta A), riel con carrito y cuatro posiciones nominales (5, 11, 17 y 23~cm), marcador coplanar en el carrito (ruta \Aprime) e iluminación cenital fija. No está a escala. Fuente: elaboración propia.}
+\label{fig:3-esquema}
+\end{figure}
+
+La cámara fue la integrada en un teléfono Realme C71 RMX5303 Dual. Las capturas se guardaron en formato JPG a $4096 \times 3072$ píxeles, con la configuración bloqueada durante el ensayo: ISO 640, velocidad de obturación 1/25~s, enfoque 0,76 y balance de blancos 5600~K. La distancia entre el frente de la lente y el vidrio fue de 230~mm, medida con una regla. Esta distancia se utilizó como aproximación de la distancia entre el centro de proyección y la primera interfaz óptica; el desplazamiento entre el frente de la lente y el centro de proyección es de pocos milímetros en una cámara de teléfono, y su efecto sobre C se cuantifica en la Sección~\ref{sec:sensibilidad} mediante el análisis de sensibilidad a $d$. La perpendicularidad aproximada del eje de la cámara respecto del vidrio se comprobó con una escuadra.
+
+La iluminación se mantuvo fija mediante un foco de bajo consumo de 12~W ubicado en el techo de la habitación, con la pecera colocada debajo. La réplica se sostuvo mediante un riel con carrito fabricado en PLA. El soporte permitió repetir las posiciones de profundidad y mantener la réplica en una orientación similar entre capturas. La Tabla~\ref{tab:posiciones} relaciona la posición nominal de cada captura con la lectura del riel y con el origen del sistema de coordenadas usado por B.
+
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{Correspondencia entre la posición nominal de la réplica y la lectura del riel.}
+\label{tab:posiciones}
+\begin{tabular}{@{}p{2.8cm}p{3.4cm}p{2.6cm}p{3.4cm}@{}}
+\toprule
+Posición nominal (cm al vidrio) & Separación de la zona de calibración de B (cm) & Lectura del riel (mm) & Desplazamiento al plano de simetría (mm) \\
+\midrule
+5  & 0  & 0   & \pend{ } \\
+11 & 6  & 60  & \pend{ } \\
+17 & 12 & 120 & \pend{ } \\
+23 & 18 & 180 & \pend{ } \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\pendiente{Completar el desplazamiento entre el apoyo del carrito y el plano de simetría de cada réplica (los JSON de B asumen 0~mm, sin medición). El CSV maestro actual muestra que B se ejecutó con separaciones de 50, 110, 170 y 230~mm respecto de la zona de calibración (se ingresó la distancia al vidrio como lectura del riel), en lugar de 0, 60, 120 y 180~mm: recalcular B en Fishmeter con esas lecturas y el desplazamiento medido, y regenerar el CSV.}
+
+Se emplearon marcadores ArUco del diccionario \texttt{4X4\_50}, con los identificadores 0 y 1. El marcador id~1, utilizado por A, permaneció fijo en el vidrio. El marcador id~0, utilizado por \Aprime{}, se colocó en una base común con la réplica. Para aproximar la coplanaridad con el plano de simetría se utilizó un separador de isopor de longitud equivalente al eje de simetría, fijado con cinta impermeable de doble faz. La réplica se sujetó a la base mediante el alambre previsto en sus orificios. Ambos marcadores se midieron con calibre: cada uno ocupa un cuadrado de 70~mm de lado, incluido el margen blanco, y el cuadrado negro mide 60~mm. Como el detector ubica las esquinas en el borde exterior del cuadrado negro, el lado físico que corresponde es el de este último, y coincide con el valor $L_m = 60{,}0$~mm con el que se configuró el procesamiento. La Figura~\ref{fig:3-2} muestra la disposición de una réplica y del marcador coplanar dentro de la pecera.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.75\textwidth]{fig3_2_montaje_replica.png}
+\caption[Montaje de una réplica junto con el marcador ArUco coplanar]{Montaje de una réplica junto con el marcador ArUco coplanar. Fuente: elaboración propia.}
+\label{fig:3-2}
+\end{figure}
+
+Para la calibración se utilizó un damero de ajedrez de $5 \times 5$ cuadros ($4 \times 4$ esquinas interiores), con cuadros de 20~mm. La calibración de B se realizó en la posición más cercana al vidrio, correspondiente a la distancia nominal de 5~cm. La separación de una captura respecto de esa zona se expresó como la diferencia absoluta entre su distancia al vidrio y la distancia de calibración. La Figura~\ref{fig:3-3} presenta el damero y el marcador empleados en la preparación de la calibración.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.75\textwidth]{fig3_3_damero.png}
+\caption[Damero y marcador ArUco colocados dentro de la pecera]{Damero y marcador ArUco colocados dentro de la pecera. Fuente: elaboración propia.}
+\label{fig:3-3}
+\end{figure}
+
+Los parámetros físicos del puerto plano consumidos por C se resumen en la Tabla~\ref{tab:puerto}; son la ficha del instrumento y se conservan en el archivo de configuración reproducido en el Anexo~\ref{anx:flatport}.
+
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{Parámetros del puerto plano utilizados por la ruta C.}
+\label{tab:puerto}
+\begin{tabular}{@{}p{3.6cm}p{2.6cm}p{1.2cm}p{5.4cm}@{}}
+\toprule
+Parámetro & Valor & Unidad & Cómo se obtuvo \\
+\midrule
+Normal del puerto $\mathbf{n}_\pi$ & $(0, 0, 1)$ & --- & Supuesta perpendicular; comprobada con escuadra \\
+Distancia cámara--vidrio $d$ & 230 & mm & Regla, desde el frente de la lente \\
+Espesor del vidrio $t_g$ & 4,0 & mm & Calibre \\
+Índice del aire $\mu_a$ & 1,000 & --- & Valor tabulado \\
+Índice del vidrio $\mu_g$ & 1,500 & --- & Valor tabulado (vidrio \emph{float}) \\
+Índice del agua $\mu_w$ & 1,333 & --- & Valor tabulado (agua dulce, 22~\si{\celsius}) \\
+Condiciones del agua & 22~\si{\celsius}; salinidad 0; 0~dbar & --- & Registradas en la configuración \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+La referencia geométrica del plano de medición de B se obtuvo a partir de dos posiciones del riel (0 y 180~mm) observadas con el damero; sus valores principales se resumen en la Tabla~\ref{tab:riel} y el archivo completo se reproduce en el Anexo~\ref{anx:riel}. El residuo del ajuste de la dirección del riel ($1{,}62 \times 10^{-13}$~mm) corresponde a una recta por dos puntos y es un residuo numérico, no una medida de precisión física; el error de reproyección observado fue de 0,270~px y la dispersión de la normal de $0{,}337^{\circ}$, ambos por debajo de los umbrales de aceptación configurados (1,0~px y $1{,}0^{\circ}$), y el error relativo de escala observado, 0,813~\%, quedó por debajo del umbral de 5~\%.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Referencia geométrica del riel utilizada por la ruta B.}
+\label{tab:riel}
+\begin{tabular}{@{}p{6cm}p{7cm}@{}}
+\toprule
+Campo & Valor \\
+\midrule
+Plano de referencia $z_{\mathrm{ref}}$ & 0,0~mm (posición nominal de 5~cm) \\
+Posiciones del riel utilizadas & 0,0 y 180,0~mm \\
+Error de reproyección (umbral) & 0,270~px (1,0~px) \\
+Dispersión de la normal (umbral) & $0{,}337^{\circ}$ ($1{,}0^{\circ}$) \\
+Error relativo de escala (umbral) & 0,813~\% (5~\%) \\
+Supuesto & Planos de las réplicas paralelos al tablero \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Software utilizado}
+\label{sec:software}
+
+El procesamiento se realizó con la aplarrollada en Python 3.12. Su código fuente y la documentación de uso se encuentran disponibles en el repositorio público \url{\RepoURL}. La aplicación utiliza OpenCV 5.0.0 para la detección de marcadores, la calibración y las transformaciones geométricas; NumPy 2.5.3 para las operaciones vectoriales; PyYAML 6.0.3 para los archivos de configuración; y Tkinter (biblioteca estándar) para la interfaz gráfica.
+\\
+El módulo refractivo (\texttt{refractive\_port.py} y \texttt{snells\_law.py}) implementa las ecuaciones~\eqref{eq:va} a~\eqref{eq:rayo} y cuenta con pruebas unitarias de sanidad: con $\mu_g = \mu_w = 1$ y $t_g = 0$ reproduce la cámara pinhole, y un rayo sobre el eje óptico no se desvía. Las pruebas de integración verifican que los cuatro métodos reciben las mismas coordenadas y producen un registro trazable por imagen.
+
+La interfaz permite cargar la fotografía, detectar los marcadores, cargar o seleccionar manualmente los puntos anatómicos, ejecutar los cuatro métodos y exportar sus resultados. Los clics realizados sobre el visor se convierten a coordenadas de la imagen original antes de ser guardados o procesados. La Figura~\ref{fig:3-4} muestra la pantalla utilizada para la selección de puntos y la comparación de las mediciones.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{fig3_4_interfaz.png}
+\caption[Interfaz de Fishmeter para la marcación y comparación de métodos]{Interfaz de Fishmeter para la marcación y comparación de métodos. Fuente: Fishmeter.}
+\label{fig:3-4}
+\end{figure}
+
+\section{Medidas físicas, puntos anatómicos y variables}
+\label{sec:medidas}
+
+Para cada réplica se conservaron medidas físicas de referencia de la longitud total y de la profundidad corporal (Tabla~\ref{tab:replicas}). La referencia y la imagen utilizaron la misma convención anatómica, definida en la Sección~\ref{sec:puntos-def}. La longitud total se definió entre el extremo anterior del hocico ($\mathbf{p}_1$) y el punto más posterior de la aleta caudal sobre el eje longitudinal ($\mathbf{p}_2$); cuando la cola presenta dos lóbulos, $\mathbf{p}_2$ es el extremo del lóbulo de mayor longitud. La profundidad corporal se midió entre el perfil dorsal ($\mathbf{p}_3$) y el perfil ventral ($\mathbf{p}_4$) de una misma sección transversal, sin incluir las aletas.
+
+Los cuatro puntos se marcaron manualmente sobre la imagen original. El eje longitudinal de la réplica se indicó de forma explícita y se utilizó para proyectar las medidas. No se empleó segmentación automática ni se eligieron puntos diferentes para cada método. La Figura~\ref{fig:3-5} resume la ubicación de los cuatro puntos y las dos medidas consideradas, y la Figura~\ref{fig:3-6} presenta los instrumentos utilizados para obtener las dimensiones físicas de referencia.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\textwidth]{fig3_5_puntos.png}
+\caption[Puntos anatómicos empleados para la longitud total y la profundidad corporal]{Puntos anatómicos empleados para la longitud total y la profundidad corporal. Fuente: elaboración propia.}
+\label{fig:3-5}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.6\textwidth]{fig3_6_instrumentos.png}
+\caption[Instrumentos y disposición utilizados para medir físicamente una réplica]{Instrumentos y disposición utilizados para medir físicamente una réplica. Fuente: elaboración propia.}
+\label{fig:3-6}
+\end{figure}
+
+Si $\mathbf{u}$ es el vector unitario del eje longitudinal y $\mathbf{n} = (-u_y, u_x)$ su normal, las medidas en el plano métrico se calcularon como
+\begin{equation}
+\mathrm{LT} = \lvert (\mathbf{q}_2 - \mathbf{q}_1)\cdot\mathbf{u} \rvert, \qquad
+\mathrm{PC} = \lvert (\mathbf{q}_4 - \mathbf{q}_3)\cdot\mathbf{n} \rvert,
+\label{eq:medidas}
+\end{equation}
+donde $\mathbf{q}_i$ son los puntos anatómicos ya convertidos a milímetros por la ruta correspondiente. Operacionalmente, LT es la proyección del segmento $\mathbf{p}_1$--$\mathbf{p}_2$ sobre el eje longitudinal; con los puntos sobre el eje coincide con la distancia euclídea, que es la convención usada con el calibre. La profundidad solo se aceptó cuando la sección marcada fue suficientemente perpendicular al eje. La aplicación conservó como diagnóstico el desvío de la sección y permitió descartar una profundidad no válida.
+
+La Tabla~\ref{tab:operacionalizacion} presenta la definición conceptual y operacional de las variables del estudio, separando los factores que se variaron, los resultados que se midieron y las condiciones que se mantuvieron fijas.
+
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{Operacionalización de las variables.}
+\label{tab:operacionalizacion}
+\begin{tabularx}{\textwidth}{@{}p{2.3cm} p{1.3cm} X X p{1.2cm}@{}}
+\toprule
+Variable & Tipo & Definición conceptual & Definición operacional & Unidad \\
+\midrule
+\multicolumn{5}{@{}l}{\emph{Factores variados}}\\
+Método & Nominal & Ruta de conversión píxel--milímetro & A, \Aprime, B o C aplicados a los mismos puntos (Sección~\ref{sec:metodos}) & --- \\
+Distancia al vidrio & Nominal & Profundidad $z$ del plano de simetría de la réplica & Posición del carrito: 5, 11, 17 o 23~cm; separación de la zona de B: 0, 6, 12 o 18~cm & cm \\
+Rango de $z$ & Nominal & Conocimiento disponible sobre la profundidad & Toda la pecera (0--30~cm); $\pm 3$~cm; $\pm 1$~cm & cm \\
+\multicolumn{5}{@{}l}{\emph{Resultados medidos}}\\
+LT y PC estimadas & Razón & Longitud total y profundidad corporal de la réplica & Salida de Fishmeter por método, ecuación~\eqref{eq:medidas} & mm \\
+LT y PC de referencia & Razón & Dimensión física de la réplica & Media de tres lecturas con calibre digital (0,01~mm) & mm \\
+Error con signo, EA, EPA & Razón & Diferencia entre estimación y referencia & Ecuaciones~\eqref{eq:errores} & mm, mm, \% \\
+Ancho relativo de $\IL$ & Razón & Extensión del intervalo por profundidad desconocida & $(\max_z L - \min_z L)/\mathrm{LT}_{\mathrm{ref}}$ & \% \\
+Cobertura de $\IL$ & Razón & Fracción de capturas cuya referencia cae en $\IL$ & Conteo sobre las capturas disponibles & --- \\
+\multicolumn{5}{@{}l}{\emph{Condiciones fijas}}\\
+Cámara, pecera, agua, luz, marcadores, soporte, operador & --- & Condiciones del montaje & Registradas en las Secciones~\ref{sec:montaje} y~\ref{sec:procedimiento} & --- \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Métodos de conversión métrica}
+\label{sec:metodos}
+
+Cada método recibe la misma imagen, los mismos cuatro puntos y el mismo eje. Solo cambia la transformación utilizada para convertir píxeles a milímetros.
+
+\begin{description}
+  \item[Método A.] Utiliza el ArUco fijo en el vidrio. Con el lado físico $L_m$ del marcador y el promedio $\bar{p}$ de las longitudes en píxeles de sus cuatro lados (ecuación~\ref{eq:lado}), la escala implementada es
+  \begin{equation}
+    k = \frac{L_m}{\bar{p}}, \qquad \bar{p} = \frac{1}{4}\sum_{i=1}^{4} p_i,
+    \label{eq:escala-impl}
+  \end{equation}
+  que difiere de la ecuación~\eqref{eq:escala-monkman} en el orden del promedio; para marcadores bien detectados ambas coinciden hasta la tercera cifra. Cada punto se transforma como $\mathbf{q}_i = k\,\mathbf{p}_i$ y las medidas se obtienen con la ecuación~\eqref{eq:medidas}. Es una línea de base que no corrige la diferencia de profundidad entre el vidrio y la réplica.
+  \item[Método \Aprime.] Utiliza el ArUco montado aproximadamente en el plano de simetría de la réplica. Las cuatro esquinas del marcador en píxeles y sus coordenadas métricas $(0,0)$, $(L_m,0)$, $(L_m,L_m)$ y $(0,L_m)$ definen una homografía $\mathbf{H}$ de $3 \times 3$; cada punto anatómico se transforma como $\tilde{\mathbf{q}}_i = \mathbf{H}\,\tilde{\mathbf{p}}_i$ en milímetros sobre el plano del marcador, el eje longitudinal se transforma del mismo modo, y las medidas se calculan con la ecuación~\eqref{eq:medidas}. La homografía corrige la perspectiva dentro del plano del marcador, pero no la diferencia de escala de puntos fuera de ese plano.
+  \item[Método B.] Utiliza la calibración de cámara con el damero sumergido y un modelo pinhole efectivo (perfil \texttt{B-effective}, Anexo~\ref{anx:calibraciones}). Los píxeles se convierten en rayos con $\mathbf{K}_{\mathrm{agua}}$ y los coeficientes de distorsión efectivos (ecuaciones~\ref{eq:pinhole} y~\ref{eq:distorsion}, invertidas) y se intersecan con el plano $\pi_z$, paralelo al tablero de calibración, situado a la distancia nominal del carrito más el desplazamiento al plano de simetría (Tabla~\ref{tab:posiciones}). La calibración se fijó en la posición más cercana al vidrio, de modo que B representa de forma empírica el comportamiento óptico de la zona calibrada. LT y PC se calculan en el espacio métrico tridimensional.
+  \item[Método C.] Utiliza la calibración de cámara en aire (perfil \texttt{C-air}) y el modelo de puerto plano de la Sección~\ref{sec:puerto-plano}. Para cada punto se corrige la distorsión de lente, se obtiene el rayo en aire (ecuación~\ref{eq:va}), se aplican las dos refracciones (ecuaciones~\ref{eq:q1} a~\ref{eq:vw}) con los parámetros de la Tabla~\ref{tab:puerto} y se interseca el rayo en agua (ecuación~\ref{eq:rayo}) con el plano de la réplica, definido en el marco de la cámara física. Para estudiar el caso de profundidad desconocida, el mismo cálculo se repite sobre la grilla de profundidades físicamente admisibles y se expresa como el intervalo geométrico de la ecuación~\eqref{eq:IL}.
+\end{description}
+
+La prueba complementaria con una barra patrón sumergida, prevista para separar un eventual error de implementación del error de marcado, no se realizó como validación separada; se efectuó únicamente una comprobación preliminar sobre la réplica R1 (longitud aproximada de 160~mm), durante las pruebas preliminares de comienzos de septiembre de 2026 (Sección~\ref{sec:delimitacion}). La validación métrica de las cuatro rutas en este trabajo es la comparación directa con las longitudes y profundidades de calibre de las seis réplicas en las cuatro posiciones (Capítulo~\ref{cap:resultados}). En este documento se distingue «comprobación instrumental con patrón» (barra sumergida, no realizada) de «validación externa» (otras cámaras, montajes o condiciones, fuera del alcance).
+
+\section{Procedimiento por imagen y trazabilidad}
+\label{sec:procedimiento}
+
+El procesamiento siguió la secuencia de la Figura~\ref{fig:3-flujo}, idéntica para las 72 imágenes:
+
+\begin{enumerate}
+  \item identificar la réplica, la distancia y la repetición, y conservar la imagen JPG original;
+  \item verificar visibilidad y enfoque;
+  \item marcar manualmente $\mathbf{p}_1$, $\mathbf{p}_2$, $\mathbf{p}_3$ y $\mathbf{p}_4$ en coordenadas de la imagen original;
+  \item registrar el eje longitudinal y las observaciones de calidad;
+  \item aplicar A, \Aprime, B y C a las mismas coordenadas;
+  \item calcular LT y PC en milímetros y guardar advertencias o exclusiones;
+  \item asociar cada estimación con la referencia física, la calibración, la versión del procedimiento y el nombre de la imagen.
+\end{enumerate}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Stealth,font=\small,node distance=4mm,
+  caja/.style={draw,rounded corners=2pt,fill=gray!8,minimum height=8mm,text width=2.5cm,align=center},
+  met/.style={draw,rounded corners=2pt,minimum height=7mm,text width=1.6cm,align=center,font=\small\bfseries}]
+  \node[caja] (a) {Imagen JPG original};
+  \node[caja,right=of a] (b) {Control de visibilidad y enfoque};
+  \node[caja,right=of b] (c) {Marcado manual de $\mathbf{p}_1\ldots\mathbf{p}_4$ y eje};
+  \node[caja,right=of c] (d) {Registro CSV y JSON por imagen};
+  \node[met,fill=metA!15,below=9mm of b] (mA) {A};
+  \node[met,fill=metAp!15,right=2mm of mA] (mAp) {\Aprime};
+  \node[met,fill=metB!15,right=2mm of mAp] (mB) {B};
+  \node[met,fill=metC!15,right=2mm of mB] (mC) {C};
+  \node[caja,below=9mm of mAp.south east,text width=5cm] (e) {LT y PC en mm; comparación con la referencia de calibre; advertencias y exclusiones};
+  \draw[->] (a) -- (b); \draw[->] (b) -- (c); \draw[->] (c) -- (d);
+  \foreach \m in {mA,mAp,mB,mC}{\draw[->] (c.south) -- (\m.north); \draw[->] (\m.south) -- (e.north);}
+  \draw[->] (e.east) -| (d.south);
+\end{tikzpicture}
+\caption[Flujo de procesamiento por imagen]{Flujo de procesamiento por imagen: los mismos cuatro puntos marcados una sola vez alimentan las cuatro rutas, y cada estimación queda asociada a su referencia física y a su registro. Fuente: elaboración propia.}
+\label{fig:3-flujo}
+\end{figure}
+
+La tabla maestra incluyó el identificador de la réplica y de la imagen, distancia al vidrio, repetición, método, medida, referencia física, estimación, error, estado de los puntos, estado del marcador y motivo de exclusión cuando correspondió. De este modo, cada estimación pudo rastrearse hasta la fotografía original y sus coordenadas manuales. Los archivos de datos (imágenes, puntos, calibraciones y tabla maestra) y el script que regenera las tablas y figuras del Capítulo~\ref{cap:resultados} forman parte del repositorio (Anexo~\ref{anx:repositorio}).
+
+\section{Evaluación de las estimaciones}
+\label{sec:evaluacion}
+
+Para cada medida se calculó el error con signo, el error absoluto y el error porcentual absoluto:
+\begin{equation}
+e = \hat{y} - y, \qquad \mathrm{EA} = \lvert \hat{y} - y \rvert, \qquad \mathrm{EPA} = 100\,\frac{\lvert \hat{y} - y \rvert}{y},
+\label{eq:errores}
+\end{equation}
+donde $\hat{y}$ es la estimación del método y $y$ la referencia física. Las tres repeticiones técnicas se resumieron por réplica y distancia antes de comparar los métodos, evitando tratarlas como observaciones independientes. Sobre las $n = 24$ combinaciones réplica--profundidad se calcularon el sesgo, el error absoluto medio y el error porcentual absoluto medio:
+\begin{equation}
+\mathrm{sesgo} = \frac{1}{n}\sum_{i=1}^{n} e_i, \qquad
+\mathrm{MAE} = \frac{1}{n}\sum_{i=1}^{n} \lvert e_i \rvert, \qquad
+\mathrm{MAPE} = \frac{100}{n}\sum_{i=1}^{n} \frac{\lvert e_i \rvert}{y_i}.
+\label{eq:agregados}
+\end{equation}
+Un sesgo positivo indica sobreestimación y uno negativo subestimación. Estas métricas describen la estimación promedio por condición; el error de una captura individual puede ser mayor, por lo que la Tabla~\ref{tab:agregados} informa también el MAE calculado sobre las capturas individuales.
+
+La comparación principal se organizó mediante el error de A, \Aprime, B y C para las mismas imágenes y profundidades. Como las 24 combinaciones pertenecen a seis réplicas (medidas repetidas), la inferencia se hizo con la réplica como unidad: para cada réplica se promedió el error absoluto de LT sobre las cuatro posiciones y se aplicó una prueba de signos exacta, de dos colas, a las diferencias pareadas entre C y cada uno de los otros métodos ($n = 6$). No se aplicaron pruebas paramétricas porque seis réplicas no permiten verificar sus supuestos. Los conteos por combinación réplica--profundidad (24 pares) se reportan como descriptivos. También se consideró el cambio del error de B y C al aumentar la separación respecto de la calibración de B, resumido por la pendiente de una recta ajustada por mínimos cuadrados a la diferencia de MAE frente a la separación.
+
+Para C se consideró el intervalo de longitudes obtenido al recorrer las profundidades admisibles. Ese intervalo representa incertidumbre geométrica por profundidad y no un intervalo de confianza estadístico. Su ancho relativo se evaluó para tres escenarios de conocimiento de $z$ (toda la pecera, $\pm 3$~cm y $\pm 1$~cm) y se comparó con la predicción de primer orden de la ecuación~\eqref{eq:Dz}. Para ello, C se evaluó en cada captura con el plano de medición en $z = 0, 10, \ldots, 300$~mm; la cobertura empírica se calculó como la fracción de las 72 capturas cuya LT de calibre quedó dentro de $\IL$. La concordancia entre C y la referencia se describe además con el sesgo y los límites de acuerdo de Bland--Altman \parencite{Bland1986}. Los límites se calcularon como el sesgo $\pm 1{,}96$ veces la desviación estándar de las diferencias sobre las 24 combinaciones (Sección~\ref{sec:discusion}).
+
+\section{Alcance y limitaciones metodológicas}
+\label{sec:limitaciones-metod}
+
+El procedimiento mide réplicas rígidas y utiliza localización manual de puntos; por ello no representa un sistema de segmentación automática ni una medición completamente automática. La distancia cámara--vidrio se midió desde el frente de la lente y los índices de refracción se tomaron de valores tabulados; la sensibilidad de C a estos dos parámetros se cuantifica en la Sección~\ref{sec:sensibilidad}. La referencia del plano de B depende del ajuste del riel (Tabla~\ref{tab:riel}), cuyo error relativo de escala informado (0,813~\%) se retoma al interpretar el sesgo de B. La comprobación instrumental con una barra patrón sumergida no se realizó; la validación métrica del trabajo es la comparación con las referencias de calibre de las réplicas.
+
+\section{Cuestiones éticas y uso de herramientas}
+\label{sec:etica}
+
+No se utilizaron animales ni datos de terceros; las réplicas, las imágenes, las calibraciones y las medidas son propias. El código de la aplicación, incluido el módulo refractivo, fue desarrollado por el autor y su historial de versiones está disponible en el repositorio. Durante la redacción se emplearon herramientas de asistencia basadas en modelos de lenguaje para revisar la estructura del documento, la consistencia de la notación y la redacción de borradores de secciones a partir de los datos del autor; el diseño experimental, la captura, el marcado, el análisis y las conclusiones son responsabilidad del autor, quien revisó y validó todo el texto.

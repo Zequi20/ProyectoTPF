@@ -1,0 +1,37 @@
+\documentclass[border=4pt]{standalone}
+\usepackage[utf8]{inputenc}\usepackage[T1]{fontenc}\usepackage{lmodern}
+\usepackage[english,spanish,es-noshorthands]{babel}
+\usepackage{amsmath,amssymb}\usepackage{tikz}\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,fit}
+\usepackage{xcolor}
+\definecolor{metA}{HTML}{C0392B}\definecolor{metAp}{HTML}{E67E22}\definecolor{metB}{HTML}{2E86C1}\definecolor{metC}{HTML}{1E8449}
+\newcommand{\Aprime}{A$'$}\newcommand{\IL}{I_L}
+\begin{document}
+\begin{tikzpicture}[scale=0.62,>=Stealth,font=\scriptsize]
+\foreach \x/\lab/\col/\txt in {0/A/metA/{escala del marcador\\en el vidrio},
+                               6.4/\Aprime/metAp/{homografía del marcador\\coplanar con la réplica},
+                               12.8/B/metB/{pinhole efectivo\\calibrado bajo el agua},
+                               19.2/C/metC/{rayo refractado dos veces\\(puerto plano)}}{
+  \begin{scope}[shift={(\x,0)}]
+    \fill[gray!25] (1.6,0) rectangle (1.85,3.6);
+    \fill[cyan!8] (1.85,0) rectangle (5.6,3.6);
+    \node[draw,fill=white,minimum width=0.6cm,minimum height=0.45cm] at (0.3,1.8) {};
+    \fill (0.6,1.8) circle (1.2pt);
+    \draw[very thick,metC] (4.6,1.2) -- (4.6,2.6);
+    \node[\col,font=\bfseries\small] at (2.8,4.1) {\lab};
+    \node[align=center,font=\scriptsize] at (2.8,-0.55) {\txt};
+  \end{scope}
+}
+% A: marcador en vidrio y rayos rectos
+\draw[very thick,metA] (1.9,1.5) -- (1.9,2.1);
+\draw[metA,dashed] (0.6,1.8) -- (4.6,1.2); \draw[metA,dashed] (0.6,1.8) -- (4.6,2.6);
+% A': marcador junto a la réplica
+\draw[very thick,metAp] (6.4+4.2,0.9) -- (6.4+4.2,1.5);
+\draw[metAp,dashed] (6.4+0.6,1.8) -- (6.4+4.6,1.2); \draw[metAp,dashed] (6.4+0.6,1.8) -- (6.4+4.6,2.6);
+% B: pinhole recto con damero
+\foreach \i in {0,1,2}{\foreach \j in {0,1}{\fill[black!60] (12.8+2.3+\i*0.22,0.4+\j*0.22) rectangle ++(0.22,0.22);}}
+\draw[metB] (12.8+0.6,1.8) -- (12.8+4.6,1.2); \draw[metB] (12.8+0.6,1.8) -- (12.8+4.6,2.6);
+% C: rayos quebrados
+\draw[metC] (19.2+0.6,1.8) -- (19.2+1.6,1.62) -- (19.2+1.85,1.6) -- (19.2+4.6,1.2);
+\draw[metC] (19.2+0.6,1.8) -- (19.2+1.6,2.3) -- (19.2+1.85,2.34) -- (19.2+4.6,2.6);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,12 @@
+Error predicho de A (mm) para L=140 mm:
+  z=50 mm: predicho -19.4, observado -13.77, dif -5.7
+  z=110 mm: predicho -36.7, observado -32.02, dif -4.6
+  z=170 mm: predicho -49.6, observado -46.29, dif -3.3
+  z=230 mm: predicho -59.6, observado -57.64, dif -2.0
+Ancho relativo de I_L (% de LT):
+  z desconocida en toda la pecera (0–30 cm): 83.3, 71.4, 62.5, 55.5
+  z conocida con ±3 cm: 16.7, 14.3, 12.5, 11.1
+  z conocida con ±1 cm: 5.6, 4.8, 4.2, 3.7
+Pendiente MAE_A vs separacion: 2.43 mm/cm
+Diferencia B-C por separacion: [18.34 16.04 13.96 12.09]
+Pendiente (MAE_B - MAE_C) vs separacion: -0.35 mm/cm

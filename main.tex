@@ -1,0 +1,122 @@
+% =====================================================================
+%  Tesis de Cipriano Ezequiel Pereira López — versión corregida (v2)
+%  Compilar: latexmk -pdf main.tex   (pdflatex + biber)
+% =====================================================================
+\documentclass[12pt,a4paper,oneside,openany]{report}
+
+% ---------- Idioma y codificación ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,spanish,es-tabla,es-nodecimaldot,es-noshorthands]{babel}
+\usepackage{lmodern}
+\usepackage{csquotes}
+
+% ---------- Página ----------
+\usepackage[top=3cm,bottom=2cm,left=3cm,right=2cm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\setlength{\parskip}{4pt}
+\usepackage{emptypage}
+\usepackage{lastpage}
+
+% ---------- Matemática ----------
+\usepackage{amsmath,amssymb,bm}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,},group-separator={\,},per-mode=symbol}
+\newcommand{\Aprime}{A$'$}
+\newcommand{\IL}{I_L}
+
+% ---------- Figuras y tablas ----------
+\usepackage{graphicx}
+\graphicspath{{figuras/}{figuras/originales/}}
+\usepackage{booktabs,longtable,array,multirow,makecell,tabularx}
+\usepackage{pdflscape}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf,justification=justified}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,fit}
+\usepackage{xcolor}
+\definecolor{metA}{HTML}{C0392B}
+\definecolor{metAp}{HTML}{E67E22}
+\definecolor{metB}{HTML}{2E86C1}
+\definecolor{metC}{HTML}{1E8449}
+\definecolor{pendiente}{HTML}{B9770E}
+
+% ---------- Listados ----------
+\usepackage{listings}
+\renewcommand{\lstlistingname}{Listado}
+\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true,frame=single,
+        columns=fullflexible,keepspaces=true}
+
+% ---------- Recuadros de pendientes ----------
+\usepackage[most]{tcolorbox}
+\newcounter{pendcount}
+\newcommand{\pendiente}[1]{%
+  \stepcounter{pendcount}%
+  \begin{tcolorbox}[colback=pendiente!8,colframe=pendiente,boxrule=0.8pt,
+    arc=2pt,left=4pt,right=4pt,top=3pt,bottom=3pt,
+    title={\small\bfseries PENDIENTE P\thependcount\ (requiere datos)},fonttitle=\small]
+  \small #1
+  \end{tcolorbox}}
+\newcommand{\pend}[1]{\textcolor{pendiente}{\textbf{[#1]}}}
+
+% ---------- Bibliografía APA 7 ----------
+\usepackage[backend=biber,style=apa,language=spanish,natbib=true]{biblatex}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+\addbibresource{referencias.bib}
+
+% ---------- Acrónimos ----------
+\usepackage[acronym,nomain,nonumberlist,nopostdot]{glossaries}
+\makenoidxglossaries
+\input{preliminares/acronimos}
+
+% ---------- Hipervínculos (sin recuadros) ----------
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Estimación morfométrica monocular de peces a través de una interfaz aire–vidrio–agua},
+            pdfauthor={Cipriano Ezequiel Pereira López}}
+
+% ---------- Datos ----------
+\input{preliminares/datos}
+
+\begin{document}
+
+% ================= PRELIMINARES =================
+\pagenumbering{roman}
+\input{preliminares/portada}
+\input{preliminares/ficha}
+\input{preliminares/advertencia}
+\input{preliminares/aprobacion}
+\input{preliminares/dedicatoria}
+\input{preliminares/agradecimientos}
+
+\tableofcontents
+\listoffigures
+\listoftables
+\clearpage
+\glsaddall
+\printnoidxglossary[type=\acronymtype,title={Lista de acrónimos}]
+\clearpage
+\input{preliminares/resumen}
+\input{preliminares/abstract}
+
+% ================= CUERPO =================
+\clearpage
+\pagenumbering{arabic}
+\input{capitulos/1-introduccion}
+\input{capitulos/2-marco}
+\input{capitulos/3-metodologia}
+\input{capitulos/4-resultados}
+\input{capitulos/5-conclusiones}
+
+% ================= REFERENCIAS =================
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{Referencias}
+\printbibliography[title={Referencias}]
+
+% ================= ANEXOS =================
+\appendix
+\input{anexos/anexos}
+
+\end{document}
