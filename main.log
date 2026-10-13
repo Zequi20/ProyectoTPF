@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.30)  13 OCT 2026 09:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.30)  13 OCT 2026 14:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1930,53 +1930,51 @@ Underfull \hbox (badness 3088) in paragraph at lines 245--245
 Cap\'{\i }tulo 4.
 [45
 
-] [46]
-<figuras/fig4_1_mae_por_metodo.pdf, id=1121, 520.34402pt x 231.26399pt>
+] [46] [47]
+<figuras/fig4_1_mae_por_metodo.pdf, id=1127, 520.34402pt x 231.26399pt>
 File: figuras/fig4_1_mae_por_metodo.pdf Graphic file (type pdf)
 <use figuras/fig4_1_mae_por_metodo.pdf>
-Package pdftex.def Info: figuras/fig4_1_mae_por_metodo.pdf  used on input line 110.
+Package pdftex.def Info: figuras/fig4_1_mae_por_metodo.pdf  used on input line 112.
 (pdftex.def)             Requested size: 441.01773pt x 196.01776pt.
- [47] [48 <./figuras/fig4_1_mae_por_metodo.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 130--130
+ [48 <./figuras/fig4_1_mae_por_metodo.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
 []|\T1/cmr/m/n/10 Distancia
  []
 
-<figuras/fig4_2_mae_lt_profundidad.pdf, id=1183, 462.52798pt x 260.17201pt>
+<figuras/fig4_2_mae_lt_profundidad.pdf, id=1184, 462.52798pt x 260.17201pt>
 File: figuras/fig4_2_mae_lt_profundidad.pdf Graphic file (type pdf)
 <use figuras/fig4_2_mae_lt_profundidad.pdf>
-Package pdftex.def Info: figuras/fig4_2_mae_lt_profundidad.pdf  used on input line 142.
+Package pdftex.def Info: figuras/fig4_2_mae_lt_profundidad.pdf  used on input line 144.
 (pdftex.def)             Requested size: 396.91325pt x 223.2751pt.
-[49]
-<figuras/fig4_errores_combinaciones.pdf, id=1194, 520.34402pt x 390.25798pt>
+[49 <./figuras/fig4_2_mae_lt_profundidad.pdf>]
+<figuras/fig4_errores_combinaciones.pdf, id=1247, 520.34402pt x 390.25798pt>
 File: figuras/fig4_errores_combinaciones.pdf Graphic file (type pdf)
 <use figuras/fig4_errores_combinaciones.pdf>
-Package pdftex.def Info: figuras/fig4_errores_combinaciones.pdf  used on input line 157.
+Package pdftex.def Info: figuras/fig4_errores_combinaciones.pdf  used on input line 159.
 (pdftex.def)             Requested size: 441.01773pt x 330.77997pt.
- [50 <./figuras/fig4_2_mae_lt_profundidad.pdf>] [51 <./figuras/fig4_errores_combinaciones.pdf>]
-<figuras/fig4_3_ancho_intervalo.pdf, id=1345, 462.52798pt x 260.17201pt>
+ [50] [51 <./figuras/fig4_errores_combinaciones.pdf>]
+<figuras/fig4_3_ancho_intervalo.pdf, id=1346, 462.52798pt x 260.17201pt>
 File: figuras/fig4_3_ancho_intervalo.pdf Graphic file (type pdf)
 <use figuras/fig4_3_ancho_intervalo.pdf>
-Package pdftex.def Info: figuras/fig4_3_ancho_intervalo.pdf  used on input line 214.
+Package pdftex.def Info: figuras/fig4_3_ancho_intervalo.pdf  used on input line 216.
 (pdftex.def)             Requested size: 396.91325pt x 223.2751pt.
- [52]
-<figuras/fig4_L_z_ejemplos.pdf, id=1352, 462.52798pt x 260.17201pt>
+<figuras/fig4_L_z_ejemplos.pdf, id=1349, 462.52798pt x 260.17201pt>
 File: figuras/fig4_L_z_ejemplos.pdf Graphic file (type pdf)
 <use figuras/fig4_L_z_ejemplos.pdf>
-Package pdftex.def Info: figuras/fig4_L_z_ejemplos.pdf  used on input line 223.
+Package pdftex.def Info: figuras/fig4_L_z_ejemplos.pdf  used on input line 225.
 (pdftex.def)             Requested size: 396.91325pt x 223.2751pt.
- [53 <./figuras/fig4_3_ancho_intervalo.pdf>] [54 <./figuras/fig4_L_z_ejemplos.pdf>] [55]
-<figuras/fig4_bland_altman_c.pdf, id=1450, 462.52798pt x 260.17201pt>
+ [52] [53 <./figuras/fig4_3_ancho_intervalo.pdf> <./figuras/fig4_L_z_ejemplos.pdf>] [54] [55]
+<figuras/fig4_bland_altman_c.pdf, id=1453, 462.52798pt x 260.17201pt>
 File: figuras/fig4_bland_altman_c.pdf Graphic file (type pdf)
 <use figuras/fig4_bland_altman_c.pdf>
-Package pdftex.def Info: figuras/fig4_bland_altman_c.pdf  used on input line 272.
+Package pdftex.def Info: figuras/fig4_bland_altman_c.pdf  used on input line 273.
 (pdftex.def)             Requested size: 418.96548pt x 235.68103pt.
- [56]
-<figuras/fig4_captura_R3_230.pdf, id=1456, 397.15549pt x 238.49101pt>
+<figuras/fig4_captura_R3_230.pdf, id=1455, 397.15549pt x 238.49101pt>
 File: figuras/fig4_captura_R3_230.pdf Graphic file (type pdf)
 <use figuras/fig4_captura_R3_230.pdf>
-Package pdftex.def Info: figuras/fig4_captura_R3_230.pdf  used on input line 281.
+Package pdftex.def Info: figuras/fig4_captura_R3_230.pdf  used on input line 282.
 (pdftex.def)             Requested size: 396.91325pt x 238.36304pt.
-) (./capitulos/5-conclusiones.tex [57 <./figuras/fig4_bland_altman_c.pdf>] [58 <./figuras/fig4_captura_R3_230.pdf>]
+ [56] [57 <./figuras/fig4_bland_altman_c.pdf> <./figuras/fig4_captura_R3_230.pdf>]) (./capitulos/5-conclusiones.tex [58]
 Cap\'{\i }tulo 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 22--22
@@ -2042,7 +2040,7 @@ Underfull \hbox (badness 1194) in paragraph at lines 120--120
 
 ]
 Anexo A.
-<figuras/originales/figA_1_capturas.png, id=1653, 1586.92876pt x 653.44125pt>
+<figuras/originales/figA_1_capturas.png, id=1662, 1586.92876pt x 653.44125pt>
 File: figuras/originales/figA_1_capturas.png Graphic file (type png)
 <use figuras/originales/figA_1_capturas.png>
 Package pdftex.def Info: figuras/originales/figA_1_capturas.png  used on input line 13.
@@ -2051,7 +2049,7 @@ Package pdftex.def Info: figuras/originales/figA_1_capturas.png  used on input l
 
  <./figuras/originales/figA_1_capturas.png (PNG copy)>]
 Anexo B.
-<figuras/originales/figB_1_flatport.png, id=1661, 523.9575pt x 404.51125pt>
+<figuras/originales/figB_1_flatport.png, id=1669, 523.9575pt x 404.51125pt>
 File: figuras/originales/figB_1_flatport.png Graphic file (type png)
 <use figuras/originales/figB_1_flatport.png>
 Package pdftex.def Info: figuras/originales/figB_1_flatport.png  used on input line 25.
@@ -2079,10 +2077,10 @@ ignored: Infinite glue shrinkage found in box being split [76
 ]
 ignored: Infinite glue shrinkage found in box being split [77]) [78]
 Anexo G.
-<figuras/fig3_1_replicas_tags.jpg, id=1798, 629.35126pt x 968.61874pt>
+<figuras/fig3_1_replicas_tags.jpg, id=1816, 629.35126pt x 968.61874pt>
 File: figuras/fig3_1_replicas_tags.jpg Graphic file (type jpg)
 <use figuras/fig3_1_replicas_tags.jpg>
-Package pdftex.def Info: figuras/fig3_1_replicas_tags.jpg  used on input line 161.
+Package pdftex.def Info: figuras/fig3_1_replicas_tags.jpg  used on input line 169.
 (pdftex.def)             Requested size: 242.5611pt x 373.31104pt.
 ) [79
 
@@ -2107,18 +2105,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54454 strings out of 469227
- 1174476 string characters out of 5462848
- 2403334 words of memory out of 5000000
+ 54460 strings out of 469227
+ 1174564 string characters out of 5462848
+ 2577374 words of memory out of 5000000
  82095 multiletter control sequences out of 15000+600000
- 661062 words of font info for 131 fonts, out of 8000000 for 9000
+ 660748 words of font info for 130 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  197i,15n,292p,2551b,5117s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (98 pages, 4505552 bytes).
+</home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on main.pdf (98 pages, 4482702 bytes).
 PDF statistics:
- 2049 PDF objects out of 2073 (max. 8388607)
- 1542 compressed objects within 16 object streams
- 399 named destinations out of 1000 (max. 500000)
+ 2064 PDF objects out of 2073 (max. 8388607)
+ 1557 compressed objects within 16 object streams
+ 406 named destinations out of 1000 (max. 500000)
  846 words of extra memory for PDF output out of 10000 (max. 10000000)
 
