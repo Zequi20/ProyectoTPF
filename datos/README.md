@@ -45,9 +45,9 @@ repositorio) o con la variable `FISHMETER_SRC` apuntando a su carpeta `src/`:
 
 ```bash
 (cd datos && sha256sum -c SHA256SUMS)   # opcional: integridad de los datos
-python analysis/reproducir_capitulo4.py  # Tablas 4.3–4.6, valores de la Tabla 4.7, pruebas de
-                                         # signos, Bland–Altman, Figuras 4.5 (L(z)) y 4.6 (Bland–Altman)
-python analysis/make_figures.py          # Figuras 4.1–4.4 y 4.7
+python analysis/reproducir_capitulo4.py  # Tablas 11–14, valores de la Tabla 15, pruebas de
+                                         # signos, Bland–Altman, Figuras 19 (L(z)) y 20 (Bland–Altman)
+python analysis/make_figures.py          # Figuras 15–18 y 21
 python analysis/tabla_maestra.py         # Tabla del Anexo F
 ```
 

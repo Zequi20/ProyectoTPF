@@ -2,7 +2,7 @@
 %  Tesis de Cipriano Ezequiel Pereira López — versión corregida (v2)
 %  Compilar: latexmk -pdf main.tex   (pdflatex + biber)
 % =====================================================================
-\documentclass[12pt,a4paper,oneside,openany]{report}
+\documentclass[12pt,letterpaper,oneside,openany]{report}
 
 % ---------- Idioma y codificación ----------
 \usepackage[utf8]{inputenc}
@@ -10,17 +10,22 @@
 \DeclareUnicodeCharacter{1EBD}{\~e}
 \DeclareUnicodeCharacter{1EF9}{\~y}
 \usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage[english,spanish,es-tabla,es-lcroman,es-nodecimaldot,es-noshorthands]{babel}
 \usepackage{csquotes}
 
 % ---------- Página ----------
-% El margen superior deja lugar al membrete: empieza a 1 cm del borde y el texto, a 4,5 cm
-\usepackage[top=4.5cm,bottom=2.5cm,left=3cm,right=2.5cm,
-            headheight=2.9cm,headsep=0.6cm,footskip=1.2cm]{geometry}
+% Hoja carta y márgenes de 2,54 cm, como el formato de referencia (APA 7).
+% El margen superior de 3,81 cm deja lugar al membrete, que empieza a 0,5 cm del borde.
+\usepackage[top=3.81cm,bottom=2.54cm,left=2.54cm,right=2.54cm,
+            headheight=3.0cm,headsep=0.35cm,footskip=1.2cm]{geometry}
+% Interlineado doble en todo el documento, como el formato de referencia (APA 7).
+% Tablas, rótulos y notas al pie van a espacio simple (setspace lo hace en los
+% flotantes y las notas); los listados y las tablas largas, más abajo.
 \usepackage{setspace}
-\onehalfspacing
+\doublespacing
 \setlength{\parindent}{1.25cm}
-\setlength{\parskip}{0.3em}
+\setlength{\parskip}{0pt}
 \setlength{\emergencystretch}{2em}
 \usepackage{ragged2e}
 \usepackage{emptypage}
@@ -28,8 +33,15 @@
 
 % ---------- Matemática ----------
 \usepackage{amsmath,amssymb,bm}
+\usepackage{etoolbox}
 \usepackage{siunitx}
 \sisetup{output-decimal-marker={,},group-separator={\,},per-mode=symbol}
+% Las filas de las matrices usan el interlineado simple aunque el texto vaya a doble
+\makeatletter
+\newcommand{\filasimple}{\@tempdima=\f@baselineskip\relax
+  \setbox\strutbox\hbox{\vrule\@height.7\@tempdima\@depth.3\@tempdima\@width\z@}}
+\makeatother
+\AtBeginEnvironment{bmatrix}{\filasimple}
 \newcommand{\Aprime}{A$'$}
 \newcommand{\IL}{I_L}
 
@@ -37,12 +49,49 @@
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
 
+% ---------- Numeración continua de figuras, tablas y ecuaciones (APA) ----------
+% Figura 1, Tabla 1, (1) en todo el cuerpo; en los anexos llevan la letra del anexo
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\counterwithout{equation}{chapter}
+
+% ---------- Títulos ----------
+% Capítulos (y títulos sin número: índices, referencias, anexos) centrados en
+% negrita; tercer y cuarto nivel (1.2.1 y 1.2.1.1) en negrita cursiva, como en APA
+\makeatletter
+\renewcommand{\@makechapterhead}[1]{%
+  \vspace*{20\p@}%
+  {\centering\normalfont\setstretch{1}%
+   \ifnum\c@secnumdepth>\m@ne
+     {\Huge\bfseries\@chapapp\space\thechapter\par}\nobreak
+     \vskip 20\p@
+   \fi
+   \interlinepenalty\@M
+   {\LARGE\bfseries #1\par}\nobreak
+   \vskip 40\p@}}
+\renewcommand{\@makeschapterhead}[1]{%
+  \vspace*{20\p@}%
+  {\centering\normalfont\setstretch{1}%
+   \interlinepenalty\@M
+   {\LARGE\bfseries #1\par}\nobreak
+   \vskip 40\p@}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}{1.5ex \@plus .2ex}%
+  {\normalfont\large\bfseries\itshape}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}{1.5ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries\itshape}}
+\makeatother
+
 % ---------- Figuras y tablas ----------
 \usepackage{graphicx}
 \graphicspath{{figuras/}{figuras/originales/}}
 \usepackage{booktabs,longtable,array,multirow,makecell,tabularx}
 \usepackage{pdflscape}
 \usepackage{caption}
+% Rótulos APA: número en negrita y, en la línea siguiente, el título en cursiva
+\captionsetup{labelfont=bf,textfont=it,labelsep=newline,
+              justification=raggedright,singlelinecheck=false}
 \usepackage{float}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,fit}
@@ -57,7 +106,10 @@
 \usepackage{listings}
 \renewcommand{\lstlistingname}{Listado}
 \lstset{basicstyle=\ttfamily\scriptsize,breaklines=true,frame=single,
-        columns=fullflexible,keepspaces=true}
+        columns=fullflexible,keepspaces=true,numberbychapter=false}
+% Listados y tablas largas a espacio simple dentro del cuerpo a doble espacio
+\AtBeginEnvironment{lstlisting}{\setstretch{1}}
+\AtBeginEnvironment{longtable}{\setstretch{1}}
 
 % ---------- Recuadros de pendientes ----------
 \usepackage[most]{tcolorbox}
@@ -75,6 +127,10 @@
 \usepackage[backend=biber,style=apa,language=spanish,natbib=true]{biblatex}
 \DeclareLanguageMapping{spanish}{spanish-apa}
 \addbibresource{referencias.bib}
+% «y» entre dos autores también en las citas entre paréntesis (APA en español);
+% la lista de referencias conserva «&»
+\AtBeginDocument{%
+  \DeclareDelimFormat[cite,parencite,textcite]{finalnamedelim}{\addspace y\space}}
 
 % ---------- Acrónimos ----------
 \usepackage[acronym,toc,nomain,nonumberlist]{glossaries}
@@ -106,8 +162,13 @@
 \hypersetup{pdftitle={Estimación morfométrica monocular de peces a través de una interfaz aire–vidrio–agua},
             pdfauthor={Cipriano Ezequiel Pereira López}}
 
-% ---------- Anexos rotulados «Anexo A», «Anexo B», ... ----------
-\addto\captionsspanish{\renewcommand{\appendixname}{Anexo}}
+% ---------- Anexos rotulados «Anexo A», «Anexo B», ... e índices ----------
+\addto\captionsspanish{%
+  \renewcommand{\appendixname}{Anexo}%
+  \renewcommand{\contentsname}{Índice}%
+  \renewcommand{\listtablename}{Índice de tablas}%
+  \renewcommand{\listfigurename}{Índice de figuras}%
+  \renewcommand{\lstlistlistingname}{Índice de listados}}
 
 % ---------- Datos ----------
 \input{preliminares/datos}
@@ -115,14 +176,15 @@
 \begin{document}
 
 % ================= PRELIMINARES =================
-\pagenumbering{roman}
+\pagenumbering{Roman}
 \input{preliminares/portada}
 \input{preliminares/advertencia}
 \input{preliminares/aprobacion}
 \input{preliminares/dedicatoria}
 \input{preliminares/agradecimientos}
 
-% Índices en el orden del reglamento (Res. 31/2020): contenido, cuadros, figuras
+% Índices en el orden del reglamento (Res. 31/2020): contenido, cuadros, figuras;
+% después, listados y acrónimos.
 \clearpage
 \phantomsection\addcontentsline{toc}{chapter}{\contentsname}
 \tableofcontents
@@ -133,8 +195,12 @@
 \phantomsection\addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
 \clearpage
+\phantomsection\addcontentsline{toc}{chapter}{\lstlistlistingname}
+\lstlistoflistings
+% \glsaddall va antes del salto: en una página nueva dejaba una hoja en blanco
 \glsaddall
-\printnoidxglossary[type=\acronymtype,title={Lista de acrónimos}]
+\clearpage
+\printnoidxglossary[type=\acronymtype,title={Índice de acrónimos}]
 \clearpage
 \input{preliminares/resumen}
 \input{preliminares/nemombyky}
@@ -157,6 +223,13 @@
 
 % ================= ANEXOS =================
 \appendix
+% Figura A1, Tabla F1, Listado C1: número propio dentro de cada anexo (APA)
+\counterwithin*{figure}{chapter}
+\counterwithin*{table}{chapter}
+\counterwithin*{lstlisting}{chapter}
+\renewcommand{\thefigure}{\thechapter\arabic{figure}}
+\renewcommand{\thetable}{\thechapter\arabic{table}}
+\renewcommand{\thelstlisting}{\thechapter\arabic{lstlisting}}
 \input{anexos/anexos}
 
 \end{document}

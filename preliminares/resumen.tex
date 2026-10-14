@@ -1,8 +1,7 @@
 % ---------- Resumen ----------
 \thispagestyle{plain}
 \phantomsection\addcontentsline{toc}{chapter}{Resumen}
-\begin{center}
-  \begin{minipage}{0.90\textwidth}
+\begingroup
     \RaggedRight
     \setlength{\parindent}{0pt}
     \setlength{\parskip}{6pt plus 1pt minus 1pt}
@@ -11,6 +10,5 @@
     Medir un pez con una cámara evitaría sacarlo del agua, pero fotografiarlo a través de un tanque introduce un error: la luz se desvía al cruzar agua, vidrio y aire, y el tamaño aparente del pez cambia con su distancia al vidrio, que una sola imagen no revela. El objetivo fue comparar cuatro maneras de convertir píxeles en milímetros sobre los mismos puntos anatómicos ---la escala de un marcador ArUco pegado al vidrio (A), una homografía con un marcador en el plano de la réplica (\Aprime), una calibración pinhole hecha bajo el agua (B) y un modelo refractivo de puerto plano (C)--- y cuantificar el intervalo de longitud que deja una profundidad desconocida. Planteamos que C tendría el menor error, que su ventaja sobre B crecería lejos de la zona de calibración y que su intervalo contendría la longitud real. Fotografiamos seis réplicas rígidas de PLA, medidas con calibre, a cuatro profundidades (5, 11, 17 y 23 cm), tres veces cada una (72 imágenes). Con la profundidad conocida, B y C lograron los menores errores de longitud total (MAE \SI{1,08}{mm}, \SI{0,73}{\percent}, y \SI{1,22}{mm}, \SI{0,88}{\percent}), seguidos de \Aprime{} (\SI{3,29}{mm}) y A (\SI{37,43}{mm}); ambos superaron a A y \Aprime{} en las seis réplicas (prueba de signos, $p = 0{,}031$) y no se diferenciaron entre sí ($p = 1$). La primera hipótesis se sostuvo solo frente a A y \Aprime, la segunda no y la tercera sí: el intervalo contuvo la longitud de calibre en las 72 capturas. El error de A creció de \SI{13,8}{} a \SI{57,6}{mm} al alejar la réplica del vidrio, como predice la geometría. Sin conocer la profundidad, el intervalo mide del 56 al 82~\% de la longitud; acotándola a $\pm 1$~cm, se reduce al 4--5~\%. Concluimos que, con la profundidad conocida, la calibración bajo el agua y el modelo refractivo llevan el error por debajo del 1~\%; sin ella, la mayor incertidumbre es la profundidad, no la refracción. Los resultados valen para este montaje y réplicas rígidas.
 
     \textbf{Palabras clave:} \PalabrasClave.
-  \end{minipage}
-\end{center}
+\endgroup
 \clearpage

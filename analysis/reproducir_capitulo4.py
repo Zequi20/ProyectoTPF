@@ -11,9 +11,9 @@ con la variable FISHMETER_SRC (ruta a su carpeta src/).
 Uso, desde la raíz del proyecto:
     python analysis/reproducir_capitulo4.py
 
-Imprime las Tablas 4.3 a 4.6 (sensibilidad, errores por método y por posición,
+Imprime las Tablas 11 a 14 (sensibilidad, errores por método y por posición,
 ancho y cobertura de I_L), los conteos pareados y las pruebas de signos que usa la
-Tabla 4.7, y los límites de Bland--Altman. Escribe:
+Tabla 15, y los límites de Bland--Altman. Escribe:
     datos/derivados/sensibilidad_c.csv, L_z.csv, intervalos_L_z.csv, resumen_capitulo4.json
     figuras/fig4_bland_altman_c.pdf, figuras/fig4_L_z_ejemplos.pdf
 """
@@ -312,15 +312,15 @@ def main():
                                                   encoding="utf-8")
 
     f = lambda v: f"{v:+.2f}" if v < 0 else f"{v:.2f}"
-    print("Tabla 4.3 - sensibilidad de C (cambio medio de LT)")
+    print("Tabla 11 - sensibilidad de C (cambio medio de LT)")
     for k, v in sens.items():
         print(f"  {k:22s} {v['delta_mm']:+7.2f} mm {v['delta_pct']:+7.2f} %  (máx. {v['max_abs_mm']:.2f} mm)")
-    print("Tabla 4.4 - sesgo LT, MAE LT, MAPE LT, sesgo PC, MAE PC, MAPE PC | MAE LT y PC por captura")
+    print("Tabla 12 - sesgo LT, MAE LT, MAPE LT, sesgo PC, MAE PC, MAPE PC | MAE LT y PC por captura")
     for m in METHODS:
         t, c = t44[m], capture[m]
         print(f"  {m:3s} n={t['n']}  " + "  ".join(f(t[k]) for k in ("sesgo_lt", "mae_lt", "mape_lt", "sesgo_pc", "mae_pc", "mape_pc"))
               + f"  | {c['mae_lt']:.2f} {c['mae_pc']:.2f} (n={c['n']})")
-    print("Tabla 4.5 - MAE de LT por posición (A, A′, B, C, B-C)")
+    print("Tabla 13 - MAE de LT por posición (A, A′, B, C, B-C)")
     for p in POSITIONS:
         print(f"  {p // 10:2d} cm  " + "  ".join(f"{t45[p][m]:.2f}" for m in METHODS) + f"  {t45[p]['B'] - t45[p]['C']:+.2f}")
     print(f"  pendientes: A {slopes['A']:+.2f} mm/cm; B-C {slopes['B-C']:+.3f} mm/cm")
@@ -337,7 +337,7 @@ def main():
         print(f"Bland-Altman C {m.upper()} (72 capturas): LoA {s['loa_inf']:+.2f} / {s['loa_sup']:+.2f} mm")
     print(f"C recalculado en la posición nominal: {sum(d < 0.01 for d in nominal)}/{len(nominal)} a menos de 0,01 mm; "
           f"diferencia máxima {max(nominal):.2f} mm")
-    print(f"Tabla 4.6 - L(z) creciente en {lz['lz_creciente']} capturas; ancho numérico (predicción) por posición")
+    print(f"Tabla 14 - L(z) creciente en {lz['lz_creciente']} capturas; ancho numérico (predicción) por posición")
     for name, s in lz["ventanas"].items():
         print(f"  {name:8s} " + "  ".join(f"{a:.1f} ({b:.1f})" for a, b in s["por_posicion"].values())
               + f"  cobertura {s['cobertura']:.2f} ({s['cubiertas']}); razón pred/num {s['razon_pred_num']:.3f}")
