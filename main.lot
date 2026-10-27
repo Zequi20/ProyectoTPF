@@ -2,34 +2,33 @@
 \babel@toc {english}{}\relax 
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1}{\ignorespaces Trazabilidad entre preguntas, objetivos, hipótesis, resultados y conclusiones.}}{7}{table.caption.21}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2}{\ignorespaces Matriz comparativa de antecedentes relacionados con la medición morfométrica y la corrección refractiva.}}{18}{table.2.2}%
+\contentsline {table}{\numberline {1}{\ignorespaces Matriz comparativa de antecedentes relacionados con la medición morfométrica y la corrección refractiva.}}{21}{table.2.1}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3}{\ignorespaces Réplicas y referencias físicas medidas con calibre.}}{44}{table.caption.29}%
-\contentsline {table}{\numberline {4}{\ignorespaces Operacionalización de las variables.}}{46}{table.caption.30}%
-\contentsline {table}{\numberline {5}{\ignorespaces Correspondencia entre la posición nominal de la réplica y la lectura del riel.}}{49}{table.caption.32}%
-\contentsline {table}{\numberline {6}{\ignorespaces Parámetros del puerto plano utilizados por la ruta C.}}{51}{table.caption.35}%
-\contentsline {table}{\numberline {7}{\ignorespaces Referencia geométrica del riel utilizada por la ruta B.}}{52}{table.caption.36}%
-\contentsline {table}{\numberline {8}{\ignorespaces Recorrido de cada método en Fishmeter, desde los píxeles hasta la medición.}}{58}{table.caption.40}%
+\contentsline {table}{\numberline {2}{\ignorespaces Réplicas y referencias físicas medidas con calibre.}}{49}{table.caption.24}%
+\contentsline {table}{\numberline {3}{\ignorespaces Operacionalización de las variables.}}{51}{table.caption.25}%
+\contentsline {table}{\numberline {4}{\ignorespaces Correspondencia entre la posición nominal de la réplica y la lectura del riel.}}{55}{table.caption.27}%
+\contentsline {table}{\numberline {5}{\ignorespaces Parámetros del puerto plano utilizados por la ruta C.}}{58}{table.caption.30}%
+\contentsline {table}{\numberline {6}{\ignorespaces Referencia geométrica del riel utilizada por la ruta B.}}{58}{table.caption.31}%
+\contentsline {table}{\numberline {7}{\ignorespaces Recorrido de cada método en Fishmeter, desde los píxeles hasta la medición.}}{65}{table.caption.35}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {9}{\ignorespaces Registros del CSV y su tratamiento en el análisis.}}{65}{table.caption.47}%
-\contentsline {table}{\numberline {10}{\ignorespaces Calibraciones de cámara utilizadas por las rutas B y C.}}{66}{table.caption.48}%
-\contentsline {table}{\numberline {11}{\ignorespaces Sensibilidad de la longitud total estimada por C a los parámetros medidos a mano: cambio medio con signo sobre las 72 capturas respecto de la configuración base ($d = 230$~mm, $\mu _w = 1{,}333$).}}{67}{table.caption.49}%
-\contentsline {table}{\numberline {12}{\ignorespaces Errores medios por método después de resumir las repeticiones técnicas.}}{68}{table.caption.50}%
-\contentsline {table}{\numberline {13}{\ignorespaces MAE de longitud total (mm) por posición de la réplica.}}{69}{table.caption.52}%
-\contentsline {table}{\numberline {14}{\ignorespaces Ancho relativo del intervalo $I_L$ (\% de la LT de calibre) según la profundidad de la réplica y el conocimiento disponible sobre $z$: cálculo numérico con C sobre las 72 capturas y, entre paréntesis, predicción geométrica de primer orden. La última columna indica la cobertura empírica.}}{73}{table.caption.55}%
-\contentsline {table}{\numberline {15}{\ignorespaces Contraste de hipótesis.}}{76}{table.caption.58}%
+\contentsline {table}{\numberline {8}{\ignorespaces Registros del CSV y su tratamiento en el análisis.}}{73}{table.caption.42}%
+\contentsline {table}{\numberline {9}{\ignorespaces Calibraciones de cámara utilizadas por las rutas B y C.}}{74}{table.caption.43}%
+\contentsline {table}{\numberline {10}{\ignorespaces Sensibilidad de la longitud total estimada por C a los parámetros medidos a mano: cambio medio con signo sobre las 72 capturas respecto de la configuración base ($d = 230$~mm, $\mu _w = 1{,}333$).}}{75}{table.caption.44}%
+\contentsline {table}{\numberline {11}{\ignorespaces Errores medios por método después de resumir las repeticiones técnicas.}}{78}{table.caption.46}%
+\contentsline {table}{\numberline {12}{\ignorespaces MAE de longitud total (mm) por posición de la réplica.}}{79}{table.caption.47}%
+\contentsline {table}{\numberline {13}{\ignorespaces Ancho relativo del intervalo $I_L$ (\% de la LT de calibre) según la profundidad de la réplica y el conocimiento disponible sobre $z$: cálculo numérico con C sobre las 72 capturas y, entre paréntesis, predicción geométrica de primer orden. La última columna indica la cobertura empírica.}}{83}{table.caption.50}%
+\contentsline {table}{\numberline {14}{\ignorespaces Contraste de hipótesis.}}{86}{table.caption.53}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {16}{\ignorespaces Regla de decisión: qué conversión usar según la situación, con el error observado en este montaje.}}{84}{table.caption.64}%
-\contentsline {table}{\numberline {17}{\ignorespaces Matriz de cumplimiento de los objetivos específicos.}}{86}{table.caption.66}%
-\addvspace {10\p@ }
+\contentsline {table}{\numberline {15}{\ignorespaces Regla de decisión: qué conversión utilizar según la situación, con el error observado en este montaje.}}{94}{table.caption.59}%
+\contentsline {table}{\numberline {16}{\ignorespaces Matriz de cumplimiento de los objetivos específicos.}}{97}{table.caption.61}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {F1}{\ignorespaces Tabla maestra: referencias de calibre y estimaciones por imagen y método.}}{102}{table.F.1}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {G1}{\ignorespaces Lecturas de calibre de las réplicas (mm).}}{105}{table.caption.75}%
+\contentsline {table}{\numberline {F1}{\ignorespaces Tabla maestra: referencias de calibre y estimaciones por imagen y método.}}{116}{table.F.1}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {G2}{\ignorespaces Lecturas de calibre de las réplicas (mm).}}{122}{table.caption.70}%
 \addvspace {10\p@ }

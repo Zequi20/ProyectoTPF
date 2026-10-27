@@ -1,0 +1,23 @@
+% Tabla 10: Calibraciones de cámara utilizadas por las rutas B y C.
+% Etiqueta original: tab:calibraciones.
+% Fuente: capitulos/4-resultados.tex, lineas 36-53.
+% Fragmento extraido automaticamente; requiere el preambulo de main.tex.
+
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{Calibraciones de cámara utilizadas por las rutas B y C.}
+\label{tab:calibraciones}
+\begin{tabular}{@{}p{4.2cm}p{4.4cm}p{4.4cm}@{}}
+\toprule
+Campo & Perfil B (bajo agua) & Perfil C (en aire) \\
+\midrule
+Identificador & \texttt{B-effective} & \texttt{C-air} \\
+Rutina & \texttt{calibrateCamera} (OpenCV 5.0.0) & \texttt{calibrateCamera} (OpenCV 5.0.0) \\
+RMS de reproyección & 0,4354~px & 0,3745~px \\
+Vistas recibidas / aceptadas & 35 / 35 & 36 / 36 \\
+Vistas rechazadas & 0 & 0 \\
+Focal efectiva $f_x$ & 4502,3~px & 3313,7~px \\
+Punto principal $(c_x, c_y)$ & (2027,3; 1549,0)~px & (2028,2; 1530,6)~px \\
+\bottomrule
+\end{tabular}
+\end{table}

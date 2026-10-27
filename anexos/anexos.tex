@@ -6,13 +6,14 @@ Los anexos reúnen el material de respaldo del experimento: el registro visual d
 \chapter{Registro visual de capturas}
 \label{anx:capturas}
 
-La Figura~\ref{fig:A-1} reúne en una sola vista las capturas del experimento. Cada etiqueta indica la réplica, la repetición y la distancia nominal de la réplica al vidrio en milímetros; por ejemplo, \texttt{R1-REP1-50.jpg}. La vista permite revisar de un vistazo cómo se organizó el conjunto y que cada captura corresponda a su posición. Las 72 imágenes originales están publicadas en el repositorio de datos (Anexo~\ref{anx:repositorio}).
+La Figura~\ref{fig:A-1} reúne en una sola vista las capturas del experimento. Cada etiqueta indica la réplica, la repetición y la distancia nominal de la réplica al vidrio en milímetros; por ejemplo, \texttt{R1-REP1-50.jpg}. La vista permite comprobar la organización del conjunto y la correspondencia de cada captura con su posición. Las 72 imágenes originales están publicadas en el repositorio de datos (Anexo~\ref{anx:repositorio}).
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{figA_1_capturas.png}
-\caption[Vista conjunta de las capturas y sus identificadores]{Vista conjunta de las capturas y sus identificadores. Fuente: elaboración propia.}
+\caption[Vista conjunta de las capturas y sus identificadores]{Vista conjunta de las capturas y sus identificadores.}
 \label{fig:A-1}
+\includegraphics[width=\textwidth]{figA_1_capturas.png}
+\fignota{Elaboración propia.}
 \end{figure}
 
 \chapter{Configuración del puerto plano}
@@ -20,11 +21,12 @@ La Figura~\ref{fig:A-1} reúne en una sola vista las capturas del experimento. C
 
 La Figura~\ref{fig:B-1} reproduce la configuración del modelo de puerto plano, resumida en la Tabla~\ref{tab:puerto}: unidades en milímetros, normal de cámara $(0, 0, 1)$, distancia de la interfaz de 230~mm, vidrio de 4~mm de espesor e índices de refracción de 1,000 para el aire, 1,500 para el vidrio y 1,333 para el agua. El archivo deja constancia de que la distancia de la lente se midió desde su frente, como aproximación, y de que el agua estaba a 22~\si{\celsius}, con salinidad 0 y presión 0~dbar.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{figB_1_flatport.png}
-\caption[Parámetros visibles de la configuración del puerto plano]{Parámetros visibles de la configuración del puerto plano. Fuente: Fishmeter.}
+\caption[Parámetros visibles de la configuración del puerto plano]{Parámetros visibles de la configuración del puerto plano.}
 \label{fig:B-1}
+\includegraphics[width=0.6\textwidth]{figB_1_flatport.png}
+\fignota{Captura de pantalla de Fishmeter, aplicación desarrollada en este trabajo.}
 \end{figure}
 
 \chapter{Parámetros de calibración de cámara}
@@ -125,7 +127,7 @@ rail_direction_camera:
 El trabajo está publicado en dos repositorios. El código de Fishmeter está en \url{\RepoURL}, etiqueta \texttt{\RepoTag}, que corresponde al commit\par\noindent{\footnotesize\texttt{\RepoCommit}}\par
 \noindent Los datos del experimento y los scripts que regeneran las tablas y figuras del Capítulo~\ref{cap:resultados} están en el repositorio de este documento, \url{\DatosURL}. La estructura de ambos es la siguiente:
 
-\begin{lstlisting}[escapeinside={(*}{*)}]
+\begin{lstlisting}
 FishmeterTPF/                     codigo (etiqueta v1.0-tesis)
   src/fish_morphometry/           aplicacion Fishmeter (calibracion, geometria,
                                   metodos A, A', B y C, interfaz, validacion)
@@ -142,18 +144,18 @@ ProyectoTPF/                      datos y analisis
   datos/SHA256SUMS                huellas de todos los archivos de datos
   datos/README.md                 contenido y convenciones de los datos
   anexos/csv-maestro-re-run.csv   tabla maestra (288 registros)
-  analysis/reproducir_capitulo4.py  Tablas (*\ref{tab:sensibilidad}*) a (*\ref{tab:intervalo}*), pruebas de signos,
-                                  Bland-Altman y Figuras (*\ref{fig:4-Lz}*) y (*\ref{fig:4-BA}*)
-  analysis/make_figures.py        Figuras (*\ref{fig:4-1}*) a (*\ref{fig:4-3}*) y (*\ref{fig:4-captura}*)
+  analysis/reproducir_capitulo4.py  Tablas 4.3 a 4.6, pruebas de signos,
+                                  Bland-Altman y Figuras 4.5 y 4.6
+  analysis/make_figures.py        Figuras 4.1 a 4.4 y 4.7
   analysis/tabla_maestra.py       tabla del Anexo F
 \end{lstlisting}
 
-Para reproducir el Capítulo~\ref{cap:resultados} hay que instalar Fishmeter en la etiqueta indicada y ejecutar, desde la raíz de ProyectoTPF, los tres scripts de \texttt{analysis/} en el orden del listado. El primero recalcula C desde los puntos marcados con el perfil \texttt{C-air} y la configuración del puerto plano; los otros dos leen la tabla maestra, los resultados del primero y, para la Figura~\ref{fig:4-captura}, la imagen original.
+Para reproducir el Capítulo~\ref{cap:resultados} se debe instalar Fishmeter en la versión indicada y ejecutar, desde la raíz de ProyectoTPF, los tres scripts de \texttt{analysis/} en el orden del listado. El primero recalcula C desde los puntos marcados con el perfil \texttt{C-air} y la configuración del puerto plano; los otros dos leen la tabla maestra, los resultados del primero y, para la Figura~\ref{fig:4-captura}, la imagen original.
 
 \chapter{Tabla maestra de resultados}
 \label{anx:maestra}
 
-La Tabla~\ref{tab:maestra} reproduce, para cada una de las 72 imágenes, las referencias de calibre y las estimaciones de LT y PC de los cuatro métodos; el error con signo de cada estimación es su diferencia con la referencia. Los guiones marcan los cuatro registros sin valor, en los que no se detectó el ArUco (Sección~\ref{sec:conjunto}). Generamos la tabla con \texttt{analysis/tabla\_maestra.py} a partir del CSV maestro, que guarda además los puntos marcados (con $\mathbf{p}_1$ y $\mathbf{p}_2$ invertidos respecto de la definición de la Sección~\ref{sec:medidas}), los parámetros de cada ruta y sus advertencias. Su huella SHA-256 figura a continuación de la tabla.
+La Tabla~\ref{tab:maestra} reproduce, para cada una de las 72 imágenes, las referencias de calibre y las estimaciones de LT y PC de los cuatro métodos; el error con signo de cada estimación es su diferencia con la referencia. Los guiones marcan los cuatro registros sin valor, en los que no se detectó el ArUco (Sección~\ref{sec:conjunto}). La tabla se generó con \texttt{analysis/tabla\_maestra.py} a partir del CSV maestro, que guarda además los puntos marcados (con $\mathbf{p}_1$ y $\mathbf{p}_2$ invertidos respecto de la definición de la Sección~\ref{sec:medidas}), los parámetros de cada ruta y sus advertencias. Su huella SHA-256 figura a continuación de la tabla.
 
 \input{anexos/tabla_maestra}
 
@@ -164,14 +166,15 @@ La Tabla~\ref{tab:maestra} reproduce, para cada una de las 72 imágenes, las ref
 
 Las seis réplicas están impresas en PLA. La Figura~\ref{fig:G-1} las muestra juntas, cada una con su identificador, y la Tabla~\ref{tab:lecturas-calibre} reproduce las tres lecturas de calibre de cada medida, registradas al milímetro, con su media y su desviación estándar muestral; las medias son las referencias de la Tabla~\ref{tab:replicas}.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.55\textwidth]{fig3_1_replicas_tags.jpg}
-\caption[Réplicas utilizadas en el experimento con su identificador]{Las seis réplicas impresas en PLA, con el identificador (R1--R6) que se usa en todo el documento. Fuente: elaboración propia.}
+\caption[Réplicas utilizadas en el experimento con su identificador]{Las seis réplicas impresas en PLA, con el identificador (R1--R6) que se usa en todo el documento.}
 \label{fig:G-1}
+\includegraphics[width=0.55\textwidth]{fig3_1_replicas_tags.jpg}
+\fignota{Elaboración propia.}
 \end{figure}
 
-\begin{table}[htbp]
+\begin{table}[H]
 \centering\footnotesize
 \caption{Lecturas de calibre de las réplicas (mm).}
 \label{tab:lecturas-calibre}
@@ -189,25 +192,32 @@ R5 & 137 & 138 & 137 & 137,3 & 0,6 & 25 & 26 & 26 & 25,7 & 0,6 \\
 R6 & 210 & 209 & 210 & 209,7 & 0,6 & 35 & 36 & 35 & 35,3 & 0,6 \\
 \bottomrule
 \end{tabular}
+
+\smallskip
+\begin{minipage}{0.9\textwidth}\footnotesize
+\emph{Nota.} Las lecturas de PC de R1 y R2 se anotaron originalmente con un cero de más (450 por 45~mm; 280/270/270 por 28/27/27~mm) y se corrigieron antes del análisis; la corrección está registrada en \texttt{datos/referencias/replicas.csv} y en la tabla maestra.
+\end{minipage}
 \end{table}
 
 \chapter{Montaje e instrumentos}
 \label{anx:montaje}
 
-La Figura~\ref{fig:H-1} muestra la pecera de vidrio en la que se hizo el ensayo, con agua y el soporte de PLA en su interior; sus dimensiones y la disposición del montaje están en la Sección~\ref{sec:montaje} y en la Figura~\ref{fig:3-esquema}. La Figura~\ref{fig:H-2} reúne los instrumentos con los que medimos y armamos el montaje: las reglas y la escuadra con las que medimos la distancia cámara--vidrio y comprobamos la perpendicularidad de la cámara, el calibre analógico con el que tomamos las medidas de referencia, el damero de calibración, los dos marcadores ArUco, el soporte del teléfono y los útiles con los que cortamos y fijamos las piezas.
+La Figura~\ref{fig:H-1} muestra la pecera de vidrio en la que se hizo el ensayo, con agua y el soporte de PLA en su interior; sus dimensiones y la disposición del montaje están en la Sección~\ref{sec:montaje} y en la Figura~\ref{fig:3-esquema}. La Figura~\ref{fig:H-2} reúne los instrumentos con los que se midió y se armó el montaje: las reglas y la escuadra con las que se midió la distancia cámara--vidrio y se comprobó la perpendicularidad de la cámara, el calibre analógico con el que se tomaron las medidas de referencia, el damero de calibración, los dos marcadores ArUco, el soporte del teléfono y los útiles con los que se cortaron y fijaron las piezas.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{estanque.png}
-\caption[Pecera utilizada en el experimento]{Pecera de vidrio utilizada en el experimento, con agua y el soporte de PLA en su interior. Fuente: elaboración propia.}
+\caption[Pecera utilizada en el experimento]{Pecera de vidrio utilizada en el experimento, con agua y el soporte de PLA en su interior.}
 \label{fig:H-1}
+\includegraphics[width=0.48\textwidth]{estanque.png}
+\fignota{Elaboración propia.}
 \end{figure}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.85\textwidth]{tools-measure-manipulate.png}
-\caption[Instrumentos de medición y de manipulación]{Instrumentos de medición y de manipulación: reglas, escuadra, calibre, damero de calibración, marcadores ArUco, soporte del teléfono, cinta doble faz y herramientas de corte y sujeción. Fuente: elaboración propia.}
+\caption[Instrumentos de medición y de manipulación]{Instrumentos de medición y de manipulación: reglas, escuadra, calibre, damero de calibración, marcadores ArUco, soporte del teléfono, cinta doble faz y herramientas de corte y sujeción.}
 \label{fig:H-2}
+\includegraphics[width=0.65\textwidth]{tools-measure-manipulate.png}
+\fignota{Elaboración propia.}
 \end{figure}
 
 

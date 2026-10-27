@@ -42,7 +42,7 @@ ERR = {m: {k: np.array([[np.mean([v[i] for v in _vals[(m, rep, p)]]) - _ref[rep]
            for i, k in enumerate(("LT", "PC"))}
        for m in METHODS}
 
-# Tabla 12 (MAE en mm) y Tabla 13 (MAE de LT por posición, mm)
+# Tabla 4.2 (MAE en mm) y Tabla 4.3 (MAE de LT por posición, mm)
 MAE_LT = {m: float(np.abs(ERR[m]["LT"]).mean()) for m in METHODS}
 MAE_PC = {m: float(np.abs(ERR[m]["PC"]).mean()) for m in METHODS}
 MAE_LT_POS = {m: list(np.abs(ERR[m]["LT"]).mean(axis=1)) for m in METHODS}
@@ -56,7 +56,7 @@ plt.rcParams.update({
 def fmt(v):
     return f"{v:.2f}".replace(".", ",")
 
-# ---------- Figura 15: MAE por método (LT y PC) ----------
+# ---------- Figura 4.1: MAE por método (LT y PC) ----------
 fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.2))
 for ax, data, title in zip(axes, (MAE_LT, MAE_PC), ("Longitud total (LT)", "Profundidad corporal (PC)")):
     vals = [data[m] for m in METHODS]
@@ -73,7 +73,7 @@ fig.savefig(OUT / "fig4_1_mae_por_metodo.pdf")
 fig.savefig(OUT / "fig4_1_mae_por_metodo.png", dpi=200)
 plt.close(fig)
 
-# ---------- Figura 16: MAE de LT por método y profundidad ----------
+# ---------- Figura 4.2: MAE de LT por método y profundidad ----------
 fig, ax = plt.subplots(figsize=(6.4, 3.6))
 for m in METHODS:
     ax.plot(POS, MAE_LT_POS[m], marker=MARKERS[m], ms=5.5, mec="white", mew=0.6,
@@ -99,7 +99,7 @@ fig.savefig(OUT / "fig4_2_mae_lt_profundidad.pdf")
 fig.savefig(OUT / "fig4_2_mae_lt_profundidad.png", dpi=200)
 plt.close(fig)
 
-# ---------- Figura 17: error con signo por combinación réplica--posición ----------
+# ---------- Figura 4.3: error con signo por combinación réplica--posición ----------
 # A va en su propio panel porque su escala (hasta -80 mm) ocultaría a los demás.
 fig, axes = plt.subplots(2, 2, figsize=(7.2, 5.4), gridspec_kw={"width_ratios": [1, 2.2]})
 groups = (["A"], ["A′", "B", "C"])
@@ -137,7 +137,7 @@ fig.savefig(OUT / "fig4_errores_combinaciones.pdf")
 fig.savefig(OUT / "fig4_errores_combinaciones.png", dpi=200)
 plt.close(fig)
 
-# ---------- Figura 21: captura real con los cuatro puntos marcados ----------
+# ---------- Figura 4.6: captura real con los cuatro puntos marcados ----------
 # Las imágenes originales están en datos/imagenes (ruta configurable con FISHMETER_IMAGES).
 import os
 IMAGES = Path(os.environ.get("FISHMETER_IMAGES", ROOT / "datos" / "imagenes"))
@@ -215,7 +215,7 @@ num = {label: [float(np.mean([float(r["ancho_num_pct"]) for r in _iv
                           ("+-3 cm", "z conocida con ±3 cm"),
                           ("+-1 cm", "z conocida con ±1 cm"))}
 
-# ---------- Figura 18: ancho relativo del intervalo ----------
+# ---------- Figura 4.4: ancho relativo del intervalo ----------
 fig, ax = plt.subplots(figsize=(6.4, 3.6))
 cols = ["#7B241C", "#B9770E", "#1E8449"]
 x = np.arange(len(z_true)); w = 0.26

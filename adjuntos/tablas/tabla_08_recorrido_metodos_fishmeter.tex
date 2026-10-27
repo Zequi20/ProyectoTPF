@@ -1,0 +1,20 @@
+% Tabla 8: Recorrido de cada método en Fishmeter, desde los píxeles hasta la medición.
+% Etiqueta original: tab:recorridos.
+% Fuente: capitulos/3-metodologia.tex, lineas 309-323.
+% Fragmento extraido automaticamente; requiere el preambulo de main.tex.
+
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{Recorrido de cada método en Fishmeter, desde los píxeles hasta la medición.}
+\label{tab:recorridos}
+\begin{tabularx}{\textwidth}{@{}p{1.1cm} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{1.9cm} >{\raggedright\arraybackslash\scriptsize\ttfamily}p{5.4cm}@{}}
+\toprule
+Método & Conversión de los puntos & Espacio de medición & \normalfont\footnotesize Funciones principales \\
+\midrule
+A & Escala uniforme $k$ tomada del ArUco fijo en el vidrio & Plano 2D & measure\_a $\rightarrow$ measure\_direct $\rightarrow$ scale\_points $\rightarrow$ measure\_projected\_morphometry \\
+\Aprime & Homografía $\mathbf{H}$ entre las esquinas del ArUco coplanar y un cuadrado de lado $L_m$ & Plano 2D & measure\_a\_prime $\rightarrow$ measure\_direct $\rightarrow$ marker\_plane\_homography $\rightarrow$ transform\_points\_homography $\rightarrow$ measure\_projected\_morphometry \\
+B & Rayo del modelo pinhole efectivo intersecado con el plano $\pi_z$ ubicado con el riel & Plano en el espacio 3D & measure\_b $\rightarrow$ intersect\_image\_points\_with\_plane $\rightarrow$ intersect\_ray\_plane $\rightarrow$ measure\_projected\_morphometry\_3d \\
+C & Rayo en aire refractado en las interfaces aire--vidrio y vidrio--agua, e intersecado con el plano de la réplica & Plano en el espacio 3D & measure\_c $\rightarrow$ \_trace\_to\_plane $\rightarrow$ trace\_refracted\_ray $\rightarrow$ intersect\_ray\_line\_plane $\rightarrow$ measure\_projected\_morphometry\_3d \\
+\bottomrule
+\end{tabularx}
+\end{table}

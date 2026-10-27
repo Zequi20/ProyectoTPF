@@ -10,38 +10,27 @@
 \DeclareUnicodeCharacter{1EBD}{\~e}
 \DeclareUnicodeCharacter{1EF9}{\~y}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
 \usepackage[english,spanish,es-tabla,es-lcroman,es-nodecimaldot,es-noshorthands]{babel}
 \usepackage{csquotes}
 
 % ---------- Página ----------
-% Hoja carta y márgenes de 2,54 cm, como el formato de referencia (APA 7).
-% El margen superior de 3,81 cm deja lugar al membrete, que empieza a 0,5 cm del borde.
-\usepackage[top=3.81cm,bottom=2.54cm,left=2.54cm,right=2.54cm,
-            headheight=3.0cm,headsep=0.35cm,footskip=1.2cm]{geometry}
-% Interlineado doble en todo el documento, como el formato de referencia (APA 7).
-% Tablas, rótulos y notas al pie van a espacio simple (setspace lo hace en los
-% flotantes y las notas); los listados y las tablas largas, más abajo.
+% El margen superior deja lugar al membrete: empieza a 1 cm del borde y el texto, a 4,5 cm
+\usepackage[top=4.8cm,bottom=2.54cm,left=2.54cm,right=2.54cm,
+            headheight=2.9cm,headsep=0.9cm,footskip=1.2cm]{geometry}
 \usepackage{setspace}
 \doublespacing
 \setlength{\parindent}{1.25cm}
-\setlength{\parskip}{0pt}
+\setlength{\parskip}{0.3em}
 \setlength{\emergencystretch}{2em}
 \usepackage{ragged2e}
 \usepackage{emptypage}
 \usepackage{lastpage}
+\usepackage{zref-totpages} % total de páginas físicas para la ficha
 
 % ---------- Matemática ----------
 \usepackage{amsmath,amssymb,bm}
-\usepackage{etoolbox}
 \usepackage{siunitx}
 \sisetup{output-decimal-marker={,},group-separator={\,},per-mode=symbol}
-% Las filas de las matrices usan el interlineado simple aunque el texto vaya a doble
-\makeatletter
-\newcommand{\filasimple}{\@tempdima=\f@baselineskip\relax
-  \setbox\strutbox\hbox{\vrule\@height.7\@tempdima\@depth.3\@tempdima\@width\z@}}
-\makeatother
-\AtBeginEnvironment{bmatrix}{\filasimple}
 \newcommand{\Aprime}{A$'$}
 \newcommand{\IL}{I_L}
 
@@ -49,53 +38,25 @@
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
 
-% ---------- Numeración continua de figuras, tablas y ecuaciones (APA) ----------
-% Figura 1, Tabla 1, (1) en todo el cuerpo; en los anexos llevan la letra del anexo
-\counterwithout{figure}{chapter}
-\counterwithout{table}{chapter}
-\counterwithout{equation}{chapter}
-
-% ---------- Títulos ----------
-% Capítulos (y títulos sin número: índices, referencias, anexos) centrados en
-% negrita; tercer y cuarto nivel (1.2.1 y 1.2.1.1) en negrita cursiva, como en APA
-\makeatletter
-\renewcommand{\@makechapterhead}[1]{%
-  \vspace*{20\p@}%
-  {\centering\normalfont\setstretch{1}%
-   \ifnum\c@secnumdepth>\m@ne
-     {\Huge\bfseries\@chapapp\space\thechapter\par}\nobreak
-     \vskip 20\p@
-   \fi
-   \interlinepenalty\@M
-   {\LARGE\bfseries #1\par}\nobreak
-   \vskip 40\p@}}
-\renewcommand{\@makeschapterhead}[1]{%
-  \vspace*{20\p@}%
-  {\centering\normalfont\setstretch{1}%
-   \interlinepenalty\@M
-   {\LARGE\bfseries #1\par}\nobreak
-   \vskip 40\p@}}
-\renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}%
-  {-3.25ex\@plus -1ex \@minus -.2ex}{1.5ex \@plus .2ex}%
-  {\normalfont\large\bfseries\itshape}}
-\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{\z@}%
-  {-3.25ex\@plus -1ex \@minus -.2ex}{1.5ex \@plus .2ex}%
-  {\normalfont\normalsize\bfseries\itshape}}
-\makeatother
-
 % ---------- Figuras y tablas ----------
 \usepackage{graphicx}
 \graphicspath{{figuras/}{figuras/originales/}}
 \usepackage{booktabs,longtable,array,multirow,makecell,tabularx}
 \usepackage{pdflscape}
 \usepackage{caption}
-% Rótulos APA: número en negrita y, en la línea siguiente, el título en cursiva
-\captionsetup{labelfont=bf,textfont=it,labelsep=newline,
-              justification=raggedright,singlelinecheck=false}
+% Rótulos APA 7: «Figura N» en negrita en línea propia, título en cursiva debajo
+\captionsetup{labelfont=bf,labelsep=newline,textfont=it,font={stretch=1.15},justification=raggedright,singlelinecheck=false,skip=6pt}
+\captionsetup[figure]{position=above}% APA 7: título de figura arriba, nota abajo
+\newcommand{\fignota}[1]{\par\vspace{4pt}{\footnotesize\setstretch{1.15}\raggedright\emph{Nota.} #1\par}}
+\AtBeginEnvironment{table}{\setstretch{1.0}}% cuerpo de tablas a espacio simple (regla 26)
+\setlength{\intextsep}{20pt plus 4pt minus 2pt}
+\setlength{\textfloatsep}{24pt plus 4pt minus 2pt}
+\captionsetup[longtable]{labelfont=bf,labelsep=newline,textfont=it,justification=raggedright,singlelinecheck=false}
 \usepackage{float}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,fit}
 \usepackage{xcolor}
+\usepackage{colortbl}
 \definecolor{metA}{HTML}{C0392B}
 \definecolor{metAp}{HTML}{E67E22}
 \definecolor{metB}{HTML}{2E86C1}
@@ -106,10 +67,7 @@
 \usepackage{listings}
 \renewcommand{\lstlistingname}{Listado}
 \lstset{basicstyle=\ttfamily\scriptsize,breaklines=true,frame=single,
-        columns=fullflexible,keepspaces=true,numberbychapter=false}
-% Listados y tablas largas a espacio simple dentro del cuerpo a doble espacio
-\AtBeginEnvironment{lstlisting}{\setstretch{1}}
-\AtBeginEnvironment{longtable}{\setstretch{1}}
+        columns=fullflexible,keepspaces=true}
 
 % ---------- Recuadros de pendientes ----------
 \usepackage[most]{tcolorbox}
@@ -127,10 +85,6 @@
 \usepackage[backend=biber,style=apa,language=spanish,natbib=true]{biblatex}
 \DeclareLanguageMapping{spanish}{spanish-apa}
 \addbibresource{referencias.bib}
-% «y» entre dos autores también en las citas entre paréntesis (APA en español);
-% la lista de referencias conserva «&»
-\AtBeginDocument{%
-  \DeclareDelimFormat[cite,parencite,textcite]{finalnamedelim}{\addspace y\space}}
 
 % ---------- Acrónimos ----------
 \usepackage[acronym,toc,nomain,nonumberlist]{glossaries}
@@ -155,20 +109,55 @@
   \fancyfoot[R]{\thepage}%
   \renewcommand{\headrulewidth}{0pt}%
   \renewcommand{\footrulewidth}{0pt}}
+\fancypagestyle{apaisada}{%
+  \fancyhf{}%
+  \fancyfoot[R]{\thepage}%
+  \renewcommand{\headrulewidth}{0pt}}
 \pagestyle{membrete}
+
+
+% ---------- Títulos de capítulo e índices: centrados y sin el espacio grande de report ----------
+\usepackage{titlesec}
+\usepackage{needspace,etoolbox}
+% Un título de sección arrastra al menos cinco líneas o pasa a la página siguiente
+\preto\section{\Needspace*{6\baselineskip}}
+\preto\subsection{\Needspace*{5\baselineskip}}
+\preto\subsubsection{\Needspace*{4\baselineskip}}
+\titleformat{\chapter}[display]
+  {\centering\normalfont\Large\bfseries}{\chaptertitlename\ \thechapter}{0.4em}{\Large}
+\titleformat{name=\chapter,numberless}[display]
+  {\centering\normalfont\Large\bfseries}{}{0pt}{\Large}
+\titlespacing*{\chapter}{0pt}{0pt}{1.2\baselineskip}
+\titlespacing*{name=\chapter,numberless}{0pt}{0pt}{1.2\baselineskip}
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries\itshape}{\thesubsubsection}{1em}{}
+\titlespacing*{\section}{0pt}{1.2\baselineskip}{0.4\baselineskip}
+\titlespacing*{\subsection}{0pt}{0.9\baselineskip}{0.3\baselineskip}
+\titlespacing*{\subsubsection}{0pt}{0.8\baselineskip}{0.2\baselineskip}
+% Numeración corrida de tablas, figuras y ecuaciones (como en la versión entregada)
+\usepackage{chngcntr}
+\counterwithout{table}{chapter}
+\counterwithout{figure}{chapter}
+\counterwithout{equation}{chapter}
+
+
+% ---------- Flotantes: que compartan página con el texto y no dejen hojas semivacías ----------
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.9}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.85}
+\setcounter{topnumber}{3}\setcounter{totalnumber}{4}
+% Sin líneas viudas ni huérfanas
+\widowpenalty=10000 \clubpenalty=10000
 
 % ---------- Hipervínculos (sin recuadros) ----------
 \usepackage[hidelinks]{hyperref}
-\hypersetup{pdftitle={Estimación morfométrica monocular de peces a través de una interfaz aire–vidrio–agua},
+\hypersetup{pdftitle={Estimación morfométrica monocular de peces a través de una interfaz aire–vidrio–agua: comparación de modelos e incertidumbre por profundidad desconocida},
             pdfauthor={Cipriano Ezequiel Pereira López}}
 
-% ---------- Anexos rotulados «Anexo A», «Anexo B», ... e índices ----------
-\addto\captionsspanish{%
-  \renewcommand{\appendixname}{Anexo}%
-  \renewcommand{\contentsname}{Índice}%
-  \renewcommand{\listtablename}{Índice de tablas}%
-  \renewcommand{\listfigurename}{Índice de figuras}%
-  \renewcommand{\lstlistlistingname}{Índice de listados}}
+% ---------- Anexos rotulados «Anexo A», «Anexo B», ... ----------
+\addto\captionsspanish{\renewcommand{\appendixname}{Anexo}}
 
 % ---------- Datos ----------
 \input{preliminares/datos}
@@ -178,14 +167,15 @@
 % ================= PRELIMINARES =================
 \pagenumbering{Roman}
 \input{preliminares/portada}
+\input{preliminares/ficha_pagina}
 \input{preliminares/advertencia}
 \input{preliminares/aprobacion}
 \input{preliminares/dedicatoria}
 \input{preliminares/agradecimientos}
 
-% Índices en el orden del reglamento (Res. 31/2020): contenido, cuadros, figuras;
-% después, listados y acrónimos.
+% Índices en el orden del reglamento (Res. 31/2020): contenido, cuadros, figuras
 \clearpage
+\begin{spacing}{1.15}
 \phantomsection\addcontentsline{toc}{chapter}{\contentsname}
 \tableofcontents
 \clearpage
@@ -194,13 +184,9 @@
 \clearpage
 \phantomsection\addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
-\clearpage
-\phantomsection\addcontentsline{toc}{chapter}{\lstlistlistingname}
-\lstlistoflistings
-% \glsaddall va antes del salto: en una página nueva dejaba una hoja en blanco
 \glsaddall
-\clearpage
-\printnoidxglossary[type=\acronymtype,title={Índice de acrónimos}]
+\printnoidxglossary[type=\acronymtype,title={Lista de acrónimos}]
+\end{spacing}
 \clearpage
 \input{preliminares/resumen}
 \input{preliminares/nemombyky}
@@ -223,13 +209,9 @@
 
 % ================= ANEXOS =================
 \appendix
-% Figura A1, Tabla F1, Listado C1: número propio dentro de cada anexo (APA)
-\counterwithin*{figure}{chapter}
-\counterwithin*{table}{chapter}
-\counterwithin*{lstlisting}{chapter}
-\renewcommand{\thefigure}{\thechapter\arabic{figure}}
+\setcounter{table}{0}\setcounter{figure}{0}
 \renewcommand{\thetable}{\thechapter\arabic{table}}
-\renewcommand{\thelstlisting}{\thechapter\arabic{lstlisting}}
+\renewcommand{\thefigure}{\thechapter\arabic{figure}}
 \input{anexos/anexos}
 
 \end{document}

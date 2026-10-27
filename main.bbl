@@ -329,6 +329,48 @@
       \verb 10.1016/j.compag.2020.105274
       \endverb
     \endentry
+    \entry{FAO2025Paraguay}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=264d9adc36dcc763205708230a469e23}{%
+           family={{Food and Agriculture Organization of the United Nations}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \name{shortauthor}{1}{}{%
+        {{un=0,uniquepart=base,hash=4807e0aebe86c17f559853f35515b533}{%
+           family={{FAO}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{4807e0aebe86c17f559853f35515b533}
+      \strng{fullhash}{264d9adc36dcc763205708230a469e23}
+      \strng{fullhashraw}{264d9adc36dcc763205708230a469e23}
+      \strng{bibnamehash}{4807e0aebe86c17f559853f35515b533}
+      \strng{authorbibnamehash}{264d9adc36dcc763205708230a469e23}
+      \strng{authornamehash}{264d9adc36dcc763205708230a469e23}
+      \strng{authorfullhash}{264d9adc36dcc763205708230a469e23}
+      \strng{authorfullhashraw}{264d9adc36dcc763205708230a469e23}
+      \strng{shortauthorbibnamehash}{4807e0aebe86c17f559853f35515b533}
+      \strng{shortauthornamehash}{4807e0aebe86c17f559853f35515b533}
+      \strng{shortauthorfullhash}{4807e0aebe86c17f559853f35515b533}
+      \strng{shortauthorfullhashraw}{4807e0aebe86c17f559853f35515b533}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{shortauthor}
+      \field{labeltitlesource}{title}
+      \field{day}{27}
+      \field{month}{11}
+      \field{title}{Paraguay teams up with FAO to advance sustainable aquaculture development}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.fao.org/guidelines-sustainable-aquaculture/news---events/news/detail/paraguay-teams-up-with-fao-to-advance-sustainable-aquaculture-development/
+      \endverb
+      \verb{url}
+      \verb https://www.fao.org/guidelines-sustainable-aquaculture/news---events/news/detail/paraguay-teams-up-with-fao-to-advance-sustainable-aquaculture-development/
+      \endverb
+    \endentry
     \entry{GarridoJurado2014}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=f564498c51cf1f10087d9696669a2d64}{%
@@ -740,52 +782,6 @@
       \range{pages}{12}
       \verb{doi}
       \verb 10.1111/2041-210X.13282
-      \endverb
-    \endentry
-    \entry{FAO2025Paraguay}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=6dcc0b4fe9210e7f3a0008ec1007c6b6}{%
-           family={{Organización de las Naciones Unidas para la Alimentación y la Agricultura}},
-           familyi={O\bibinitperiod}}}%
-      }
-      \name{shortauthor}{1}{}{%
-        {{un=0,uniquepart=base,hash=4807e0aebe86c17f559853f35515b533}{%
-           family={{FAO}},
-           familyi={F\bibinitperiod}}}%
-      }
-      \strng{namehash}{4807e0aebe86c17f559853f35515b533}
-      \strng{fullhash}{6dcc0b4fe9210e7f3a0008ec1007c6b6}
-      \strng{fullhashraw}{6dcc0b4fe9210e7f3a0008ec1007c6b6}
-      \strng{bibnamehash}{4807e0aebe86c17f559853f35515b533}
-      \strng{authorbibnamehash}{6dcc0b4fe9210e7f3a0008ec1007c6b6}
-      \strng{authornamehash}{6dcc0b4fe9210e7f3a0008ec1007c6b6}
-      \strng{authorfullhash}{6dcc0b4fe9210e7f3a0008ec1007c6b6}
-      \strng{authorfullhashraw}{6dcc0b4fe9210e7f3a0008ec1007c6b6}
-      \strng{shortauthorbibnamehash}{4807e0aebe86c17f559853f35515b533}
-      \strng{shortauthornamehash}{4807e0aebe86c17f559853f35515b533}
-      \strng{shortauthorfullhash}{4807e0aebe86c17f559853f35515b533}
-      \strng{shortauthorfullhashraw}{4807e0aebe86c17f559853f35515b533}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{shortauthor}
-      \field{labeltitlesource}{title}
-      \field{day}{27}
-      \field{month}{11}
-      \field{title}{Paraguay teams up with FAO to advance sustainable aquaculture development}
-      \field{urlday}{13}
-      \field{urlmonth}{10}
-      \field{urlyear}{2026}
-      \field{year}{2025}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.fao.org/guidelines-sustainable-aquaculture/news---events/news/detail/paraguay-teams-up-with-fao-to-advance-sustainable-aquaculture-development/
-      \endverb
-      \verb{url}
-      \verb https://www.fao.org/guidelines-sustainable-aquaculture/news---events/news/detail/paraguay-teams-up-with-fao-to-advance-sustainable-aquaculture-development/
       \endverb
     \endentry
     \entry{Petrellis2021}{article}{}{}
@@ -1987,6 +1983,48 @@
       \verb 10.1016/j.compag.2020.105274
       \endverb
     \endentry
+    \entry{FAO2025Paraguay}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=264d9adc36dcc763205708230a469e23}{%
+           family={{Food and Agriculture Organization of the United Nations}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \name{shortauthor}{1}{}{%
+        {{un=0,uniquepart=base,hash=4807e0aebe86c17f559853f35515b533}{%
+           family={{FAO}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{4807e0aebe86c17f559853f35515b533}
+      \strng{fullhash}{264d9adc36dcc763205708230a469e23}
+      \strng{fullhashraw}{264d9adc36dcc763205708230a469e23}
+      \strng{bibnamehash}{4807e0aebe86c17f559853f35515b533}
+      \strng{authorbibnamehash}{264d9adc36dcc763205708230a469e23}
+      \strng{authornamehash}{264d9adc36dcc763205708230a469e23}
+      \strng{authorfullhash}{264d9adc36dcc763205708230a469e23}
+      \strng{authorfullhashraw}{264d9adc36dcc763205708230a469e23}
+      \strng{shortauthorbibnamehash}{4807e0aebe86c17f559853f35515b533}
+      \strng{shortauthornamehash}{4807e0aebe86c17f559853f35515b533}
+      \strng{shortauthorfullhash}{4807e0aebe86c17f559853f35515b533}
+      \strng{shortauthorfullhashraw}{4807e0aebe86c17f559853f35515b533}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{shortauthor}
+      \field{labeltitlesource}{title}
+      \field{day}{27}
+      \field{month}{11}
+      \field{title}{Paraguay teams up with FAO to advance sustainable aquaculture development}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.fao.org/guidelines-sustainable-aquaculture/news---events/news/detail/paraguay-teams-up-with-fao-to-advance-sustainable-aquaculture-development/
+      \endverb
+      \verb{url}
+      \verb https://www.fao.org/guidelines-sustainable-aquaculture/news---events/news/detail/paraguay-teams-up-with-fao-to-advance-sustainable-aquaculture-development/
+      \endverb
+    \endentry
     \entry{GarridoJurado2014}{article}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=f564498c51cf1f10087d9696669a2d64}{%
@@ -2398,52 +2436,6 @@
       \range{pages}{12}
       \verb{doi}
       \verb 10.1111/2041-210X.13282
-      \endverb
-    \endentry
-    \entry{FAO2025Paraguay}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=6dcc0b4fe9210e7f3a0008ec1007c6b6}{%
-           family={{Organización de las Naciones Unidas para la Alimentación y la Agricultura}},
-           familyi={O\bibinitperiod}}}%
-      }
-      \name{shortauthor}{1}{}{%
-        {{un=0,uniquepart=base,hash=4807e0aebe86c17f559853f35515b533}{%
-           family={{FAO}},
-           familyi={F\bibinitperiod}}}%
-      }
-      \strng{namehash}{4807e0aebe86c17f559853f35515b533}
-      \strng{fullhash}{6dcc0b4fe9210e7f3a0008ec1007c6b6}
-      \strng{fullhashraw}{6dcc0b4fe9210e7f3a0008ec1007c6b6}
-      \strng{bibnamehash}{4807e0aebe86c17f559853f35515b533}
-      \strng{authorbibnamehash}{6dcc0b4fe9210e7f3a0008ec1007c6b6}
-      \strng{authornamehash}{6dcc0b4fe9210e7f3a0008ec1007c6b6}
-      \strng{authorfullhash}{6dcc0b4fe9210e7f3a0008ec1007c6b6}
-      \strng{authorfullhashraw}{6dcc0b4fe9210e7f3a0008ec1007c6b6}
-      \strng{shortauthorbibnamehash}{4807e0aebe86c17f559853f35515b533}
-      \strng{shortauthornamehash}{4807e0aebe86c17f559853f35515b533}
-      \strng{shortauthorfullhash}{4807e0aebe86c17f559853f35515b533}
-      \strng{shortauthorfullhashraw}{4807e0aebe86c17f559853f35515b533}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{shortauthor}
-      \field{labeltitlesource}{title}
-      \field{day}{27}
-      \field{month}{11}
-      \field{title}{Paraguay teams up with FAO to advance sustainable aquaculture development}
-      \field{urlday}{13}
-      \field{urlmonth}{10}
-      \field{urlyear}{2026}
-      \field{year}{2025}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.fao.org/guidelines-sustainable-aquaculture/news---events/news/detail/paraguay-teams-up-with-fao-to-advance-sustainable-aquaculture-development/
-      \endverb
-      \verb{url}
-      \verb https://www.fao.org/guidelines-sustainable-aquaculture/news---events/news/detail/paraguay-teams-up-with-fao-to-advance-sustainable-aquaculture-development/
       \endverb
     \endentry
     \entry{Petrellis2021}{article}{}{}

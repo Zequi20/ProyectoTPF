@@ -7,15 +7,15 @@
 
 \vspace{0.8\baselineskip}
 
-\begingroup
+\begin{spacing}{1.3}
     \begin{otherlanguage}{english}
     \justifying
     \setlength{\parskip}{6pt plus 1pt minus 1pt}
     \setlength{\parindent}{0pt}
 
-    Measuring a fish with a camera would spare it from being taken out of the water, but photographing it through a tank introduces an error: light bends as it crosses water, glass and air, and the apparent size of the fish changes with its distance from the glass, which a single image does not reveal. The objective was to compare four ways of converting pixels to millimetres on the same anatomical points---the scale of an ArUco marker attached to the glass (A), a homography from a marker in the plane of the replica (\Aprime), a pinhole calibration performed under water (B) and a flat-port refractive model (C)---and to quantify the length interval left by an unknown depth. We hypothesised that C would have the lowest error, that its advantage over B would grow away from the calibration zone, and that its interval would contain the true length. We photographed six rigid PLA replicas, measured with a calliper, at four depths (5, 11, 17 and 23 cm), three times each (72 images). With known depth, B and C achieved the lowest total-length errors (MAE 1.08 mm, 0.73\,\%, and 1.22 mm, 0.88\,\%), followed by \Aprime{} (3.29 mm) and A (37.43 mm); both outperformed A and \Aprime{} in all six replicas (sign test, $p = 0.031$) and did not differ from each other ($p = 1$). The first hypothesis held only against A and \Aprime, the second did not, and the third did: the interval contained the calliper length in all 72 captures. The error of A grew from 13.8 to 57.6 mm as the replica moved away from the glass, as geometry predicts. With unknown depth, the interval spans 56 to 82\,\% of the length; bounding depth to $\pm 1$~cm reduces it to 4 to 5\,\%. We conclude that, with known depth, both the underwater calibration and the refractive model bring the error below 1\,\%; without it, the main uncertainty is depth, not refraction. The results apply to this setup and to rigid replicas.
+    Measuring fish from images would avoid removing them from the water, but photographing them through a tank introduces an error: light is refracted as it crosses water, glass and air, and the apparent size of the fish depends on its distance from the glass, which a single image cannot reveal. The objective was to compare, on the same anatomical points, four procedures for converting pixels to millimetres ---the scale of an ArUco marker attached to the glass (A), a homography from a marker coplanar with the replica (\Aprime), an underwater pinhole calibration (B) and a flat-port refractive model (C)--- and to quantify the length interval that results from an unknown depth. Six rigid replicas, measured with a calliper, were photographed at four distances from the glass, with three captures per condition (72 images). B and C require the depth to be known; with that information they obtained the lowest total-length errors (MAE 1.08 mm, 0.73\,\%, and 1.22 mm, 0.88\,\%), followed by \Aprime{} (3.29 mm) and A (37.43 mm); no difference between B and C was detected (sign test, $p = 1$). Without depth information, the interval of C spans 56 to 82\,\% of the length and contained the calliper length in all 72 captures; with depth bounded to $\pm 1$~cm it narrows to 4 to 5\,\%. It is concluded that, with known depth, the underwater calibration and the refractive model reduce the mean error below 1\,\%, and that without it depth is the dominant source of uncertainty.
 
     \textbf{Keywords:} \Keywords.
     \end{otherlanguage}
-\endgroup
+\end{spacing}
 \clearpage

@@ -1,0 +1,21 @@
+% Tabla 16: Regla de decisión sobre la conversión que se debe utilizar.
+% Etiqueta original: tab:regla.
+% Fuente: capitulos/5-conclusiones.tex, lineas 8-23.
+% Fragmento extraido automaticamente; requiere el preambulo de main.tex.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Regla de decisión: qué conversión usar según la situación, con el error observado en este montaje.}
+\label{tab:regla}
+\begin{tabularx}{\textwidth}{@{}X p{2.6cm} p{3.0cm} X@{}}
+\toprule
+Situación de uso & Método recomendado & Error esperado en este montaje & Condición \\
+\midrule
+Se puede poner un marcador junto al pez, en su mismo plano & \Aprime{} (homografía con marcador coplanar) & $\approx$ 2--3~\% de LT (3,3~mm) & Coplanaridad dentro de $\pm 1$~cm; no requiere calibración \\
+No se puede poner un marcador junto al pez, pero se conoce su distancia al vidrio (riel, guía, tanque angosto) & C (puerto plano) & $< 1$~\% de LT (1,2~mm) & Calibración en aire y parámetros $d$, $t_g$ e índices del puerto \\
+Hay calibración bajo agua en el mismo tanque y se conoce la posición del pez en el marco de esa calibración (riel o guía) & B (pinhole efectivo) & $< 1$~\% de LT (1,1~mm) & Damero sumergido y referencia del plano; comprobado hasta 18~cm de la zona calibrada \\
+Marcador fijo en el vidrio y pez a distancia desconocida & Ninguno es aceptable (A) & 10--40~\% según la distancia & Solo sirve si el pez está pegado al vidrio \\
+No se sabe nada de la profundidad & C con intervalo $\IL$ & 56--82~\% de ancho: no utilizable & Hay que acotar $z$; con $\pm 1$~cm el ancho baja a 4--5~\% \\
+\bottomrule
+\end{tabularx}
+\end{table}
