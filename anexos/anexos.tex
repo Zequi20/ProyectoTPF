@@ -148,9 +148,10 @@ ProyectoTPF/                      datos y analisis
                                   Bland-Altman y Figuras 4.5 y 4.6
   analysis/make_figures.py        Figuras 4.1 a 4.4 y 4.7
   analysis/tabla_maestra.py       tabla del Anexo F
+  analysis/re_run_b.py            recalculo de B con la lectura del riel
 \end{lstlisting}
 
-Para reproducir el Capítulo~\ref{cap:resultados} se debe instalar Fishmeter en la versión indicada y ejecutar, desde la raíz de ProyectoTPF, los tres scripts de \texttt{analysis/} en el orden del listado. El primero recalcula C desde los puntos marcados con el perfil \texttt{C-air} y la configuración del puerto plano; los otros dos leen la tabla maestra, los resultados del primero y, para la Figura~\ref{fig:4-captura}, la imagen original.
+Para reproducir el Capítulo~\ref{cap:resultados} se debe instalar Fishmeter en la versión indicada y ejecutar, desde la raíz de ProyectoTPF, los tres primeros scripts de \texttt{analysis/} en el orden del listado. El primero recalcula C desde los puntos marcados con el perfil \texttt{C-air} y la configuración del puerto plano; los otros dos leen la tabla maestra, los resultados del primero y, para la Figura~\ref{fig:4-captura}, la imagen original. El cuarto, \texttt{re\_run\_b.py}, documenta cómo se obtuvieron los valores de B de la tabla maestra: toma los JSON de B del cálculo preliminar y repite el cálculo con la posición expresada en el marco del riel (Anexo~\ref{anx:riel}), sin cambiar los puntos marcados ni las calibraciones. Su salida ya está incluida en la tabla maestra, por lo que no es necesario ejecutarlo para reproducir el capítulo.
 
 \chapter{Tabla maestra de resultados}
 \label{anx:maestra}
