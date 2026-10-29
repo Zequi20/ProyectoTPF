@@ -131,6 +131,13 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def repo_relative(path: Path) -> str:
+    """Ruta relativa a la raíz del proyecto, para no registrar rutas locales."""
+
+    resolved = path.resolve()
+    return str(resolved.relative_to(REPO_ROOT)) if resolved.is_relative_to(REPO_ROOT) else str(path)
+
+
 def fmt(value: float | None) -> str:
     """Mismo formato numérico que el CSV maestro original (9 decimales sin ceros)."""
 
@@ -582,16 +589,16 @@ def main() -> None:
     context = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "script": str(SCRIPT_PATH.relative_to(REPO_ROOT)),
-        "source_csv": str(args.csv),
+        "source_csv": repo_relative(args.csv),
         "source_csv_sha256": sha256(args.csv),
-        "b_calibration": str(args.b_calibration),
-        "rail_reference": str(args.rail_reference),
+        "b_calibration": repo_relative(args.b_calibration),
+        "rail_reference": repo_relative(args.rail_reference),
         "calibration_profile_hash": profile.profile_hash,
         "rail_reference_hash": reference.reference_hash,
         "rail_origin_from_glass_mm": args.rail_origin_from_glass_mm,
         "n_b_records": len(payloads),
         "n_errors": n_errors,
-        "output_csv": str(args.output_csv),
+        "output_csv": repo_relative(args.output_csv),
     }
     summary = verification(rows, new_rows) if n_errors == 0 else {}
 

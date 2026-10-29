@@ -1,17 +1,17 @@
 {
   "context": {
-    "generated_at_utc": "2026-10-13T10:52:52+00:00",
-    "script": "outputs/tesis_pendientes/scripts/re_run_b.py",
-    "source_csv": "/home/epereira/Documentos/repos/Fishmeter/results/csv_maestro_morfometrico.csv",
-    "source_csv_sha256": "c585ecb417e4608aca6906b903f586c48fc1c42cb2069923b8fd1c9b6d14bad3",
-    "b_calibration": "/home/epereira/Imágenes/TEST6/agua/calibration_B.yaml",
-    "rail_reference": "/home/epereira/Imágenes/TEST6/rail/rail_reference_B.yaml",
+    "generated_at_utc": "2026-10-29T19:26:19+00:00",
+    "script": "analysis/re_run_b.py",
+    "source_csv": "anexos/csv_maestro_morfometrico.csv",
+    "source_csv_sha256": "e08665cf7c13552a9a77c9c9f82a0ec07c62293df6e61b660e8b8c3dd0ab1c6c",
+    "b_calibration": "datos/calibraciones/calibration_B.yaml",
+    "rail_reference": "datos/calibraciones/rail_reference_B.yaml",
     "calibration_profile_hash": "eb245104cb46caded48e9e9f827dda11db985c7b22ec5cb63a27572da14caf4e",
     "rail_reference_hash": "1f0659fd92c5986fa9c96a027933d06ed2f853323bcd44f451de8808b4b7a413",
     "rail_origin_from_glass_mm": 50.0,
     "n_b_records": 72,
     "n_errors": 0,
-    "output_csv": "/home/epereira/Documentos/repos/Fishmeter/results/csv-maestro-re-run.csv"
+    "output_csv": "anexos/csv-maestro-re-run.csv"
   },
   "verification": {
     "unit_of_summary": "réplica–posición (promedio de repeticiones), n=24",
@@ -283,6 +283,6 @@
       "pc": 22,
       "of": 24
     },
-    "pc_reference_caveat": "24 de 72 capturas por método tienen reference_qc_status=REVISAR_PC_UNIDAD (PC de referencia reescalada ×0,1 de forma provisional); LT es la referencia más firme."
+    "pc_reference_caveat": "Las lecturas de PC de R1 y R2 se anotaron con un cero de más (450 por 45 mm; 280/270 por 28/27 mm) y están corregidas en la tabla maestra."
   }
 }

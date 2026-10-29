@@ -1,6 +1,6 @@
 # Re-run de B con la coordenada de riel corregida
 
-Generado: 2026-10-13T10:52:52+00:00 · script `outputs/tesis_pendientes/scripts/re_run_b.py`
+Generado: 2026-10-29T19:26:19+00:00 · script `analysis/re_run_b.py`
 
 ## Qué cambió
 
@@ -54,6 +54,6 @@ Combinaciones réplica–posición donde el re-run reduce |error|: LT 24/24, PC 
 
 ## Advertencias
 
-- 24 de 72 capturas por método tienen reference_qc_status=REVISAR_PC_UNIDAD (PC de referencia reescalada ×0,1 de forma provisional); LT es la referencia más firme.
-- El offset apoyo–plano de simetría sigue en 0 mm asumido; no hay medición física.
+- Las lecturas de PC de R1 y R2 se anotaron con un cero de más (450 por 45 mm; 280/270 por 28/27 mm) y están corregidas en la tabla maestra.
+- El desplazamiento de 10 mm del plano de simetría respecto del apoyo se compensó físicamente en el montaje; el procesamiento usa 0 mm.
 - B sigue en `PENDING_VALIDATION`: una menor discrepancia con el calibre no reemplaza la validación física con regla sumergida en cada posición.
