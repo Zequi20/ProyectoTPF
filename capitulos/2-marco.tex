@@ -1,17 +1,9 @@
 \chapter{Marco teórico}
 \label{cap:marco}
 
-La medición de un pez a partir de una fotografía tomada a través de un vidrio requiere encadenar varias etapas, y cada una de ellas puede introducir error. En primer lugar es necesario definir qué se mide y contra qué referencia física; luego, comprender cómo se forma la imagen cuando la luz atraviesa el agua, el vidrio y el aire; y finalmente marcar los puntos anatómicos, recuperar la escala y comparar lo estimado con lo medido. Las etapas de esa cadena se muestran en la Figura~\ref{fig:2-1}, en el mismo orden en que las desarrolla el marco referencial de este capítulo.
+La medición de un pez a partir de una fotografía tomada a través de un vidrio requiere encadenar varias etapas, y cada una de ellas puede introducir error. En primer lugar es necesario definir qué se mide y contra qué referencia física; luego, comprender cómo se forma la imagen cuando la luz atraviesa el agua, el vidrio y el aire; y finalmente marcar los puntos anatómicos, recuperar la escala y comparar lo estimado con lo medido. El marco referencial de este capítulo desarrolla la teoría de esas etapas en ese mismo orden, y el Capítulo~\ref{cap:metodologia} describe cómo se aplicaron en este trabajo.
 
-Este capítulo tiene tres partes. Primero se revisan los antecedentes y, a partir de ellos, se identifica la brecha que motiva el trabajo (\ref{sec:antecedentes}). Después se desarrolla la teoría de cada etapa de la cadena de medición (\ref{sec:referencial}). Al final se definen los términos que se usan a lo largo del documento (\ref{sec:conceptual}).
-
-\begin{figure}[H]
-\centering
-\caption[Flujo teórico simplificado de la investigación]{Flujo teórico simplificado de la investigación: escena y referencia física, formación refractiva de la imagen, marcado manual único de puntos, comparación de las rutas A, \Aprime, B y C y evaluación con profundidad conocida o desconocida.}
-\label{fig:2-1}
-\includegraphics[width=0.85\textwidth]{fig2_1_flujo.png}
-\fignota{Elaboración propia.}
-\end{figure}
+Este capítulo tiene tres partes. Primero se revisan los antecedentes y, a partir de ellos, se identifica la brecha que motiva el trabajo (\ref{sec:antecedentes}). Después se desarrolla la teoría de cada etapa de la cadena de medición, es decir, los modelos, las ecuaciones y las métricas disponibles en la bibliografía (\ref{sec:referencial}); las decisiones, los procedimientos y los valores propios de este trabajo se describen en el Capítulo~\ref{cap:metodologia}. Al final se definen los términos que se usan a lo largo del documento (\ref{sec:conceptual}).
 
 \section{Antecedentes}
 \label{sec:antecedentes}
@@ -128,9 +120,7 @@ El marco referencial reúne la teoría en la que se apoya la medición: qué se 
 
 La morfometría estudia los rasgos externos del tamaño y la forma de un organismo. En peces, estas medidas se obtienen con instrumentos manuales o mediante el análisis de imágenes, y se utilizan para describir la variación corporal y para obtener datos biométricos \parencite{Petrtyl2014}.
 
-En este trabajo se consideran dos medidas: la longitud total y la profundidad corporal. La longitud estándar y la longitud cefálica se excluyeron de manera deliberada, porque el marcado manual permite ubicar sin ambigüedad los extremos de las dos primeras, pero no la placa hipural ni el borde posterior del opérculo que requieren las otras dos. La profundidad corporal se define de forma estricta, para que no se confunda con una dimensión que incluya las aletas.
-
-La longitud total resume el tamaño del pez y se extiende desde la punta del hocico hasta el extremo posterior de la aleta caudal. La profundidad corporal es la distancia entre el perfil dorsal y el perfil ventral del cuerpo, en la sección donde esa separación es máxima, y excluye por completo las aletas dorsal, ventral, pectorales y caudal. Las aletas pueden formar parte de la longitud total cuando constituyen el extremo caudal, pero no intervienen en la profundidad corporal. La referencia física y las cuatro rutas, A, \Aprime, B y C, utilizan exactamente los mismos puntos para ambas medidas, lo que evita seleccionar, una vez observados los datos, la medida que más favorezca a un método.
+La longitud total resume el tamaño del pez y se extiende desde la punta del hocico hasta el extremo posterior de la aleta caudal. La profundidad corporal es la distancia entre el perfil dorsal y el perfil ventral del cuerpo, en la sección donde esa separación es máxima, y excluye por completo las aletas dorsal, ventral, pectorales y caudal. Las aletas pueden formar parte de la longitud total cuando constituyen el extremo caudal, pero no intervienen en la profundidad corporal.
 
 \subsubsection{Puntos anatómicos y definición de las medidas}
 \label{sec:puntos-def}
@@ -138,11 +128,11 @@ La longitud total resume el tamaño del pez y se extiende desde la punta del hoc
 La medición de longitudes sobre un pez requiere puntos anatómicos que cualquier operador pueda volver a localizar. La bibliografía no siempre utiliza los nombres de manera uniforme, en especial en el caso de la longitud estándar, por lo que se adoptan las siguientes definiciones \parencite{Howe2002,Saleh2023,Steeds2024}:
 
 \begin{description}
-  \item[Longitud total (LT):] distancia desde el punto más anterior del hocico hasta el punto más posterior de la aleta caudal, es decir, el extremo del radio caudal más largo. En la práctica se mide como la proyección del segmento entre ambos puntos sobre el eje longitudinal del cuerpo (ecuación~\ref{eq:medidas}); si los dos puntos se ubican sobre el eje, coincide con la distancia en línea recta.
+  \item[Longitud total (LT):] distancia desde el punto más anterior del hocico hasta el punto más posterior de la aleta caudal, es decir, el extremo del radio caudal más largo.
   \item[Profundidad corporal (PC):] mayor distancia dorsoventral entre los perfiles dorsal y ventral del cuerpo, medida en la sección de separación máxima y sin incluir las aletas. Sus extremos se ubican sobre el perfil del cuerpo y no sobre el extremo de una aleta.
 \end{description}
 
-Estas definiciones se aplican por igual a la medición con calibre y a la estimación a partir de las imágenes. La longitud estándar y la cefálica quedan como antecedentes o trabajo futuro, porque con los cuatro puntos del marcado manual no es posible observar sus extremos sin ambigüedad. La Figura~\ref{fig:2-2} muestra los puntos y las medidas.
+La Figura~\ref{fig:2-2} muestra los puntos y las medidas.
 
 \begin{figure}[H]
 \centering
@@ -152,7 +142,7 @@ Estas definiciones se aplican por igual a la medición con calibre y a la estima
 \fignota{Elaboración propia.}
 \end{figure}
 
-Las medidas tomadas con calibre sobre las réplicas constituyen la referencia contra la cual se evalúa cada estimación. Esta referencia también tiene error, que depende de la resolución del instrumento, de la ubicación de los puntos anatómicos y de la repetibilidad del procedimiento. Por ese motivo se utilizan las mismas definiciones anatómicas en la medición física y en la digital.
+Los puntos anatómicos pueden localizarse con algoritmos, como en los trabajos de la Sección~\ref{sec:antecedentes}, o marcarse a mano sobre la imagen; en este último caso, el resultado varía entre operadores y entre repeticiones \parencite{Petrtyl2014}. Las medidas con calibre constituyen la referencia contra la cual se evalúa una estimación obtenida de imágenes. Esta referencia también tiene error, que depende de la resolución del instrumento, de la ubicación de los puntos anatómicos y de la repetibilidad del procedimiento. Por ese motivo, la medición física y la digital deben seguir las mismas definiciones anatómicas.
 
 \subsubsection{Exactitud, repetibilidad e incertidumbre de la referencia}
 
@@ -213,7 +203,7 @@ n_1 \sin\theta_1 = n_2 \sin\theta_2 .
 \label{eq:snell}
 \end{equation}
 
-Los ángulos se miden respecto de la normal de la interfaz. En el montaje utilizado, la luz que proviene del objeto atraviesa primero el agua, luego la pared transparente y por último el aire situado frente a la cámara; recorrido en sentido inverso, desde la cámara, el orden es aire, vidrio y agua. La ley de Snell se aplica en cada interfaz, teniendo en cuenta los índices, la orientación de las superficies y su geometría. Como señalan \textcite{Seegraber2025}, una carcasa o un puerto modifica el modelo de formación de la imagen, ya que el camino de cada rayo depende de la forma y la orientación del puerto, de la posición de la cámara respecto de él y de los medios que atraviesa.
+Los ángulos se miden respecto de la normal de la interfaz. En un montaje con la cámara fuera del agua, la luz que proviene del objeto atraviesa primero el agua, luego la pared transparente y por último el aire situado frente a la cámara; recorrido en sentido inverso, desde la cámara, el orden es aire, vidrio y agua. La ley de Snell se aplica en cada interfaz, teniendo en cuenta los índices, la orientación de las superficies y su geometría. Como señalan \textcite{Seegraber2025}, una carcasa o un puerto modifica el modelo de formación de la imagen, ya que el camino de cada rayo depende de la forma y la orientación del puerto, de la posición de la cámara respecto de él y de los medios que atraviesa.
 
 \subsubsection{Modelo refractivo de puerto plano}
 \label{sec:puerto-plano}
@@ -377,78 +367,26 @@ La ubicación de la cámara, el tamaño y el material del tanque, las distancias
 \subsubsection{Profundidad conocida y profundidad desconocida}
 \label{sec:z-desconocida}
 
-La profundidad $z$ es la distancia entre el objeto y la referencia geométrica del montaje, medida desde la cara interna del vidrio o en el sistema de coordenadas de la calibración. Se considera conocida cuando un soporte fija y mide la posición de la réplica. En ese caso, cada rayo se interseca con el plano del objeto, se obtiene una estimación puntual y es posible comparar A, \Aprime, B y C contra la referencia física.
+La profundidad $z$ es la distancia entre el objeto y la referencia geométrica del montaje, medida desde la cara interna del vidrio o en el sistema de coordenadas de la calibración. Cuando se conoce, cada rayo se interseca con el plano del objeto y se obtiene una estimación puntual.
 
-Se considera desconocida cuando una sola imagen no permite determinar a qué distancia del vidrio se encuentra el pez. En ese caso se evalúa C sobre todo el rango físicamente posible, $z \in [z_{\min}, z_{\max}]$. Si $L(z)$ es la longitud que se obtiene al suponer la profundidad $z$, el intervalo geométrico es
+La profundidad es desconocida cuando una sola imagen no permite determinar a qué distancia del vidrio se encuentra el pez; en ese caso, cada valor admisible de $z$ produce una longitud distinta. Si $L(z)$ es la longitud que se obtiene al suponer la profundidad $z$, y $z$ puede tomar cualquier valor del rango físicamente posible, $z \in [z_{\min}, z_{\max}]$, el intervalo geométrico es
 \begin{equation}
 \IL = \Big[\min_{z \in [z_{\min}, z_{\max}]} L(z),\ \max_{z \in [z_{\min}, z_{\max}]} L(z)\Big].
 \label{eq:IL}
 \end{equation}
 
-La forma abreviada $[L(z_{\min}), L(z_{\max})]$ solo es equivalente si $L(z)$ es monótona en el rango. En la aproximación de primer orden de la ecuación~\eqref{eq:Dz}, $L(z)$ es proporcional a $D(z)$ y, por lo tanto, crece con $z$; en el Capítulo~\ref{cap:resultados} se verifica con el trazado completo. El intervalo expresa únicamente la incertidumbre debida a la profundidad desconocida. No incluye los errores de calibración, de postura, de marcado manual ni de la referencia de calibre, que se informan por separado (Secciones~\ref{sec:calibraciones} y~\ref{sec:sensibilidad} y Tabla~\ref{tab:replicas}); la repetibilidad del marcado no se cuantificó. No debe interpretarse como un intervalo de confianza.
+La forma abreviada $[L(z_{\min}), L(z_{\max})]$ solo es equivalente si $L(z)$ es monótona en el rango. En la aproximación de primer orden de la ecuación~\eqref{eq:Dz}, $L(z)$ es proporcional a $D(z)$ y, por lo tanto, crece con $z$; en el Capítulo~\ref{cap:resultados} se verifica con el trazado completo. El intervalo expresa únicamente la incertidumbre debida a la profundidad desconocida: no incluye los errores de calibración, de postura, de marcado manual ni de la referencia. No debe interpretarse como un intervalo de confianza.
 
 \subsubsection{Calibración y corrección refractiva}
+\label{sec:calibracion-implicita}
 
-CalibMar, el software de \textcite{Seegraber2025}, calibra cámaras y carcasas con puertos planos o en cúpula, y estima tanto los parámetros intrínsecos como los de la geometría refractiva. En este trabajo opera como antecedente instrumental, ya que los perfiles de calibración se obtuvieron con la rutina \texttt{calibrateCamera} de OpenCV \parencite{Zhang2000}, y la ruta C utiliza el trazado de rayos implementado en la aplicación desarrollada en este trabajo (Sección~\ref{sec:metodos}).
+CalibMar, el software de \textcite{Seegraber2025}, calibra cámaras y carcasas con puertos planos o en cúpula, y estima tanto los parámetros intrínsecos como los de la geometría refractiva.
 
-Para medir el efecto geométrico se aplican las cuatro rutas, A, \Aprime, B y C, a la misma escena. Si la imagen, el criterio de marcado, los puntos anatómicos y la referencia física se mantienen fijos, las diferencias de error pueden atribuirse con mayor claridad al tratamiento geométrico. La salida de una herramienta de calibración no es, por sí misma, una «corrección refractiva», ni puede convertirse sin verificación en coeficientes de distorsión de lente. La ruta C requiere parámetros, unidades, un sistema de coordenadas y un trazado coherentes con la geometría del montaje; por ese motivo se documentan los parámetros que consume, sus unidades y el sistema de coordenadas que utiliza.
+Una alternativa a modelar el puerto de forma explícita es calibrar la cámara con un patrón visto a través del mismo sistema aire--vidrio--agua. Esta calibración compensa la refracción de forma implícita: el ajuste elige parámetros intrínsecos y coeficientes de distorsión efectivos que minimizan el error de reproyección en la zona que cubren las imágenes de calibración. La parametrización no reproduce la geometría no central de un puerto plano, pero puede aproximarla adecuadamente si se mide a distancias similares a las de la calibración \parencite{JordtSedlazeck2012,Treibitz2012,Shortis2015}. La limitación es que la compensación necesaria cambia con la distancia entre la cámara y el punto observado, de modo que un único conjunto de parámetros \emph{pinhole} no describe con la misma calidad objetos a distintas profundidades. Las simulaciones de \textcite{Rofallski2022} muestran que la calibración implícita funciona mejor cerca de la distancia de calibración y pierde exactitud al alejarse, y que se degrada aún más si el eje óptico no es perpendicular a la interfaz. La hipótesis H2 se apoya en ese comportamiento.
 
 \subsection{Estrategias de conversión métrica A, \Aprime, B y C}
-\label{sec:rutas}
 
-El experimento compara cuatro rutas geométricas aplicadas a los mismos puntos de cada imagen. La Figura~\ref{fig:2-4} las presenta de forma comparada.
-
-\begin{figure}[H]
-\centering
-\caption[Las cuatro rutas de conversión métrica lado a lado]{Las cuatro rutas de conversión métrica sobre la misma escena. A toma la escala de un marcador en el vidrio y supone rayos rectos; \Aprime{} rectifica el plano del marcador coplanar con la réplica; B usa una cámara \emph{pinhole} con parámetros efectivos ajustados bajo el agua; C traza cada rayo a través de aire, vidrio y agua.}
-\label{fig:2-4}
-\begin{tikzpicture}[scale=0.6,>=Stealth,font=\scriptsize]
-\foreach \x/\lab/\col/\txt in {0/A/metA/{escala del marcador\\en el vidrio},
-                               6.4/\Aprime/metAp/{homografía del marcador\\coplanar con la réplica},
-                               12.8/B/metB/{pinhole efectivo\\calibrado bajo el agua},
-                               19.2/C/metC/{rayo refractado dos veces\\(puerto plano)}}{
-  \begin{scope}[shift={(\x,0)}]
-    \fill[gray!25] (1.6,0) rectangle (1.85,3.6);
-    \fill[cyan!8] (1.85,0) rectangle (5.6,3.6);
-    \node[draw,fill=white,minimum width=0.6cm,minimum height=0.45cm] at (0.3,1.8) {};
-    \fill (0.6,1.8) circle (1.2pt);
-    \draw[very thick,metC] (4.6,1.2) -- (4.6,2.6);
-    \node[\col,font=\bfseries\small] at (2.8,4.1) {\lab};
-    \node[align=center,font=\scriptsize] at (2.8,-0.55) {\txt};
-  \end{scope}
-}
-% A: marcador en vidrio y rayos rectos
-\draw[very thick,metA] (1.9,1.5) -- (1.9,2.1);
-\draw[metA,dashed] (0.6,1.8) -- (4.6,1.2); \draw[metA,dashed] (0.6,1.8) -- (4.6,2.6);
-% A': marcador junto a la réplica
-\draw[very thick,metAp] (6.4+4.2,0.9) -- (6.4+4.2,1.5);
-\draw[metAp,dashed] (6.4+0.6,1.8) -- (6.4+4.6,1.2); \draw[metAp,dashed] (6.4+0.6,1.8) -- (6.4+4.6,2.6);
-% B: pinhole recto con damero
-\foreach \i in {0,1,2}{\foreach \j in {0,1}{\fill[black!60] (12.8+2.3+\i*0.22,0.4+\j*0.22) rectangle ++(0.22,0.22);}}
-\draw[metB] (12.8+0.6,1.8) -- (12.8+4.6,1.2); \draw[metB] (12.8+0.6,1.8) -- (12.8+4.6,2.6);
-% C: rayos quebrados
-\draw[metC] (19.2+0.6,1.8) -- (19.2+1.6,1.62) -- (19.2+1.85,1.6) -- (19.2+4.6,1.2);
-\draw[metC] (19.2+0.6,1.8) -- (19.2+1.6,2.3) -- (19.2+1.85,2.34) -- (19.2+4.6,2.6);
-\end{tikzpicture}
-\fignota{Elaboración propia.}
-\end{figure}
-
-\begin{description}
-  \item[A: escala directa en el vidrio.] El marcador ArUco queda pegado a la pared y su tamaño conocido convierte píxeles en milímetros. Constituye la línea de base más realista, la que emplearía cualquier usuario con una cámara y un marcador, pero está afectada por el paralaje: si la réplica se encuentra a otra profundidad, su escala aparente es distinta.
-  \item[\Aprime: escala aproximadamente coplanar.] El marcador se coloca en el mismo plano de profundidad que la réplica, dentro de la tolerancia que fija la metodología. Esta ruta permite medir cuánto del error de A se debe a la separación entre marcador y objeto. Como rectifica el plano con una homografía, la diferencia entre A y \Aprime{} combina dos efectos: la coplanaridad y la corrección de perspectiva del plano del marcador.
-  \item[B: cámara \emph{pinhole} calibrada bajo el agua.] Calibrar la cámara con un patrón visto a través del mismo sistema aire--vidrio--agua compensa la refracción de forma implícita: el ajuste elige parámetros intrínsecos y coeficientes de distorsión efectivos que minimizan el error de reproyección en la zona que cubren las imágenes de calibración. Esta calibración se realizó en la posición más cercana al vidrio y el error se estudió según la separación respecto de esa zona. La parametrización no reproduce la geometría no central de un puerto plano, pero puede aproximarla adecuadamente si se mide a distancias similares a las de la calibración \parencite{JordtSedlazeck2012,Treibitz2012,Shortis2015}. La limitación es que la compensación necesaria cambia con la distancia entre la cámara y el punto observado, de modo que un único conjunto de parámetros \emph{pinhole} no describe con la misma calidad objetos a distintas profundidades. Las simulaciones de \textcite{Rofallski2022} muestran que la calibración implícita funciona mejor cerca de la distancia de calibración y pierde exactitud al alejarse, y que se degrada aún más si el eje óptico no es perpendicular a la interfaz. La hipótesis H2 se apoya en ese comportamiento.
-  \item[C: puerto plano explícito.] Cada rayo se sigue a través de las interfaces con la ley de Snell y las dimensiones se recuperan para una profundidad supuesta. Al recorrer una grilla de valores admisibles de $z$ se obtiene $L(z)$ y, cuando $z$ es desconocida, el intervalo geométrico $[\min_z L(z), \max_z L(z)]$. La ruta C no aísla la refracción como única causa, sino que incorpora el modelo completo de interfaces y la información de profundidad, lo que se tiene en cuenta al interpretar sus resultados.
-\end{description}
-
-El marcado manual, la imagen y la referencia física son los mismos para las cuatro rutas. En consecuencia, una diferencia entre métodos no puede atribuirse a una elección distinta de puntos ni a una imagen rectificada.
-
-\subsection{Marcado manual de puntos anatómicos}
-
-A diferencia de los trabajos de la Sección~\ref{sec:antecedentes}, que localizan los puntos anatómicos con redes neuronales, en este proyecto los cuatro puntos de cada captura se marcaron a mano sobre la imagen original, con un criterio anatómico fijo: $\mathbf{p}_1$ y $\mathbf{p}_2$ son los extremos de la longitud total, y $\mathbf{p}_3$ y $\mathbf{p}_4$, los de la profundidad corporal, sin incluir ninguna aleta.
-
-Cada captura se marcó una sola vez y las mismas coordenadas se reutilizaron en A, \Aprime, B y C. Cada registro de medición conserva la réplica, la imagen, el operador, la fecha, el criterio aplicado y cualquier revisión. Un nuevo marcado, o una revisión independiente, permite estimar la repetibilidad del procedimiento, pero no lo convierte en una salida automática ni genera una nueva unidad experimental.
-
-La incertidumbre de la ubicación manual de los puntos se separa de la incertidumbre geométrica por profundidad. Quedaron registrados los casos en que el contorno, la postura o la visibilidad de una aleta dificultaron la ubicación de un punto, así como el motivo de cada exclusión. Esta separación permite atribuir las diferencias entre A, \Aprime, B y C al tratamiento geométrico, dado que los puntos anatómicos son siempre los mismos.
+Las cuatro estrategias de conversión métrica que se comparan en este trabajo se apoyan en los modelos de este capítulo: A, en la escala obtenida de un marcador de tamaño conocido (Sección~\ref{sec:conversion}); \Aprime, en la homografía del plano del marcador (Sección~\ref{sec:homografia}); B, en la calibración implícita de un modelo \emph{pinhole} efectivo (Sección~\ref{sec:calibracion-implicita}); y C, en el modelo refractivo de puerto plano (Sección~\ref{sec:puerto-plano}). Su aplicación se describe en la Sección~\ref{sec:metodos}.
 
 \subsection{Recuperación de la escala física}
 
@@ -461,6 +399,7 @@ En una escena frontal y casi plana, el tamaño aparente del marcador proporciona
 El diccionario, el identificador, el tamaño físico, la forma de cálculo elegida y las reglas para aceptar o descartar una detección son parámetros del sistema; el Capítulo~\ref{cap:metodologia} los documenta.
 
 \subsubsection{Conversión entre píxeles y unidades físicas}
+\label{sec:conversion}
 
 En una escena frontal y casi plana, el tamaño conocido del marcador proporciona una escala local. Sea $L_m$ la longitud física de su lado y sean $p_i$, con $i = 1, \ldots, 4$, las longitudes en píxeles de sus cuatro lados detectados. Cada una se calcula a partir de dos esquinas consecutivas:
 \begin{equation}
@@ -474,7 +413,7 @@ donde, para cerrar el contorno, se toma $(x_5, y_5) = (x_1, y_1)$.
 k = \frac{1}{4}\sum_{i=1}^{4}\frac{L_m}{p_i},
 \label{eq:escala-monkman}
 \end{equation}
-donde $k$ queda en unidades físicas por píxel, por ejemplo mm/píxel. El promedio de los cuatro lados reduce la dependencia de una sola detección y absorbe las pequeñas diferencias entre las longitudes observadas en la imagen. La implementación utilizada divide el lado físico por el promedio de los cuatro lados en píxeles (Sección~\ref{sec:metodos}); para marcadores correctamente detectados, ambas variantes difieren en menos de una centésima de píxel.
+donde $k$ queda en unidades físicas por píxel, por ejemplo mm/píxel. El promedio de los cuatro lados reduce la dependencia de una sola detección y absorbe las pequeñas diferencias entre las longitudes observadas en la imagen.
 
 Si $d_f$ es la distancia en píxeles entre dos puntos anatómicos, la longitud física estimada es
 \begin{equation}
@@ -487,13 +426,14 @@ Si $d_f$ es la distancia en píxeles entre dos puntos anatómicos, la longitud f
 Además, las esquinas del marcador y los puntos anatómicos deben expresarse en el mismo sistema de coordenadas y en la misma condición de corrección de la imagen. El Capítulo~\ref{cap:metodologia} indica en qué etapa del procesamiento se obtiene la escala y cómo se revisa el marcado.
 
 \subsubsection{Homografía y perspectiva}
+\label{sec:homografia}
 
 Una homografía es la transformación proyectiva que relaciona las coordenadas de un plano con las de su imagen, y se representa con una matriz de $3 \times 3$ \parencite{Hartley2004}. Rectifica únicamente el plano que la define: no recupera la posición espacial de los puntos situados fuera de ese plano, ni corrige la diferencia de escala que aparece cuando el marcador y el pez se encuentran a distinta profundidad. En presencia de refracción, además, la homografía es una aproximación, ya que puede ajustar adecuadamente las correspondencias del plano de referencia sin representar el camino de todos los rayos aire--vidrio--agua. La Sección~\ref{sec:metodos} presenta la homografía que usa \Aprime.
 
 \subsection{Estimación y evaluación morfométrica}
 \label{sec:metricas}
 
-Para evaluar una medición conviene distinguir tres propiedades. La exactitud indica cuán cerca se encuentra una estimación de la referencia física; la repetibilidad, cuánto se dispersan las repeticiones técnicas en las mismas condiciones; y la concordancia, si dos procedimientos producen valores comparables, lo que es una condición más exigente que la correlación \parencite{Bland1986,Lin1989}. Las tres propiedades se examinan sobre las mismas réplicas, con errores con signo y absolutos, métricas agregadas y análisis pareados.
+Para evaluar una medición conviene distinguir tres propiedades. La exactitud indica cuán cerca se encuentra una estimación de la referencia física; la repetibilidad, cuánto se dispersan las repeticiones técnicas en las mismas condiciones; y la concordancia, si dos procedimientos producen valores comparables, lo que es una condición más exigente que la correlación \parencite{Bland1986,Lin1989}.
 
 El error de medida es la diferencia entre el valor estimado y un valor de referencia, y el sesgo es una estimación de su componente sistemática \parencite{JCGM2012}. Para una estimación, el error con signo, el error absoluto y el error porcentual absoluto son
 \begin{equation}
@@ -514,13 +454,7 @@ Un sesgo positivo indica que el método sobreestima, y uno negativo, que subesti
 \end{equation}
 En este trabajo se informan el MAE y el MAPE; el RMSE se define porque lo utilizan antecedentes como \textcite{Seibold2026}.
 
-La referencia manual se trata como una medición controlada que también tiene incertidumbre. Por ese motivo, MAE y MAPE se interpretan como diferencias respecto de esa referencia, y el sesgo se utiliza para detectar tendencias sistemáticas. Las repeticiones de una misma réplica se resumieron antes de cualquier comparación inferencial, porque no son unidades experimentales independientes. Las agregaciones y los criterios de decisión aplicados en este trabajo están en el Capítulo~\ref{cap:metodologia}.
-
-\subsubsection{Trazabilidad de la medición}
-
-Para que una medición pueda reproducirse, cada resultado debe guardar, junto con el valor estimado, la imagen de origen, el modo de corrección, el perfil de calibración, el marcador usado, el protocolo de marcado, el operador, la unidad y las advertencias de calidad. Con esa información se puede reconstruir el camino completo, desde la captura hasta la comparación con la referencia, y determinar si un error proviene de la adquisición, la corrección, el marcado o la conversión métrica.
-
-Los datos mínimos que entrega cada medición, la estructura del archivo JSON y las evidencias que se conservan para su inspección son decisiones de diseño e implementación. El Capítulo~\ref{cap:metodologia} las define y describe la trazabilidad efectiva entre los datos de entrada, los resultados y las evidencias.
+Cuando la referencia es manual, se trata como una medición controlada que también tiene incertidumbre. Por ese motivo, MAE y MAPE se interpretan como diferencias respecto de esa referencia, y el sesgo se utiliza para detectar tendencias sistemáticas. Las agregaciones y los criterios de decisión aplicados en este trabajo están en el Capítulo~\ref{cap:metodologia}.
 
 \section{Marco conceptual}
 \label{sec:conceptual}
@@ -529,7 +463,7 @@ Esta sección establece el sentido con que se emplean los términos principales 
 
 \begin{description}
   \item[Morfometría.] Medición de las dimensiones y de la forma externa del cuerpo de un organismo. En este trabajo se reduce a dos medidas: la longitud total y la profundidad corporal.
-  \item[Punto anatómico.] Lugar del cuerpo que puede ubicarse de forma repetible en la réplica y en la imagen. Se utilizan cuatro, de $\mathbf{p}_1$ a $\mathbf{p}_4$ (Sección~\ref{sec:puntos-def}).
+  \item[Punto anatómico.] Lugar del cuerpo que puede ubicarse de forma repetible en la réplica y en la imagen. Se utilizan cuatro, de $\mathbf{p}_1$ a $\mathbf{p}_4$ (Secciones~\ref{sec:puntos-def} y~\ref{sec:medidas}).
   \item[Longitud total (LT).] Distancia entre el extremo anterior del hocico y el punto más posterior de la aleta caudal, medida sobre el eje longitudinal del pez.
   \item[Profundidad corporal (PC).] Distancia entre el perfil dorsal y el ventral en una misma sección transversal del cuerpo, sin incluir las aletas.
   \item[Réplica rígida.] Modelo de pez impreso en PLA cuyas dimensiones no cambian. Sus medidas con calibre son la referencia física de cada estimación.

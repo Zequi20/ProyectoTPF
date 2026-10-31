@@ -1,7 +1,17 @@
 \chapter{Marco metodológico}
 \label{cap:metodologia}
 
-Este capítulo describe el procedimiento con el que se midieron réplicas rígidas de peces a partir de fotografías tomadas a través de una pecera. La investigación es aplicada, cuantitativa y utiliza un diseño experimental pareado, lo que significa que cada imagen, con sus mismos puntos anatómicos, se procesó con los cuatro métodos de conversión métrica; de este modo, cualquier diferencia entre ellos se atribuye al método y no a la fotografía.
+Este capítulo describe el procedimiento con el que se midieron réplicas rígidas de peces a partir de fotografías tomadas a través de una pecera. La investigación es aplicada, cuantitativa y utiliza un diseño experimental pareado, lo que significa que cada imagen, con sus mismos puntos anatómicos, se procesó con los cuatro métodos de conversión métrica; de este modo, cualquier diferencia entre ellos se atribuye al método y no a la fotografía. La Figura~\ref{fig:2-1} resume el flujo de la investigación, desde la escena y la referencia física hasta la evaluación con profundidad conocida o desconocida.
+
+\begin{figure}[H]
+\centering
+\caption[Flujo teórico simplificado de la investigación]{Flujo teórico simplificado de la investigación: escena y referencia física, formación refractiva de la imagen, marcado manual único de puntos, comparación de las rutas A, \Aprime, B y C y evaluación con profundidad conocida o desconocida.}
+\label{fig:2-1}
+\includegraphics[width=0.85\textwidth]{fig2_1_flujo.png}
+\fignota{Elaboración propia.}
+\end{figure}
+
+El capítulo presenta el tipo y el enfoque de la investigación, la población y la muestra, las variables y los criterios de decisión de las hipótesis; luego, los instrumentos, las medidas y el marcado manual de los puntos anatómicos, los métodos de conversión A, \Aprime, B y C con su implementación, el procedimiento por imagen con su trazabilidad y, por último, la evaluación de las estimaciones, incluido el intervalo con profundidad desconocida.
 
 \section{Tipo y enfoque de la investigación}
 \label{sec:diseno}
@@ -239,7 +249,7 @@ Supuesto & Planos de las réplicas paralelos al tablero \\
 \subsection{Software utilizado}
 \label{sec:software}
 
-Las imágenes se procesaron con Fishmeter, una aplicación propia escrita en Python 3.12. El código fuente y la documentación de uso están en el repositorio público \url{\RepoURL}, etiqueta \texttt{\RepoTag}. La aplicación usa OpenCV 5.0.0 para detectar marcadores, calibrar y aplicar transformaciones geométricas; NumPy 2.5.3 para el cálculo vectorial; PyYAML 6.0.3 para los archivos de configuración; y Tkinter, de la biblioteca estándar, para la interfaz gráfica.
+Las imágenes se procesaron con Fishmeter, una aplicación propia escrita en Python 3.12. El código fuente y la documentación de uso están en el repositorio público \url{\RepoURL}, etiqueta \texttt{\RepoTag}. La aplicación usa OpenCV 5.0.0 para detectar marcadores, calibrar y aplicar transformaciones geométricas; NumPy 2.5.3 para el cálculo vectorial; PyYAML 6.0.3 para los archivos de configuración; y Tkinter, de la biblioteca estándar, para la interfaz gráfica. Los perfiles de calibración de B y C se obtuvieron con la rutina \texttt{calibrateCamera} de OpenCV \parencite{Zhang2000}; CalibMar \parencite{Seegraber2025} opera solo como antecedente instrumental, y la ruta C utiliza el trazado de rayos implementado en la aplicación.
 \\
 El módulo refractivo (\texttt{refractive\_port.py} y \texttt{snells\_law.py}) implementa las ecuaciones~\eqref{eq:va} a~\eqref{eq:rayo} e incluye pruebas unitarias de sanidad. Con $\mu_g = \mu_w = 1$ y $t_g = 0$, es decir, sin vidrio ni agua, reproduce la cámara \emph{pinhole}, y un rayo que viaja sobre el eje óptico no se desvía. Las pruebas de integración verifican que los cuatro métodos reciban las mismas coordenadas y que cada imagen produzca un registro trazable.
 
@@ -256,9 +266,14 @@ Desde la interfaz se carga la fotografía, se detectan los marcadores, se cargan
 \subsection{Medidas físicas y puntos anatómicos}
 \label{sec:medidas}
 
-Para cada réplica se conservan las medidas físicas de referencia de la longitud total y de la profundidad corporal (Tabla~\ref{tab:replicas}). La referencia y la imagen siguieron la misma convención anatómica, la de la Sección~\ref{sec:puntos-def}. La longitud total va desde el extremo anterior del hocico ($\mathbf{p}_1$) hasta el punto más posterior de la aleta caudal sobre el eje longitudinal ($\mathbf{p}_2$); si la cola tiene dos lóbulos, $\mathbf{p}_2$ es el extremo del lóbulo más largo. La profundidad corporal va del perfil dorsal ($\mathbf{p}_3$) al perfil ventral ($\mathbf{p}_4$) en una misma sección transversal, sin incluir las aletas.
+En este trabajo se consideran dos medidas: la longitud total y la profundidad corporal. La longitud estándar y la longitud cefálica se excluyeron de manera deliberada, porque el marcado manual permite ubicar sin ambigüedad los extremos de las dos primeras, pero no la placa hipural ni el borde posterior del opérculo que requieren las otras dos; ambas quedan como antecedentes o trabajo futuro. La profundidad corporal se define de forma estricta, para que no se confunda con una dimensión que incluya las aletas.
 
-Los cuatro puntos se marcaron a mano sobre la imagen original y se indicó de forma explícita el eje longitudinal de la réplica, utilizado para proyectar las medidas. No hubo segmentación automática ni puntos distintos para cada método. La Figura~\ref{fig:3-5} resume la ubicación de los cuatro puntos y lo que miden, y la Figura~\ref{fig:3-6} muestra los instrumentos con los que se obtuvieron las dimensiones físicas de referencia.
+Para cada réplica se conservan las medidas físicas de referencia de la longitud total y de la profundidad corporal (Tabla~\ref{tab:replicas}). La medición con calibre y la estimación a partir de las imágenes siguieron la misma convención anatómica, la de la Sección~\ref{sec:puntos-def}. La longitud total va desde el extremo anterior del hocico ($\mathbf{p}_1$) hasta el punto más posterior de la aleta caudal sobre el eje longitudinal ($\mathbf{p}_2$); si la cola tiene dos lóbulos, $\mathbf{p}_2$ es el extremo del lóbulo más largo. La profundidad corporal va del perfil dorsal ($\mathbf{p}_3$) al perfil ventral ($\mathbf{p}_4$) en una misma sección transversal, sin incluir las aletas. La referencia física y las cuatro rutas, A, \Aprime, B y C, utilizan exactamente los mismos puntos para ambas medidas, lo que evita seleccionar, una vez observados los datos, la medida que más favorezca a un método.
+
+A diferencia de los trabajos de la Sección~\ref{sec:antecedentes}, que localizan los puntos anatómicos con redes neuronales, los cuatro puntos se marcaron a mano sobre la imagen original, con ese criterio anatómico fijo, y se indicó de forma explícita el eje longitudinal de la réplica, utilizado para proyectar las medidas. No hubo segmentación automática: cada captura se marcó una sola vez y las mismas coordenadas se reutilizaron en A, \Aprime, B y C. Un nuevo marcado, o una revisión independiente, permite estimar la repetibilidad del procedimiento, pero no lo convierte en una salida automática ni genera una nueva unidad experimental.
+% TODO-LB4: criterio de selección de cada punto, nivel de ampliación usado en Fishmeter y procedimiento cuando el borde no se distingue
+
+La incertidumbre de la ubicación manual de los puntos se separa de la incertidumbre geométrica por profundidad. Quedaron registrados los casos en que el contorno, la postura o la visibilidad de una aleta dificultaron la ubicación de un punto, así como el motivo de cada exclusión. La Figura~\ref{fig:3-5} resume la ubicación de los cuatro puntos y lo que miden, y la Figura~\ref{fig:3-6} muestra los instrumentos con los que se obtuvieron las dimensiones físicas de referencia.
 
 \begin{figure}[H]
 \centering
@@ -287,19 +302,58 @@ donde $\mathbf{q}_i$ son los puntos anatómicos ya convertidos a milímetros por
 \section{Métodos de conversión métrica}
 \label{sec:metodos}
 
-Los cuatro métodos reciben la misma imagen, los mismos cuatro puntos y el mismo eje; lo único que cambia es la transformación que convierte píxeles en milímetros.
+\label{sec:rutas}
+
+El experimento compara cuatro rutas geométricas aplicadas a los mismos puntos de cada imagen. Los cuatro métodos reciben la misma imagen, los mismos cuatro puntos y el mismo eje; lo único que cambia es la transformación que convierte píxeles en milímetros. La Figura~\ref{fig:2-4} las presenta de forma comparada.
+
+\begin{figure}[H]
+\centering
+\caption[Las cuatro rutas de conversión métrica lado a lado]{Las cuatro rutas de conversión métrica sobre la misma escena. A toma la escala de un marcador en el vidrio y supone rayos rectos; \Aprime{} rectifica el plano del marcador coplanar con la réplica; B usa una cámara \emph{pinhole} con parámetros efectivos ajustados bajo el agua; C traza cada rayo a través de aire, vidrio y agua.}
+\label{fig:2-4}
+\begin{tikzpicture}[scale=0.6,>=Stealth,font=\scriptsize]
+\foreach \x/\lab/\col/\txt in {0/A/metA/{escala del marcador\\en el vidrio},
+                               6.4/\Aprime/metAp/{homografía del marcador\\coplanar con la réplica},
+                               12.8/B/metB/{pinhole efectivo\\calibrado bajo el agua},
+                               19.2/C/metC/{rayo refractado dos veces\\(puerto plano)}}{
+  \begin{scope}[shift={(\x,0)}]
+    \fill[gray!25] (1.6,0) rectangle (1.85,3.6);
+    \fill[cyan!8] (1.85,0) rectangle (5.6,3.6);
+    \node[draw,fill=white,minimum width=0.6cm,minimum height=0.45cm] at (0.3,1.8) {};
+    \fill (0.6,1.8) circle (1.2pt);
+    \draw[very thick,metC] (4.6,1.2) -- (4.6,2.6);
+    \node[\col,font=\bfseries\small] at (2.8,4.1) {\lab};
+    \node[align=center,font=\scriptsize] at (2.8,-0.55) {\txt};
+  \end{scope}
+}
+% A: marcador en vidrio y rayos rectos
+\draw[very thick,metA] (1.9,1.5) -- (1.9,2.1);
+\draw[metA,dashed] (0.6,1.8) -- (4.6,1.2); \draw[metA,dashed] (0.6,1.8) -- (4.6,2.6);
+% A': marcador junto a la réplica
+\draw[very thick,metAp] (6.4+4.2,0.9) -- (6.4+4.2,1.5);
+\draw[metAp,dashed] (6.4+0.6,1.8) -- (6.4+4.6,1.2); \draw[metAp,dashed] (6.4+0.6,1.8) -- (6.4+4.6,2.6);
+% B: pinhole recto con damero
+\foreach \i in {0,1,2}{\foreach \j in {0,1}{\fill[black!60] (12.8+2.3+\i*0.22,0.4+\j*0.22) rectangle ++(0.22,0.22);}}
+\draw[metB] (12.8+0.6,1.8) -- (12.8+4.6,1.2); \draw[metB] (12.8+0.6,1.8) -- (12.8+4.6,2.6);
+% C: rayos quebrados
+\draw[metC] (19.2+0.6,1.8) -- (19.2+1.6,1.62) -- (19.2+1.85,1.6) -- (19.2+4.6,1.2);
+\draw[metC] (19.2+0.6,1.8) -- (19.2+1.6,2.3) -- (19.2+1.85,2.34) -- (19.2+4.6,2.6);
+\end{tikzpicture}
+\fignota{Elaboración propia.}
+\end{figure}
 
 \begin{description}
-  \item[Método A.] Utiliza el ArUco fijo en el vidrio. Con el lado físico $L_m$ del marcador y el promedio $\bar{p}$ de las longitudes en píxeles de sus cuatro lados (ecuación~\ref{eq:lado}), la escala implementada es
+  \item[Método A: escala directa en el vidrio.] El marcador ArUco queda pegado a la pared y su tamaño conocido convierte píxeles en milímetros. Constituye la línea de base más realista, la que emplearía cualquier usuario con una cámara y un marcador, pero está afectada por el paralaje: si la réplica se encuentra a otra profundidad, su escala aparente es distinta, y A no corrige esa diferencia. Con el lado físico $L_m$ del marcador y el promedio $\bar{p}$ de las longitudes en píxeles de sus cuatro lados (ecuación~\ref{eq:lado}), la escala implementada es
   \begin{equation}
     k = \frac{L_m}{\bar{p}}, \qquad \bar{p} = \frac{1}{4}\sum_{i=1}^{4} p_i,
     \label{eq:escala-impl}
   \end{equation}
-  que difiere de la ecuación~\eqref{eq:escala-monkman} solo en el orden en que se promedia; para marcadores correctamente detectados, ambas coinciden hasta la tercera cifra. Cada punto se transforma como $\mathbf{q}_i = k\,\mathbf{p}_i$ y las medidas se obtienen con la ecuación~\eqref{eq:medidas}. Es la línea de base, ya que no corrige la diferencia de profundidad entre el vidrio y la réplica.
-  \item[Método \Aprime.] Utiliza el ArUco montado aproximadamente en el plano de simetría de la réplica. Las cuatro esquinas del marcador en píxeles y sus coordenadas métricas $(0,0)$, $(L_m,0)$, $(L_m,L_m)$ y $(0,L_m)$ definen una homografía $\mathbf{H}$ de $3 \times 3$. Cada punto anatómico se transforma como $\tilde{\mathbf{q}}_i = \mathbf{H}\,\tilde{\mathbf{p}}_i$, en milímetros sobre el plano del marcador; el eje longitudinal se transforma del mismo modo, y las medidas se obtienen con la ecuación~\eqref{eq:medidas}. La homografía corrige la perspectiva dentro del plano del marcador, pero no la diferencia de escala de los puntos que quedan fuera de él.
-  \item[Método B.] Utiliza la calibración de cámara realizada con el damero sumergido y un modelo \emph{pinhole} efectivo (perfil \texttt{B-effective}, Anexo~\ref{anx:calibraciones}). Los píxeles se convierten en rayos con $\mathbf{K}_{\mathrm{agua}}$ y los coeficientes de distorsión efectivos (ecuaciones~\ref{eq:pinhole} y~\ref{eq:distorsion}, invertidas), y esos rayos se intersecan con el plano $\pi_z$, paralelo al tablero de calibración y ubicado en la lectura del riel de cada captura, que ya corresponde al plano de simetría de la réplica (Tabla~\ref{tab:posiciones}). Dado que la calibración se fijó en la posición más cercana al vidrio, B representa de forma empírica el comportamiento óptico de esa zona. LT y PC se calculan en el espacio métrico tridimensional.
-  \item[Método C.] Utiliza la calibración de cámara realizada en aire (perfil \texttt{C-air}) y el modelo de puerto plano de la Sección~\ref{sec:puerto-plano}. Para cada punto se corrige la distorsión de la lente, se obtiene el rayo en el aire (ecuación~\ref{eq:va}), se aplican las dos refracciones (ecuaciones~\ref{eq:q1} a~\ref{eq:vw}) con los parámetros de la Tabla~\ref{tab:puerto} y se interseca el rayo en el agua (ecuación~\ref{eq:rayo}) con el plano de la réplica, definido en el marco de la cámara física. Para el caso de profundidad desconocida el cálculo se repite sobre la grilla de profundidades físicamente admisibles y se expresa como el intervalo geométrico de la ecuación~\eqref{eq:IL}.
+  que difiere de la ecuación~\eqref{eq:escala-monkman} solo en el orden en que se promedia; para marcadores correctamente detectados, ambas coinciden hasta la tercera cifra. Cada punto se transforma como $\mathbf{q}_i = k\,\mathbf{p}_i$ y las medidas se obtienen con la ecuación~\eqref{eq:medidas}.
+  \item[Método \Aprime: escala aproximadamente coplanar.] Utiliza el ArUco montado aproximadamente en el plano de simetría de la réplica. Esta ruta permite medir cuánto del error de A se debe a la separación entre marcador y objeto. Las cuatro esquinas del marcador en píxeles y sus coordenadas métricas $(0,0)$, $(L_m,0)$, $(L_m,L_m)$ y $(0,L_m)$ definen una homografía $\mathbf{H}$ de $3 \times 3$. Cada punto anatómico se transforma como $\tilde{\mathbf{q}}_i = \mathbf{H}\,\tilde{\mathbf{p}}_i$, en milímetros sobre el plano del marcador; el eje longitudinal se transforma del mismo modo, y las medidas se obtienen con la ecuación~\eqref{eq:medidas}. La homografía corrige la perspectiva dentro del plano del marcador, pero no la diferencia de escala de los puntos que quedan fuera de él. Como \Aprime{} rectifica el plano con una homografía, la diferencia entre A y \Aprime{} combina dos efectos: la coplanaridad y la corrección de perspectiva del plano del marcador.
+  \item[Método B: cámara \emph{pinhole} calibrada bajo el agua.] Utiliza la calibración de cámara realizada con el damero sumergido y un modelo \emph{pinhole} efectivo (perfil \texttt{B-effective}, Anexo~\ref{anx:calibraciones}), que compensa la refracción de forma implícita (Sección~\ref{sec:calibracion-implicita}). Los píxeles se convierten en rayos con $\mathbf{K}_{\mathrm{agua}}$ y los coeficientes de distorsión efectivos (ecuaciones~\ref{eq:pinhole} y~\ref{eq:distorsion}, invertidas), y esos rayos se intersecan con el plano $\pi_z$, paralelo al tablero de calibración y ubicado en la lectura del riel de cada captura, que ya corresponde al plano de simetría de la réplica (Tabla~\ref{tab:posiciones}). Dado que la calibración se fijó en la posición más cercana al vidrio, B representa de forma empírica el comportamiento óptico de esa zona, y su error se estudió según la separación respecto de ella. LT y PC se calculan en el espacio métrico tridimensional.
+  \item[Método C: puerto plano explícito.] Cada rayo se sigue a través de las interfaces con la ley de Snell y las dimensiones se recuperan para una profundidad supuesta. Utiliza la calibración de cámara realizada en aire (perfil \texttt{C-air}) y el modelo de puerto plano de la Sección~\ref{sec:puerto-plano}. Para cada punto se corrige la distorsión de la lente, se obtiene el rayo en el aire (ecuación~\ref{eq:va}), se aplican las dos refracciones (ecuaciones~\ref{eq:q1} a~\ref{eq:vw}) con los parámetros de la Tabla~\ref{tab:puerto} y se interseca el rayo en el agua (ecuación~\ref{eq:rayo}) con el plano de la réplica, definido en el marco de la cámara física. Para el caso de profundidad desconocida, el cálculo se repite sobre una grilla de valores admisibles de $z$, lo que da $L(z)$ y el intervalo geométrico de la ecuación~\eqref{eq:IL} (Sección~\ref{sec:intervalo-metodo}). La ruta C no aísla la refracción como única causa, sino que incorpora el modelo completo de interfaces y la información de profundidad, lo que se tiene en cuenta al interpretar sus resultados.
 \end{description}
+
+El marcado manual, la imagen y la referencia física son los mismos para las cuatro rutas. En consecuencia, una diferencia entre métodos no puede atribuirse a una elección distinta de puntos ni a una imagen rectificada, y puede atribuirse con mayor claridad al tratamiento geométrico. La salida de una herramienta de calibración no es, por sí misma, una «corrección refractiva», ni puede convertirse sin verificación en coeficientes de distorsión de lente. La ruta C requiere parámetros, unidades, un sistema de coordenadas y un trazado coherentes con la geometría del montaje; por ese motivo se documentan los parámetros que consume, sus unidades y el sistema de coordenadas que utiliza (Tabla~\ref{tab:puerto} y Anexo~\ref{anx:flatport}).
 
 Estaba prevista una prueba complementaria con una barra patrón sumergida, destinada a separar un posible error de implementación del error de marcado. Esta prueba no se realizó como validación separada; solo hubo una comprobación preliminar con la réplica R1 (de unos 160~mm de largo), durante las pruebas de comienzos de septiembre de 2026 (Sección~\ref{sec:delimitacion}). La validación métrica de las cuatro rutas es, por lo tanto, la comparación directa con las longitudes y profundidades medidas con calibre en las seis réplicas y las cuatro posiciones (Capítulo~\ref{cap:resultados}). A lo largo del documento se distingue la «comprobación instrumental con patrón» (barra sumergida, no realizada) de la «validación externa» (otras cámaras, montajes o condiciones, fuera del alcance).
 
@@ -393,16 +447,34 @@ Las 72 imágenes siguieron la misma secuencia, que se muestra en la Figura~\ref{
 \fignota{Elaboración propia.}
 \end{figure}
 
+Para que una medición pueda reproducirse, cada resultado debe guardar, junto con el valor estimado, la imagen de origen, el modo de corrección, el perfil de calibración, el marcador usado, el protocolo de marcado, el operador, la unidad y las advertencias de calidad. Con esa información se puede reconstruir el camino completo, desde la captura hasta la comparación con la referencia, y determinar si un error proviene de la adquisición, la corrección, el marcado o la conversión métrica. En este trabajo, cada registro de medición conserva además la fecha y cualquier revisión del marcado.
+
 La tabla maestra guarda, para cada estimación, la réplica y la imagen, la distancia al vidrio, la repetición, el método, la medida, la referencia física, el valor estimado, el error, el estado de los puntos y del marcador, y el motivo de exclusión si lo hubo. De este modo, cada valor puede rastrearse hasta la fotografía original y sus coordenadas manuales. Los archivos de datos (imágenes, puntos, calibraciones y tabla maestra) y los scripts que regeneran las tablas y figuras del Capítulo~\ref{cap:resultados} están publicados (Anexo~\ref{anx:repositorio}).
 
 \section{Evaluación de las estimaciones}
 \label{sec:evaluacion}
 
-Para cada medida se calcularon el error con signo, el error absoluto y el error porcentual absoluto de cada estimación (ecuación~\ref{eq:errores}) y, sobre las $n = 24$ combinaciones réplica--profundidad, el sesgo, el MAE y el MAPE (ecuación~\ref{eq:agregados}), definidos en la Sección~\ref{sec:metricas}. Antes de comparar métodos se resumieron las tres repeticiones técnicas de cada réplica y distancia, para no tratarlas como observaciones independientes. Estas métricas describen la estimación promedio por condición; una captura individual puede presentar un error mayor, y por ese motivo la Tabla~\ref{tab:agregados} informa también el MAE calculado captura por captura.
+Las tres propiedades definidas en la Sección~\ref{sec:metricas}, exactitud, repetibilidad y concordancia, se examinaron sobre las mismas réplicas, con errores con signo y absolutos, métricas agregadas y análisis pareados. Antes de cualquier comparación se resumieron las tres repeticiones técnicas de cada réplica y distancia, porque no son unidades experimentales independientes. Luego, para cada medida se calcularon las métricas de las ecuaciones~\eqref{eq:errores} y~\eqref{eq:agregados}: el error con signo, el error absoluto y el error porcentual absoluto y, sobre las $n = 24$ combinaciones réplica--profundidad, el sesgo, el MAE y el MAPE. Estas métricas describen la estimación promedio por condición; una captura individual puede presentar un error mayor, y por ese motivo la Tabla~\ref{tab:agregados} informa también el MAE calculado captura por captura.
 
 La comparación principal enfrenta el error de A, \Aprime, B y C en las mismas imágenes y profundidades. Las 24 combinaciones pertenecen a solo seis réplicas, es decir, son medidas repetidas; por esa razón la inferencia se realizó con la réplica como unidad. Para cada réplica se promedió el error absoluto de LT de las cuatro posiciones y se aplicó una prueba de signos exacta de dos colas a las diferencias pareadas entre C y cada uno de los otros métodos, y entre B y los métodos A y \Aprime{} ($n = 6$). No se utilizaron pruebas paramétricas porque con seis réplicas no es posible verificar sus supuestos. Los valores $p$ se informan sin ajuste por comparaciones múltiples, y los conteos sobre las 24 combinaciones réplica--profundidad se presentan como descriptivos. Para examinar cómo cambia el error de B y C al alejarse de la zona de calibración de B, se ajustó por mínimos cuadrados una recta a la diferencia de MAE frente a la separación y se utilizó su pendiente.
 
-Con C se calculó además el intervalo de longitudes que resulta de recorrer todas las profundidades admisibles. Este intervalo expresa la incertidumbre geométrica por profundidad y no constituye un intervalo de confianza estadístico. Su ancho relativo se evaluó en tres escenarios de conocimiento de $z$ (toda la pecera, $\pm 3$~cm y $\pm 1$~cm) y se comparó con la predicción de primer orden de la ecuación~\eqref{eq:Dz}. Para ello se ejecutó C en cada captura con el plano de medición en $z = 0, 10, \ldots, 300$~mm, y la cobertura empírica se calculó como la fracción de las 72 capturas cuya LT de calibre quedó dentro de $\IL$. La concordancia de B y C con la referencia se describe también mediante el sesgo y los límites de acuerdo de Bland--Altman \parencite{Bland1986}, calculados como el sesgo $\pm 1{,}96$ veces la desviación estándar de las diferencias sobre las 24 combinaciones; dado que las cuatro posiciones de cada réplica son medidas dependientes, estos límites se presentan como un resumen descriptivo (Sección~\ref{sec:discusion}).
+La concordancia de B y C con la referencia se describe también mediante el sesgo y los límites de acuerdo de Bland--Altman \parencite{Bland1986}, calculados como el sesgo $\pm 1{,}96$ veces la desviación estándar de las diferencias sobre las 24 combinaciones; dado que las cuatro posiciones de cada réplica son medidas dependientes, estos límites se presentan como un resumen descriptivo (Sección~\ref{sec:discusion}).
+
+\subsection{Profundidad conocida e intervalo con profundidad desconocida}
+\label{sec:intervalo-metodo}
+
+La profundidad $z$ se consideró conocida cuando un soporte fijó y midió la posición de la réplica. En ese caso, cada rayo se interseca con el plano de la réplica, se obtiene una estimación puntual y es posible comparar A, \Aprime, B y C contra la referencia física. En el experimento, ese soporte fue el carrito que se desliza sobre el riel: cada captura se tomó con el plano de simetría de la réplica en una de las cuatro posiciones nominales, a 5, 11, 17 y 23~cm de la cara interna del vidrio, que corresponden a las lecturas del riel de 0, 60, 120 y 180~mm, con el desplazamiento entre el apoyo del carrito y el plano de simetría compensado físicamente (Tabla~\ref{tab:posiciones}). Como se indicó en la Sección~\ref{sec:montaje}, B recibió la lectura del riel y C, la distancia $z$ a la cara interna del vidrio.
+
+Cuando la profundidad se consideró desconocida, se evaluó C sobre todo el rango físicamente posible, $z \in [z_{\min}, z_{\max}] = [0, 300]$~mm, que corresponde al interior de la pecera: desde la cara interna del vidrio frontal ($z = 0$) hasta unos 30~cm detrás de ella (Sección~\ref{sec:montaje} y Figura~\ref{fig:3-esquema}).
+% TODO-LB: confirmar que 300 mm es la profundidad interior de la pecera medida desde la cara interna del vidrio frontal; la tesis solo da «aproximadamente 30 x 30 x 30 cm» sin aclarar si son medidas interiores, y analysis/reproducir_capitulo4.py fija el rango en 0--300 mm sin justificarlo.
+
+El intervalo se calculó en tres escenarios de conocimiento de $z$. En el primero, $z$ es desconocida en toda la pecera (0--300~mm). En los otros dos, la profundidad se conoce de forma aproximada: se usaron ventanas de $\pm 3$ y $\pm 1$~cm centradas en la profundidad nominal $z_0$ de cada captura, $[z_0 - 30, z_0 + 30]$ y $[z_0 - 10, z_0 + 10]$~mm, recortadas a los límites del rango admisible cuando los superan. Con las posiciones del ensayo (50 a 230~mm), ninguna ventana alcanzó esos límites, de modo que todas conservaron su ancho completo.
+
+Con C se calculó el intervalo de longitudes que resulta de recorrer todas las profundidades admisibles. Para ello se ejecutó C en cada una de las 72 capturas con el plano de medición en $z = 0, 10, 20, \ldots, 300$~mm, con los mismos puntos marcados y los parámetros de la Tabla~\ref{tab:puerto}, y sobre esa grilla se comprobó si $L(z)$ era monótona. Si lo es, el mínimo y el máximo de $L(z)$ se alcanzan en los extremos del rango (Sección~\ref{sec:z-desconocida}); por eso, en cada escenario, los límites de $\IL$ se tomaron como el menor y el mayor de los valores de $L$ calculados en los dos extremos de su rango de $z$.
+
+El ancho relativo de $\IL$ se expresó como porcentaje de la LT de calibre de la réplica, $100\,(\max L - \min L)/\mathrm{LT}_{\mathrm{ref}}$, y se promedió por posición sobre las capturas. Se comparó con la predicción de primer orden de la ecuación~\eqref{eq:Dz}: si $L(z)$ es proporcional a $D(z)$, el ancho relativo para una réplica situada realmente a la profundidad $z_0$ es $(D(z_{\max}) - D(z_{\min}))/D(z_0)$, con $z_{\min}$ y $z_{\max}$ iguales a los límites del escenario y con los valores del montaje, $d = 230$~mm, $t_g = 4$~mm, $\mu_g = 1{,}5$ y $\mu_w = 1{,}333$. La cobertura empírica se calculó, en cada escenario, como la fracción de las 72 capturas cuya LT de calibre quedó dentro de $\IL$.
+
+Este intervalo expresa la incertidumbre geométrica por profundidad y no constituye un intervalo de confianza estadístico. No incluye los errores de calibración, de postura, de marcado manual ni de la referencia de calibre, que se informan por separado (Secciones~\ref{sec:calibraciones} y~\ref{sec:sensibilidad} y Tabla~\ref{tab:replicas}); la repetibilidad del marcado no se cuantificó.
 
 \section{Alcance y limitaciones metodológicas}
 \label{sec:limitaciones-metod}
