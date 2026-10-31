@@ -4,7 +4,7 @@
 
         Unidad Académica de Ciencias y Tecnología
 
-            Carrera de Ingeniería en Informática
+            Carrera de Ingeniería Informática
 
 
 
@@ -41,7 +41,7 @@ CUANTIFICACIÓN DE LA INCERTIDUMBRE POR
 
 
         PROYECTO FINAL DE CARRERA presentado como requisito para optar al
-título de Ingeniero en Informática, Universidad Católica Nuestra Señora de la Asunción,
+título de Ingeniero Informático, Universidad Católica Nuestra Señora de la Asunción,
 Campus Guairá, Unidad Académica de Ciencias y Tecnología.
 
 
@@ -108,7 +108,7 @@ equivalente.
 
                Unidad Académica de Ciencias y Tecnología
 
-                   Carrera de Ingeniería en Informática
+                   Carrera de Ingeniería Informática
 
                      Cipriano Ezequiel Pereira López
 
