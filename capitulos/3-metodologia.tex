@@ -398,19 +398,7 @@ La tabla maestra guarda, para cada estimación, la réplica y la imagen, la dist
 \section{Evaluación de las estimaciones}
 \label{sec:evaluacion}
 
-Para cada medida se calcularon el error con signo, el error absoluto y el error porcentual absoluto:
-\begin{equation}
-e = \hat{y} - y, \qquad \mathrm{EA} = \lvert \hat{y} - y \rvert, \qquad \mathrm{EPA} = 100\,\frac{\lvert \hat{y} - y \rvert}{y},
-\label{eq:errores}
-\end{equation}
-donde $\hat{y}$ es la estimación del método e $y$ la referencia física. Antes de comparar métodos se resumieron las tres repeticiones técnicas de cada réplica y distancia, para no tratarlas como observaciones independientes. Sobre las $n = 24$ combinaciones réplica--profundidad se calcularon el sesgo, el error absoluto medio y el error porcentual absoluto medio:
-\begin{equation}
-\mathrm{sesgo} = \frac{1}{n}\sum_{i=1}^{n} e_i, \qquad
-\mathrm{MAE} = \frac{1}{n}\sum_{i=1}^{n} \lvert e_i \rvert, \qquad
-\mathrm{MAPE} = \frac{100}{n}\sum_{i=1}^{n} \frac{\lvert e_i \rvert}{y_i}.
-\label{eq:agregados}
-\end{equation}
-Un sesgo positivo indica que el método sobreestima, y uno negativo, que subestima. Estas métricas describen la estimación promedio por condición; una captura individual puede presentar un error mayor, y por ese motivo la Tabla~\ref{tab:agregados} informa también el MAE calculado captura por captura.
+Para cada medida se calcularon el error con signo, el error absoluto y el error porcentual absoluto de cada estimación (ecuación~\ref{eq:errores}) y, sobre las $n = 24$ combinaciones réplica--profundidad, el sesgo, el MAE y el MAPE (ecuación~\ref{eq:agregados}), definidos en la Sección~\ref{sec:metricas}. Antes de comparar métodos se resumieron las tres repeticiones técnicas de cada réplica y distancia, para no tratarlas como observaciones independientes. Estas métricas describen la estimación promedio por condición; una captura individual puede presentar un error mayor, y por ese motivo la Tabla~\ref{tab:agregados} informa también el MAE calculado captura por captura.
 
 La comparación principal enfrenta el error de A, \Aprime, B y C en las mismas imágenes y profundidades. Las 24 combinaciones pertenecen a solo seis réplicas, es decir, son medidas repetidas; por esa razón la inferencia se realizó con la réplica como unidad. Para cada réplica se promedió el error absoluto de LT de las cuatro posiciones y se aplicó una prueba de signos exacta de dos colas a las diferencias pareadas entre C y cada uno de los otros métodos, y entre B y los métodos A y \Aprime{} ($n = 6$). No se utilizaron pruebas paramétricas porque con seis réplicas no es posible verificar sus supuestos. Los valores $p$ se informan sin ajuste por comparaciones múltiples, y los conteos sobre las 24 combinaciones réplica--profundidad se presentan como descriptivos. Para examinar cómo cambia el error de B y C al alejarse de la zona de calibración de B, se ajustó por mínimos cuadrados una recta a la diferencia de MAE frente a la separación y se utilizó su pendiente.
 

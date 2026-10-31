@@ -30,7 +30,7 @@ Un segundo grupo de trabajos se ocupa de la recuperación de la escala. Mediante
 
 En la misma línea, \textcite{Tseng2020} emplearon una red convolucional para detectar la cabeza, la horquilla caudal y una placa de color de tamaño conocido. Luego ubicaron los puntos del hocico y de la horquilla con procesamiento de imágenes y calcularon la longitud a partir de la relación píxel--distancia de la placa. El clasificador alcanzó una exactitud del 98,78~\%, mientras que la longitud presentó un error absoluto medio de 5,36~cm y un error relativo absoluto medio de 4,26~\%. La diferencia entre ambas cifras muestra que una detección muy precisa no garantiza una medición igualmente precisa.
 
-En un tanque de producción, \textcite{Correia2025} conectaron una cámara a una Raspberry Pi y utilizaron un modelo YOLOv8m-seg para segmentar camarones y una placa de alimentación de tamaño conocido. La placa proporcionó la escala, y la segmentación permitió seleccionar individuos extendidos y aproximadamente coplanares. Obtuvieron un MAPE de 1,56~\% en longitud y de 0,15~\% en anchura. El trabajo integra captura acuática, segmentación y escala visual, pero no corrige la refracción de forma explícita y estudia otro organismo con otra geometría.
+En un tanque de producción, \textcite{Correia2025} conectaron una cámara a una Raspberry Pi y utilizaron un modelo YOLOv8m-seg para segmentar camarones y una placa de alimentación de tamaño conocido. La placa proporcionó la escala, y la segmentación permitió seleccionar individuos extendidos y aproximadamente coplanares. Obtuvieron un error porcentual absoluto medio (MAPE) de 1,56~\% en longitud y de 0,15~\% en anchura. El trabajo integra captura acuática, segmentación y escala visual, pero no corrige la refracción de forma explícita y estudia otro organismo con otra geometría.
 
 Los sistemas estéreo constituyen otra vía para obtener dimensiones físicas. \textcite{Marrable2023} combinaron la detección automática de cabeza y cola con un sistema estéreo BRUVS calibrado con estructuras tridimensionales. Al comparar 3954 mediciones automáticas con mediciones manuales obtuvieron un coeficiente de correlación de Pearson de $r = 0{,}99$. Se trata de una asociación lineal muy fuerte, aunque la correlación no mide concordancia ni descarta un sesgo entre métodos. \textcite{AlJubouri2017}, por su parte, midieron peces cebra a través de un tanque de vidrio con dos cámaras web ortogonales; despreciaron el efecto del vidrio y compensaron la distancia con la segunda vista.
 
@@ -40,7 +40,7 @@ Los antecedentes de carácter óptico cumplen una función distinta. \textcite{Q
 
 Para la calibración de cámaras que miran a través de interfaces planas, el modelo Pinax de \textcite{Luczynski2017} representa de forma explícita la refracción en una carcasa de puerto plano y corrige el camino de los rayos antes de reconstruir o medir. Es el antecedente conceptual más cercano a la ruta C, aunque fue concebido como corrección óptica general y no para comparar, en una misma captura monocular, una escala sin corregir, una calibración implícita y un modelo refractivo explícito. En la misma línea, \textcite{Rofallski2022} analizaron la distorsión que depende de la distancia cuando se aplican modelos de cámara convencionales a interfaces multimedia planas, y \textcite{Shortis2015} revisó las técnicas de calibración para medir bajo el agua. Ambos trabajos indican que la compensación implícita depende de la profundidad y que la calidad de una calibración no puede resumirse en un único valor válido para toda la zona de trabajo.
 
-Tres trabajos recientes permiten delimitar con precisión la brecha que aborda esta tesis. MorphoCal \parencite{Vijayalakshmi2026} utiliza una sola cámara, aunque sumergida, y proyecta los puntos sobre un plano de calibración fijo obtenido con un damero bajo el agua; reporta un MAE de 0,75~cm y un RMSE de 0,86~cm sobre 4810 muestras. \textcite{Yin2026} corrigieron la refracción en la superficie agua--aire con la ley de Snell, suponiendo una profundidad nominal (aproximadamente 0,8~m), y analizaron el efecto de ese supuesto, sin informar un intervalo. \textcite{Zhou2023} resolvieron la profundidad con visión estéreo y corrigieron la refracción en la superficie. Ninguno de los tres considera una cámara ubicada del lado exterior de un vidrio plano, ni compara sobre los mismos puntos una escala directa, una calibración implícita y un modelo explícito.
+Tres trabajos recientes permiten delimitar con precisión la brecha que aborda esta tesis. MorphoCal \parencite{Vijayalakshmi2026} utiliza una sola cámara, aunque sumergida, y proyecta los puntos sobre un plano de calibración fijo obtenido con un damero bajo el agua; reporta un error absoluto medio (MAE) de 0,75~cm y una raíz del error cuadrático medio (RMSE) de 0,86~cm sobre 4810 muestras. \textcite{Yin2026} corrigieron la refracción en la superficie agua--aire con la ley de Snell, suponiendo una profundidad nominal (aproximadamente 0,8~m), y analizaron el efecto de ese supuesto, sin informar un intervalo. \textcite{Zhou2023} resolvieron la profundidad con visión estéreo y corrigieron la refracción en la superficie. Ninguno de los tres considera una cámara ubicada del lado exterior de un vidrio plano, ni compara sobre los mismos puntos una escala directa, una calibración implícita y un modelo explícito.
 
 \textcite{Seegraber2025} desarrollaron CalibMar, una herramienta abierta que integra la calibración de la cámara, del par estéreo y de la carcasa para puertos planos o en cúpula. En un puerto plano, el modelo estima la orientación y la posición de la interfaz y representa el camino no central de los rayos. Es un antecedente instrumental, pero no incluye marcado anatómico, referencia ArUco ni evaluación de medidas de peces.
 
@@ -264,31 +264,31 @@ Un puerto plano se modela con dos interfaces paralelas: una entre el aire y la p
 \fignota{Adaptado de \emph{A theory of multi-layer flat refractive geometry}, por A. Agrawal, S. Ramalingam, Y. Taguchi y V. Chari, 2012, \emph{2012 IEEE Conference on Computer Vision and Pattern Recognition}, pp. 3346--3353 (\url{https://doi.org/10.1109/CVPR.2012.6248073}).}
 \end{figure}
 
-Se toma el centro de proyección de la cámara como origen de coordenadas y se llama $\mathbf{n}_\pi$ al vector unitario normal a las interfaces, orientado desde la cámara hacia la escena. La cara exterior de la pared (del lado del aire, $\Pi_1$) y la cara interior (del lado del agua, $\Pi_2$) se escriben como
+Se toma el centro de proyección de la cámara como origen de coordenadas y se llama $\mathbf{n}_\pi$ al vector unitario normal a las interfaces, orientado desde la cámara hacia la escena. La cara exterior de la pared (del lado del aire, $\Pi_1$) y la cara interior (del lado del agua, $\Pi_2$) se escriben como \parencite{Agrawal2012,JordtSedlazeck2012}
 \begin{align}
 \Pi_1 &: \mathbf{n}_\pi^{\mathsf{T}}\mathbf{X} = d, \label{eq:pi1}\\
 \Pi_2 &: \mathbf{n}_\pi^{\mathsf{T}}\mathbf{X} = d + t_g, \label{eq:pi2}
 \end{align}
 donde $d$ es la distancia perpendicular entre el centro de la cámara y la primera interfaz, y $t_g$ es el espesor de la pared. Esta representación supone dos superficies planas, paralelas y con la misma normal.
 
-Para un punto de la imagen en coordenadas homogéneas, $\tilde{\mathbf{p}} = (u, v, 1)^{\mathsf{T}}$, ya corregido de la distorsión de la lente, la dirección unitaria del rayo en el aire es
+Para un punto de la imagen en coordenadas homogéneas, $\tilde{\mathbf{p}} = (u, v, 1)^{\mathsf{T}}$, ya corregido de la distorsión de la lente, la dirección unitaria del rayo en el aire es \parencite{Hartley2004}
 \begin{equation}
 \mathbf{v}_a = \frac{\mathbf{K}^{-1}\tilde{\mathbf{p}}}{\lVert \mathbf{K}^{-1}\tilde{\mathbf{p}} \rVert},
 \label{eq:va}
 \end{equation}
-donde $\mathbf{K}$ es la matriz de parámetros intrínsecos de la cámara. El rayo toca la cara exterior del puerto en
+donde $\mathbf{K}$ es la matriz de parámetros intrínsecos de la cámara. El rayo toca la cara exterior del puerto en \parencite{Agrawal2012,JordtSedlazeck2012}
 \begin{equation}
 \mathbf{q}_1 = \frac{d}{\mathbf{n}_\pi^{\mathsf{T}}\mathbf{v}_a}\,\mathbf{v}_a .
 \label{eq:q1}
 \end{equation}
 
-Para calcular la desviación del rayo al pasar de un medio $i$ a un medio $j$ se utiliza la forma vectorial de la ley de Snell. Si $\mathbf{v}_i$ es la dirección unitaria incidente y $\eta_{ij} = \mu_i/\mu_j$ es el cociente entre los índices de refracción, entonces
+Para calcular la desviación del rayo al pasar de un medio $i$ a un medio $j$ se utiliza la forma vectorial de la ley de Snell, es decir, de la ecuación~\eqref{eq:snell} \parencite{Hecht2017,Agrawal2012}. Si $\mathbf{v}_i$ es la dirección unitaria incidente y $\eta_{ij} = \mu_i/\mu_j$ es el cociente entre los índices de refracción, entonces
 \begin{equation}
 \mathcal{R}(\mathbf{v}_i; \mu_i, \mu_j, \mathbf{n}_\pi) = \eta_{ij}\left(\mathbf{v}_i - (\mathbf{v}_i^{\mathsf{T}}\mathbf{n}_\pi)\,\mathbf{n}_\pi\right) + \sqrt{1 - \eta_{ij}^2\left(1 - (\mathbf{v}_i^{\mathsf{T}}\mathbf{n}_\pi)^2\right)}\;\mathbf{n}_\pi .
 \label{eq:snell-vec}
 \end{equation}
 
-Con esta expresión, la dirección del rayo dentro de la pared transparente es
+Con esta expresión, la dirección del rayo dentro de la pared transparente es \parencite{Agrawal2012,JordtSedlazeck2012}
 \begin{equation}
 \mathbf{v}_g = \mathcal{R}(\mathbf{v}_a; \mu_a, \mu_g, \mathbf{n}_\pi),
 \label{eq:vg}
@@ -304,7 +304,7 @@ Una segunda aplicación de la ley de Snell, en la interfaz vidrio--agua, proporc
 \mathbf{v}_w = \mathcal{R}(\mathbf{v}_g; \mu_g, \mu_w, \mathbf{n}_\pi),
 \label{eq:vw}
 \end{equation}
-donde $\mu_w$ es el índice de refracción del agua. Todos los puntos de la escena que pueden haber producido ese píxel se encuentran, por lo tanto, sobre el rayo
+donde $\mu_w$ es el índice de refracción del agua. Todos los puntos de la escena que pueden haber producido ese píxel se encuentran, por lo tanto, sobre el rayo \parencite{Agrawal2012,Treibitz2012}
 \begin{equation}
 \mathbf{X}(\lambda) = \mathbf{q}_2 + \lambda\,\mathbf{v}_w, \qquad \lambda \geq 0 .
 \label{eq:rayo}
@@ -323,7 +323,7 @@ Los índices $\mu_a$, $\mu_g$ y $\mu_w$ actúan a través de sus cocientes y det
 
 Dado que cada píxel tiene su propio punto de partida $\mathbf{q}_2$ y su propia dirección $\mathbf{v}_w$, los rayos en el agua no necesariamente se cruzan en un único centro de proyección. Un sistema con interfaces planas y paralelas es, en general, una cámara axial no central, en la que cada rayo se mantiene en el plano formado por el rayo incidente y la normal del puerto \parencite{Agrawal2012}.
 
-\paragraph{Aproximación de primer orden.} Cuando los rayos inciden de forma casi perpendicular al vidrio, la ecuación~\eqref{eq:snell-vec} puede linealizarse y el sistema se comporta como una cámara \emph{pinhole} cuya distancia efectiva al plano del objeto es
+\paragraph{Aproximación de primer orden.} Cuando los rayos inciden de forma casi perpendicular al vidrio, la ecuación~\eqref{eq:snell-vec} puede linealizarse y el sistema se comporta como una cámara \emph{pinhole} cuya distancia efectiva al plano del objeto es \parencite{Treibitz2012,Agrawal2012}
 \begin{equation}
 D(z) = d + \frac{t_g}{\mu_g} + \frac{z}{\mu_w},
 \label{eq:Dz}
@@ -491,10 +491,30 @@ Además, las esquinas del marcador y los puntos anatómicos deben expresarse en 
 Una homografía es la transformación proyectiva que relaciona las coordenadas de un plano con las de su imagen, y se representa con una matriz de $3 \times 3$ \parencite{Hartley2004}. Rectifica únicamente el plano que la define: no recupera la posición espacial de los puntos situados fuera de ese plano, ni corrige la diferencia de escala que aparece cuando el marcador y el pez se encuentran a distinta profundidad. En presencia de refracción, además, la homografía es una aproximación, ya que puede ajustar adecuadamente las correspondencias del plano de referencia sin representar el camino de todos los rayos aire--vidrio--agua. La Sección~\ref{sec:metodos} presenta la homografía que usa \Aprime.
 
 \subsection{Estimación y evaluación morfométrica}
+\label{sec:metricas}
 
 Para evaluar una medición conviene distinguir tres propiedades. La exactitud indica cuán cerca se encuentra una estimación de la referencia física; la repetibilidad, cuánto se dispersan las repeticiones técnicas en las mismas condiciones; y la concordancia, si dos procedimientos producen valores comparables, lo que es una condición más exigente que la correlación \parencite{Bland1986,Lin1989}. Las tres propiedades se examinan sobre las mismas réplicas, con errores con signo y absolutos, métricas agregadas y análisis pareados.
 
-La referencia manual se trata como una medición controlada que también tiene incertidumbre. Por ese motivo, MAE, RMSE y MAPE se interpretan como diferencias respecto de esa referencia, y el sesgo se utiliza para detectar tendencias sistemáticas. Las repeticiones de una misma réplica se resumieron antes de cualquier comparación inferencial, porque no son unidades experimentales independientes. Las definiciones, fórmulas, agregaciones y criterios de decisión están en el Capítulo~\ref{cap:metodologia}.
+El error de medida es la diferencia entre el valor estimado y un valor de referencia, y el sesgo es una estimación de su componente sistemática \parencite{JCGM2012}. Para una estimación, el error con signo, el error absoluto y el error porcentual absoluto son
+\begin{equation}
+e = \hat{y} - y, \qquad \mathrm{EA} = \lvert \hat{y} - y \rvert, \qquad \mathrm{EPA} = 100\,\frac{\lvert \hat{y} - y \rvert}{y},
+\label{eq:errores}
+\end{equation}
+donde $\hat{y}$ es la estimación del método e $y$ la referencia física. Sobre un conjunto de $n$ estimaciones, el sesgo, el error absoluto medio (MAE) y el error porcentual absoluto medio (MAPE) son \parencite{Willmott2005,Hyndman2006}
+\begin{equation}
+\mathrm{sesgo} = \frac{1}{n}\sum_{i=1}^{n} e_i, \qquad
+\mathrm{MAE} = \frac{1}{n}\sum_{i=1}^{n} \lvert e_i \rvert, \qquad
+\mathrm{MAPE} = \frac{100}{n}\sum_{i=1}^{n} \frac{\lvert e_i \rvert}{y_i}.
+\label{eq:agregados}
+\end{equation}
+Un sesgo positivo indica que el método sobreestima, y uno negativo, que subestima. La raíz del error cuadrático medio (RMSE) eleva cada error al cuadrado antes de promediar, por lo que pondera más los errores grandes \parencite{Willmott2005,Chai2014}:
+\begin{equation}
+\mathrm{RMSE} = \sqrt{\frac{1}{n}\sum_{i=1}^{n} e_i^2}.
+\label{eq:rmse}
+\end{equation}
+En este trabajo se informan el MAE y el MAPE; el RMSE se define porque lo utilizan antecedentes como \textcite{Seibold2026}.
+
+La referencia manual se trata como una medición controlada que también tiene incertidumbre. Por ese motivo, MAE y MAPE se interpretan como diferencias respecto de esa referencia, y el sesgo se utiliza para detectar tendencias sistemáticas. Las repeticiones de una misma réplica se resumieron antes de cualquier comparación inferencial, porque no son unidades experimentales independientes. Las agregaciones y los criterios de decisión aplicados en este trabajo están en el Capítulo~\ref{cap:metodologia}.
 
 \subsubsection{Trazabilidad de la medición}
 
