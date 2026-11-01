@@ -101,6 +101,30 @@
     or
     test \ifmorenames
     }}
+% Actas (APA 10.5): biblatex-apa trata un @inproceedings sin editor como artículo de revista;
+% aquí todas las actas se imprimen como capítulo: «En <actas> (pp. x–y). <Editorial>.»
+\DeclareSourcemap{\maps[datatype=bibtex]{\map{\pertype{inproceedings}%
+  \step[typesource=inproceedings, typetarget=incollection]}}}
+% En el paréntesis de un capítulo, el volumen va antes de las páginas: «(Vol. 7576, pp. 846–859)».
+\renewbibmacro*{addinfo1}{%
+  \printtexte[parens]{%
+    \usebibmacro{editor+trans+narr}%
+    \setunit*{\addsemicolon\addspace}%
+    \printfield{edition}%
+    \setunit*{\addcomma\addspace}%
+    \ifthenelse{\ifentrytype{report}\OR\ifentrytype{unpublished}\OR\ifentrytype{dataset}\OR%
+                \ifentrytype{software}\OR\ifentrytype{audio}\OR\ifentrytype{patent}\OR%
+                \ifentrytype{image}}{\usebibmacro{addinfo3}}{}%
+    \setunit*{\addcomma\addspace}%
+    \iffieldundef{maintitle}
+      {\ifthenelse{\ifentrytype{book}\OR\ifentrytype{inbook}}{\printfield{volumes}}{}%
+       \setunit*{\addcomma\addspace}%
+       \ifthenelse{\ifentrytype{book}\OR\ifentrytype{inbook}}{\printfield{volume}}{}}
+      {}%
+    \setunit*{\addcomma\addspace}%
+    \ifentrytype{inbook}{\printfield{pages}}{}}}
+% Rangos de páginas con raya corta (spanish.lbx usa guion)
+\DefineBibliographyExtras{spanish}{\protected\def\bibrangedash{\textendash\penalty\hyphenpenalty}}
 \makeatother
 \usepackage{xurl}
 
