@@ -85,6 +85,24 @@
 \usepackage[backend=biber,style=apa,language=spanish,natbib=true]{biblatex}
 \DeclareLanguageMapping{spanish}{spanish-apa}
 \addbibresource{referencias.bib}
+% APA 7 en español: «y» antes del último autor, sin coma, en citas y referencias.
+% biblatex-apa usa «\&» en citas parentéticas, en citas narrativas dentro de tablas
+% y en la lista de referencias; spanish.lbx ya deja vacío \finalandcomma.
+\DefineBibliographyStrings{spanish}{and={y}}
+\DeclareDelimFormat[parencite,textcite,fullcite,fullcitebib]{finalnamedelim}{\addspace\bibstring{and}\space}
+\DeclareDelimFormat[bib,biblist]{finalnamedelim}{%
+  \ifthenelse{\value{listcount}>\maxprtauth}{}{\addspace\bibstring{and}\space}}
+% En la lista de referencias, apa.bbx agrega una coma tras cada nombre invertido salvo
+% el último («Taguchi, Y., & Chari, V.»); aquí tampoco la agrega tras el penúltimo.
+\makeatletter
+\renewcommand*{\apablx@ifnotfinalname}{%
+  \ifboolexpr{
+    test {\ifnumless{\value{listcount}}{\value{liststop}-1}}
+    or
+    test \ifmorenames
+    }}
+\makeatother
+\usepackage{xurl}
 
 % ---------- Acrónimos ----------
 \usepackage[acronym,toc,nomain,nonumberlist]{glossaries}
@@ -212,6 +230,9 @@
 \setcounter{table}{0}\setcounter{figure}{0}
 \renewcommand{\thetable}{\thechapter\arabic{table}}
 \renewcommand{\thefigure}{\thechapter\arabic{figure}}
+% Cada anexo reinicia la numeración de tablas y figuras (A1, B1, ...)
+\counterwithin*{table}{chapter}
+\counterwithin*{figure}{chapter}
 \input{anexos/anexos}
 
 \end{document}
