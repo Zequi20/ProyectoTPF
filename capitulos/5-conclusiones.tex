@@ -29,14 +29,14 @@ No se dispone de información sobre la profundidad & C con intervalo $\IL$ & Anc
 \setstretch{1}% interlineado simple dentro de las cajas del diagrama
 \begin{tikzpicture}[>=Stealth,font=\small,
   preg/.style={draw,rounded corners=3pt,fill=gray!8,text width=5.2cm,align=center,minimum height=12mm},
-  hoja/.style={draw,rounded corners=3pt,text width=5.4cm,align=center,minimum height=12mm,font=\small\bfseries}]
+  hoja/.style={draw,rounded corners=3pt,text width=6.0cm,align=center,minimum height=12mm,font=\small\bfseries}]
   \node[preg] (q1) at (0,0) {¿Se puede colocar un marcador coplanar con el pez?};
-  \node[hoja,fill=metAp!15] (h1) at (6.9,0) {\Aprime\\ \normalfont MAPE de LT $\approx$ 2--3~\%};
+  \node[hoja,fill=metAp!15] (h1) at (7.1,0) {\Aprime\\ \normalfont MAPE de LT $\approx$ 2--3~\%};
   \node[preg] (q2) at (0,-2.7) {¿Se conoce la distancia pez--vidrio?};
-  \node[hoja,fill=metC!15] (h2) at (6.9,-2.7) {C, o B con calibración bajo agua y lectura del riel\\ \normalfont MAPE de LT ${<}\,1$~\%};
+  \node[hoja,fill=metC!15] (h2) at (7.1,-2.7) {C, o B con calibración bajo agua y lectura del riel\\ \normalfont MAPE de LT ${<}\,1$~\%};
   \node[preg] (q3) at (0,-5.4) {¿Se puede acotar $z$ con una guía o una segunda vista?};
-  \node[hoja,fill=metC!15] (h3) at (6.9,-5.4) {C con intervalo $\IL$\\ \normalfont ancho 4--16~\% según la cota; cobertura 58/72 con $\pm 1$~cm};
-  \node[hoja,fill=metA!15] (h4) at (0,-8.1) {Solo intervalo $\IL$\\ \normalfont ancho de 56--82~\%};
+  \node[hoja,fill=metC!15] (h3) at (7.1,-5.4) {C con intervalo $\IL$\\ \normalfont ancho de 4--16~\% de LT según la cota; cobertura 58/72 con $\pm 1$~cm};
+  \node[hoja,fill=metA!15] (h4) at (0,-8.1) {Solo intervalo $\IL$\\ \normalfont ancho de 56--82~\% de LT};
   \draw[->] (q1) -- node[above,font=\footnotesize]{sí} (h1);
   \draw[->] (q1) -- node[right,font=\footnotesize]{no} (q2);
   \draw[->] (q2) -- node[above,font=\footnotesize]{sí} (h2);
