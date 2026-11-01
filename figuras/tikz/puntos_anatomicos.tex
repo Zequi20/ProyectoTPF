@@ -1,0 +1,38 @@
+% Puntos anatómicos y medidas (Figuras 2 y 11). Réplica de perfil mirando a la derecha,
+% como en las capturas: p1 en el extremo del lóbulo caudal más largo, p2 en el hocico,
+% p3 y p4 en los perfiles dorsal y ventral de la sección de mayor altura.
+\setstretch{1}% interlineado simple en los rótulos del dibujo
+\begin{tikzpicture}[font=\small,
+  contorno/.style={draw=black!70,line width=0.6pt},
+  aleta/.style={contorno,fill=black!12},
+  punto/.style={circle,draw=black,fill=white,line width=0.7pt,inner sep=0pt,minimum size=6pt}]
+  % Aleta caudal bifurcada (el lóbulo superior es el más largo)
+  \draw[aleta] (-4.0,0.55) -- (-6.2,1.9) -- (-5.3,0) -- (-5.9,-1.6) -- (-4.0,-0.55) -- cycle;
+  % Aletas dorsal y ventral, separadas de la sección p3--p4
+  \draw[aleta] (0.6,1.6) .. controls (1.0,2.35) and (1.9,2.35) .. (2.5,1.35) -- cycle;
+  \draw[aleta] (0.8,-1.55) .. controls (1.1,-2.25) and (1.8,-2.25) .. (2.2,-1.4) -- cycle;
+  % Cuerpo, aleta pectoral y ojo
+  \draw[contorno,fill=black!4] (0,0) ellipse [x radius=4.5,y radius=1.7];
+  \draw[aleta] (2.3,-0.35) .. controls (1.9,-0.6) and (1.5,-0.9) .. (1.4,-1.0)
+                .. controls (1.9,-0.95) and (2.3,-0.75) .. (2.5,-0.5) -- cycle;
+  \draw[contorno,fill=white] (3.5,0.45) circle (0.17);
+  \fill (3.5,0.45) circle (0.06);
+  % Eje longitudinal: dirección horizontal de la imagen
+  \draw[black!45,densely dotted,line width=0.6pt] (-6.2,0) -- (4.5,0);
+  % Proyección del extremo del lóbulo caudal sobre el eje
+  \draw[black!45,densely dotted,line width=0.6pt] (-6.2,1.9) -- (-6.2,0);
+  % Profundidad corporal sin aletas
+  \draw[{Latex[length=2.2mm]}-{Latex[length=2.2mm]},green!50!black,line width=0.9pt]
+    (0,1.58) -- (0,-1.58);
+  \node[fill=black!4,inner sep=2pt,align=center,text=green!50!black] at (-2.05,0)
+    {Profundidad corporal\\sin aletas};
+  % Longitud total
+  \draw[{Latex[length=2.4mm]}-{Latex[length=2.4mm]},blue!70!black,line width=0.9pt]
+    (-6.2,2.75) -- (4.5,2.75)
+    node[midway,above=1pt,text=blue!70!black] {Longitud total $\mathbf{p}_1$--$\mathbf{p}_2$};
+  % Puntos anatómicos
+  \node[punto,label={[inner sep=2pt]left:$\mathbf{p}_1$}] at (-6.2,0) {};
+  \node[punto,label={[inner sep=2pt]right:$\mathbf{p}_2$}] at (4.5,0) {};
+  \node[punto,label={[inner sep=2pt]above left:$\mathbf{p}_3$}] at (0,1.7) {};
+  \node[punto,label={[inner sep=2pt]below left:$\mathbf{p}_4$}] at (0,-1.7) {};
+\end{tikzpicture}

@@ -268,9 +268,9 @@ Desde la interfaz se carga la fotografía, se detectan los marcadores, se cargan
 
 En este trabajo se consideran dos medidas: la longitud total y la profundidad corporal. La longitud estándar y la longitud cefálica se excluyeron de manera deliberada, porque el marcado manual permite ubicar sin ambigüedad los extremos de las dos primeras, pero no la placa hipural ni el borde posterior del opérculo que requieren las otras dos; ambas quedan como antecedentes o trabajo futuro. La profundidad corporal se define de forma estricta, para que no se confunda con una dimensión que incluya las aletas.
 
-Para cada réplica se conservan las medidas físicas de referencia de la longitud total y de la profundidad corporal (Tabla~\ref{tab:replicas}). La medición con calibre y la estimación a partir de las imágenes siguieron la misma convención anatómica, la de la Sección~\ref{sec:puntos-def}. La longitud total va desde el extremo anterior del hocico ($\mathbf{p}_1$) hasta el punto más posterior de la aleta caudal sobre el eje longitudinal ($\mathbf{p}_2$); si la cola tiene dos lóbulos, $\mathbf{p}_2$ es el extremo del lóbulo más largo. La profundidad corporal va del perfil dorsal ($\mathbf{p}_3$) al perfil ventral ($\mathbf{p}_4$) en una misma sección transversal, sin incluir las aletas. La referencia física y las cuatro rutas, A, \Aprime, B y C, utilizan exactamente los mismos puntos para ambas medidas, lo que evita seleccionar, una vez observados los datos, la medida que más favorezca a un método.
+Para cada réplica se conservan las medidas físicas de referencia de la longitud total y de la profundidad corporal (Tabla~\ref{tab:replicas}). La medición con calibre y la estimación a partir de las imágenes siguieron la misma convención anatómica, la de la Sección~\ref{sec:puntos-def}. La longitud total va desde el punto más posterior de la aleta caudal sobre el eje longitudinal ($\mathbf{p}_1$; si la cola tiene dos lóbulos, el extremo del lóbulo más largo) hasta el extremo anterior del hocico ($\mathbf{p}_2$). La profundidad corporal va del perfil dorsal ($\mathbf{p}_3$) al perfil ventral ($\mathbf{p}_4$) en una misma sección transversal, sin incluir las aletas. La referencia física y las cuatro rutas, A, \Aprime, B y C, utilizan exactamente los mismos puntos para ambas medidas, lo que evita seleccionar, una vez observados los datos, la medida que más favorezca a un método.
 
-A diferencia de los trabajos de la Sección~\ref{sec:antecedentes}, que localizan los puntos anatómicos con redes neuronales, los cuatro puntos se marcaron a mano sobre la imagen original, con ese criterio anatómico fijo, y se indicó de forma explícita el eje longitudinal de la réplica, utilizado para proyectar las medidas. No hubo segmentación automática: cada captura se marcó una sola vez y las mismas coordenadas se reutilizaron en A, \Aprime, B y C. Un nuevo marcado, o una revisión independiente, permite estimar la repetibilidad del procedimiento, pero no lo convierte en una salida automática ni genera una nueva unidad experimental.
+A diferencia de los trabajos de la Sección~\ref{sec:antecedentes}, que localizan los puntos anatómicos con redes neuronales, los cuatro puntos se marcaron a mano sobre la imagen original, con ese criterio anatómico fijo. El eje longitudinal sobre el que se proyectan las medidas no se marcó: en todas las capturas se adoptó la dirección horizontal de la imagen, $(1, 0)$, porque las réplicas se ubicaron con su eje paralelo al riel (Sección~\ref{sec:implementacion}). No hubo segmentación automática: cada captura se marcó una sola vez y las mismas coordenadas se reutilizaron en A, \Aprime, B y C. Un nuevo marcado, o una revisión independiente, permite estimar la repetibilidad del procedimiento, pero no lo convierte en una salida automática ni genera una nueva unidad experimental.
 % TODO-LB4: criterio de selección de cada punto, nivel de ampliación usado en Fishmeter y procedimiento cuando el borde no se distingue
 
 La incertidumbre de la ubicación manual de los puntos se separa de la incertidumbre geométrica por profundidad. Quedaron registrados los casos en que el contorno, la postura o la visibilidad de una aleta dificultaron la ubicación de un punto, así como el motivo de cada exclusión. La Figura~\ref{fig:3-5} resume la ubicación de los cuatro puntos y lo que miden, y la Figura~\ref{fig:3-6} muestra los instrumentos con los que se obtuvieron las dimensiones físicas de referencia.
@@ -279,7 +279,7 @@ La incertidumbre de la ubicación manual de los puntos se separa de la incertidu
 \centering
 \caption[Puntos anatómicos empleados para la longitud total y la profundidad corporal]{Puntos anatómicos empleados para la longitud total y la profundidad corporal.}
 \label{fig:3-5}
-\includegraphics[width=0.7\textwidth]{fig3_5_puntos.png}
+\input{figuras/tikz/puntos_anatomicos}
 \fignota{Elaboración propia.}
 \end{figure}
 
@@ -289,7 +289,7 @@ Si $\mathbf{u}$ es el vector unitario del eje longitudinal y $\mathbf{n} = (-u_y
 \mathrm{PC} = \lvert (\mathbf{q}_4 - \mathbf{q}_3)\cdot\mathbf{n} \rvert,
 \label{eq:medidas}
 \end{equation}
-donde $\mathbf{q}_i$ son los puntos anatómicos ya convertidos a milímetros por cada ruta. En la práctica, LT es la proyección del segmento $\mathbf{p}_1$--$\mathbf{p}_2$ sobre el eje longitudinal; si los puntos se ubican sobre el eje, coincide con la distancia en línea recta, que es la que mide el calibre. En los registros del experimento los rótulos $\mathbf{p}_1$ y $\mathbf{p}_2$ quedaron invertidos respecto de esta definición, de modo que $\mathbf{p}_1$ se marcó en el extremo caudal y $\mathbf{p}_2$ en el hocico. Como LT se calcula con el valor absoluto de la proyección (ecuación~\ref{eq:medidas}), el orden de los puntos no modifica el resultado. La profundidad corporal se aceptó únicamente cuando la sección marcada era suficientemente perpendicular al eje; la aplicación guardó ese desvío como diagnóstico y permitió descartar una profundidad no válida.
+donde $\mathbf{q}_i$ son los puntos anatómicos ya convertidos a milímetros por cada ruta. En la práctica, LT es la proyección del segmento $\mathbf{p}_1$--$\mathbf{p}_2$ sobre el eje longitudinal; si los puntos se ubican sobre el eje, coincide con la distancia en línea recta, que es la que mide el calibre. Esta convención es la que registra la tabla maestra. Como LT se calcula con el valor absoluto de la proyección (ecuación~\ref{eq:medidas}), el orden de los dos puntos no modifica el resultado. La profundidad corporal se aceptó únicamente cuando la sección marcada era suficientemente perpendicular al eje; la aplicación guardó ese desvío como diagnóstico y permitió descartar una profundidad no válida.
 
 \begin{figure}[H]
 \centering
@@ -360,7 +360,7 @@ Estaba prevista una prueba complementaria con una barra patrón sumergida, desti
 \subsection{Implementación en Fishmeter}
 \label{sec:implementacion}
 
-En Fishmeter, los cuatro métodos comparten el principio y el final del cálculo. Todos parten de los mismos cuatro puntos y del mismo eje longitudinal marcados en la imagen; en todas las capturas, ese eje se indicó como la dirección horizontal de la imagen, $(1, 0)$. Todos terminan, también, en la misma operación, que consiste en proyectar los segmentos $\mathbf{p}_1$--$\mathbf{p}_2$ y $\mathbf{p}_3$--$\mathbf{p}_4$ sobre los ejes anatómicos. Lo que varía es el camino que lleva los píxeles a un espacio métrico: A y \Aprime{} llegan a un plano bidimensional en milímetros, mientras que B y C llegan a un plano ubicado en el espacio tridimensional de la cámara. La Tabla~\ref{tab:recorridos} resume ese camino con los nombres de las funciones del repositorio (Sección~\ref{sec:software}).
+En Fishmeter, los cuatro métodos comparten el principio y el final del cálculo. Todos parten de los mismos cuatro puntos marcados en la imagen y del mismo eje longitudinal; en todas las capturas, ese eje fue la dirección horizontal de la imagen, $(1, 0)$, sin marcado manual. Todos terminan, también, en la misma operación, que consiste en proyectar los segmentos $\mathbf{p}_1$--$\mathbf{p}_2$ y $\mathbf{p}_3$--$\mathbf{p}_4$ sobre los ejes anatómicos. Lo que varía es el camino que lleva los píxeles a un espacio métrico: A y \Aprime{} llegan a un plano bidimensional en milímetros, mientras que B y C llegan a un plano ubicado en el espacio tridimensional de la cámara. La Tabla~\ref{tab:recorridos} resume ese camino con los nombres de las funciones del repositorio (Sección~\ref{sec:software}).
 
 \begin{table}[H]
 \centering\footnotesize
@@ -378,7 +378,7 @@ C & Rayo en aire refractado en las interfaces aire--vidrio y vidrio--agua, e int
 \end{tabularx}
 \end{table}
 
-\paragraph{Método A.} La función \texttt{measure\_direct} calcula el factor $k$ de la ecuación~\eqref{eq:escala-impl} y multiplica por él las coordenadas de los cuatro puntos, $\mathbf{q}_i = k\,\mathbf{p}_i$. Dado que una escala uniforme no modifica las direcciones, el eje marcado en la imagen se utiliza sin cambios en el plano métrico. Cada resultado de A se acompaña de una advertencia automática que indica que la escala proviene del plano del vidrio y no corrige la separación entre planos, la perspectiva ni la refracción.
+\paragraph{Método A.} La función \texttt{measure\_direct} calcula el factor $k$ de la ecuación~\eqref{eq:escala-impl} y multiplica por él las coordenadas de los cuatro puntos, $\mathbf{q}_i = k\,\mathbf{p}_i$. Dado que una escala uniforme no modifica las direcciones, el eje de la imagen se utiliza sin cambios en el plano métrico. Cada resultado de A se acompaña de una advertencia automática que indica que la escala proviene del plano del vidrio y no corrige la separación entre planos, la perspectiva ni la refracción.
 
 \paragraph{Método \Aprime.} La misma función calcula con OpenCV la homografía que lleva las cuatro esquinas detectadas del marcador al cuadrado métrico de lado $L_m$, y la aplica a los cuatro puntos. Una homografía no conserva las direcciones de la imagen, por lo que el eje se transforma como una recta: Fishmeter toma $\mathbf{p}_1$ y un segundo punto desplazado sobre el eje, transforma ambos y utiliza como eje métrico la dirección que los une. El mismo procedimiento se aplica en B y en C.
 
@@ -433,7 +433,7 @@ Las 72 imágenes siguieron la misma secuencia, que se muestra en la Figura~\ref{
   met/.style={draw,rounded corners=2pt,minimum height=7mm,text width=1.6cm,align=center,font=\small\bfseries}]
   \node[caja] (a) {Imagen JPG original};
   \node[caja,right=of a] (b) {Control de visibilidad y enfoque};
-  \node[caja,right=of b] (c) {Marcado manual de $\mathbf{p}_1\ldots\mathbf{p}_4$ y eje};
+  \node[caja,right=of b] (c) {Marcado manual de $\mathbf{p}_1\ldots\mathbf{p}_4$};
   \node[caja,right=of c] (d) {Registro CSV y JSON por imagen};
   \node[met,fill=metA!15,below=9mm of b] (mA) {A};
   \node[met,fill=metAp!15,right=2mm of mA] (mAp) {\Aprime};
