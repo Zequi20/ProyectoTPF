@@ -65,9 +65,9 @@ Se incluyeron las capturas en las que la réplica se observaba completa y enfoca
 Las variables del estudio son de tres tipos:
 
 \begin{description}
-  \item[Independientes.] Método (A, \Aprime, B, C); distancia de la réplica al vidrio y separación respecto de la zona de calibración de B; rango de $z$ usado para el intervalo.
+  \item[Independientes.] Método (A, \Aprime, B, C); distancia de la réplica al vidrio (de la que se deriva la separación respecto de la zona de calibración de B); rango de $z$ usado para el intervalo.
   \item[Dependientes.] Error con signo, error absoluto y error porcentual de longitud total y de profundidad corporal sin aletas; ancho relativo y cobertura del intervalo.
-  \item[Controladas.] Cámara y sus ajustes, pecera, agua, iluminación, marcadores, soporte, protocolo de marcado manual, operador y unidades experimentales.
+  \item[Controladas.] Cámara y sus ajustes, pecera, agua, iluminación, marcadores, soporte, protocolo de marcado manual y operador.
 \end{description}
 
 La Tabla~\ref{tab:operacionalizacion} define cada variable en términos conceptuales y operacionales, y distingue los factores variados, los resultados medidos y las condiciones que se mantuvieron fijas.
@@ -82,13 +82,13 @@ Variable & Tipo & Definición conceptual & Definición operacional & Unidad \\
 \midrule
 \multicolumn{5}{@{}l}{\emph{Factores variados}}\\
 Método & Nominal & Ruta de conversión píxel--milímetro & A, \Aprime, B o C aplicados a los mismos puntos (Sección~\ref{sec:metodos}) & --- \\
-Distancia al vidrio & Razón; cuatro niveles & Profundidad $z$ del plano de simetría de la réplica & Posición del carrito: 5, 11, 17 o 23~cm; separación de la zona de B: 0, 6, 12 o 18~cm & cm \\
+Distancia al vidrio & Razón; cuatro niveles & Profundidad $z$ del plano de simetría de la réplica & Posición del carrito: 5, 11, 17 o 23~cm; de ella se deriva la separación de la zona de B (0, 6, 12 o 18~cm) & cm \\
 Escenario de profundidad & Nominal & Conocimiento disponible sobre $z$ & Tres escenarios: toda la pecera (límites 0 y 30~cm); $z$ nominal $\pm 3$~cm; $z$ nominal $\pm 1$~cm & --- \\
 \multicolumn{5}{@{}l}{\emph{Resultados medidos}}\\
 LT y PC estimadas & Razón & Longitud total y profundidad corporal de la réplica & Salida de Fishmeter por método, ecuación~\eqref{eq:medidas} & mm \\
 LT y PC de referencia & Razón & Dimensión física de la réplica & Media de tres lecturas con calibre analógico, registradas al milímetro & mm \\
-Error con signo, EA, EPA & Razón & Diferencia entre estimación y referencia & Ecuaciones~\eqref{eq:errores} & mm, mm, \% \\
-Ancho relativo de $\IL$ & Razón & Extensión del intervalo por profundidad desconocida & $(\max_z L - \min_z L)/\mathrm{LT}_{\mathrm{ref}}$ & \% \\
+Error con signo, EA, EPA & Razón & Diferencia entre estimación y referencia & Ecuación~\eqref{eq:errores} & mm, mm, \% \\
+Ancho relativo de $\IL$ & Razón & Extensión del intervalo por profundidad desconocida & $(\max_z L - \min_z L)/\mathrm{LT}_{\mathrm{ref}}$ (Sección~\ref{sec:intervalo-metodo}) & \% \\
 Cobertura de $\IL$ & Razón & Fracción de capturas cuya referencia cae en $\IL$ & Conteo sobre las capturas disponibles & --- \\
 \multicolumn{5}{@{}l}{\emph{Condiciones fijas}}\\
 Cámara, pecera, agua, luz, marcadores, soporte, operador & --- & Condiciones del montaje & Registradas en las Secciones~\ref{sec:montaje} y~\ref{sec:procedimiento} & --- \\
@@ -99,12 +99,12 @@ Cámara, pecera, agua, luz, marcadores, soporte, operador & --- & Condiciones de
 \section{Criterios de decisión para las hipótesis}
 \label{sec:criterios-hipotesis}
 
-Las hipótesis H1, H2 y H3 se enuncian en la Sección~\ref{sec:hipotesis}. Sus criterios de decisión se definen en términos de las cantidades calculadas en el Capítulo~\ref{cap:resultados}, con la réplica como unidad experimental y los estadísticos de la Sección~\ref{sec:evaluacion}. Los valores $p$ que se informan son nominales por comparación y no incluyen ajuste por comparaciones múltiples; los contrastes se interpretan de forma exploratoria, con prioridad en la magnitud de los errores y en el patrón observado entre réplicas.
+Las hipótesis H1, H2 y H3 se enuncian en la Sección~\ref{sec:hipotesis}. Sus criterios de decisión se definen en términos de las cantidades calculadas en el Capítulo~\ref{cap:resultados}, con la réplica como unidad experimental y los estadísticos de la Sección~\ref{sec:evaluacion}. Los valores $p$ que se informan son nominales por comparación y no incluyen ajuste por comparaciones múltiples; los contrastes se interpretan de forma exploratoria, con prioridad en la magnitud de los errores y en el patrón observado entre réplicas. Con seis réplicas, el menor valor $p$ que puede alcanzar una prueba de signos exacta de dos colas es 0,031 ($2 \times 0{,}5^{6}$), de modo que el contraste solo puede resultar significativo cuando las seis réplicas coinciden en el signo.
 
 \begin{description}
   \item[H1.] Prueba de signos exacta sobre las diferencias pareadas por réplica ($n = 6$, unidad experimental), con $p < 0{,}05$; el conteo por combinación réplica--profundidad se reporta como descriptivo. El protocolo preveía además evaluar la equivalencia entre B y C dentro de la zona de calibración de B con un margen $\delta$; esta evaluación no se realizó formalmente porque el margen no se fijó antes de observar los datos, y en su lugar se informa la diferencia observada.
   \item[H2.] Pendiente positiva de la diferencia de MAE de longitud total entre B y C frente a la separación (0, 6, 12 y 18~cm).
-  \item[H3.] Cobertura empírica objetivo $\geq 0{,}95$ sobre las capturas disponibles, y diferencia entre el ancho predicho y el observado menor que la mitad del ancho. El ancho relativo se reporta como predicción geométrica, no como intervalo de confianza.
+  \item[H3.] Cobertura empírica objetivo $\geq 0{,}95$ sobre las capturas disponibles, y diferencia entre el ancho predicho y el ancho numérico (calculado con C) menor que la mitad del ancho numérico. El ancho relativo se reporta como predicción geométrica, no como intervalo de confianza.
 \end{description}
 
 \section{Instrumentos y técnicas de recolección de datos}
@@ -218,10 +218,10 @@ Parámetro & Valor & Unidad & Cómo se obtuvo \\
 Normal del puerto $\mathbf{n}_\pi$ & $(0, 0, 1)$ & --- & Supuesta perpendicular; comprobada con escuadra \\
 Distancia cámara--vidrio $d$ & 230 & mm & Regla, desde el frente de la lente \\
 Espesor del vidrio $t_g$ & 4,0 & mm & Calibre \\
-Índice del aire $\mu_a$ & 1,000 & --- & Valor tabulado \\
-Índice del vidrio $\mu_g$ & 1,500 & --- & Valor tabulado (vidrio \emph{float}) \\
-Índice del agua $\mu_w$ & 1,333 & --- & Valor tabulado (agua dulce, 22~\si{\celsius}) \\
-Condiciones del agua & 22~\si{\celsius}; salinidad 0; 0~dbar & --- & Registradas en la configuración \\
+Índice del aire $\mu_a$ & 1,000 & --- & Valor tabulado \parencite{Hecht2017} \\
+Índice del vidrio $\mu_g$ & 1,500 & --- & Valor tabulado (vidrio \emph{float}; \cite{Hecht2017}) \\ % TODO-MATRIZ: verificar que 1,500 (vidrio float) figure en Hecht 2017
+Índice del agua $\mu_w$ & 1,333 & --- & Valor tabulado (agua dulce, 22~\si{\celsius}; \cite{Hecht2017}) \\
+Condiciones del agua & 22~\si{\celsius}, \mbox{agua dulce} & --- & Registradas en la configuración \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -447,7 +447,7 @@ Las 72 imágenes siguieron la misma secuencia, que se muestra en la Figura~\ref{
 \fignota{Elaboración propia.}
 \end{figure}
 
-Para que una medición pueda reproducirse, cada resultado debe guardar, junto con el valor estimado, la imagen de origen, el modo de corrección, el perfil de calibración, el marcador usado, el protocolo de marcado, el operador, la unidad y las advertencias de calidad. Con esa información se puede reconstruir el camino completo, desde la captura hasta la comparación con la referencia, y determinar si un error proviene de la adquisición, la corrección, el marcado o la conversión métrica. En este trabajo, cada registro de medición conserva además la fecha y cualquier revisión del marcado.
+Para que una medición pueda reproducirse, cada resultado debe guardar, junto con el valor estimado, la imagen de origen, el modo de corrección, el perfil de calibración, el marcador usado, el protocolo de marcado, el operador, la unidad y las advertencias de calidad. Con esa información se puede reconstruir el camino completo, desde la captura hasta la comparación con la referencia, y determinar si un error proviene de la adquisición, la corrección, el marcado o la conversión métrica. En este trabajo, cada registro de la tabla maestra conserva además el operador y la regla de marcado aplicada; la fecha del marcado y sus eventuales revisiones no se registraron.
 
 La tabla maestra guarda, para cada estimación, la réplica y la imagen, la distancia al vidrio, la repetición, el método, la medida, la referencia física, el valor estimado, el error, el estado de los puntos y del marcador, y el motivo de exclusión si lo hubo. De este modo, cada valor puede rastrearse hasta la fotografía original y sus coordenadas manuales. Los archivos de datos (imágenes, puntos, calibraciones y tabla maestra) y los scripts que regeneran las tablas y figuras del Capítulo~\ref{cap:resultados} están publicados (Anexo~\ref{anx:repositorio}).
 

@@ -28,7 +28,7 @@ Se estudió, por lo tanto, un flujo de medición con una sola cámara y puntos a
 
 Diversos trabajos han demostrado que de una imagen pueden extraerse tanto los puntos anatómicos de un pez como una referencia de escala, ya sea mediante algoritmos o de forma manual \parencite{Correia2025,Saleh2023,Tseng2020}. Los primeros enfoques se desarrollaron fuera del agua o en montajes controlados. \textcite{Monkman2019} detectaron el pez junto con un marcador ArUco colocado a su lado, aproximadamente en el mismo plano; \textcite{Fernandes2020} segmentaron imágenes de tilapia para extraer medidas corporales; y \textcite{Saleh2023} localizaron puntos anatómicos con fines morfométricos. Estos estudios confirman que las imágenes contienen información morfométrica aprovechable. Muestran también que la correcta ubicación de los puntos no es suficiente para obtener una medida física exacta, y ninguno de ellos considera lo que ocurre cuando la imagen se forma a través de una pared de vidrio y la escala varía con la profundidad.
 
-En condiciones subacuáticas se agrega una dificultad, dado que además de localizar al pez es necesario recuperar su escala o su profundidad. \textcite{AlJubouri2017} resolvieron este problema con dos cámaras ortogonales, y \textcite{Zhou2023} y \textcite{Seibold2026}, mediante visión estéreo y triangulación. MorphoCal emplea una sola cámara, aunque sumergida, y proyecta los puntos sobre un plano de referencia definido mediante una calibración \emph{pinhole} realizada bajo el agua \parencite{Vijayalakshmi2026}. \textcite{Yin2026} corrigieron la refracción en una interfaz aire--agua y analizaron el efecto de suponer distintas profundidades, pero trabajaron con una profundidad nominal y no informaron un intervalo de longitud. Pinax y CalibMar modelan puertos planos, aunque no fueron concebidos para medir peces \parencite{Luczynski2017,Seegraber2025}. En la bibliografía revisada no se encontró una evaluación monocular que compare A, \Aprime, B y C sobre los mismos puntos y que, además, cuantifique el intervalo de longitud cuando la profundidad es desconocida. La Sección~\ref{sec:antecedentes} desarrolla estos antecedentes y los compara en detalle.
+En condiciones subacuáticas se agrega una dificultad, dado que además de localizar al pez es necesario recuperar su escala o su profundidad. \textcite{AlJubouri2017} resolvieron este problema con dos cámaras ortogonales, y \textcite{Zhou2023} y \textcite{Seibold2026}, mediante visión estéreo y triangulación. MorphoCal emplea una sola cámara, aunque sumergida, y proyecta los puntos sobre un plano de referencia definido mediante una calibración \emph{pinhole} realizada bajo el agua \parencite{Vijayalakshmi2026}. \textcite{Yin2026} corrigieron la refracción en una interfaz aire--agua y analizaron el efecto de suponer distintas profundidades, pero trabajaron con una profundidad nominal y no informaron un intervalo de longitud. Pinax y CalibMar modelan puertos planos, aunque no fueron concebidos para medir peces \parencite{Luczynski2017,Seegraber2025}. En la bibliografía revisada no se encontró una evaluación monocular a través de un puerto plano que compare, sobre los mismos puntos e imágenes, una escala directa, una calibración implícita y una corrección refractiva explícita, que mida cómo cambia su error con la distancia al vidrio y que cuantifique el intervalo de longitud cuando la profundidad es desconocida. La Sección~\ref{sec:antecedentes} desarrolla estos antecedentes y los compara en detalle.
 
 
 La medición a partir de imágenes permitiría reducir la manipulación de los animales y observarlos con mayor frecuencia. El obstáculo es de naturaleza física: cuando la escena atraviesa la interfaz aire--vidrio--agua, la cámara deja de comportarse como una cámara perspectiva simple, y la refracción, sumada a la diferencia de profundidad entre el pez y el marcador de escala, puede producir una longitud aparente distinta de la real aunque los cuatro puntos anatómicos estén correctamente marcados.
@@ -40,6 +40,7 @@ El estudio se limita a réplicas rígidas vistas de perfil y a dos medidas, la l
 De esta brecha y de esta delimitación surgen las preguntas que orientaron la investigación.
 
 \subsection{Formulación del problema}
+\label{sec:formulacion}
 
 El problema se formula mediante una pregunta principal y dos preguntas secundarias.
 
@@ -71,7 +72,7 @@ Evaluar, en un montaje controlado con una interfaz aire--vidrio--agua, cuatro es
   \item Evaluar la sensibilidad de las estimaciones de C a las condiciones geométricas del montaje medidas a mano (distancia cámara--vidrio e índice de refracción del agua).
 \end{enumerate}
 
-Los objetivos 1, 2 y 3 construyen el conjunto de datos, el protocolo de marcado y las rutas sobre las que se trabaja; el objetivo 4 responde a la pregunta secundaria 1 y se contrasta con las hipótesis H1 y H2; el objetivo 5 responde a la pregunta principal y se contrasta con la hipótesis H3; y el objetivo 6 responde a la pregunta secundaria 2 (Sección~\ref{sec:hipotesis}). Las conclusiones del Capítulo~5 se presentan en ese mismo orden.
+Los objetivos 1, 2 y 3 construyen el conjunto de datos, el protocolo de marcado y las rutas sobre las que se trabaja; el objetivo 4 responde a la pregunta secundaria 1 y se contrasta con las hipótesis H1 y H2; el objetivo 5 responde a la pregunta principal y se contrasta con la hipótesis H3; y el objetivo 6 responde a la pregunta secundaria 2 (Sección~\ref{sec:formulacion}). Las conclusiones del Capítulo~5 se presentan en ese mismo orden.
 
 \section{Hipótesis}
 \label{sec:hipotesis}
@@ -79,7 +80,7 @@ Los objetivos 1, 2 y 3 construyen el conjunto de datos, el protocolo de marcado 
 Se plantean tres hipótesis de investigación. Los criterios con que se decide cada una se definen en la Sección~\ref{sec:criterios-hipotesis}.
 
 \begin{description}
-  \item[H1: comparación geométrica con profundidad conocida.] Con la profundidad conocida, el error absoluto de longitud total de C es menor que el de A, \Aprime{} y B. Responde a la pregunta secundaria 1 y a los objetivos 3 y 4.
+  \item[H1: comparación geométrica con profundidad conocida.] Con la profundidad conocida, el error absoluto de longitud total de C es menor que el de A, \Aprime{} y B. Responde a la pregunta secundaria 1 y al objetivo 4.
   \item[H2: dependencia con la distancia.] La diferencia $\mathrm{error}(B) - \mathrm{error}(C)$ aumenta con la separación respecto de la zona de calibración de B. Responde a la pregunta secundaria 1 y al objetivo 4.
   \item[H3: intervalo por profundidad desconocida.] El intervalo calculado con C, $\IL = [\min_z L(z), \max_z L(z)]$, contiene la longitud física de la réplica cuando $z$ recorre el rango físicamente admisible, y su ancho relativo puede predecirse a partir de la geometría del montaje ($d$, $t_g$, índices y rango de $z$). Responde a la pregunta principal y al objetivo 5.
 \end{description}

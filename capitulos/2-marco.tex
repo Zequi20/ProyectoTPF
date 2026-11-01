@@ -30,13 +30,13 @@ Los sistemas estéreo constituyen otra vía para obtener dimensiones físicas. \
 
 Los antecedentes de carácter óptico cumplen una función distinta. \textcite{Qiao2019} propusieron un método de estructura a partir del movimiento con un modelo refractivo, capaz de estimar la calibración, la pose de la cámara y la reconstrucción tridimensional a través de superficies que desvían la luz. Con simulaciones e imágenes reales mostraron que ignorar la refracción deforma la reconstrucción. Su objetivo, no obstante, es la reconstrucción de escenas y no la medición de peces.
 
-Para la calibración de cámaras que miran a través de interfaces planas, el modelo Pinax de \textcite{Luczynski2017} representa de forma explícita la refracción en una carcasa de puerto plano y corrige el camino de los rayos antes de reconstruir o medir. Es el antecedente conceptual más cercano a la ruta C, aunque fue concebido como corrección óptica general y no para comparar, en una misma captura monocular, una escala sin corregir, una calibración implícita y un modelo refractivo explícito. En la misma línea, \textcite{Rofallski2022} analizaron la distorsión que depende de la distancia cuando se aplican modelos de cámara convencionales a interfaces multimedia planas, y \textcite{Shortis2015} revisó las técnicas de calibración para medir bajo el agua. Ambos trabajos indican que la compensación implícita depende de la profundidad y que la calidad de una calibración no puede resumirse en un único valor válido para toda la zona de trabajo.
+Para la calibración de cámaras que miran a través de interfaces planas, el modelo Pinax de \textcite{Luczynski2017} representa de forma explícita la refracción en una carcasa de puerto plano y corrige el camino de los rayos antes de reconstruir o medir. Es el antecedente del modelo óptico de la ruta C, aunque fue concebido como corrección óptica general y no para comparar, en una misma captura monocular, una escala sin corregir, una calibración implícita y un modelo refractivo explícito. En la misma línea, \textcite{Rofallski2022} analizaron la distorsión que depende de la distancia cuando se aplican modelos de cámara convencionales a interfaces multimedia planas, y \textcite{Shortis2015} revisó las técnicas de calibración para medir bajo el agua. Ambos trabajos indican que la compensación implícita depende de la profundidad y que la calidad de una calibración no puede resumirse en un único valor válido para toda la zona de trabajo.
 
 Tres trabajos recientes permiten delimitar con precisión la brecha que aborda esta tesis. MorphoCal \parencite{Vijayalakshmi2026} utiliza una sola cámara, aunque sumergida, y proyecta los puntos sobre un plano de calibración fijo obtenido con un damero bajo el agua; reporta un error absoluto medio (MAE) de 0,75~cm y una raíz del error cuadrático medio (RMSE) de 0,86~cm sobre 4810 muestras. \textcite{Yin2026} corrigieron la refracción en la superficie agua--aire con la ley de Snell, suponiendo una profundidad nominal (aproximadamente 0,8~m), y analizaron el efecto de ese supuesto, sin informar un intervalo. \textcite{Zhou2023} resolvieron la profundidad con visión estéreo y corrigieron la refracción en la superficie. Ninguno de los tres considera una cámara ubicada del lado exterior de un vidrio plano, ni compara sobre los mismos puntos una escala directa, una calibración implícita y un modelo explícito.
 
 \textcite{Seegraber2025} desarrollaron CalibMar, una herramienta abierta que integra la calibración de la cámara, del par estéreo y de la carcasa para puertos planos o en cúpula. En un puerto plano, el modelo estima la orientación y la posición de la interfaz y representa el camino no central de los rayos. Es un antecedente instrumental, pero no incluye marcado anatómico, referencia ArUco ni evaluación de medidas de peces.
 
-El antecedente más cercano desde el punto de vista óptico es el de \textcite{Seibold2026}, quienes midieron la longitud de pequeños peces de agua dulce en acuarios con una cámara estéreo. Su método combina YOLOv11-Pose, correspondencias restringidas por geometría epipolar refractiva y una triangulación tridimensional que tiene en cuenta las interfaces aire--vidrio--agua. Sus mejores resultados fueron un RMSE de 6,11~mm y 9,22~mm en dos escenas de prueba. El trabajo confirma que la refracción debe incorporarse a la cadena de medición, pero utiliza dos cámaras, no emplea un marcador ArUco y no compara, sobre las mismas observaciones, una cadena con y sin corrección.
+El antecedente más cercano en la medición de peces a través de la pared de un acuario, con la refracción incorporada, es el de \textcite{Seibold2026}, quienes midieron la longitud de pequeños peces de agua dulce en acuarios con una cámara estéreo. Su método combina YOLOv11-Pose, correspondencias restringidas por geometría epipolar refractiva y una triangulación tridimensional que tiene en cuenta las interfaces aire--vidrio--agua. Sus mejores resultados fueron un RMSE de 6,11~mm y 9,22~mm en dos escenas de prueba. El trabajo confirma que la refracción debe incorporarse a la cadena de medición, pero utiliza dos cámaras, no emplea un marcador ArUco y no compara, sobre las mismas observaciones, una cadena con y sin corrección.
 
 La Tabla~\ref{tab:antecedentes} resume las diferencias. Sus cifras no permiten establecer un ordenamiento entre métodos, porque difieren la especie, el tamaño, la geometría, las medidas, los datos e incluso la definición de las métricas.
 
@@ -103,7 +103,7 @@ Existen sistemas que combinan medición de peces y refracción explícita, como 
 
 El estado del arte ha resuelto, por separado, varios componentes de la cadena: el marcado y la detección de puntos anatómicos, la recuperación de escala con marcadores o patrones, la calibración convencional de cámaras y el modelado explícito de la refracción en montajes acuáticos. También hay sistemas estéreo que combinan triangulación y refracción para medir peces.
 
-Lo que permanece abierto, para la configuración estudiada, es qué parte del error de una medición monocular a través de un puerto plano se debe al uso de una escala constante, de una calibración implícita o de una corrección refractiva explícita. En concreto, no se dispone de una comparación pareada que mantenga fijos los puntos marcados, la referencia ArUco y las imágenes; que mida cómo cambia el error al alejarse del plano de calibración; y que establezca qué puede afirmarse sobre la longitud cuando la profundidad no se conoce.
+Lo que permanece abierto, para la configuración estudiada, es qué parte del error de una medición monocular a través de un puerto plano se debe al uso de una escala constante, de una calibración implícita o de una corrección refractiva explícita. En concreto, en la bibliografía revisada no se encontró una evaluación monocular a través de un puerto plano que compare, sobre los mismos puntos e imágenes, una escala directa, una calibración implícita y una corrección refractiva explícita, que mida cómo cambia su error con la distancia al vidrio y que cuantifique el intervalo de longitud cuando la profundidad es desconocida.
 
 Esta tesis evaluó esa diferencia de forma experimental mediante las rutas A, \Aprime, B y C, la comparación contra una referencia manual y el análisis de la variación del error con la profundidad. El marcado manual es la entrada común; la contribución central es la evaluación geométrica y metrológica de las alternativas de conversión y la medida del intervalo por profundidad desconocida.
 
@@ -369,7 +369,7 @@ La ubicación de la cámara, el tamaño y el material del tanque, las distancias
 
 La profundidad $z$ es la distancia entre el objeto y la referencia geométrica del montaje, medida desde la cara interna del vidrio o en el sistema de coordenadas de la calibración. Cuando se conoce, cada rayo se interseca con el plano del objeto y se obtiene una estimación puntual.
 
-La profundidad es desconocida cuando una sola imagen no permite determinar a qué distancia del vidrio se encuentra el pez; en ese caso, cada valor admisible de $z$ produce una longitud distinta. Si $L(z)$ es la longitud que se obtiene al suponer la profundidad $z$, y $z$ puede tomar cualquier valor del rango físicamente posible, $z \in [z_{\min}, z_{\max}]$, el intervalo geométrico es
+La profundidad es desconocida cuando una sola imagen no permite determinar a qué distancia del vidrio se encuentra el pez; en ese caso, cada valor admisible de $z$ produce una longitud distinta. Si $L(z)$ es la longitud que se obtiene al suponer la profundidad $z$, y $z$ puede tomar cualquier valor del rango físicamente posible, $z \in [z_{\min}, z_{\max}]$, el intervalo geométrico, en una formulación propia a partir de la ecuación~\eqref{eq:Dz}, es
 \begin{equation}
 \IL = \Big[\min_{z \in [z_{\min}, z_{\max}]} L(z),\ \max_{z \in [z_{\min}, z_{\max}]} L(z)\Big].
 \label{eq:IL}
@@ -401,7 +401,7 @@ El diccionario, el identificador, el tamaño físico, la forma de cálculo elegi
 \subsubsection{Conversión entre píxeles y unidades físicas}
 \label{sec:conversion}
 
-En una escena frontal y casi plana, el tamaño conocido del marcador proporciona una escala local. Sea $L_m$ la longitud física de su lado y sean $p_i$, con $i = 1, \ldots, 4$, las longitudes en píxeles de sus cuatro lados detectados. Cada una se calcula a partir de dos esquinas consecutivas:
+En una escena frontal y casi plana, el tamaño conocido del marcador proporciona una escala local. Sea $L_m$ la longitud física de su lado y sean $p_i$, con $i = 1, \ldots, 4$, las longitudes en píxeles de sus cuatro lados detectados. Cada una se calcula a partir de dos esquinas consecutivas \parencite{Monkman2019}:
 \begin{equation}
 p_i = \sqrt{(x_{i+1} - x_i)^2 + (y_{i+1} - y_i)^2},
 \label{eq:lado}
@@ -415,7 +415,7 @@ k = \frac{1}{4}\sum_{i=1}^{4}\frac{L_m}{p_i},
 \end{equation}
 donde $k$ queda en unidades físicas por píxel, por ejemplo mm/píxel. El promedio de los cuatro lados reduce la dependencia de una sola detección y absorbe las pequeñas diferencias entre las longitudes observadas en la imagen.
 
-Si $d_f$ es la distancia en píxeles entre dos puntos anatómicos, la longitud física estimada es
+Si $d_f$ es la distancia en píxeles entre dos puntos anatómicos, la longitud física estimada \parencite{Monkman2019} es
 \begin{equation}
 \hat{L}_f = k\,d_f .
 \label{eq:Lf}
@@ -433,7 +433,7 @@ Una homografía es la transformación proyectiva que relaciona las coordenadas d
 \subsection{Estimación y evaluación morfométrica}
 \label{sec:metricas}
 
-Para evaluar una medición conviene distinguir tres propiedades. La exactitud indica cuán cerca se encuentra una estimación de la referencia física; la repetibilidad, cuánto se dispersan las repeticiones técnicas en las mismas condiciones; y la concordancia, si dos procedimientos producen valores comparables, lo que es una condición más exigente que la correlación \parencite{Bland1986,Lin1989}.
+Para evaluar una medición conviene distinguir tres propiedades. La exactitud indica cuán cerca se encuentra una estimación de la referencia física; la repetibilidad, cuánto se dispersan las repeticiones técnicas en las mismas condiciones; y la concordancia, si dos procedimientos producen valores comparables \parencite{Bland1986}.
 
 El error de medida es la diferencia entre el valor estimado y un valor de referencia, y el sesgo es una estimación de su componente sistemática \parencite{JCGM2012}. Para una estimación, el error con signo, el error absoluto y el error porcentual absoluto son
 \begin{equation}
