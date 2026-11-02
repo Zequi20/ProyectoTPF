@@ -253,10 +253,10 @@ Supuesto & Planos de las réplicas paralelos al tablero \\
 \end{tabular}
 \end{table}
 
-\subsection{Software utilizado}
+\subsection{\emph{Software} utilizado}
 \label{sec:software}
 
-Las imágenes se procesaron con Fishmeter, una aplicación propia escrita en Python 3.12. El código fuente y la documentación de uso están en el repositorio público \url{\RepoURL}, etiqueta \texttt{\RepoTag}. La aplicación usa OpenCV 5.0.0 para detectar marcadores, calibrar y aplicar transformaciones geométricas; NumPy 2.5.3 para el cálculo vectorial; PyYAML 6.0.3 para los archivos de configuración; y Tkinter, de la biblioteca estándar, para la interfaz gráfica. El análisis estadístico y las figuras del Capítulo~\ref{cap:resultados} se generaron con los scripts de la carpeta \texttt{analysis/} de ProyectoTPF (Anexo~\ref{anx:repositorio}), que usan la biblioteca estándar de Python (\texttt{csv}, \texttt{json}, \texttt{math} y \texttt{hashlib}, entre otros módulos), NumPy, Matplotlib y, para recalcular B y C, los módulos de Fishmeter; la prueba de signos exacta se calculó a partir de la distribución binomial (\texttt{math.comb}), sin bibliotecas estadísticas adicionales. Los perfiles de calibración de B y C se obtuvieron con la rutina \texttt{calibrateCamera} de OpenCV \parencite{Zhang2000}; CalibMar \parencite{Seegraber2025} opera solo como antecedente instrumental, y la ruta C utiliza el trazado de rayos implementado en la aplicación.
+Las imágenes se procesaron con Fishmeter, una aplicación propia escrita en Python 3.12. El código fuente y la documentación de uso están en el repositorio público \url{\RepoURL}, etiqueta \texttt{\RepoTag}. La aplicación usa OpenCV 5.0.0 para detectar marcadores, calibrar y aplicar transformaciones geométricas; NumPy 2.5.3 para el cálculo vectorial; PyYAML 6.0.3 para los archivos de configuración; y Tkinter, de la biblioteca estándar, para la interfaz gráfica. El análisis estadístico y las figuras del Capítulo~\ref{cap:resultados} se generaron con los \emph{scripts} de la carpeta \texttt{analysis/} de ProyectoTPF (Anexo~\ref{anx:repositorio}), que usan la biblioteca estándar de Python (\texttt{csv}, \texttt{json}, \texttt{math} y \texttt{hashlib}, entre otros módulos), NumPy, Matplotlib y, para recalcular B y C, los módulos de Fishmeter; la prueba de signos exacta se calculó a partir de la distribución binomial (\texttt{math.comb}), sin bibliotecas estadísticas adicionales. Los perfiles de calibración de B y C se obtuvieron con la rutina \texttt{calibrateCamera} de OpenCV \parencite{Zhang2000}; CalibMar \parencite{Seegraber2025} opera solo como antecedente instrumental, y la ruta C utiliza el trazado de rayos implementado en la aplicación.
 \\
 El módulo refractivo (\texttt{refractive\_port.py} y \texttt{snells\_law.py}) implementa las ecuaciones~\eqref{eq:va} a~\eqref{eq:rayo} e incluye pruebas unitarias de sanidad. Con $\mu_g = \mu_w = 1$ y $t_g = 0$, es decir, sin vidrio ni agua, reproduce la cámara \emph{pinhole}, y un rayo que viaja sobre el eje óptico no se desvía. Las pruebas de integración verifican que los cuatro métodos reciban las mismas coordenadas y que cada imagen produzca un registro trazable.
 
@@ -321,7 +321,7 @@ El experimento compara cuatro rutas geométricas aplicadas a los mismos puntos d
 \begin{tikzpicture}[scale=0.6,>=Stealth,font=\scriptsize]
 \foreach \x/\lab/\col/\txt in {0/A/metA/{escala del marcador\\en el vidrio},
                                6.4/\Aprime/metAp/{homografía del marcador\\coplanar con la réplica},
-                               12.8/B/metB/{pinhole efectivo\\calibrado bajo el agua},
+                               12.8/B/metB/{\emph{pinhole} efectivo\\calibrado bajo el agua},
                                19.2/C/metC/{rayo refractado dos veces\\(puerto plano)}}{
   \begin{scope}[shift={(\x,0)}]
     \fill[gray!25] (1.6,0) rectangle (1.85,3.6);
@@ -457,7 +457,7 @@ Las 72 imágenes siguieron la misma secuencia, que se muestra en la Figura~\ref{
 
 Para que una medición pueda reproducirse, cada resultado debe guardar, junto con el valor estimado, la imagen de origen, el modo de corrección, el perfil de calibración, el marcador usado, el procedimiento de marcado, el operador, la unidad y las advertencias de calidad. Con esa información se puede reconstruir el camino completo, desde la captura hasta la comparación con la referencia, y determinar si un error proviene de la adquisición, la corrección, el marcado o la conversión métrica. En este trabajo, cada registro de la tabla maestra conserva además el operador y la regla de marcado aplicada; la fecha del marcado y sus eventuales revisiones no se registraron.
 
-La tabla maestra guarda, para cada estimación, la réplica y la imagen, la distancia al vidrio, la repetición, el método, la medida, la referencia física, el valor estimado, el error, el estado de los puntos y del marcador, y el motivo de exclusión si lo hubo. De este modo, cada valor puede rastrearse hasta la fotografía original y sus coordenadas manuales. Los archivos de datos (imágenes, puntos, calibraciones y tabla maestra) y los scripts que regeneran las tablas y figuras del Capítulo~\ref{cap:resultados} están publicados (Anexo~\ref{anx:repositorio}).
+La tabla maestra guarda, para cada estimación, la réplica y la imagen, la distancia al vidrio, la repetición, el método, la medida, la referencia física, el valor estimado, el error, el estado de los puntos y del marcador, y el motivo de exclusión si lo hubo. De este modo, cada valor puede rastrearse hasta la fotografía original y sus coordenadas manuales. Los archivos de datos (imágenes, puntos, calibraciones y tabla maestra) y los \emph{scripts} que regeneran las tablas y figuras del Capítulo~\ref{cap:resultados} están publicados (Anexo~\ref{anx:repositorio}).
 
 \section{Evaluación de las estimaciones}
 \label{sec:evaluacion}
