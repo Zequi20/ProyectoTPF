@@ -350,9 +350,9 @@ El experimento compara cuatro rutas geométricas aplicadas a los mismos puntos d
 \end{figure}
 
 \begin{description}
-  \item[Método A: escala directa en el vidrio.] El marcador ArUco queda pegado a la pared y su tamaño conocido convierte píxeles en milímetros. Constituye la línea de base más realista, la que emplearía cualquier usuario con una cámara y un marcador, pero está afectada por el paralaje: si la réplica se encuentra a otra profundidad, su escala aparente es distinta, y A no corrige esa diferencia. Con el lado físico $L_m$ del marcador y el promedio $\bar{p}$ de las longitudes en píxeles de sus cuatro lados (ecuación~\ref{eq:lado}), la escala implementada es
+  \item[Método A: escala directa en el vidrio.] El marcador ArUco queda pegado a la pared y su tamaño conocido convierte píxeles en milímetros. Constituye la línea de base más realista, la que emplearía cualquier usuario con una cámara y un marcador, pero está afectada por el paralaje: si la réplica se encuentra a otra profundidad, su escala aparente es distinta, y A no corrige esa diferencia. Con el lado físico $L_m$ del marcador y el promedio $\bar{\ell}$ de las longitudes en píxeles de sus cuatro lados (ecuación~\ref{eq:lado}), la escala implementada es
   \begin{equation}
-    k = \frac{L_m}{\bar{p}}, \qquad \bar{p} = \frac{1}{4}\sum_{i=1}^{4} p_i,
+    k = \frac{L_m}{\bar{\ell}}, \qquad \bar{\ell} = \frac{1}{4}\sum_{i=1}^{4} \ell_i,
     \label{eq:escala-impl}
   \end{equation}
   que difiere de la ecuación~\eqref{eq:escala-monkman} solo en el orden en que se promedia; para marcadores correctamente detectados, ambas coinciden hasta la tercera cifra. Cada punto se transforma como $\mathbf{q}_i = k\,\mathbf{p}_i$ y las medidas se obtienen con la ecuación~\eqref{eq:medidas}.

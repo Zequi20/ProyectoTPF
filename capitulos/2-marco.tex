@@ -403,16 +403,16 @@ El diccionario, el identificador, el tamaño físico, la forma de cálculo elegi
 \subsubsection{Conversión entre píxeles y unidades físicas}
 \label{sec:conversion}
 
-En una escena frontal y casi plana, el tamaño conocido del marcador proporciona una escala local. Sea $L_m$ la longitud física de su lado y sean $p_i$, con $i = 1, \ldots, 4$, las longitudes en píxeles de sus cuatro lados detectados. Cada una se calcula a partir de dos esquinas consecutivas \parencite{Monkman2019}:
+En una escena frontal y casi plana, el tamaño conocido del marcador proporciona una escala local. Sea $L_m$ la longitud física de su lado y sean $\ell_i$, con $i = 1, \ldots, 4$, las longitudes en píxeles de sus cuatro lados detectados. Cada una se calcula a partir de dos esquinas consecutivas \parencite{Monkman2019}:
 \begin{equation}
-p_i = \sqrt{(x_{i+1} - x_i)^2 + (y_{i+1} - y_i)^2},
+\ell_i = \sqrt{(x_{i+1} - x_i)^2 + (y_{i+1} - y_i)^2},
 \label{eq:lado}
 \end{equation}
 donde, para cerrar el contorno, se toma $(x_5, y_5) = (x_1, y_1)$.
 
 \textcite{Monkman2019} estiman la cantidad de milímetros que representa un píxel promediando las escalas de los cuatro lados del marcador:
 \begin{equation}
-k = \frac{1}{4}\sum_{i=1}^{4}\frac{L_m}{p_i},
+k = \frac{1}{4}\sum_{i=1}^{4}\frac{L_m}{\ell_i},
 \label{eq:escala-monkman}
 \end{equation}
 donde $k$ queda en unidades físicas por píxel, por ejemplo mm/píxel. El promedio de los cuatro lados reduce la dependencia de una sola detección y absorbe las pequeñas diferencias entre las longitudes observadas en la imagen.
