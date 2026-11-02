@@ -1,0 +1,34 @@
+# Archivos que genera la compilación de LaTeX (latexmk / LaTeX Workshop)
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.synctex(busy)
+*.toc
+*.xdv
+*.glg
+*.glo
+*.gls
+*.acn
+*.acr
+*.alg
+*.ist
+*.slg
+*.syg
+*.syi
+
+# PDF de la tesis (se regenera al compilar)
+/main.pdf
+
+# Renderizados temporales y caché de Python
+/tmp/
+__pycache__/
+*.pyc
