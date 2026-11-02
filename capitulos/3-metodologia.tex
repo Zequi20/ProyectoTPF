@@ -71,7 +71,7 @@ Las variables del estudio son de tres tipos:
 
 \begin{description}
   \item[Independientes.] Método (A, \Aprime, B, C); posición nominal $z_0$ de la réplica respecto del vidrio (de la que se deriva la separación respecto de la zona de calibración de B); rango de $z$ usado para el intervalo.
-  \item[Dependientes.] Error con signo, error absoluto y error porcentual de longitud total y de profundidad corporal sin aletas; ancho relativo y cobertura del intervalo.
+  \item[Dependientes.] Error con signo, error absoluto y error porcentual de LT y de PC sin aletas; ancho relativo y cobertura del intervalo.
   \item[Controladas.] Cámara y sus ajustes, pecera, agua, iluminación, marcadores, soporte, procedimiento de marcado manual y operador.
 \end{description}
 
@@ -90,7 +90,7 @@ Método & Nominal & Ruta de conversión píxel--milímetro & A, \Aprime, B o C a
 Distancia al vidrio & Razón; cuatro niveles & Profundidad $z$ de la réplica respecto de la cara interna del vidrio & Posición nominal $z_0$ del carrito: 5, 11, 17 o 23~cm; de ella se deriva la separación de la zona de B (0, 6, 12 o 18~cm) & cm \\
 Escenario de profundidad & Nominal & Conocimiento disponible sobre $z$ & Tres escenarios: rango admisible de toda la pecera ($z \in [0, 30]$~cm); ventana $z_0 \pm 3$~cm; ventana $z_0 \pm 1$~cm & --- \\
 \multicolumn{5}{@{}l}{\emph{Resultados medidos}}\\
-LT y PC estimadas & Razón & Longitud total y profundidad corporal de la réplica & Salida de Fishmeter por método, ecuación~\eqref{eq:medidas} & mm \\
+LT y PC estimadas & Razón & LT y PC de la réplica (Sección~\ref{sec:puntos-def}) & Salida de Fishmeter por método, ecuación~\eqref{eq:medidas} & mm \\
 LT y PC de referencia & Razón & Dimensión física de la réplica & Media de tres lecturas con calibre analógico de 160~mm (escuadra y regla para la LT de R6), registradas al milímetro & mm \\
 Error con signo, EA, EPA & Razón & Diferencia entre estimación y referencia & Ecuación~\eqref{eq:errores} & mm, mm, \% \\
 Ancho relativo de $\IL$ & Razón & Extensión del intervalo por profundidad desconocida & $(\max_z L - \min_z L)/\mathrm{LT}_{\mathrm{ref}}$ (Sección~\ref{sec:intervalo-metodo}) & \% \\
@@ -108,7 +108,7 @@ Las hipótesis H1, H2 y H3 se enuncian en la Sección~\ref{sec:hipotesis}. Sus c
 
 \begin{description}
   \item[H1.] Prueba de signos exacta sobre las diferencias pareadas por réplica ($n = 6$, unidad experimental), con $p < 0{,}05$; el conteo por combinación réplica--posición se reporta como descriptivo. El protocolo preveía además evaluar la equivalencia entre B y C dentro de la zona de calibración de B con un margen $\delta$; esta evaluación no se realizó formalmente porque el margen no se fijó antes de observar los datos, y en su lugar se informa la diferencia observada.
-  \item[H2.] Pendiente positiva de la diferencia de MAE de longitud total entre B y C frente a la separación (0, 6, 12 y 18~cm).
+  \item[H2.] Pendiente positiva de la diferencia de MAE de LT entre B y C frente a la separación (0, 6, 12 y 18~cm).
   \item[H3.] Cobertura empírica objetivo $\geq 0{,}95$ sobre las capturas disponibles, y diferencia entre el ancho predicho y el ancho numérico (calculado con C) menor que la mitad del ancho numérico. El ancho relativo se reporta como predicción geométrica, no como intervalo de confianza.
 \end{description}
 
@@ -124,7 +124,7 @@ El ensayo se realizó en una pecera de aproximadamente $30 \times 30 \times 30$~
 
 La cámara utilizada fue la de un teléfono de uso corriente, un Realme C71 RMX5303 Dual. Las capturas se guardaron en JPG a $4096 \times 3072$ píxeles, con la configuración bloqueada durante todo el ensayo: ISO 640, velocidad de obturación 1/25~s, enfoque 0,76 y balance de blancos 5600~K. El modelo de C define $d$ como la distancia entre el centro de proyección de la cámara y la primera interfaz aire--vidrio (Sección~\ref{sec:puerto-plano}). En el montaje se midió con regla la distancia entre el frente de la lente y el vidrio, 230~mm, y ese valor se introdujo como aproximación de $d$; el archivo de configuración del puerto deja constancia de esa procedencia (Anexo~\ref{anx:flatport}). La separación $\Delta$ entre el frente de la lente y el centro de proyección no se midió, y el procesamiento no aplicó ninguna corrección por ella: si el centro de proyección se encuentra $\Delta$ milímetros dentro del teléfono, la distancia coherente con el modelo es $230 + \Delta$~mm. El efecto de esa aproximación se acota en la Sección~\ref{sec:sensibilidad} y se declara como fuente de incertidumbre (Sección~\ref{sec:limitaciones}). Con una escuadra se comprobó que el eje de la cámara fuera aproximadamente perpendicular al vidrio.
 
-La iluminación se mantuvo constante, con un foco de bajo consumo de 12~W en el techo de la habitación y la pecera debajo. La réplica se montó en un carrito que se desliza sobre un riel, ambos impresos en PLA. Este soporte permitió repetir las posiciones nominales y mantener la réplica con una orientación similar entre capturas. En este trabajo, $z$ designa la distancia entre el plano de simetría de la réplica y la cara interna del vidrio, es decir, la profundidad de la réplica, que no debe confundirse con la profundidad corporal (PC); $z_0$, la posición nominal, cada uno de los cuatro valores del ensayo en que se ubicó la réplica (5, 11, 17 y 23~cm); $z_{\mathrm{riel}}$, la lectura del riel (0, 60, 120 y 180~mm), que solo utiliza B; y $d$, la distancia cámara--vidrio. La separación respecto de la zona de calibración de B (0, 6, 12 y 18~cm) se deriva de $z_0$, y el rango admisible de $z$ y las ventanas centradas en $z_0$ se definen en la Sección~\ref{sec:intervalo-metodo}. La Tabla~\ref{tab:posiciones} relaciona la posición nominal de cada captura con la lectura del riel y con el origen de coordenadas que utiliza B. El cero del riel coincide con la posición nominal de 5~cm, donde se calibró B; por ese motivo B recibió como posición del plano de medición la lectura del riel, $z_{\mathrm{riel}} = z_0 - 50$~mm, mientras que C utilizó la distancia absoluta a la cara interna del vidrio, $z = z_0$.
+La iluminación se mantuvo constante, con un foco de bajo consumo de 12~W en el techo de la habitación y la pecera debajo. La réplica se montó en un carrito que se desliza sobre un riel, ambos impresos en PLA. Este soporte permitió repetir las posiciones nominales y mantener la réplica con una orientación similar entre capturas. En este trabajo, $z$ designa la distancia entre el plano de simetría de la réplica y la cara interna del vidrio, es decir, la profundidad de la réplica, que no debe confundirse con la PC; $z_0$, la posición nominal, cada uno de los cuatro valores del ensayo en que se ubicó la réplica (5, 11, 17 y 23~cm); $z_{\mathrm{riel}}$, la lectura del riel (0, 60, 120 y 180~mm), que solo utiliza B; y $d$, la distancia cámara--vidrio. La separación respecto de la zona de calibración de B (0, 6, 12 y 18~cm) se deriva de $z_0$, y el rango admisible de $z$ y las ventanas centradas en $z_0$ se definen en la Sección~\ref{sec:intervalo-metodo}. La Tabla~\ref{tab:posiciones} relaciona la posición nominal de cada captura con la lectura del riel y con el origen de coordenadas que utiliza B. El cero del riel coincide con la posición nominal de 5~cm, donde se calibró B; por ese motivo B recibió como posición del plano de medición la lectura del riel, $z_{\mathrm{riel}} = z_0 - 50$~mm, mientras que C utilizó la distancia absoluta a la cara interna del vidrio, $z = z_0$.
 
 \begin{figure}[H]
 \centering
@@ -273,9 +273,9 @@ Desde la interfaz se carga la fotografía, se detectan los marcadores, se cargan
 \subsection{Medidas físicas y puntos anatómicos}
 \label{sec:medidas}
 
-En este trabajo se consideran dos medidas: la longitud total y la profundidad corporal. La LE y la longitud cefálica se excluyeron de manera deliberada, porque el marcado manual permite ubicar sin ambigüedad los extremos de las dos primeras, pero no la placa hipural ni el borde posterior del opérculo que requieren las otras dos; ambas quedan como antecedentes o trabajo futuro. La profundidad corporal se define de forma estricta, para que no se confunda con una dimensión que incluya las aletas.
+En este trabajo se consideran dos medidas: la LT y la PC. La LE y la longitud cefálica se excluyeron de manera deliberada, porque el marcado manual permite ubicar sin ambigüedad los extremos de las dos primeras, pero no la placa hipural ni el borde posterior del opérculo que requieren las otras dos; ambas quedan como antecedentes o trabajo futuro. La PC se define de forma estricta, para que no se confunda con una dimensión que incluya las aletas.
 
-Para cada réplica se conservan las medidas físicas de referencia de la longitud total y de la profundidad corporal (Tabla~\ref{tab:replicas}). La medición con calibre y la estimación a partir de las imágenes siguieron la misma convención anatómica, la de la Sección~\ref{sec:puntos-def}. La longitud total va desde el punto más posterior de la aleta caudal sobre el eje longitudinal ($\mathbf{p}_1$; si la cola tiene dos lóbulos, el extremo del lóbulo más largo) hasta el extremo anterior del hocico ($\mathbf{p}_2$). La profundidad corporal va del perfil dorsal ($\mathbf{p}_3$) al perfil ventral ($\mathbf{p}_4$) en una misma sección transversal, sin incluir las aletas. La referencia física y las cuatro rutas, A, \Aprime, B y C, utilizan exactamente los mismos puntos para ambas medidas, lo que evita seleccionar, una vez observados los datos, la medida que más favorezca a un método.
+Según la definición de la Sección~\ref{sec:puntos-def}, la LT se toma entre el punto más posterior de la aleta caudal sobre el eje longitudinal ($\mathbf{p}_1$; si la cola tiene dos lóbulos, el extremo del lóbulo más largo) y el extremo anterior del hocico ($\mathbf{p}_2$), y la PC, entre el perfil dorsal ($\mathbf{p}_3$) y el perfil ventral ($\mathbf{p}_4$) de una misma sección transversal. La medición con calibre de las referencias (Tabla~\ref{tab:replicas}) y la estimación a partir de las imágenes siguieron esa misma convención. La referencia física y las cuatro rutas, A, \Aprime, B y C, utilizan exactamente los mismos puntos para ambas medidas, lo que evita seleccionar, una vez observados los datos, la medida que más favorezca a un método.
 
 A diferencia de los trabajos de la Sección~\ref{sec:antecedentes}, que localizan los puntos anatómicos con redes neuronales, los cuatro puntos se marcaron a mano sobre la imagen original, con ese criterio anatómico fijo. El eje longitudinal sobre el que se proyectan las medidas no se marcó: en todas las capturas se adoptó la dirección horizontal de la imagen, $(1, 0)$, porque las réplicas se ubicaron con su eje paralelo al riel (Sección~\ref{sec:implementacion}). No hubo segmentación automática: cada captura se marcó una sola vez y las mismas coordenadas se reutilizaron en A, \Aprime, B y C. Un nuevo marcado, o una revisión independiente, permite estimar la repetibilidad del procedimiento, pero no lo convierte en una salida automática ni genera una nueva unidad experimental.
 
@@ -285,7 +285,7 @@ La incertidumbre de la ubicación manual de los puntos se separa de la incertidu
 
 \begin{figure}[H]
 \centering
-\caption[Puntos anatómicos empleados para la longitud total y la profundidad corporal]{Puntos anatómicos empleados para la longitud total y la profundidad corporal.}
+\caption[Puntos anatómicos empleados para la LT y la PC]{Puntos anatómicos empleados para la LT y la PC.}
 \label{fig:3-5}
 \input{figuras/tikz/puntos_anatomicos}
 \fignota{Elaboración propia.}
@@ -297,7 +297,7 @@ Si $\mathbf{u}$ es el vector unitario del eje longitudinal y $\mathbf{n} = (-u_y
 \mathrm{PC} = \lvert (\mathbf{q}_4 - \mathbf{q}_3)\cdot\mathbf{n} \rvert,
 \label{eq:medidas}
 \end{equation}
-donde $\mathbf{q}_i$ son los puntos anatómicos ya convertidos a milímetros por cada ruta. En la práctica, LT es la proyección del segmento $\mathbf{p}_1$--$\mathbf{p}_2$ sobre el eje longitudinal; si los puntos se ubican sobre el eje, coincide con la distancia en línea recta, que es la que mide el calibre. Esta convención es la que registra la tabla maestra. Como LT se calcula con el valor absoluto de la proyección (ecuación~\ref{eq:medidas}), el orden de los dos puntos no modifica el resultado. La profundidad corporal se aceptó únicamente cuando la sección marcada era suficientemente perpendicular al eje; la aplicación guardó ese desvío como diagnóstico y permitió descartar una PC no válida.
+donde $\mathbf{q}_i$ son los puntos anatómicos ya convertidos a milímetros por cada ruta. En la práctica, LT es la proyección del segmento $\mathbf{p}_1$--$\mathbf{p}_2$ sobre el eje longitudinal; si los puntos se ubican sobre el eje, coincide con la distancia en línea recta, que es la que mide el calibre. Esta convención es la que registra la tabla maestra. Como LT se calcula con el valor absoluto de la proyección (ecuación~\ref{eq:medidas}), el orden de los dos puntos no modifica el resultado. La PC se aceptó únicamente cuando la sección marcada era suficientemente perpendicular al eje; la aplicación guardó ese desvío como diagnóstico y permitió descartar una PC no válida.
 
 \begin{figure}[H]
 \centering
@@ -410,7 +410,7 @@ Los dos puntos que definen el eje se trazan de la misma forma, de modo que los p
 \mathbf{n} = \mathbf{s} \times \mathbf{u} .
 \label{eq:ejes-3d}
 \end{equation}
-Con estos ejes, LT y PC se obtienen con la misma ecuación~\eqref{eq:medidas}, con los puntos tridimensionales $\mathbf{P}_i$ en lugar de $\mathbf{q}_i$. En los cuatro métodos, la profundidad corporal se valida con el ángulo de la sección,
+Con estos ejes, LT y PC se obtienen con la misma ecuación~\eqref{eq:medidas}, con los puntos tridimensionales $\mathbf{P}_i$ en lugar de $\mathbf{q}_i$. En los cuatro métodos, la PC se valida con el ángulo de la sección,
 \begin{equation}
 \theta = \arctan\frac{\lvert (\mathbf{q}_4 - \mathbf{q}_3)\cdot\mathbf{u} \rvert}{\lvert (\mathbf{q}_4 - \mathbf{q}_3)\cdot\mathbf{n} \rvert},
 \label{eq:angulo-seccion}

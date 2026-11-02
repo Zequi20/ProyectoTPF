@@ -33,7 +33,7 @@ La medición a partir de imágenes permitiría reducir la manipulación de los a
 
 La dificultad metodológica consiste en separar tres efectos que suelen presentarse combinados: la escala directa de un marcador adherido al vidrio, la calibración aproximada de una cámara bajo el agua y el modelado explícito de los rayos a través del puerto plano. Para aislarlos, se compararon las rutas A, \Aprime, B y C en la misma imagen y sobre los mismos puntos anatómicos, y se evaluó además la ruta C sobre todo el rango de profundidades físicamente posibles. El resultado de esta última evaluación es un rango geométrico y no un intervalo de confianza estadístico: $[\min_{z} L(z), \max_{z} L(z)]$, es decir, el conjunto de longitudes compatibles con desconocer la posición de $z$ dentro de $[z_{\min}, z_{\max}]$. La notación abreviada $[L(z_{\min}), L(z_{\max})]$ solo es válida cuando $L(z)$ es monótona en ese intervalo.
 
-El estudio se limita a réplicas rígidas vistas de perfil y a dos medidas, la longitud total y la profundidad corporal, esta última tomada sobre el cuerpo y sin incluir las aletas. Los cuatro puntos anatómicos se marcaron a mano una sola vez sobre cada imagen original y se reutilizaron en las cuatro rutas. Las capturas repetidas de una misma réplica se consideran repeticiones técnicas y no unidades experimentales independientes. Esta delimitación permitió aislar el efecto geométrico, a costa de no poder extender las conclusiones de manera directa a peces vivos, en movimiento, en agua turbia, parcialmente ocultos o en posturas distintas de la de perfil.
+El estudio se limita a réplicas rígidas vistas de perfil y a dos medidas, la longitud total (LT) y la profundidad corporal (PC), esta última tomada sobre el cuerpo y sin incluir las aletas. Los cuatro puntos anatómicos se marcaron a mano una sola vez sobre cada imagen original y se reutilizaron en las cuatro rutas. Las capturas repetidas de una misma réplica se consideran repeticiones técnicas y no unidades experimentales independientes. Esta delimitación permitió aislar el efecto geométrico, a costa de no poder extender las conclusiones de manera directa a peces vivos, en movimiento, en agua turbia, parcialmente ocultos o en posturas distintas de la de perfil.
 
 De esta brecha y de esta delimitación surgen las preguntas que orientaron la investigación.
 
@@ -49,7 +49,7 @@ El problema se formula mediante una pregunta principal, dos preguntas secundaria
 \subsubsection*{Preguntas secundarias}
 
 \begin{enumerate}
-  \item Con $z$ conocida, ¿cómo se comportan A, \Aprime, B y C en longitud total y en profundidad corporal, y cómo cambia el error de A y de B al alejarse de la zona de calibración de B?
+  \item Con $z$ conocida, ¿cómo se comportan A, \Aprime, B y C en LT y en PC, y cómo cambia el error de A y de B al alejarse de la zona de calibración de B?
   \item ¿Qué sensibilidad tiene la estimación de C a los parámetros geométricos del montaje medidos a mano (distancia cámara--vidrio e índice de refracción del agua)?
 \end{enumerate}
 
@@ -67,7 +67,7 @@ Las preguntas de diseño se refieren a los medios necesarios para responder las 
 
 \subsection{Objetivo general}
 
-Evaluar, en un montaje controlado con una interfaz aire--vidrio--agua, cuatro estrategias de conversión métrica para estimar con una sola cámara la longitud total y la profundidad corporal de peces, comparándolas sobre los mismos puntos anatómicos contra referencias físicas de réplicas rígidas, y cuantificar con un modelo refractivo de puerto plano el intervalo de longitud que introduce una profundidad desconocida.
+Evaluar, en un montaje controlado con una interfaz aire--vidrio--agua, cuatro estrategias de conversión métrica para estimar con una sola cámara la LT y la PC de peces, comparándolas sobre los mismos puntos anatómicos contra referencias físicas de réplicas rígidas, y cuantificar con un modelo refractivo de puerto plano el intervalo de longitud que introduce una profundidad desconocida.
 
 \subsection{Objetivos específicos}
 
@@ -75,7 +75,7 @@ Evaluar, en un montaje controlado con una interfaz aire--vidrio--agua, cuatro es
   \item Construir y documentar el conjunto de datos de réplicas, referencias físicas, posiciones, repeticiones y exclusiones.
   \item Documentar y aplicar un procedimiento de marcado manual de los cuatro puntos anatómicos, único por imagen y compartido por las cuatro rutas.
   \item Implementar y validar las rutas A, \Aprime, B y C, incluido el módulo C de puerto plano, frente a las referencias físicas de las réplicas.
-  \item Comparar el error de longitud total y de profundidad corporal de A, \Aprime, B y C sobre las mismas imágenes, y analizar cómo varía ese error con la distancia de la réplica al vidrio.
+  \item Comparar el error de LT y de PC de A, \Aprime, B y C sobre las mismas imágenes, y analizar cómo varía ese error con la distancia de la réplica al vidrio.
   \item Calcular el intervalo $[\min_z L(z), \max_z L(z)]$ sobre el rango físicamente admisible de profundidad y sobre ventanas acotadas de $\pm 3$ y $\pm 1$~cm, junto con su ancho relativo y su cobertura.
   \item Evaluar la sensibilidad de las estimaciones de C a las condiciones geométricas del montaje medidas a mano (distancia cámara--vidrio e índice de refracción del agua).
 \end{enumerate}
@@ -88,7 +88,7 @@ Cada objetivo específico responde a una pregunta de la Sección~\ref{sec:formul
 Se plantean tres hipótesis de investigación. Los criterios con que se decide cada una se definen en la Sección~\ref{sec:criterios-hipotesis}.
 
 \begin{description}
-  \item[H1: comparación geométrica con profundidad conocida.] Con la profundidad conocida, el error absoluto de longitud total de C es menor que el de A, \Aprime{} y B. Responde a la pregunta secundaria 1 y al objetivo 4.
+  \item[H1: comparación geométrica con profundidad conocida.] Con la profundidad conocida, el error absoluto de LT de C es menor que el de A, \Aprime{} y B. Responde a la pregunta secundaria 1 y al objetivo 4.
   \item[H2: dependencia con la distancia al vidrio.] La diferencia $\mathrm{error}(B) - \mathrm{error}(C)$ aumenta con la separación respecto de la zona de calibración de B. Responde a la pregunta secundaria 1 y al objetivo 4.
   \item[H3: intervalo por profundidad desconocida.] El intervalo calculado con C, $\IL = [\min_z L(z), \max_z L(z)]$, contiene la longitud física de la réplica cuando $z$ recorre el rango físicamente admisible, y su ancho relativo puede predecirse a partir de la geometría del montaje ($d$, $t_g$, índices y rango de $z$). Responde a la pregunta principal y al objetivo 5.
 \end{description}

@@ -12,13 +12,13 @@ Se realizó una revisión narrativa estructurada de los trabajos sobre medición
 
 \textcite{Petrtyl2014} midieron 18 caracteres morfométricos de carpa prusiana de dos maneras, con calibre digital y sobre imágenes, y repitieron las medidas con dos investigadores. Los sesgos relativos medios fueron de $-4{,}27$~\% a $9{,}48$~\%, y en varias comparaciones las diferencias resultaron significativas. Es decir, ni la medición manual ni la digital están libres de sesgo, y ambas cambian según quién mide y cuántas veces. Por eso en este trabajo la referencia manual se tomó con un procedimiento fijo y se la trata como una medida con su propia incertidumbre, no como el valor verdadero.
 
-Sobre la automatización de la información anatómica, \textcite{Petrellis2021} combinó procesamiento de imágenes, detección de contornos, correspondencia de patrones y aprendizaje profundo para estimar la longitud, la profundidad corporal y el área en términos relativos, y para localizar aletas y otras regiones. El error en longitud se ubicó entre 1,9~\% y 13,2~\%. El método trabajó sobre todo con dimensiones relativas, y \citeauthor{Petrellis2021} propuso pasar a visión estéreo, es decir, dos cámaras que observan la misma escena y permiten calcular por triangulación la distancia de cada punto \parencite{Hartley2004}, para obtener dimensiones absolutas en peces inclinados u ocultos.
+Sobre la automatización de la información anatómica, \textcite{Petrellis2021} combinó procesamiento de imágenes, detección de contornos, correspondencia de patrones y aprendizaje profundo para estimar la longitud, la PC y el área en términos relativos, y para localizar aletas y otras regiones. El error en longitud se ubicó entre 1,9~\% y 13,2~\%. El método trabajó sobre todo con dimensiones relativas, y \citeauthor{Petrellis2021} propuso pasar a visión estéreo, es decir, dos cámaras que observan la misma escena y permiten calcular por triangulación la distancia de cada punto \parencite{Hartley2004}, para obtener dimensiones absolutas en peces inclinados u ocultos.
 
-\textcite{Saleh2023} propusieron MFLD-net, una red liviana que detecta 16 puntos anatómicos en imágenes de peces y, a partir de ellos, calcula la longitud total, la longitud estándar (LE), la longitud cefálica y la profundidad corporal. El modelo logró una precisión media de detección (AP) de 0,967 y errores absolutos medios de 9,25~mm en longitud total, 8,27~mm en LE, 6,57~mm en longitud cefálica y 7,62~mm en profundidad corporal. De este trabajo se tomaron las definiciones de los extremos anatómicos. Su montaje, con cámara industrial y cinta transportadora, es distinto del de esta tesis, donde la imagen se forma a través del vidrio y del agua.
+\textcite{Saleh2023} propusieron MFLD-net, una red liviana que detecta 16 puntos anatómicos en imágenes de peces y, a partir de ellos, calcula la LT, la longitud estándar (LE), la longitud cefálica y la PC. El modelo logró una precisión media de detección (AP) de 0,967 y errores absolutos medios de 9,25~mm en LT, 8,27~mm en LE, 6,57~mm en longitud cefálica y 7,62~mm en PC. De este trabajo se tomaron las definiciones de los extremos anatómicos. Su montaje, con cámara industrial y cinta transportadora, es distinto del de esta tesis, donde la imagen se forma a través del vidrio y del agua.
 
 En esta tesis los puntos se marcaron a mano, por dos razones: no atribuirle a un algoritmo una precisión que no se evaluó, y asegurar que las cuatro rutas se comparen sobre exactamente los mismos cuatro puntos. La incertidumbre de la referencia física queda documentada con las tres lecturas de calibre de cada réplica (Tabla~\ref{tab:replicas}).
 
-Un segundo grupo de trabajos se ocupa de la recuperación de la escala. Mediante tres redes regionales, \textcite{Monkman2019} detectaron simultáneamente el pez y un marcador ArUco de tamaño conocido. Calcularon la longitud total a partir del lado mayor de la región detectada y del promedio de las escalas de los cuatro lados del marcador, y reportaron una intersección sobre la unión media (mIoU) cercana al 93~\% y un sesgo porcentual medio de 2,2~\%. También identificaron las principales fuentes de error: la diferencia de profundidad entre marcador y pez, la distorsión de la lente y las orientaciones mayores a unos $20^{\circ}$. Este trabajo respalda el uso de marcadores ArUco y, al mismo tiempo, advierte que el marcador proporciona una escala válida solo si se controlan la coplanaridad y la orientación.
+Un segundo grupo de trabajos se ocupa de la recuperación de la escala. Mediante tres redes regionales, \textcite{Monkman2019} detectaron simultáneamente el pez y un marcador ArUco de tamaño conocido. Calcularon la LT a partir del lado mayor de la región detectada y del promedio de las escalas de los cuatro lados del marcador, y reportaron una intersección sobre la unión media (mIoU) cercana al 93~\% y un sesgo porcentual medio de 2,2~\%. También identificaron las principales fuentes de error: la diferencia de profundidad entre marcador y pez, la distorsión de la lente y las orientaciones mayores a unos $20^{\circ}$. Este trabajo respalda el uso de marcadores ArUco y, al mismo tiempo, advierte que el marcador proporciona una escala válida solo si se controlan la coplanaridad y la orientación.
 
 En la misma línea, \textcite{Tseng2020} emplearon una red convolucional para detectar la cabeza, la horquilla caudal y una placa de color de tamaño conocido. Luego ubicaron los puntos del hocico y de la horquilla con procesamiento de imágenes y calcularon la longitud a partir de la relación píxel--distancia de la placa. El clasificador alcanzó una exactitud del 98,78~\%, mientras que la longitud presentó un error absoluto medio de 5,36~cm y un error relativo absoluto medio de 4,26~\%. La diferencia entre ambas cifras muestra que una detección muy precisa no garantiza una medición igualmente precisa.
 
@@ -26,7 +26,7 @@ En un tanque de producción, \textcite{Correia2025} conectaron una cámara a una
 
 Los sistemas estéreo constituyen otra vía para obtener dimensiones físicas. \textcite{Marrable2023} combinaron la detección automática de cabeza y cola con un sistema estéreo de estaciones remotas de video submarino con cebo (BRUVS, \emph{baited remote underwater video stations}) calibrado con estructuras tridimensionales. Al comparar 3954 mediciones automáticas con mediciones manuales obtuvieron un coeficiente de correlación de Pearson de $r = 0{,}99$. Se trata de una asociación lineal muy fuerte, aunque la correlación no mide concordancia ni descarta un sesgo entre métodos. \textcite{AlJubouri2017}, por su parte, midieron peces cebra a través de un tanque de vidrio con dos cámaras web ortogonales; despreciaron el efecto del vidrio y compensaron la distancia con la segunda vista.
 
-\textcite{ZhangX2025} utilizaron una cámara superior y otra lateral, una red basada en módulos Hourglass y transformaciones tridimensionales para medir siete variables fenotípicas de bagre de canal bajo el agua. El error relativo medio (ERM) fue de alrededor de 3,7~\% en longitud total y de 9,6~\% considerando las siete variables juntas. El trabajo demuestra que es posible recuperar varias medidas en un montaje acuático, aunque no evalúa por separado el efecto de corregir la refracción.
+\textcite{ZhangX2025} utilizaron una cámara superior y otra lateral, una red basada en módulos Hourglass y transformaciones tridimensionales para medir siete variables fenotípicas de bagre de canal bajo el agua. El error relativo medio (ERM) fue de alrededor de 3,7~\% en LT y de 9,6~\% considerando las siete variables juntas. El trabajo demuestra que es posible recuperar varias medidas en un montaje acuático, aunque no evalúa por separado el efecto de corregir la refracción.
 
 Los antecedentes de carácter óptico cumplen una función distinta. \textcite{Qiao2019} propusieron un método de estructura a partir del movimiento con un modelo refractivo, capaz de estimar la calibración, la pose de la cámara y la reconstrucción tridimensional a través de superficies que desvían la luz. Con simulaciones e imágenes reales mostraron que ignorar la refracción deforma la reconstrucción. Su objetivo, no obstante, es la reconstrucción de escenas y no la medición de peces.
 
@@ -122,8 +122,6 @@ El marco referencial reúne la teoría en la que se apoya la medición: qué se 
 
 La morfometría estudia los rasgos externos del tamaño y la forma de un organismo. En peces, estas medidas se obtienen con instrumentos manuales o mediante el análisis de imágenes, y se utilizan para describir la variación corporal y para obtener datos biométricos \parencite{Petrtyl2014}.
 
-La longitud total resume el tamaño del pez y se extiende desde la punta del hocico hasta el extremo posterior de la aleta caudal. La profundidad corporal es la distancia entre el perfil dorsal y el perfil ventral del cuerpo, en la sección donde esa separación es máxima, y excluye por completo las aletas dorsal, ventral, pectorales y caudal. Las aletas pueden formar parte de la longitud total cuando constituyen el extremo caudal, pero no intervienen en la profundidad corporal.
-
 \subsubsection{Puntos anatómicos y definición de las medidas}
 \label{sec:puntos-def}
 
@@ -134,11 +132,11 @@ La medición de longitudes sobre un pez requiere puntos anatómicos que cualquie
   \item[Profundidad corporal (PC):] mayor distancia dorsoventral entre los perfiles dorsal y ventral del cuerpo, medida en la sección de separación máxima y sin incluir las aletas. Sus extremos se ubican sobre el perfil del cuerpo y no sobre el extremo de una aleta.
 \end{description}
 
-La Figura~\ref{fig:2-2} muestra los puntos y las medidas.
+La LT resume el tamaño del pez; las aletas pueden formar parte de ella cuando constituyen el extremo caudal, pero no intervienen en la PC, que excluye por completo las aletas dorsal, ventral, pectorales y caudal. La Figura~\ref{fig:2-2} muestra los puntos y las medidas.
 
 \begin{figure}[H]
 \centering
-\caption[Puntos anatómicos y medidas morfométricas consideradas]{Puntos anatómicos y medidas morfométricas consideradas. La longitud total incluye el extremo caudal; la profundidad corporal se mide solo sobre el cuerpo y excluye las aletas.}
+\caption[Puntos anatómicos y medidas morfométricas consideradas]{Puntos anatómicos y medidas morfométricas consideradas. La LT incluye el extremo caudal; la PC se mide solo sobre el cuerpo y excluye las aletas.}
 \label{fig:2-2}
 \input{figuras/tikz/puntos_anatomicos}
 \fignota{Elaboración propia.}
@@ -423,7 +421,7 @@ Si $d_f$ es la distancia en píxeles entre dos puntos anatómicos, la longitud f
 \label{eq:Lf}
 \end{equation}
 
-\textcite{Monkman2019} emplearon este procedimiento para estimar la longitud total de peces con marcadores ArUco de tamaño conocido. El método supone que la magnificación es la misma en el marcador y en la región medida, lo que exige que ambos se encuentren aproximadamente en el mismo plano y con una orientación similar respecto de la cámara. Si están a distinta profundidad, aparece una diferencia de escala que esta relación no corrige.
+\textcite{Monkman2019} emplearon este procedimiento para estimar la LT de peces con marcadores ArUco de tamaño conocido. El método supone que la magnificación es la misma en el marcador y en la región medida, lo que exige que ambos se encuentren aproximadamente en el mismo plano y con una orientación similar respecto de la cámara. Si están a distinta profundidad, aparece una diferencia de escala que esta relación no corrige.
 
 Además, las esquinas del marcador y los puntos anatómicos deben expresarse en el mismo sistema de coordenadas y en la misma condición de corrección de la imagen. El Capítulo~\ref{cap:metodologia} indica en qué etapa del procesamiento se obtiene la escala y cómo se revisa el marcado.
 
@@ -464,10 +462,10 @@ Cuando la referencia es manual, se trata como una medición controlada que tambi
 Esta sección establece el sentido con que se emplean los términos principales del trabajo. Las definiciones resumen lo desarrollado en el marco referencial y en el Capítulo~\ref{cap:metodologia}.
 
 \begin{description}
-  \item[Morfometría.] Medición de las dimensiones y de la forma externa del cuerpo de un organismo. En este trabajo se reduce a dos medidas: la longitud total y la profundidad corporal.
+  \item[Morfometría.] Medición de las dimensiones y de la forma externa del cuerpo de un organismo. En este trabajo se reduce a dos medidas: la LT y la PC.
   \item[Punto anatómico.] Lugar del cuerpo que puede ubicarse de forma repetible en la réplica y en la imagen. Se utilizan cuatro, de $\mathbf{p}_1$ a $\mathbf{p}_4$ (Secciones~\ref{sec:puntos-def} y~\ref{sec:medidas}).
-  \item[Longitud total (LT).] Distancia entre el extremo anterior del hocico y el punto más posterior de la aleta caudal, medida sobre el eje longitudinal del pez.
-  \item[Profundidad corporal (PC).] Distancia entre el perfil dorsal y el ventral en una misma sección transversal del cuerpo, sin incluir las aletas.
+  \item[Longitud total (LT).] Distancia desde el punto más anterior del hocico hasta el punto más posterior de la aleta caudal, es decir, el extremo del radio caudal más largo (Sección~\ref{sec:puntos-def}).
+  \item[Profundidad corporal (PC).] Mayor distancia dorsoventral entre los perfiles dorsal y ventral del cuerpo, medida en la sección de separación máxima y sin incluir las aletas (Sección~\ref{sec:puntos-def}).
   \item[Réplica rígida.] Modelo de pez impreso en ácido poliláctico (PLA) cuyas dimensiones no cambian. Sus medidas con calibre son la referencia física de cada estimación.
   \item[Conversión métrica.] Transformación que lleva las coordenadas de un punto de la imagen, en píxeles, a milímetros. A, \Aprime, B y C son cuatro conversiones distintas (Sección~\ref{sec:rutas}).
   \item[Marcador ArUco.] Cuadrado de lado conocido con un código binario que un detector localiza automáticamente en la imagen \parencite{GarridoJurado2014}. Sus esquinas sirven como referencia de escala.
