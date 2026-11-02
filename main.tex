@@ -16,7 +16,7 @@
 % ---------- Página ----------
 % El margen superior deja lugar al membrete: empieza a 1 cm del borde y el texto, a 4,5 cm
 \usepackage[top=4.8cm,bottom=2.54cm,left=2.54cm,right=2.54cm,
-            headheight=2.9cm,headsep=0.9cm,footskip=1.2cm]{geometry}
+            headheight=3.0cm,headsep=0.9cm,footskip=1.2cm]{geometry}
 \usepackage{setspace}
 \doublespacing
 \setlength{\parindent}{1.25cm}
@@ -31,7 +31,7 @@
 \usepackage{amsmath,amssymb,bm}
 \usepackage{siunitx}
 \sisetup{output-decimal-marker={,},group-separator={\,},per-mode=symbol}
-\newcommand{\Aprime}{A$'$}
+\newcommand{\Aprime}{\texorpdfstring{A$'$}{A′}}
 \newcommand{\IL}{I_L}
 
 % ---------- Numeración e índice hasta subsubsecciones (marco referencial) ----------
@@ -42,6 +42,9 @@
 \usepackage{graphicx}
 \graphicspath{{figuras/}{figuras/originales/}}
 \usepackage{booktabs,longtable,array,multirow,makecell,tabularx}
+% Columnas de tabla alineadas a la izquierda (APA 7), sin los huecos del justificado
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \usepackage{pdflscape}
 \usepackage{caption}
 % Rótulos APA 7: «Figura N» en negrita en línea propia, título en cursiva debajo
