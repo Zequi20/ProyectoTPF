@@ -40,7 +40,7 @@ De esta brecha y de esta delimitación surgen las preguntas que orientaron la in
 \subsection{Formulación del problema}
 \label{sec:formulacion}
 
-El problema se formula mediante una pregunta principal y dos preguntas secundarias.
+El problema se formula mediante una pregunta principal, dos preguntas secundarias y tres preguntas de diseño.
 
 \subsubsection*{Pregunta principal}
 
@@ -52,6 +52,16 @@ El problema se formula mediante una pregunta principal y dos preguntas secundari
   \item Con $z$ conocida, ¿cómo se comportan A, \Aprime, B y C en longitud total y en profundidad corporal, y cómo cambia el error de A y de B al alejarse de la zona de calibración de B?
   \item ¿Qué sensibilidad tiene la estimación de C a los parámetros geométricos del montaje medidos a mano (distancia cámara--vidrio e índice de refracción del agua)?
 \end{enumerate}
+
+\subsubsection*{Preguntas de diseño}
+
+\begin{enumerate}
+  \item ¿Qué conjunto de imágenes, referencias físicas y registros se necesita para comparar las cuatro rutas sobre los mismos puntos y rastrear cada valor hasta su fotografía?
+  \item ¿Cómo marcar una sola vez los cuatro puntos anatómicos de cada imagen, de modo que las cuatro rutas reciban las mismas coordenadas?
+  \item ¿Cómo implementar las rutas A, \Aprime, B y C en una misma aplicación, de modo que la diferencia entre ellas sea solo la transformación geométrica?
+\end{enumerate}
+
+Las preguntas de diseño se refieren a los medios necesarios para responder las demás: se responden con la metodología (Capítulo~\ref{cap:metodologia}), mientras que la pregunta principal y las secundarias se responden con los resultados (Capítulo~\ref{cap:resultados}).
 
 \section{Objetivos de la investigación}
 
@@ -70,7 +80,7 @@ Evaluar, en un montaje controlado con una interfaz aire--vidrio--agua, cuatro es
   \item Evaluar la sensibilidad de las estimaciones de C a las condiciones geométricas del montaje medidas a mano (distancia cámara--vidrio e índice de refracción del agua).
 \end{enumerate}
 
-Los objetivos 1, 2 y 3 construyen el conjunto de datos, el procedimiento de marcado y las rutas sobre las que se trabaja; el objetivo 4 responde a la pregunta secundaria 1 y se contrasta con las hipótesis H1 y H2; el objetivo 5 responde a la pregunta principal y se contrasta con la hipótesis H3; y el objetivo 6 responde a la pregunta secundaria 2 (Sección~\ref{sec:formulacion}). Las conclusiones del Capítulo~5 se presentan en ese mismo orden.
+Cada objetivo específico responde a una pregunta de la Sección~\ref{sec:formulacion}. Los objetivos 1, 2 y 3 responden, respectivamente, a las preguntas de diseño 1, 2 y 3; el objetivo 4 responde a la pregunta secundaria 1 y se contrasta con las hipótesis H1 y H2; el objetivo 5 responde a la pregunta principal y se contrasta con la hipótesis H3; y el objetivo 6 responde a la pregunta secundaria 2. Las conclusiones del Capítulo~\ref{cap:conclusiones} se presentan en el orden de los objetivos.
 
 \section{Hipótesis}
 \label{sec:hipotesis}
@@ -110,8 +120,8 @@ El documento consta de cinco capítulos, ordenados según la estructura que esta
 \begin{description}
   \item[Capítulo 1. Introducción.] Presenta la motivación, el enunciado del problema con su planteamiento y sus preguntas, los objetivos, las hipótesis, la justificación, la delimitación espacial y temporal, el alcance y las limitaciones, y la estructura del documento.
   \item[Capítulo 2. Marco teórico.] Reúne los antecedentes y la brecha de investigación; el marco referencial, que presenta los modelos, las ecuaciones y las métricas de la bibliografía sobre morfometría, formación de imágenes a través de una interfaz plana, calibración, recuperación de la escala con marcadores ArUco y homografías, y evaluación de mediciones; y el marco conceptual, con las definiciones de los términos principales.
-  \item[Capítulo 3. Marco metodológico.] Describe el tipo y el enfoque de la investigación, la población y la muestra, las variables con su definición conceptual y operacional, los criterios de decisión de las hipótesis, los instrumentos y técnicas de recolección de datos, las medidas y el marcado manual de los puntos anatómicos, las rutas de conversión A, \Aprime, B y C con su implementación, el procedimiento por imagen y su trazabilidad, y la evaluación de las estimaciones, incluido el cálculo del intervalo con profundidad desconocida.
-  \item[Capítulo 4. Presentación, análisis e interpretación de resultados.] Presenta los datos y las exclusiones, las calibraciones, la comparación entre A, \Aprime, B y C, el comportamiento según la profundidad, el intervalo por profundidad desconocida, el contraste de hipótesis y la discusión.
+  \item[Capítulo 3. Marco metodológico.] Describe el tipo y el enfoque de la investigación, la población y la muestra, las variables con su definición conceptual y operacional, los criterios de decisión de las hipótesis, los instrumentos y técnicas de recolección de datos, las medidas y el marcado manual de los puntos anatómicos, las rutas de conversión A, \Aprime, B y C con su implementación, el procedimiento por imagen y su trazabilidad, y la evaluación de las estimaciones, incluido el cálculo del intervalo con profundidad desconocida, con lo que responde a las preguntas de diseño.
+  \item[Capítulo 4. Presentación, análisis e interpretación de resultados.] Presenta los datos y las exclusiones, las calibraciones, la comparación entre A, \Aprime, B y C, el comportamiento según la profundidad, el intervalo por profundidad desconocida, el contraste de hipótesis y la discusión, con lo que responde a la pregunta principal y a las secundarias.
   \item[Capítulo 5. Conclusiones y recomendaciones.] Ofrece la regla de decisión que resume el aporte, una conclusión por objetivo, el impacto potencial, las limitaciones, las recomendaciones y el trabajo futuro.
 \end{description}
 
