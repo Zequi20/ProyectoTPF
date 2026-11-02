@@ -252,7 +252,7 @@ def figure_lz(grid, rows, path):
         ax.axvspan(max(0, z0 - 10), min(300, z0 + 10), color="#F9E79F", alpha=0.65, label="Ventana ±1 cm")
         ax.plot([g["z_mm"] for g in recs], [g["lt_mm"] for g in recs], color=COLOR_C, linewidth=1.5, label="L(z)")
         ax.axhline(ref, color="#333333", linestyle="--", linewidth=1.0, label="LT de calibre")
-        ax.axvline(z0, color="#7D3C98", linestyle=":", linewidth=1.2, label="z real")
+        ax.axvline(z0, color="#7D3C98", linestyle=":", linewidth=1.2, label="$z_0$ (posición nominal)")
         ax.set_xlabel("z desde la cara interna del vidrio (mm)"); ax.set_ylabel("LT estimada (mm)")
         ax.set_title(image_id.replace(".jpg", ""))
         ax.xaxis.set_major_formatter(FuncFormatter(comma)); ax.yaxis.set_major_formatter(FuncFormatter(comma))

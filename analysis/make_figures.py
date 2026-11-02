@@ -78,7 +78,7 @@ fig, ax = plt.subplots(figsize=(6.4, 3.6))
 for m in METHODS:
     ax.plot(POS, MAE_LT_POS[m], marker=MARKERS[m], ms=5.5, mec="white", mew=0.6,
             color=COLORS[m], label=m, lw=1.8)
-ax.set_xlabel("Distancia nominal de la réplica al vidrio (cm)")
+ax.set_xlabel("Posición nominal $z_0$ (cm)")
 ax.set_ylabel("MAE de LT (mm)")
 ax.set_xticks(POS)
 ax.set_xlim(3.5, 26.5)
@@ -230,7 +230,7 @@ MAPE_Ap = 100 * float(np.mean([abs(ERR["A′"]["LT"][i, j]) / _ref[rep][0]
 ax.axhline(MAPE_Ap, color=COLORS["A′"], ls="--", lw=1,
            label=f"MAPE de A′ ({MAPE_Ap:.1f} %)".replace(".", ","))
 ax.set_xticks(x); ax.set_xticklabels([f"{int(z/10)} cm" for z in z_true])
-ax.set_xlabel("Profundidad real de la réplica")
+ax.set_xlabel("Posición nominal $z_0$")
 ax.set_ylabel("Ancho relativo de $I_L$ (% de LT)")
 ax.set_ylim(0, 115)
 ax.legend(frameon=False, fontsize=8.5, loc="upper right")
