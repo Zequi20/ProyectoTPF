@@ -127,7 +127,7 @@ rail_direction_camera:
 El trabajo está publicado en dos repositorios. El código de Fishmeter está en \url{\RepoURL}, etiqueta \texttt{\RepoTag}, que corresponde al \emph{commit}\par\noindent{\footnotesize\texttt{\RepoCommit}}\par
 \noindent Los datos del experimento y los \emph{scripts} que regeneran las tablas y figuras del Capítulo~\ref{cap:resultados} están en el repositorio de este documento, \url{\DatosURL}, etiqueta \texttt{\DatosTag}, que corresponde al \emph{commit}\par\noindent{\footnotesize\texttt{\DatosCommit}}\par\noindent La estructura de ambos es la siguiente:
 
-\begin{lstlisting}
+\begin{lstlisting}[escapeinside={(*}{*)}]
 FishmeterTPF/                     codigo (etiqueta v1.0-tesis)
   src/fish_morphometry/           aplicacion Fishmeter (calibracion, geometria,
                                   metodos A, A', B y C, interfaz, validacion)
@@ -144,10 +144,10 @@ ProyectoTPF/                      datos y analisis
   datos/SHA256SUMS                huellas de todos los archivos de datos
   datos/README.md                 contenido y convenciones de los datos
   anexos/csv-maestro-re-run.csv   tabla maestra (288 registros)
-  analysis/reproducir_capitulo4.py  Tablas 10 a 13, pruebas de signos,
-                                  Bland-Altman y Figuras 19 y 20
-  analysis/make_figures.py        Figuras 15 a 18 y 21
-  analysis/tabla_maestra.py       tabla del Anexo F
+  analysis/reproducir_capitulo4.py  Tablas (*\ref{tab:sensibilidad}*) a (*\ref{tab:intervalo}*), pruebas de signos,
+                                  Bland-Altman y Figuras (*\ref{fig:4-Lz}*) y (*\ref{fig:4-BA}*)
+  analysis/make_figures.py        Figuras (*\ref{fig:4-1}*) a (*\ref{fig:4-3}*) y (*\ref{fig:4-captura}*)
+  analysis/tabla_maestra.py       tabla del Anexo (*\ref{anx:maestra}*)
   analysis/re_run_b.py            recalculo de B con la lectura del riel
 \end{lstlisting}
 
