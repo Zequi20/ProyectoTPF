@@ -1,10 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.30)  27 OCT 2026 15:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.5.30)  2 NOV 2026 00:22
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/epereira/Documentos/tesis_ezequiel_v2_latex/tesis_v2/main.tex
-(/home/epereira/Documentos/tesis_ezequiel_v2_latex/tesis_v2/main.tex
+**main.tex
+(./main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-05-15>
 (/home/epereira/.TinyTeX/texmf-dist/tex/latex/base/report.cls
@@ -1001,7 +1000,18 @@ Package biblatex Info: ... and expl3
 Package: xparse 2025-10-09 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
-)) (/home/epereira/.TinyTeX/texmf-dist/tex/latex/glossaries/base/glossaries.sty
+))
+Package biblatex Info: Delimiter 'finalnamedelim' in context 'parencite' already defined, overwriting on input line 92.
+Package biblatex Info: Delimiter 'finalnamedelim' in context 'textcite' already defined, overwriting on input line 92.
+Package biblatex Info: Delimiter 'finalnamedelim' in context 'fullcite' already defined, overwriting on input line 92.
+Package biblatex Info: Delimiter 'finalnamedelim' in context 'fullcitebib' already defined, overwriting on input line 92.
+Package biblatex Info: Delimiter 'finalnamedelim' in context 'bib' already defined, overwriting on input line 94.
+Package biblatex Info: Delimiter 'finalnamedelim' in context 'biblist' already defined, overwriting on input line 94.
+ (/home/epereira/.TinyTeX/texmf-dist/tex/latex/xurl/xurl.sty
+Package: xurl 2022/01/09 v 0.10 modify URL breaks
+
+xurl: Set penalties for biblatex
+) (/home/epereira/.TinyTeX/texmf-dist/tex/latex/glossaries/base/glossaries.sty
 Package: glossaries 2026/04/21 v5.1 (NLCT)
  (/home/epereira/.TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2025/11/04 v2.10 package option processing (HA)
@@ -1251,26 +1261,26 @@ LaTeX Info: Redefining \% on input line 40.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
-LaTeX Info: Redefining \. on input line 165.
-LaTeX Info: Redefining \% on input line 165.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 207.
+LaTeX Font Info:    ... okay on input line 207.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 207.
+LaTeX Font Info:    ... okay on input line 207.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 207.
+LaTeX Font Info:    ... okay on input line 207.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 207.
+LaTeX Font Info:    ... okay on input line 207.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 207.
+LaTeX Font Info:    ... okay on input line 207.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 207.
+LaTeX Font Info:    ... okay on input line 207.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 207.
+LaTeX Font Info:    ... okay on input line 207.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 207.
+LaTeX Font Info:    ... okay on input line 207.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 207.
+LaTeX Font Info:    ... okay on input line 207.
+LaTeX Info: Redefining \. on input line 207.
+LaTeX Info: Redefining \% on input line 207.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1309,11 +1319,11 @@ LaTeX Info: Redefining \% on input line 165.
 (/home/epereira/.TinyTeX/texmf-dist/tex/latex/translations/translations-basic-dictionary-spanish.trsl
 File: translations-basic-dictionary-spanish.trsl (spanish translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `spanish'. on input line 165.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `spanish'. on input line 207.
  (/home/epereira/.TinyTeX/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 165.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 207.
  (/home/epereira/.TinyTeX/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count562
@@ -1384,9 +1394,9 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 165.
-Package biblatex Info: Reference segment=0 on input line 165.
-Package hyperref Info: Link coloring OFF on input line 165.
+Package biblatex Info: Reference section=0 on input line 207.
+Package biblatex Info: Reference segment=0 on input line 207.
+Package hyperref Info: Link coloring OFF on input line 207.
  (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -1424,7 +1434,7 @@ Package hyperref Info: Link coloring OFF on input line 165.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<figuras/logo.png, id=400, 759.83875pt x 873.2625pt>
+<figuras/logo.png, id=396, 759.83875pt x 873.2625pt>
 File: figuras/logo.png Graphic file (type png)
 <use figuras/logo.png>
 Package pdftex.def Info: figuras/logo.png  used on input line 18.
@@ -1446,7 +1456,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [3
 
 ]) (./preliminares/ficha_pagina.tex (./preliminares/ficha.tex)
-<figuras/header.png, id=422, 1071.00125pt x 409.53pt>
+<figuras/header.png, id=418, 1071.00125pt x 409.53pt>
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
 Package pdftex.def Info: figuras/header.png  used on input line 6.
@@ -1560,7 +1570,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [10]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 86.
+Package pdftex.def Info: figuras/header.png  used on input line 85.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -1576,7 +1586,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 181.
+Package pdftex.def Info: figuras/header.png  used on input line 223.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -1595,7 +1605,7 @@ LaTeX Info: Redefining \. on input line 3.
 LaTeX Info: Redefining \% on input line 3.
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 33.
+Package pdftex.def Info: figuras/header.png  used on input line 32.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -1614,7 +1624,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 184.
+Package pdftex.def Info: figuras/header.png  used on input line 226.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -1657,7 +1667,7 @@ Package glossaries Info: Preparing to sort glossary `acronym' (total number of
 
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 188.
+Package pdftex.def Info: figuras/header.png  used on input line 230.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 Package fancyhdr Warning: \headheight is too small (82.51282pt): 
@@ -1669,7 +1679,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [16]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 190.
+Package pdftex.def Info: figuras/header.png  used on input line 232.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -1748,7 +1758,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 
 
 ]
-<figuras/originales/fig1_1_configuracion.png, id=716, 1634.105pt x 924.45375pt>
+<figuras/originales/fig1_1_configuracion.png, id=712, 1634.105pt x 924.45375pt>
 File: figuras/originales/fig1_1_configuracion.png Graphic file (type png)
 <use figuras/originales/fig1_1_configuracion.png>
 Package pdftex.def Info: figuras/originales/fig1_1_configuracion.png  used on input line 12.
@@ -1781,7 +1791,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [3]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 32.
+Package pdftex.def Info: figuras/header.png  used on input line 34.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -1794,7 +1804,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [4]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 39.
+Package pdftex.def Info: figuras/header.png  used on input line 40.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -1807,7 +1817,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [5]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 57.
+Package pdftex.def Info: figuras/header.png  used on input line 62.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -1820,7 +1830,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [6]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 72.
+Package pdftex.def Info: figuras/header.png  used on input line 75.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -1831,13 +1841,13 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
 [7]
-Underfull \hbox (badness 1412) in paragraph at lines 84--85
+Underfull \hbox (badness 1412) in paragraph at lines 83--84
 []\T1/cmr/m/n/12 El in-ter-va-lo cal-cu-la-do con C, $\OML/cmm/m/it/12 I[] \OT1/cmr/m/n/12 =
  []
 
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 87.
+Package pdftex.def Info: figuras/header.png  used on input line 86.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 Package fancyhdr Warning: \headheight is too small (82.51282pt): 
@@ -1849,7 +1859,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [8]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 95.
+Package pdftex.def Info: figuras/header.png  used on input line 94.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -1862,7 +1872,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [9]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 107.
+Package pdftex.def Info: figuras/header.png  used on input line 106.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -1875,7 +1885,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [10]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 117.
+Package pdftex.def Info: figuras/header.png  used on input line 116.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -1900,14 +1910,9 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 
 [12]
 Cap\'{\i }tulo 2.
-<figuras/originales/fig2_1_flujo.png, id=815, 897.3525pt x 631.35875pt>
-File: figuras/originales/fig2_1_flujo.png Graphic file (type png)
-<use figuras/originales/fig2_1_flujo.png>
-Package pdftex.def Info: figuras/originales/fig2_1_flujo.png  used on input line 12.
-(pdftex.def)             Requested size: 399.29494pt x 280.92967pt.
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 15.
+Package pdftex.def Info: figuras/header.png  used on input line 8.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 Package fancyhdr Warning: \headheight is too small (82.51282pt): 
@@ -1921,7 +1926,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 ]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 20.
+Package pdftex.def Info: figuras/header.png  used on input line 14.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -1931,10 +1936,10 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[14 <./figuras/originales/fig2_1_flujo.png (PNG copy)>]
+[14]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 24.
+Package pdftex.def Info: figuras/header.png  used on input line 22.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -1947,7 +1952,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [15]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 31.
+Package pdftex.def Info: figuras/header.png  used on input line 28.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -1960,7 +1965,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [16]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 38.
+Package pdftex.def Info: figuras/header.png  used on input line 34.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -1973,7 +1978,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [17]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 44.
+Package pdftex.def Info: figuras/header.png  used on input line 40.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -1986,7 +1991,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [18]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 51.
+Package pdftex.def Info: figuras/header.png  used on input line 43.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -1997,374 +2002,361 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
 [19]
-File: figuras/header.png Graphic file (type png)
-<use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 51.
-(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
-
-
-Package fancyhdr Warning: \headheight is too small (82.51282pt): 
-(fancyhdr)                Make it at least 84.86107pt, for example:
-(fancyhdr)                \setlength{\headheight}{84.86107pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
-
-[20]
-Underfull \hbox (badness 1342) in paragraph at lines 60--60
+Underfull \hbox (badness 1342) in paragraph at lines 52--52
 []|\T1/cmr/m/n/10 Puntos o pro-ce-di-
  []
 
 
-Overfull \hbox (66.30954pt too wide) in alignment at lines 56--62
+Overfull \hbox (66.30954pt too wide) in alignment at lines 48--54
  [] [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 1342) in paragraph at lines 65--65
+Underfull \hbox (badness 1342) in paragraph at lines 57--57
 []|\T1/cmr/m/n/10 Puntos o pro-ce-di-
  []
 
 
-Overfull \hbox (66.30954pt too wide) in alignment at lines 62--67
+Overfull \hbox (66.30954pt too wide) in alignment at lines 54--59
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (66.30954pt too wide) in alignment at lines 67--69
+Overfull \hbox (66.30954pt too wide) in alignment at lines 59--61
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (66.30954pt too wide) in alignment at lines 69--70
+Overfull \hbox (66.30954pt too wide) in alignment at lines 61--62
  [] [] [] [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 7576) in paragraph at lines 71--71
+Underfull \hbox (badness 7576) in paragraph at lines 63--63
 []|[]\T1/cmr/m/n/10 Monkman et
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--71
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
 []|\T1/cmr/m/n/10 Lubina eu-ro-pea;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--71
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
 \T1/cmr/m/n/10 fo-to-gra-fías fue-ra
  []
 
 
-Underfull \hbox (badness 2671) in paragraph at lines 71--71
+Underfull \hbox (badness 2671) in paragraph at lines 63--63
 []|\T1/cmr/m/n/10 Monocular; tres
  []
 
 
-Underfull \hbox (badness 4024) in paragraph at lines 71--71
+Underfull \hbox (badness 4024) in paragraph at lines 63--63
 \T1/cmr/m/n/10 por re-gión en-vol-
  []
 
 
-Underfull \hbox (badness 4341) in paragraph at lines 73--73
+Underfull \hbox (badness 4341) in paragraph at lines 65--65
 []|[]\T1/cmr/m/n/10 Tseng et al.
  []
 
 
-Underfull \hbox (badness 7221) in paragraph at lines 73--73
+Underfull \hbox (badness 7221) in paragraph at lines 65--65
 \T1/cmr/m/n/10 co-no-ci-da; sin re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--73
+Underfull \hbox (badness 10000) in paragraph at lines 65--65
 []|\T1/cmr/m/n/10 LT; exac-ti-tud de
  []
 
 
-Underfull \hbox (badness 6961) in paragraph at lines 75--75
+Underfull \hbox (badness 6961) in paragraph at lines 67--67
 []|[]\T1/cmr/m/n/10 Saleh et al.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--75
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
 []|\T1/cmr/m/n/10 Peces en cin-ta
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--75
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
 []|\T1/cmr/m/n/10 Cámara in-dus-
  []
 
 
-Underfull \hbox (badness 5756) in paragraph at lines 75--75
+Underfull \hbox (badness 5756) in paragraph at lines 67--67
 \T1/cmr/m/n/10 trial mo-no-cu-lar
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--75
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
 []|\T1/cmr/m/n/10 Calibración del
  []
 
 
-Underfull \hbox (badness 1596) in paragraph at lines 75--75
+Underfull \hbox (badness 1596) in paragraph at lines 67--67
 []|\T1/cmr/m/n/10 LT, LE, ce-fá-li-ca y
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--77
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
 []|\T1/cmr/m/n/10 Camarones en
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--77
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
 []|\T1/cmr/m/n/10 Monocular
  []
 
 
-Underfull \hbox (badness 1127) in paragraph at lines 77--77
+Underfull \hbox (badness 1127) in paragraph at lines 69--69
 \T1/cmr/m/n/10 cia; sin co-rrec-ción
  []
 
 
-Underfull \hbox (badness 3260) in paragraph at lines 77--77
+Underfull \hbox (badness 3260) in paragraph at lines 69--69
 []|\T1/cmr/m/n/10 Longitud y an-chu-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--79
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
 []|\T1/cmr/m/n/10 Peces ce-bra en
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--79
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
 []|\T1/cmr/m/n/10 Compensación de
  []
 
 
-Underfull \hbox (badness 6001) in paragraph at lines 79--79
+Underfull \hbox (badness 6001) in paragraph at lines 71--71
 []|\T1/cmr/m/n/10 Longitud; error $\OMS/cmsy/m/n/10 ^^Y$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--81
+Underfull \hbox (badness 10000) in paragraph at lines 73--73
 []|[]\T1/cmr/m/n/10 Marrable et
  []
 
 
-Underfull \hbox (badness 3417) in paragraph at lines 81--81
+Underfull \hbox (badness 3417) in paragraph at lines 73--73
 []|\T1/cmr/m/n/10 Estéreo ca-li-bra-
  []
 
 
-Underfull \hbox (badness 2781) in paragraph at lines 83--83
+Underfull \hbox (badness 2781) in paragraph at lines 75--75
 []|[]\T1/cmr/m/n/10 X. Zhang et
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--83
+Underfull \hbox (badness 10000) in paragraph at lines 75--75
 []|\T1/cmr/m/n/10 Cámaras su-pe-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--83
+Underfull \hbox (badness 10000) in paragraph at lines 75--75
 []|\T1/cmr/m/n/10 Red Hour-glass;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--83
+Underfull \hbox (badness 10000) in paragraph at lines 75--75
 []|\T1/cmr/m/n/10 Transformaciones
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--85
+Underfull \hbox (badness 10000) in paragraph at lines 77--77
 []|\T1/cmr/m/n/10 Interfaz pla-na;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--85
+Underfull \hbox (badness 10000) in paragraph at lines 77--77
 \T1/cmr/m/n/10 aná-li-sis de la
  []
 
 
-Underfull \hbox (badness 3364) in paragraph at lines 85--85
+Underfull \hbox (badness 3364) in paragraph at lines 77--77
 []|\T1/cmr/m/n/10 Modelo con-ven-
  []
 
 
-Underfull \hbox (badness 4779) in paragraph at lines 85--85
+Underfull \hbox (badness 4779) in paragraph at lines 77--77
 []|\T1/cmr/m/n/10 Patrones de ca-li-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--85
+Underfull \hbox (badness 10000) in paragraph at lines 77--77
 []|\T1/cmr/m/n/10 Distorsión de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--85
+Underfull \hbox (badness 10000) in paragraph at lines 77--77
 \T1/cmr/m/n/10 pen-dien-te de la
  []
 
 
-Underfull \hbox (badness 3657) in paragraph at lines 85--85
+Underfull \hbox (badness 3657) in paragraph at lines 77--77
 []|\T1/cmr/m/n/10 Error de re-pro-yec-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--87
+Underfull \hbox (badness 10000) in paragraph at lines 79--79
 []|[]\T1/cmr/m/n/10 Šuczy«ski
  []
 
 
-Underfull \hbox (badness 4779) in paragraph at lines 87--87
+Underfull \hbox (badness 4779) in paragraph at lines 79--79
 []|\T1/cmr/m/n/10 Patrones de ca-li-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--89
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
 []|[]\T1/cmr/m/n/10 Seegräber
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--89
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
 []|\T1/cmr/m/n/10 Patrones sin-té-ti-
  []
 
 
-Underfull \hbox (badness 1147) in paragraph at lines 89--89
+Underfull \hbox (badness 1147) in paragraph at lines 81--81
 []|\T1/cmr/m/n/10 Mono o es-té-reo
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--91
+Underfull \hbox (badness 10000) in paragraph at lines 83--83
 []|[]\T1/cmr/m/n/10 Vijayalakshmi
  []
 
 
-Underfull \hbox (badness 5985) in paragraph at lines 91--91
+Underfull \hbox (badness 5985) in paragraph at lines 83--83
 []|\T1/cmr/m/n/10 Peces en es-tan-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--91
+Underfull \hbox (badness 10000) in paragraph at lines 83--83
 []|\T1/cmr/m/n/10 Pinhole ca-li-bra-do
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--91
+Underfull \hbox (badness 10000) in paragraph at lines 83--83
 []|\T1/cmr/m/n/10 Longitud; MAE
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--91
+Underfull \hbox (badness 10000) in paragraph at lines 83--83
 \T1/cmr/m/n/10 0,75 cm, RM-SE
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--91
+Underfull \hbox (badness 10000) in paragraph at lines 83--83
 \T1/cmr/m/n/10 0,86 cm (4810
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
 []|\T1/cmr/m/n/10 Cámara su-mer-gi-da;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--93
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
 []|[]\T1/cmr/m/n/10 Yin et al.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--93
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
 []|\T1/cmr/m/it/10 Micropterus
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--93
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
 \T1/cmr/m/it/10 sal-moi-des \T1/cmr/m/n/10 en
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--93
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
 []|\T1/cmr/m/n/10 Monocular;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--93
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
 \T1/cmr/m/n/10 fi-cie agua--aire;
  []
 
 
-Underfull \hbox (badness 1342) in paragraph at lines 93--93
+Underfull \hbox (badness 1342) in paragraph at lines 85--85
 \T1/cmr/m/n/10 pro-fun-di-dad no-mi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--93
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
 []|\T1/cmr/m/n/10 Longitud; sen-si-bi-
  []
 
 
-Underfull \hbox (badness 6808) in paragraph at lines 93--93
+Underfull \hbox (badness 6808) in paragraph at lines 85--85
 \T1/cmr/m/n/10 li-dad al error de
  []
 
 
-Underfull \hbox (badness 1472) in paragraph at lines 93--94
+Underfull \hbox (badness 1472) in paragraph at lines 85--86
 []|\T1/cmr/m/n/10 Interfaz agua--aire sin
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--95
+Underfull \hbox (badness 10000) in paragraph at lines 87--87
 []|[]\T1/cmr/m/n/10 Zhou et al.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--95
+Underfull \hbox (badness 10000) in paragraph at lines 87--87
 []|\T1/cmr/m/n/10 Corrección de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--95
+Underfull \hbox (badness 10000) in paragraph at lines 87--87
 \T1/cmr/m/n/10 re-frac-ción en la
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--95
+Underfull \hbox (badness 10000) in paragraph at lines 87--87
 \T1/cmr/m/n/10 ca-li-brar en ai-re
  []
 
 
-Underfull \hbox (badness 6001) in paragraph at lines 95--95
+Underfull \hbox (badness 6001) in paragraph at lines 87--87
 []|\T1/cmr/m/n/10 Longitud; error $\OMS/cmsy/m/n/10 ^^Y$
  []
 
 
-Underfull \hbox (badness 3965) in paragraph at lines 97--97
+Underfull \hbox (badness 3965) in paragraph at lines 89--89
 []|\T1/cmr/m/n/10 Estéreo ex-terno
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--97
+Underfull \hbox (badness 10000) in paragraph at lines 89--89
 []|\T1/cmr/m/n/10 YOLOv11-Pose;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--97
+Underfull \hbox (badness 10000) in paragraph at lines 89--89
 \T1/cmr/m/n/10 cin-co pun-tos;
  []
 
 
-Overfull \hbox (66.30954pt too wide) in alignment at lines 70--98
+Overfull \hbox (66.30954pt too wide) in alignment at lines 62--90
  [] [] [] [] [] [] [] 
  []
 
-[21
+[20
 
-] [22]
+] [21]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 117.
+Package pdftex.def Info: figuras/header.png  used on input line 108.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2374,12 +2366,25 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[23
+[22
 
 ]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 132.
+Package pdftex.def Info: figuras/header.png  used on input line 123.
+(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
+
+Package fancyhdr Warning: \headheight is too small (82.51282pt): 
+(fancyhdr)                Make it at least 84.86107pt, for example:
+(fancyhdr)                \setlength{\headheight}{84.86107pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
+
+[23] (./figuras/tikz/puntos_anatomicos.tex)
+File: figuras/header.png Graphic file (type png)
+<use figuras/header.png>
+Package pdftex.def Info: figuras/header.png  used on input line 144.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2392,7 +2397,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [24]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 142.
+Package pdftex.def Info: figuras/header.png  used on input line 151.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2403,14 +2408,9 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
 [25]
-<figuras/originales/fig2_2_puntos.png, id=924, 821.0675pt x 366.36874pt>
-File: figuras/originales/fig2_2_puntos.png Graphic file (type png)
-<use figuras/originales/fig2_2_puntos.png>
-Package pdftex.def Info: figuras/originales/fig2_2_puntos.png  used on input line 151.
-(pdftex.def)             Requested size: 375.80574pt x 167.68752pt.
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 157.
+Package pdftex.def Info: figuras/header.png  used on input line 168.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2420,10 +2420,10 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[26 <./figuras/originales/fig2_2_puntos.png (PNG copy)>]
+[26]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 171.
+Package pdftex.def Info: figuras/header.png  used on input line 182.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2436,7 +2436,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [27]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 185.
+Package pdftex.def Info: figuras/header.png  used on input line 198.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2449,7 +2449,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [28]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 205.
+Package pdftex.def Info: figuras/header.png  used on input line 255.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2462,7 +2462,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [29]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 218.
+Package pdftex.def Info: figuras/header.png  used on input line 261.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2475,7 +2475,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [30]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 268.
+Package pdftex.def Info: figuras/header.png  used on input line 285.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2488,7 +2488,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [31]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 295.
+Package pdftex.def Info: figuras/header.png  used on input line 309.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2501,7 +2501,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [32]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 320.
+Package pdftex.def Info: figuras/header.png  used on input line 322.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2514,7 +2514,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [33]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 332.
+Package pdftex.def Info: figuras/header.png  used on input line 364.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2527,7 +2527,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [34]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 374.
+Package pdftex.def Info: figuras/header.png  used on input line 376.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2551,11 +2551,18 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
 [36]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 387.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 387.
+
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 395.
+Package pdftex.def Info: figuras/header.png  used on input line 398.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
-
 
 Package fancyhdr Warning: \headheight is too small (82.51282pt): 
 (fancyhdr)                Make it at least 84.86107pt, for example:
@@ -2564,18 +2571,11 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
 [37]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 396.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 396.
-
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 439.
+Package pdftex.def Info: figuras/header.png  used on input line 422.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
 
 Package fancyhdr Warning: \headheight is too small (82.51282pt): 
 (fancyhdr)                Make it at least 84.86107pt, for example:
@@ -2586,7 +2586,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [38]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 445.
+Package pdftex.def Info: figuras/header.png  used on input line 433.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2599,7 +2599,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [39]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 455.
+Package pdftex.def Info: figuras/header.png  used on input line 457.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2612,7 +2612,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [40]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 472.
+Package pdftex.def Info: figuras/header.png  used on input line 471.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2625,7 +2625,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [41]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 489.
+Package pdftex.def Info: figuras/header.png  used on input line 478.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2635,46 +2635,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[42]
-File: figuras/header.png Graphic file (type png)
-<use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 499.
-(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
-
-
-Package fancyhdr Warning: \headheight is too small (82.51282pt): 
-(fancyhdr)                Make it at least 84.86107pt, for example:
-(fancyhdr)                \setlength{\headheight}{84.86107pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
-
-[43]
-File: figuras/header.png Graphic file (type png)
-<use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 515.
-(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
-
-
-Package fancyhdr Warning: \headheight is too small (82.51282pt): 
-(fancyhdr)                Make it at least 84.86107pt, for example:
-(fancyhdr)                \setlength{\headheight}{84.86107pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
-
-[44]
-File: figuras/header.png Graphic file (type png)
-<use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 523.
-(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
-
-
-Package fancyhdr Warning: \headheight is too small (82.51282pt): 
-(fancyhdr)                Make it at least 84.86107pt, for example:
-(fancyhdr)                \setlength{\headheight}{84.86107pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
-
-[45]) (./capitulos/3-metodologia.tex
+[42]) (./capitulos/3-metodologia.tex
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
 Package pdftex.def Info: figuras/header.png  used on input line 1.
@@ -2687,11 +2648,16 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[46]
+[43]
 Cap\'{\i }tulo 3.
+<figuras/originales/fig2_1_flujo.png, id=1123, 897.3525pt x 631.35875pt>
+File: figuras/originales/fig2_1_flujo.png Graphic file (type png)
+<use figuras/originales/fig2_1_flujo.png>
+Package pdftex.def Info: figuras/originales/fig2_1_flujo.png  used on input line 10.
+(pdftex.def)             Requested size: 399.29494pt x 280.92967pt.
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 11.
+Package pdftex.def Info: figuras/header.png  used on input line 13.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 Package fancyhdr Warning: \headheight is too small (82.51282pt): 
@@ -2700,17 +2666,30 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[47
+[44
 
 ]
-<figuras/originales/fig3_1_replicas.png, id=1127, 1012.78375pt x 716.6775pt>
+File: figuras/header.png Graphic file (type png)
+<use figuras/header.png>
+Package pdftex.def Info: figuras/header.png  used on input line 16.
+(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
+
+Package fancyhdr Warning: \headheight is too small (82.51282pt): 
+(fancyhdr)                Make it at least 84.86107pt, for example:
+(fancyhdr)                \setlength{\headheight}{84.86107pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
+
+[45 <./figuras/originales/fig2_1_flujo.png (PNG copy)>]
+<figuras/originales/fig3_1_replicas.png, id=1136, 1012.78375pt x 716.6775pt>
 File: figuras/originales/fig3_1_replicas.png Graphic file (type png)
 <use figuras/originales/fig3_1_replicas.png>
-Package pdftex.def Info: figuras/originales/fig3_1_replicas.png  used on input line 22.
+Package pdftex.def Info: figuras/originales/fig3_1_replicas.png  used on input line 32.
 (pdftex.def)             Requested size: 281.8561pt x 199.44354pt.
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 27.
+Package pdftex.def Info: figuras/header.png  used on input line 34.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2720,12 +2699,91 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[48 <./figuras/originales/fig3_1_replicas.png (PNG copy)>]
+[46]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 49.
+Package pdftex.def Info: figuras/header.png  used on input line 55.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
+
+Package fancyhdr Warning: \headheight is too small (82.51282pt): 
+(fancyhdr)                Make it at least 84.86107pt, for example:
+(fancyhdr)                \setlength{\headheight}{84.86107pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
+
+[47 <./figuras/originales/fig3_1_replicas.png (PNG copy)>]
+File: figuras/header.png Graphic file (type png)
+<use figuras/header.png>
+Package pdftex.def Info: figuras/header.png  used on input line 61.
+(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
+
+Package fancyhdr Warning: \headheight is too small (82.51282pt): 
+(fancyhdr)                Make it at least 84.86107pt, for example:
+(fancyhdr)                \setlength{\headheight}{84.86107pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
+
+[48]
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+[]|\T1/cmr/m/n/10 Ruta de con-ver-sión píxel--
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+[]|\T1/cmr/m/n/10 Razón;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+\T1/cmr/m/n/10 cua-tro
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+[]|\T1/cmr/m/n/10 Escenario de
+ []
+
+
+Underfull \hbox (badness 2253) in paragraph at lines 96--96
+[]|\T1/cmr/m/n/10 Longitud to-tal y pro-fun-di-dad
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+[]|\T1/cmr/m/n/10 Error con
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+\T1/cmr/m/n/10 signo, EA,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+[]|\T1/cmr/m/n/10 mm,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+[]|\T1/cmr/m/n/10 Cobertura de
+ []
+
+
+Underfull \hbox (badness 1484) in paragraph at lines 96--96
+\T1/cmr/m/n/10 ra, agua, luz,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+\T1/cmr/m/n/10 mar-ca-do-res,
+ []
+
+File: figuras/header.png Graphic file (type png)
+<use figuras/header.png>
+Package pdftex.def Info: figuras/header.png  used on input line 98.
+(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 Package fancyhdr Warning: \headheight is too small (82.51282pt): 
 (fancyhdr)                Make it at least 84.86107pt, for example:
@@ -2734,64 +2792,11 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
 [49]
-Underfull \hbox (badness 10000) in paragraph at lines 86--86
-[]|\T1/cmr/m/n/10 Ruta de con-ver-sión píxel--
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--86
-[]|\T1/cmr/m/n/10 Razón;
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--86
-\T1/cmr/m/n/10 cua-tro
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--86
-[]|\T1/cmr/m/n/10 Escenario de
- []
-
-
-Underfull \hbox (badness 2253) in paragraph at lines 86--86
-[]|\T1/cmr/m/n/10 Longitud to-tal y pro-fun-di-dad
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--86
-[]|\T1/cmr/m/n/10 Error con
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--86
-\T1/cmr/m/n/10 signo, EA,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--86
-[]|\T1/cmr/m/n/10 mm,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--86
-[]|\T1/cmr/m/n/10 Cobertura de
- []
-
-
-Underfull \hbox (badness 1484) in paragraph at lines 86--86
-\T1/cmr/m/n/10 ra, agua, luz,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--86
-\T1/cmr/m/n/10 mar-ca-do-res,
- []
-
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 88.
+Package pdftex.def Info: figuras/header.png  used on input line 103.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
 
 Package fancyhdr Warning: \headheight is too small (82.51282pt): 
 (fancyhdr)                Make it at least 84.86107pt, for example:
@@ -2802,7 +2807,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [50]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 95.
+Package pdftex.def Info: figuras/header.png  used on input line 115.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2815,7 +2820,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [51]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 105.
+Package pdftex.def Info: figuras/header.png  used on input line 123.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2826,11 +2831,24 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
 [52]
+Underfull \hbox (badness 3260) in paragraph at lines 173--173
+[]|\T1/cmr/m/n/10 Posición no-mi-nal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
+[]|\T1/cmr/m/n/10 Desplazamiento al
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
+\T1/cmr/m/n/10 plano de si-me-tría
+ []
+
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 156.
+Package pdftex.def Info: figuras/header.png  used on input line 187.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
-
 
 Package fancyhdr Warning: \headheight is too small (82.51282pt): 
 (fancyhdr)                Make it at least 84.86107pt, for example:
@@ -2839,24 +2857,11 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
 [53]
-Underfull \hbox (badness 3260) in paragraph at lines 163--163
-[]|\T1/cmr/m/n/10 Posición no-mi-nal
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--164
-[]|\T1/cmr/m/n/10 Desplazamiento al
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--164
-\T1/cmr/m/n/10 plano de si-me-tría
- []
-
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 177.
+Package pdftex.def Info: figuras/header.png  used on input line 191.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
 
 Package fancyhdr Warning: \headheight is too small (82.51282pt): 
 (fancyhdr)                Make it at least 84.86107pt, for example:
@@ -2865,32 +2870,19 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
 [54]
-<figuras/originales/fig3_2_montaje_replica.png, id=1193, 1047.915pt x 787.94376pt>
+<figuras/originales/fig3_2_montaje_replica.png, id=1216, 1047.915pt x 787.94376pt>
 File: figuras/originales/fig3_2_montaje_replica.png Graphic file (type png)
 <use figuras/originales/fig3_2_montaje_replica.png>
-Package pdftex.def Info: figuras/originales/fig3_2_montaje_replica.png  used on input line 184.
+Package pdftex.def Info: figuras/originales/fig3_2_montaje_replica.png  used on input line 196.
 (pdftex.def)             Requested size: 352.31653pt x 264.9036pt.
-File: figuras/header.png Graphic file (type png)
-<use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 187.
-(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
-
-
-Package fancyhdr Warning: \headheight is too small (82.51282pt): 
-(fancyhdr)                Make it at least 84.86107pt, for example:
-(fancyhdr)                \setlength{\headheight}{84.86107pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
-
-[55]
-<figuras/originales/fig3_3_damero.png, id=1199, 1043.9pt x 761.84625pt>
+<figuras/originales/fig3_3_damero.png, id=1218, 1043.9pt x 761.84625pt>
 File: figuras/originales/fig3_3_damero.png Graphic file (type png)
 <use figuras/originales/fig3_3_damero.png>
-Package pdftex.def Info: figuras/originales/fig3_3_damero.png  used on input line 194.
+Package pdftex.def Info: figuras/originales/fig3_3_damero.png  used on input line 206.
 (pdftex.def)             Requested size: 352.31653pt x 257.11783pt.
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 197.
+Package pdftex.def Info: figuras/header.png  used on input line 209.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2900,14 +2892,19 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[56 <./figuras/originales/fig3_2_montaje_replica.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 209--209
+[55 <./figuras/originales/fig3_2_montaje_replica.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 221--221
 []|\T1/cmr/m/n/10 Distancia cámara--
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--226
+[]|\T1/cmr/m/n/10 22 $[]$,
  []
 
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 218.
+Package pdftex.def Info: figuras/header.png  used on input line 230.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 Package fancyhdr Warning: \headheight is too small (82.51282pt): 
@@ -2916,10 +2913,23 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[57 <./figuras/originales/fig3_3_damero.png (PNG copy)>]
+[56 <./figuras/originales/fig3_3_damero.png (PNG copy)>]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 239.
+Package pdftex.def Info: figuras/header.png  used on input line 250.
+(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
+
+Package fancyhdr Warning: \headheight is too small (82.51282pt): 
+(fancyhdr)                Make it at least 84.86107pt, for example:
+(fancyhdr)                \setlength{\headheight}{84.86107pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
+
+[57]
+File: figuras/header.png Graphic file (type png)
+<use figuras/header.png>
+Package pdftex.def Info: figuras/header.png  used on input line 257.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2930,14 +2940,14 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
 [58]
-<figuras/originales/fig3_4_interfaz.png, id=1220, 962.59625pt x 650.43pt>
+<figuras/originales/fig3_4_interfaz.png, id=1251, 1868.9825pt x 1005.7575pt>
 File: figuras/originales/fig3_4_interfaz.png Graphic file (type png)
 <use figuras/originales/fig3_4_interfaz.png>
-Package pdftex.def Info: figuras/originales/fig3_4_interfaz.png  used on input line 252.
-(pdftex.def)             Requested size: 375.80574pt x 253.92471pt.
+Package pdftex.def Info: figuras/originales/fig3_4_interfaz.png  used on input line 264.
+(pdftex.def)             Requested size: 375.80574pt x 202.2222pt.
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 255.
+Package pdftex.def Info: figuras/header.png  used on input line 268.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2947,10 +2957,10 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[59]
+[59 <./figuras/originales/fig3_4_interfaz.png>]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 262.
+Package pdftex.def Info: figuras/header.png  used on input line 278.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2960,33 +2970,28 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[60 <./figuras/originales/fig3_4_interfaz.png (PNG copy)>]
-<figuras/originales/fig3_5_puntos.png, id=1235, 821.0675pt x 366.36874pt>
-File: figuras/originales/fig3_5_puntos.png Graphic file (type png)
-<use figuras/originales/fig3_5_puntos.png>
-Package pdftex.def Info: figuras/originales/fig3_5_puntos.png  used on input line 267.
-(pdftex.def)             Requested size: 328.82733pt x 146.72379pt.
-<figuras/originales/fig3_6_instrumentos.png, id=1237, 640.3925pt x 553.06625pt>
+[60] (./figuras/tikz/puntos_anatomicos.tex)
+File: figuras/header.png Graphic file (type png)
+<use figuras/header.png>
+Package pdftex.def Info: figuras/header.png  used on input line 295.
+(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
+
+Package fancyhdr Warning: \headheight is too small (82.51282pt): 
+(fancyhdr)                Make it at least 84.86107pt, for example:
+(fancyhdr)                \setlength{\headheight}{84.86107pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
+
+[61]
+<figuras/originales/fig3_6_instrumentos.png, id=1273, 640.3925pt x 553.06625pt>
 File: figuras/originales/fig3_6_instrumentos.png Graphic file (type png)
 <use figuras/originales/fig3_6_instrumentos.png>
-Package pdftex.def Info: figuras/originales/fig3_6_instrumentos.png  used on input line 283.
+Package pdftex.def Info: figuras/originales/fig3_6_instrumentos.png  used on input line 300.
 (pdftex.def)             Requested size: 281.8561pt x 243.42584pt.
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 285.
-(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
-
-
-Package fancyhdr Warning: \headheight is too small (82.51282pt): 
-(fancyhdr)                Make it at least 84.86107pt, for example:
-(fancyhdr)                \setlength{\headheight}{84.86107pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
-
-[61 <./figuras/originales/fig3_5_puntos.png (PNG copy)>]
-File: figuras/header.png Graphic file (type png)
-<use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 297.
+Package pdftex.def Info: figuras/header.png  used on input line 304.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -2999,7 +3004,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [62 <./figuras/originales/fig3_6_instrumentos.png (PNG copy)>]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 302.
+Package pdftex.def Info: figuras/header.png  used on input line 353.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -3010,14 +3015,11 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
 [63]
-Overfull \hbox (2.027pt too wide) in paragraph at lines 324--324
-[]|\T1/cmr/m/n/10 Método| 
- []
-
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 326.
+Package pdftex.def Info: figuras/header.png  used on input line 356.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
 
 Package fancyhdr Warning: \headheight is too small (82.51282pt): 
 (fancyhdr)                Make it at least 84.86107pt, for example:
@@ -3028,7 +3030,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [64]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 332.
+Package pdftex.def Info: figuras/header.png  used on input line 361.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -3039,11 +3041,14 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
 [65]
+Overfull \hbox (2.027pt too wide) in paragraph at lines 380--380
+[]|\T1/cmr/m/n/10 Método| 
+ []
+
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 345.
+Package pdftex.def Info: figuras/header.png  used on input line 382.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
-
 
 Package fancyhdr Warning: \headheight is too small (82.51282pt): 
 (fancyhdr)                Make it at least 84.86107pt, for example:
@@ -3054,7 +3059,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [66]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 367.
+Package pdftex.def Info: figuras/header.png  used on input line 388.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -3067,7 +3072,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [67]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 397.
+Package pdftex.def Info: figuras/header.png  used on input line 401.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -3080,7 +3085,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [68]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 416.
+Package pdftex.def Info: figuras/header.png  used on input line 423.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -3093,7 +3098,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [69]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 419.
+Package pdftex.def Info: figuras/header.png  used on input line 453.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -3103,7 +3108,46 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[70]) (./capitulos/4-resultados.tex
+[70]
+File: figuras/header.png Graphic file (type png)
+<use figuras/header.png>
+Package pdftex.def Info: figuras/header.png  used on input line 462.
+(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
+
+Package fancyhdr Warning: \headheight is too small (82.51282pt): 
+(fancyhdr)                Make it at least 84.86107pt, for example:
+(fancyhdr)                \setlength{\headheight}{84.86107pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
+
+[71]
+File: figuras/header.png Graphic file (type png)
+<use figuras/header.png>
+Package pdftex.def Info: figuras/header.png  used on input line 469.
+(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
+
+Package fancyhdr Warning: \headheight is too small (82.51282pt): 
+(fancyhdr)                Make it at least 84.86107pt, for example:
+(fancyhdr)                \setlength{\headheight}{84.86107pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
+
+[72]
+File: figuras/header.png Graphic file (type png)
+<use figuras/header.png>
+Package pdftex.def Info: figuras/header.png  used on input line 478.
+(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
+
+Package fancyhdr Warning: \headheight is too small (82.51282pt): 
+(fancyhdr)                Make it at least 84.86107pt, for example:
+(fancyhdr)                \setlength{\headheight}{84.86107pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
+
+[73]) (./capitulos/4-resultados.tex
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
 Package pdftex.def Info: figuras/header.png  used on input line 1.
@@ -3116,7 +3160,20 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[71]
+[74]
+File: figuras/header.png Graphic file (type png)
+<use figuras/header.png>
+Package pdftex.def Info: figuras/header.png  used on input line 1.
+(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
+
+Package fancyhdr Warning: \headheight is too small (82.51282pt): 
+(fancyhdr)                Make it at least 84.86107pt, for example:
+(fancyhdr)                \setlength{\headheight}{84.86107pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
+
+[75]
 Cap\'{\i }tulo 4.
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
@@ -3129,7 +3186,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[72
+[76
 
 ]
 File: figuras/header.png Graphic file (type png)
@@ -3144,7 +3201,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[73]
+[77]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
 Package pdftex.def Info: figuras/header.png  used on input line 57.
@@ -3157,7 +3214,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[74]
+[78]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
 Package pdftex.def Info: figuras/header.png  used on input line 80.
@@ -3170,7 +3227,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[75]
+[79]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
 Package pdftex.def Info: figuras/header.png  used on input line 88.
@@ -3183,8 +3240,8 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[76]
-<figuras/fig4_1_mae_por_metodo.pdf, id=1381, 520.34402pt x 231.26399pt>
+[80]
+<figuras/fig4_1_mae_por_metodo.pdf, id=1447, 520.34402pt x 231.26399pt>
 File: figuras/fig4_1_mae_por_metodo.pdf Graphic file (type pdf)
 <use figuras/fig4_1_mae_por_metodo.pdf>
 Package pdftex.def Info: figuras/fig4_1_mae_por_metodo.pdf  used on input line 93.
@@ -3201,7 +3258,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[77 <./figuras/fig4_1_mae_por_metodo.pdf>]
+[81 <./figuras/fig4_1_mae_por_metodo.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 135--135
 []|\T1/cmr/m/n/10 Distancia
  []
@@ -3217,8 +3274,8 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[78]
-<figuras/fig4_2_mae_lt_profundidad.pdf, id=1443, 462.52798pt x 260.17201pt>
+[82]
+<figuras/fig4_2_mae_lt_profundidad.pdf, id=1508, 462.52798pt x 260.17201pt>
 File: figuras/fig4_2_mae_lt_profundidad.pdf Graphic file (type pdf)
 <use figuras/fig4_2_mae_lt_profundidad.pdf>
 Package pdftex.def Info: figuras/fig4_2_mae_lt_profundidad.pdf  used on input line 149.
@@ -3235,8 +3292,8 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[79 <./figuras/fig4_2_mae_lt_profundidad.pdf>]
-<figuras/fig4_errores_combinaciones.pdf, id=1503, 520.34402pt x 390.25798pt>
+[83 <./figuras/fig4_2_mae_lt_profundidad.pdf>]
+<figuras/fig4_errores_combinaciones.pdf, id=1570, 520.34402pt x 390.25798pt>
 File: figuras/fig4_errores_combinaciones.pdf Graphic file (type pdf)
 <use figuras/fig4_errores_combinaciones.pdf>
 Package pdftex.def Info: figuras/fig4_errores_combinaciones.pdf  used on input line 185.
@@ -3253,7 +3310,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[80]
+[84]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
 Package pdftex.def Info: figuras/header.png  used on input line 189.
@@ -3266,28 +3323,15 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[81 <./figuras/fig4_errores_combinaciones.pdf>]
-File: figuras/header.png Graphic file (type png)
-<use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 216.
-(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
-
-
-Package fancyhdr Warning: \headheight is too small (82.51282pt): 
-(fancyhdr)                Make it at least 84.86107pt, for example:
-(fancyhdr)                \setlength{\headheight}{84.86107pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
-
-[82]
-<figuras/fig4_3_ancho_intervalo.pdf, id=1607, 462.52798pt x 260.17201pt>
+[85 <./figuras/fig4_errores_combinaciones.pdf>]
+<figuras/fig4_3_ancho_intervalo.pdf, id=1672, 462.52798pt x 260.17201pt>
 File: figuras/fig4_3_ancho_intervalo.pdf Graphic file (type pdf)
 <use figuras/fig4_3_ancho_intervalo.pdf>
-Package pdftex.def Info: figuras/fig4_3_ancho_intervalo.pdf  used on input line 221.
+Package pdftex.def Info: figuras/fig4_3_ancho_intervalo.pdf  used on input line 220.
 (pdftex.def)             Requested size: 422.77698pt x 237.82478pt.
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 226.
+Package pdftex.def Info: figuras/header.png  used on input line 223.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -3297,11 +3341,24 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[83 <./figuras/fig4_3_ancho_intervalo.pdf>]
-<figuras/fig4_L_z_ejemplos.pdf, id=1677, 462.52798pt x 260.17201pt>
+[86]
+File: figuras/header.png Graphic file (type png)
+<use figuras/header.png>
+Package pdftex.def Info: figuras/header.png  used on input line 225.
+(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
+
+Package fancyhdr Warning: \headheight is too small (82.51282pt): 
+(fancyhdr)                Make it at least 84.86107pt, for example:
+(fancyhdr)                \setlength{\headheight}{84.86107pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
+
+[87 <./figuras/fig4_3_ancho_intervalo.pdf>]
+<figuras/fig4_L_z_ejemplos.pdf, id=1743, 462.52798pt x 260.17201pt>
 File: figuras/fig4_L_z_ejemplos.pdf Graphic file (type pdf)
 <use figuras/fig4_L_z_ejemplos.pdf>
-Package pdftex.def Info: figuras/fig4_L_z_ejemplos.pdf  used on input line 231.
+Package pdftex.def Info: figuras/fig4_L_z_ejemplos.pdf  used on input line 230.
 (pdftex.def)             Requested size: 422.77698pt x 237.82478pt.
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
@@ -3315,62 +3372,10 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[84]
+[88 <./figuras/fig4_L_z_ejemplos.pdf>]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 254.
-(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
-
-
-Package fancyhdr Warning: \headheight is too small (82.51282pt): 
-(fancyhdr)                Make it at least 84.86107pt, for example:
-(fancyhdr)                \setlength{\headheight}{84.86107pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
-
-[85 <./figuras/fig4_L_z_ejemplos.pdf>]
-File: figuras/header.png Graphic file (type png)
-<use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 258.
-(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
-
-
-Package fancyhdr Warning: \headheight is too small (82.51282pt): 
-(fancyhdr)                Make it at least 84.86107pt, for example:
-(fancyhdr)                \setlength{\headheight}{84.86107pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
-
-[86]
-File: figuras/header.png Graphic file (type png)
-<use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 265.
-(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
-
-
-Package fancyhdr Warning: \headheight is too small (82.51282pt): 
-(fancyhdr)                Make it at least 84.86107pt, for example:
-(fancyhdr)                \setlength{\headheight}{84.86107pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
-
-[87]
-File: figuras/header.png Graphic file (type png)
-<use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 271.
-(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
-
-
-Package fancyhdr Warning: \headheight is too small (82.51282pt): 
-(fancyhdr)                Make it at least 84.86107pt, for example:
-(fancyhdr)                \setlength{\headheight}{84.86107pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
-
-[88]
-File: figuras/header.png Graphic file (type png)
-<use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 275.
+Package pdftex.def Info: figuras/header.png  used on input line 255.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -3381,19 +3386,9 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
 [89]
-<figuras/fig4_bland_altman_c.pdf, id=1729, 462.52798pt x 260.17201pt>
-File: figuras/fig4_bland_altman_c.pdf Graphic file (type pdf)
-<use figuras/fig4_bland_altman_c.pdf>
-Package pdftex.def Info: figuras/fig4_bland_altman_c.pdf  used on input line 280.
-(pdftex.def)             Requested size: 328.82733pt x 184.97351pt.
-<figuras/fig4_captura_R3_230.pdf, id=1731, 397.15549pt x 238.49101pt>
-File: figuras/fig4_captura_R3_230.pdf Graphic file (type pdf)
-<use figuras/fig4_captura_R3_230.pdf>
-Package pdftex.def Info: figuras/fig4_captura_R3_230.pdf  used on input line 290.
-(pdftex.def)             Requested size: 422.77698pt x 253.8946pt.
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 293.
+Package pdftex.def Info: figuras/header.png  used on input line 260.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -3403,10 +3398,10 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[90 <./figuras/fig4_bland_altman_c.pdf>]) (./capitulos/5-conclusiones.tex
+[90]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 1.
+Package pdftex.def Info: figuras/header.png  used on input line 268.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -3416,10 +3411,10 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[91 <./figuras/fig4_captura_R3_230.pdf>]
+[91]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 1.
+Package pdftex.def Info: figuras/header.png  used on input line 272.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -3430,6 +3425,68 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
 [92]
+<figuras/fig4_bland_altman_c.pdf, id=1790, 462.52798pt x 260.17201pt>
+File: figuras/fig4_bland_altman_c.pdf Graphic file (type pdf)
+<use figuras/fig4_bland_altman_c.pdf>
+Package pdftex.def Info: figuras/fig4_bland_altman_c.pdf  used on input line 279.
+(pdftex.def)             Requested size: 328.82733pt x 184.97351pt.
+File: figuras/header.png Graphic file (type png)
+<use figuras/header.png>
+Package pdftex.def Info: figuras/header.png  used on input line 282.
+(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
+
+Package fancyhdr Warning: \headheight is too small (82.51282pt): 
+(fancyhdr)                Make it at least 84.86107pt, for example:
+(fancyhdr)                \setlength{\headheight}{84.86107pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
+
+[93]
+<figuras/fig4_captura_R3_230.pdf, id=1796, 397.15549pt x 238.49101pt>
+File: figuras/fig4_captura_R3_230.pdf Graphic file (type pdf)
+<use figuras/fig4_captura_R3_230.pdf>
+Package pdftex.def Info: figuras/fig4_captura_R3_230.pdf  used on input line 289.
+(pdftex.def)             Requested size: 422.77698pt x 253.8946pt.
+File: figuras/header.png Graphic file (type png)
+<use figuras/header.png>
+Package pdftex.def Info: figuras/header.png  used on input line 292.
+(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
+
+Package fancyhdr Warning: \headheight is too small (82.51282pt): 
+(fancyhdr)                Make it at least 84.86107pt, for example:
+(fancyhdr)                \setlength{\headheight}{84.86107pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
+
+[94 <./figuras/fig4_bland_altman_c.pdf>]
+File: figuras/header.png Graphic file (type png)
+<use figuras/header.png>
+Package pdftex.def Info: figuras/header.png  used on input line 297.
+(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
+
+Package fancyhdr Warning: \headheight is too small (82.51282pt): 
+(fancyhdr)                Make it at least 84.86107pt, for example:
+(fancyhdr)                \setlength{\headheight}{84.86107pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
+
+[95 <./figuras/fig4_captura_R3_230.pdf>]) (./capitulos/5-conclusiones.tex
+File: figuras/header.png Graphic file (type png)
+<use figuras/header.png>
+Package pdftex.def Info: figuras/header.png  used on input line 1.
+(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
+
+Package fancyhdr Warning: \headheight is too small (82.51282pt): 
+(fancyhdr)                Make it at least 84.86107pt, for example:
+(fancyhdr)                \setlength{\headheight}{84.86107pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
+
+[96]
 Cap\'{\i }tulo 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 22--22
@@ -3462,23 +3519,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--22
  []
 
 
-Underfull \hbox (badness 5592) in paragraph at lines 22--22
-[]|$\OML/cmm/m/it/10.95 < \OT1/cmr/m/n/10.95 1$$ $\T1/cmr/m/n/10.95 % de LT
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+[]|\T1/cmr/m/n/10.95 MAPE de LT
  []
 
 
-Underfull \hbox (badness 1082) in paragraph at lines 22--22
-\T1/cmr/m/n/10.95 (1,2 mm) con $\OML/cmm/m/it/10.95 z$
+Underfull \hbox (badness 6808) in paragraph at lines 22--22
+\T1/cmr/m/n/10.95 con la po-si-ción
  []
 
 
-Underfull \hbox (badness 5592) in paragraph at lines 22--22
-[]|$\OML/cmm/m/it/10.95 < \OT1/cmr/m/n/10.95 1$$ $\T1/cmr/m/n/10.95 % de LT
- []
-
-
-Underfull \hbox (badness 1082) in paragraph at lines 22--22
-\T1/cmr/m/n/10.95 (1,1 mm) con $\OML/cmm/m/it/10.95 z$
+Underfull \hbox (badness 7326) in paragraph at lines 22--22
+\T1/cmr/m/n/10.95 del plano da-da
  []
 
 
@@ -3497,64 +3549,12 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[93
+[97
 
 ]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 48.
-(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
-
-
-Package fancyhdr Warning: \headheight is too small (82.51282pt): 
-(fancyhdr)                Make it at least 84.86107pt, for example:
-(fancyhdr)                \setlength{\headheight}{84.86107pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
-
-[94]
-File: figuras/header.png Graphic file (type png)
-<use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 55.
-(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
-
-
-Package fancyhdr Warning: \headheight is too small (82.51282pt): 
-(fancyhdr)                Make it at least 84.86107pt, for example:
-(fancyhdr)                \setlength{\headheight}{84.86107pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
-
-[95]
-File: figuras/header.png Graphic file (type png)
-<use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 58.
-(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
-
-
-Package fancyhdr Warning: \headheight is too small (82.51282pt): 
-(fancyhdr)                Make it at least 84.86107pt, for example:
-(fancyhdr)                \setlength{\headheight}{84.86107pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
-
-[96]
-File: figuras/header.png Graphic file (type png)
-<use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 83.
-(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
-
-
-Package fancyhdr Warning: \headheight is too small (82.51282pt): 
-(fancyhdr)                Make it at least 84.86107pt, for example:
-(fancyhdr)                \setlength{\headheight}{84.86107pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
-
-[97]
-File: figuras/header.png Graphic file (type png)
-<use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 90.
+Package pdftex.def Info: figuras/header.png  used on input line 49.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -3567,7 +3567,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [98]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 100.
+Package pdftex.def Info: figuras/header.png  used on input line 55.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -3577,10 +3577,10 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[99])
+[99]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 203.
+Package pdftex.def Info: figuras/header.png  used on input line 58.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -3593,7 +3593,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [100]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 205.
+Package pdftex.def Info: figuras/header.png  used on input line 65.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -3606,7 +3606,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [101]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 208.
+Package pdftex.def Info: figuras/header.png  used on input line 72.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -3616,13 +3616,10 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[102
-
-
-]
+[102]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 208.
+Package pdftex.def Info: figuras/header.png  used on input line 80.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -3635,7 +3632,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 [103]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 208.
+Package pdftex.def Info: figuras/header.png  used on input line 87.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -3645,10 +3642,10 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[104]
+[104])
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 208.
+Package pdftex.def Info: figuras/header.png  used on input line 247.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -3658,7 +3655,75 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[105] (./anexos/anexos.tex
+[105]
+File: figuras/header.png Graphic file (type png)
+<use figuras/header.png>
+Package pdftex.def Info: figuras/header.png  used on input line 250.
+(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
+
+Package fancyhdr Warning: \headheight is too small (82.51282pt): 
+(fancyhdr)                Make it at least 84.86107pt, for example:
+(fancyhdr)                \setlength{\headheight}{84.86107pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
+
+[106
+
+
+]
+File: figuras/header.png Graphic file (type png)
+<use figuras/header.png>
+Package pdftex.def Info: figuras/header.png  used on input line 250.
+(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
+
+Package fancyhdr Warning: \headheight is too small (82.51282pt): 
+(fancyhdr)                Make it at least 84.86107pt, for example:
+(fancyhdr)                \setlength{\headheight}{84.86107pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
+
+[107]
+File: figuras/header.png Graphic file (type png)
+<use figuras/header.png>
+Package pdftex.def Info: figuras/header.png  used on input line 250.
+(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
+
+Package fancyhdr Warning: \headheight is too small (82.51282pt): 
+(fancyhdr)                Make it at least 84.86107pt, for example:
+(fancyhdr)                \setlength{\headheight}{84.86107pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
+
+[108]
+File: figuras/header.png Graphic file (type png)
+<use figuras/header.png>
+Package pdftex.def Info: figuras/header.png  used on input line 250.
+(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
+
+Package fancyhdr Warning: \headheight is too small (82.51282pt): 
+(fancyhdr)                Make it at least 84.86107pt, for example:
+(fancyhdr)                \setlength{\headheight}{84.86107pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
+
+[109]
+File: figuras/header.png Graphic file (type png)
+<use figuras/header.png>
+Package pdftex.def Info: figuras/header.png  used on input line 250.
+(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
+
+Package fancyhdr Warning: \headheight is too small (82.51282pt): 
+(fancyhdr)                Make it at least 84.86107pt, for example:
+(fancyhdr)                \setlength{\headheight}{84.86107pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
+
+[110] (./anexos/anexos.tex
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
 Package pdftex.def Info: figuras/header.png  used on input line 1.
@@ -3671,7 +3736,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[106]
+[111]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
 Package pdftex.def Info: figuras/header.png  used on input line 6.
@@ -3684,11 +3749,11 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[107
+[112
 
 ]
 Anexo A.
-<figuras/originales/figA_1_capturas.png, id=1955, 1586.92876pt x 653.44125pt>
+<figuras/originales/figA_1_capturas.png, id=1993, 1586.92876pt x 653.44125pt>
 File: figuras/originales/figA_1_capturas.png Graphic file (type png)
 <use figuras/originales/figA_1_capturas.png>
 Package pdftex.def Info: figuras/originales/figA_1_capturas.png  used on input line 15.
@@ -3704,11 +3769,11 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[108
+[113
 
  <./figuras/originales/figA_1_capturas.png (PNG copy)>]
 Anexo B.
-<figuras/originales/figB_1_flatport.png, id=1962, 523.9575pt x 404.51125pt>
+<figuras/originales/figB_1_flatport.png, id=2001, 523.9575pt x 404.51125pt>
 File: figuras/originales/figB_1_flatport.png Graphic file (type png)
 <use figuras/originales/figB_1_flatport.png>
 Package pdftex.def Info: figuras/originales/figB_1_flatport.png  used on input line 28.
@@ -3724,7 +3789,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[109
+[114
 
  <./figuras/originales/figB_1_flatport.png (PNG copy)>]
 Anexo C.
@@ -3740,7 +3805,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[110
+[115
 
 ]
 File: figuras/header.png Graphic file (type png)
@@ -3755,7 +3820,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[111]
+[116]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
 Package pdftex.def Info: figuras/header.png  used on input line 103.
@@ -3768,7 +3833,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[112]
+[117]
 Anexo D.
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
@@ -3781,13 +3846,13 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[113
+[118
 
 ]
 Anexo E.
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 151.
+Package pdftex.def Info: figuras/header.png  used on input line 147.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 Package fancyhdr Warning: \headheight is too small (82.51282pt): 
@@ -3796,12 +3861,12 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[114
+[119
 
 ]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 155.
+Package pdftex.def Info: figuras/header.png  used on input line 156.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -3811,7 +3876,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[115]
+[120]
 Anexo F.
 (./anexos/tabla_maestra.tex
 ignored: Infinite glue shrinkage found in box being split
@@ -3827,7 +3892,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[116
+[121
 
 ]
 ignored: Infinite glue shrinkage found in box being split
@@ -3843,7 +3908,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[117]
+[122]
 ignored: Infinite glue shrinkage found in box being split
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
@@ -3857,10 +3922,10 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[118])
+[123])
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 164.
+Package pdftex.def Info: figuras/header.png  used on input line 165.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -3870,16 +3935,16 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[119]
+[124]
 Anexo G.
-<figuras/fig3_1_replicas_tags.jpg, id=2122, 629.35126pt x 968.61874pt>
+<figuras/fig3_1_replicas_tags.jpg, id=2163, 629.35126pt x 968.61874pt>
 File: figuras/fig3_1_replicas_tags.jpg Graphic file (type jpg)
 <use figuras/fig3_1_replicas_tags.jpg>
-Package pdftex.def Info: figuras/fig3_1_replicas_tags.jpg  used on input line 173.
+Package pdftex.def Info: figuras/fig3_1_replicas_tags.jpg  used on input line 174.
 (pdftex.def)             Requested size: 258.36688pt x 397.63878pt.
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 176.
+Package pdftex.def Info: figuras/header.png  used on input line 177.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 Package fancyhdr Warning: \headheight is too small (82.51282pt): 
@@ -3888,22 +3953,9 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[120
+[125
 
 ]
-File: figuras/header.png Graphic file (type png)
-<use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 201.
-(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
-
-
-Package fancyhdr Warning: \headheight is too small (82.51282pt): 
-(fancyhdr)                Make it at least 84.86107pt, for example:
-(fancyhdr)                \setlength{\headheight}{84.86107pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
-
-[121 <./figuras/fig3_1_replicas_tags.jpg>]
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
 Package pdftex.def Info: figuras/header.png  used on input line 202.
@@ -3916,21 +3968,34 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[122]
+[126 <./figuras/fig3_1_replicas_tags.jpg>]
+File: figuras/header.png Graphic file (type png)
+<use figuras/header.png>
+Package pdftex.def Info: figuras/header.png  used on input line 203.
+(pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
+
+
+Package fancyhdr Warning: \headheight is too small (82.51282pt): 
+(fancyhdr)                Make it at least 84.86107pt, for example:
+(fancyhdr)                \setlength{\headheight}{84.86107pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
+
+[127]
 Anexo H.
-<figuras/estanque.png, id=2140, 749.80125pt x 640.3925pt>
+<figuras/estanque.png, id=2181, 749.80125pt x 640.3925pt>
 File: figuras/estanque.png Graphic file (type png)
 <use figuras/estanque.png>
-Package pdftex.def Info: figuras/estanque.png  used on input line 211.
+Package pdftex.def Info: figuras/estanque.png  used on input line 212.
 (pdftex.def)             Requested size: 225.48058pt x 192.57849pt.
-<figuras/tools-measure-manipulate.png, id=2141, 1052.93375pt x 729.72626pt>
+<figuras/tools-measure-manipulate.png, id=2182, 1052.93375pt x 729.72626pt>
 File: figuras/tools-measure-manipulate.png Graphic file (type png)
 <use figuras/tools-measure-manipulate.png>
-Package pdftex.def Info: figuras/tools-measure-manipulate.png  used on input line 219.
+Package pdftex.def Info: figuras/tools-measure-manipulate.png  used on input line 220.
 (pdftex.def)             Requested size: 305.33812pt x 211.61519pt.
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 222.
+Package pdftex.def Info: figuras/header.png  used on input line 223.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 Package fancyhdr Warning: \headheight is too small (82.51282pt): 
@@ -3939,12 +4004,12 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[123
+[128
 
  <./figuras/estanque.png>])
 File: figuras/header.png Graphic file (type png)
 <use figuras/header.png>
-Package pdftex.def Info: figuras/header.png  used on input line 217.
+Package pdftex.def Info: figuras/header.png  used on input line 262.
 (pdftex.def)             Requested size: 210.55022pt x 80.51103pt.
 
 
@@ -3954,7 +4019,7 @@ Package fancyhdr Warning: \headheight is too small (82.51282pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.34825pt}.
 
-[124 <./figuras/tools-measure-manipulate.png>] 
+[129 <./figuras/tools-measure-manipulate.png>] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./main.aux
 LaTeX Info: Redefining \sptext on input line 11.
@@ -3969,24 +4034,24 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-05-15>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8A88CB1D9BD4EFE65A650F60A1D54690;18169.
+(rerunfilecheck)             Checksum: CFFD68C806A9E29CE015B92B3B14626B;18078.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55685 strings out of 469227
- 1196478 string characters out of 5462848
- 2594006 words of memory out of 5000000
- 83208 multiletter control sequences out of 15000+600000
+ 55867 strings out of 469227
+ 1199983 string characters out of 5462848
+ 2529855 words of memory out of 5000000
+ 83373 multiletter control sequences out of 15000+600000
  655896 words of font info for 118 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
- 197i,16n,292p,2551b,5117s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 197i,16n,292p,2492b,5117s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfit1200.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></home/epereira/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (144 pages, 6281689 bytes).
+Output written on main.pdf (149 pages, 6533959 bytes).
 PDF statistics:
- 2407 PDF objects out of 2487 (max. 8388607)
- 1851 compressed objects within 19 object streams
- 475 named destinations out of 1000 (max. 500000)
- 984 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2451 PDF objects out of 2487 (max. 8388607)
+ 1912 compressed objects within 20 object streams
+ 483 named destinations out of 1000 (max. 500000)
+ 966 words of extra memory for PDF output out of 10000 (max. 10000000)
 

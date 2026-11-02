@@ -19,7 +19,7 @@
 
 \refsection{0}
   \datalist[entry]{apa/apasortcite//global/global/global}
-    \entry{Agrawal2012}{article}{}{}
+    \entry{Agrawal2012}{inbook}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=950b6bd713e6d6bf5e1e082dcf37838f}{%
            family={Agrawal},
@@ -64,7 +64,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{2012 IEEE Conference on Computer Vision and Pattern Recognition}
+      \field{booktitle}{2012 IEEE Conference on Computer Vision and Pattern Recognition}
       \field{title}{A theory of multi-layer flat refractive geometry}
       \field{year}{2012}
       \field{pages}{3346\bibrangedash 3353}
@@ -197,6 +197,47 @@
       \field{year}{1966}
       \field{pages}{444\bibrangedash 462}
       \range{pages}{19}
+    \endentry
+    \entry{Chai2014}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=8e53bdae71702914a9a1ccbaee47b2af}{%
+           family={Chai},
+           familyi={C\bibinitperiod},
+           given={Tianfeng},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=80fabc38ffe747f5c1ea20ae1a651cab}{%
+           family={Draxler},
+           familyi={D\bibinitperiod},
+           given={Roland\bibnamedelima R.},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e1577aec9e3708c9b1407bc9eb3fb545}
+      \strng{fullhash}{e1577aec9e3708c9b1407bc9eb3fb545}
+      \strng{fullhashraw}{e1577aec9e3708c9b1407bc9eb3fb545}
+      \strng{bibnamehash}{e1577aec9e3708c9b1407bc9eb3fb545}
+      \strng{authorbibnamehash}{e1577aec9e3708c9b1407bc9eb3fb545}
+      \strng{authornamehash}{e1577aec9e3708c9b1407bc9eb3fb545}
+      \strng{authorfullhash}{e1577aec9e3708c9b1407bc9eb3fb545}
+      \strng{authorfullhashraw}{e1577aec9e3708c9b1407bc9eb3fb545}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Geoscientific Model Development}
+      \field{number}{3}
+      \field{title}{Root mean square error ({RMSE}) or mean absolute error ({MAE})? -- Arguments against avoiding {RMSE} in the literature}
+      \field{volume}{7}
+      \field{year}{2014}
+      \field{pages}{1247\bibrangedash 1250}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.5194/gmd-7-1247-2014
+      \endverb
     \endentry
     \entry{Correia2025}{article}{}{}
       \name{author}{4}{}{%
@@ -530,7 +571,83 @@
       \verb 10.1016/S0165-7836(01)00312-5
       \endverb
     \endentry
-    \entry{JordtSedlazeck2012}{article}{}{}
+    \entry{Hyndman2006}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2f709db8a046ae1d056e75c1f3aad31c}{%
+           family={Hyndman},
+           familyi={H\bibinitperiod},
+           given={Rob\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e1d517a3ae1d7b892371ef8f37f88412}{%
+           family={Koehler},
+           familyi={K\bibinitperiod},
+           given={Anne\bibnamedelima B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{fullhash}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{fullhashraw}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{bibnamehash}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{authorbibnamehash}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{authornamehash}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{authorfullhash}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{authorfullhashraw}{5b8826bba5f702862b6f6d20f0ae0758}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Forecasting}
+      \field{number}{4}
+      \field{title}{Another look at measures of forecast accuracy}
+      \field{volume}{22}
+      \field{year}{2006}
+      \field{pages}{679\bibrangedash 688}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.ijforecast.2006.03.001
+      \endverb
+    \endentry
+    \entry{JCGM2012}{manual}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=06bfa51bd1bb8240fcaa1ae04d2c5d59}{%
+           family={{Joint Committee for Guides in Metrology}},
+           familyi={J\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {BIPM}%
+      }
+      \strng{namehash}{06bfa51bd1bb8240fcaa1ae04d2c5d59}
+      \strng{fullhash}{06bfa51bd1bb8240fcaa1ae04d2c5d59}
+      \strng{fullhashraw}{06bfa51bd1bb8240fcaa1ae04d2c5d59}
+      \strng{bibnamehash}{06bfa51bd1bb8240fcaa1ae04d2c5d59}
+      \strng{authorbibnamehash}{06bfa51bd1bb8240fcaa1ae04d2c5d59}
+      \strng{authornamehash}{06bfa51bd1bb8240fcaa1ae04d2c5d59}
+      \strng{authorfullhash}{06bfa51bd1bb8240fcaa1ae04d2c5d59}
+      \strng{authorfullhashraw}{06bfa51bd1bb8240fcaa1ae04d2c5d59}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{number}{JCGM 200:2012}
+      \field{title}{International vocabulary of metrology -- Basic and general concepts and associated terms ({VIM})}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb https://www.bipm.org/en/committees/jc/jcgm/publications
+      \endverb
+      \verb{url}
+      \verb https://www.bipm.org/en/committees/jc/jcgm/publications
+      \endverb
+    \endentry
+    \entry{JordtSedlazeck2012}{inbook}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=b9685c3b84b83a8b03d5a8a095377b35}{%
            family={Jordt-Sedlazeck},
@@ -545,6 +662,33 @@
            giveni={R\bibinitperiod},
            givenun=0}}%
       }
+      \name{editor}{5}{}{%
+        {{hash=8eb0347090bee0e3077a241bdad85387}{%
+           family={Fitzgibbon},
+           familyi={F\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ed3e473df095b5791b5a5d837557bff7}{%
+           family={Lazebnik},
+           familyi={L\bibinitperiod},
+           given={Svetlana},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e52876f830a8a20786ff3e4d7dd6f083}{%
+           family={Perona},
+           familyi={P\bibinitperiod},
+           given={Pietro},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e292ab2afea048f7ad6399d6b3301f67}{%
+           family={Sato},
+           familyi={S\bibinitperiod},
+           given={Yoichi},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=58e4a9845eac42a4b0e5205cf0970fc0}{%
+           family={Schmid},
+           familyi={S\bibinitperiod},
+           given={Cordelia},
+           giveni={C\bibinitperiod}}}%
+      }
       \list{publisher}{1}{%
         {Springer}%
       }
@@ -556,6 +700,10 @@
       \strng{authornamehash}{9ed6ea02576475f6f4af582958c3ba8a}
       \strng{authorfullhash}{9ed6ea02576475f6f4af582958c3ba8a}
       \strng{authorfullhashraw}{9ed6ea02576475f6f4af582958c3ba8a}
+      \strng{editorbibnamehash}{e51d8adfa31c91e050ae1106e625556b}
+      \strng{editornamehash}{030f19bc7a52b401ad3aad5d214083fa}
+      \strng{editorfullhash}{e51d8adfa31c91e050ae1106e625556b}
+      \strng{editorfullhashraw}{e51d8adfa31c91e050ae1106e625556b}
       \field{sortinit}{J}
       \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
       \field{extradatescope}{labelyear}
@@ -563,7 +711,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Computer Vision -- ECCV 2012}
+      \field{booktitle}{Computer Vision -- ECCV 2012}
       \field{series}{Lecture Notes in Computer Science}
       \field{title}{Refractive calibration of underwater cameras}
       \field{volume}{7576}
@@ -572,41 +720,6 @@
       \range{pages}{14}
       \verb{doi}
       \verb 10.1007/978-3-642-33715-4_61
-      \endverb
-    \endentry
-    \entry{Lin1989}{article}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=0bf6ff23a73256f3096ebc762ac917f1}{%
-           family={Lin},
-           familyi={L\bibinitperiod},
-           given={Lawrence\bibnamedelima I-Kuei},
-           giveni={L\bibinitperiod\bibinitdelim I\bibinithyphendelim K\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{0bf6ff23a73256f3096ebc762ac917f1}
-      \strng{fullhash}{0bf6ff23a73256f3096ebc762ac917f1}
-      \strng{fullhashraw}{0bf6ff23a73256f3096ebc762ac917f1}
-      \strng{bibnamehash}{0bf6ff23a73256f3096ebc762ac917f1}
-      \strng{authorbibnamehash}{0bf6ff23a73256f3096ebc762ac917f1}
-      \strng{authornamehash}{0bf6ff23a73256f3096ebc762ac917f1}
-      \strng{authorfullhash}{0bf6ff23a73256f3096ebc762ac917f1}
-      \strng{authorfullhashraw}{0bf6ff23a73256f3096ebc762ac917f1}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Biometrics}
-      \field{number}{1}
-      \field{title}{A concordance correlation coefficient to evaluate reproducibility}
-      \field{volume}{45}
-      \field{year}{1989}
-      \field{pages}{255\bibrangedash 268}
-      \range{pages}{14}
-      \verb{doi}
-      \verb 10.2307/2532051
       \endverb
     \endentry
     \entry{Luczynski2017}{article}{}{}
@@ -1062,7 +1175,7 @@
       \verb https://www.engineeringletters.com/issues_v26/issue_4/EL_26_4_09.pdf
       \endverb
     \endentry
-    \entry{Seegraber2025}{article}{}{}
+    \entry{Seegraber2025}{inbook}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=3b895fd1856f48bbe55442455a79c7d6}{%
            family={Seegräber},
@@ -1107,7 +1220,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{2025 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)}
+      \field{booktitle}{2025 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)}
       \field{title}{A calibration tool for refractive underwater vision}
       \field{year}{2025}
       \field{pages}{2087\bibrangedash 2095}
@@ -1116,7 +1229,7 @@
       \verb 10.1109/ICCVW69036.2025.00218
       \endverb
     \endentry
-    \entry{Seibold2026}{article}{}{}
+    \entry{Seibold2026}{inbook}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=0e1cb2386a19fc57bfd75203441ccbc4}{%
            family={Seibold},
@@ -1155,7 +1268,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Proceedings of the 21st International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications -- Volume 3: VISAPP}
+      \field{booktitle}{Proceedings of the 21st International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications -- Volume 3: VISAPP}
       \field{title}{Non-invasive growth monitoring of small freshwater fish in home aquariums via stereo vision}
       \field{year}{2026}
       \field{pages}{639\bibrangedash 646}
@@ -1459,6 +1572,47 @@
       \range{pages}{16}
       \verb{doi}
       \verb 10.1109/34.159901
+      \endverb
+    \endentry
+    \entry{Willmott2005}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=7e389034db1c4f1ba99047863db850eb}{%
+           family={Willmott},
+           familyi={W\bibinitperiod},
+           given={Cort\bibnamedelima J.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=683ecc9a84dc4c42d3b77ac983b771ca}{%
+           family={Matsuura},
+           familyi={M\bibinitperiod},
+           given={Kenji},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{62fb2205b9983b6df20c51349d89b32d}
+      \strng{fullhash}{62fb2205b9983b6df20c51349d89b32d}
+      \strng{fullhashraw}{62fb2205b9983b6df20c51349d89b32d}
+      \strng{bibnamehash}{62fb2205b9983b6df20c51349d89b32d}
+      \strng{authorbibnamehash}{62fb2205b9983b6df20c51349d89b32d}
+      \strng{authornamehash}{62fb2205b9983b6df20c51349d89b32d}
+      \strng{authorfullhash}{62fb2205b9983b6df20c51349d89b32d}
+      \strng{authorfullhashraw}{62fb2205b9983b6df20c51349d89b32d}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Climate Research}
+      \field{number}{1}
+      \field{title}{Advantages of the mean absolute error ({MAE}) over the root mean square error ({RMSE}) in assessing average model performance}
+      \field{volume}{30}
+      \field{year}{2005}
+      \field{pages}{79\bibrangedash 82}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.3354/cr030079
       \endverb
     \endentry
     \entry{Yin2026}{article}{}{}
@@ -1673,7 +1827,7 @@
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global/global}
-    \entry{Agrawal2012}{article}{}{}
+    \entry{Agrawal2012}{inbook}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=950b6bd713e6d6bf5e1e082dcf37838f}{%
            family={Agrawal},
@@ -1718,7 +1872,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{2012 IEEE Conference on Computer Vision and Pattern Recognition}
+      \field{booktitle}{2012 IEEE Conference on Computer Vision and Pattern Recognition}
       \field{title}{A theory of multi-layer flat refractive geometry}
       \field{year}{2012}
       \field{pages}{3346\bibrangedash 3353}
@@ -1851,6 +2005,47 @@
       \field{year}{1966}
       \field{pages}{444\bibrangedash 462}
       \range{pages}{19}
+    \endentry
+    \entry{Chai2014}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=8e53bdae71702914a9a1ccbaee47b2af}{%
+           family={Chai},
+           familyi={C\bibinitperiod},
+           given={Tianfeng},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=80fabc38ffe747f5c1ea20ae1a651cab}{%
+           family={Draxler},
+           familyi={D\bibinitperiod},
+           given={Roland\bibnamedelima R.},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e1577aec9e3708c9b1407bc9eb3fb545}
+      \strng{fullhash}{e1577aec9e3708c9b1407bc9eb3fb545}
+      \strng{fullhashraw}{e1577aec9e3708c9b1407bc9eb3fb545}
+      \strng{bibnamehash}{e1577aec9e3708c9b1407bc9eb3fb545}
+      \strng{authorbibnamehash}{e1577aec9e3708c9b1407bc9eb3fb545}
+      \strng{authornamehash}{e1577aec9e3708c9b1407bc9eb3fb545}
+      \strng{authorfullhash}{e1577aec9e3708c9b1407bc9eb3fb545}
+      \strng{authorfullhashraw}{e1577aec9e3708c9b1407bc9eb3fb545}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Geoscientific Model Development}
+      \field{number}{3}
+      \field{title}{Root mean square error ({RMSE}) or mean absolute error ({MAE})? -- Arguments against avoiding {RMSE} in the literature}
+      \field{volume}{7}
+      \field{year}{2014}
+      \field{pages}{1247\bibrangedash 1250}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.5194/gmd-7-1247-2014
+      \endverb
     \endentry
     \entry{Correia2025}{article}{}{}
       \name{author}{4}{}{%
@@ -2184,7 +2379,83 @@
       \verb 10.1016/S0165-7836(01)00312-5
       \endverb
     \endentry
-    \entry{JordtSedlazeck2012}{article}{}{}
+    \entry{Hyndman2006}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2f709db8a046ae1d056e75c1f3aad31c}{%
+           family={Hyndman},
+           familyi={H\bibinitperiod},
+           given={Rob\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e1d517a3ae1d7b892371ef8f37f88412}{%
+           family={Koehler},
+           familyi={K\bibinitperiod},
+           given={Anne\bibnamedelima B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{fullhash}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{fullhashraw}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{bibnamehash}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{authorbibnamehash}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{authornamehash}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{authorfullhash}{5b8826bba5f702862b6f6d20f0ae0758}
+      \strng{authorfullhashraw}{5b8826bba5f702862b6f6d20f0ae0758}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Forecasting}
+      \field{number}{4}
+      \field{title}{Another look at measures of forecast accuracy}
+      \field{volume}{22}
+      \field{year}{2006}
+      \field{pages}{679\bibrangedash 688}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.ijforecast.2006.03.001
+      \endverb
+    \endentry
+    \entry{JCGM2012}{manual}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=06bfa51bd1bb8240fcaa1ae04d2c5d59}{%
+           family={{Joint Committee for Guides in Metrology}},
+           familyi={J\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {BIPM}%
+      }
+      \strng{namehash}{06bfa51bd1bb8240fcaa1ae04d2c5d59}
+      \strng{fullhash}{06bfa51bd1bb8240fcaa1ae04d2c5d59}
+      \strng{fullhashraw}{06bfa51bd1bb8240fcaa1ae04d2c5d59}
+      \strng{bibnamehash}{06bfa51bd1bb8240fcaa1ae04d2c5d59}
+      \strng{authorbibnamehash}{06bfa51bd1bb8240fcaa1ae04d2c5d59}
+      \strng{authornamehash}{06bfa51bd1bb8240fcaa1ae04d2c5d59}
+      \strng{authorfullhash}{06bfa51bd1bb8240fcaa1ae04d2c5d59}
+      \strng{authorfullhashraw}{06bfa51bd1bb8240fcaa1ae04d2c5d59}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{number}{JCGM 200:2012}
+      \field{title}{International vocabulary of metrology -- Basic and general concepts and associated terms ({VIM})}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb https://www.bipm.org/en/committees/jc/jcgm/publications
+      \endverb
+      \verb{url}
+      \verb https://www.bipm.org/en/committees/jc/jcgm/publications
+      \endverb
+    \endentry
+    \entry{JordtSedlazeck2012}{inbook}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=b9685c3b84b83a8b03d5a8a095377b35}{%
            family={Jordt-Sedlazeck},
@@ -2199,6 +2470,33 @@
            giveni={R\bibinitperiod},
            givenun=0}}%
       }
+      \name{editor}{5}{}{%
+        {{hash=8eb0347090bee0e3077a241bdad85387}{%
+           family={Fitzgibbon},
+           familyi={F\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ed3e473df095b5791b5a5d837557bff7}{%
+           family={Lazebnik},
+           familyi={L\bibinitperiod},
+           given={Svetlana},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e52876f830a8a20786ff3e4d7dd6f083}{%
+           family={Perona},
+           familyi={P\bibinitperiod},
+           given={Pietro},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e292ab2afea048f7ad6399d6b3301f67}{%
+           family={Sato},
+           familyi={S\bibinitperiod},
+           given={Yoichi},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=58e4a9845eac42a4b0e5205cf0970fc0}{%
+           family={Schmid},
+           familyi={S\bibinitperiod},
+           given={Cordelia},
+           giveni={C\bibinitperiod}}}%
+      }
       \list{publisher}{1}{%
         {Springer}%
       }
@@ -2210,6 +2508,10 @@
       \strng{authornamehash}{9ed6ea02576475f6f4af582958c3ba8a}
       \strng{authorfullhash}{9ed6ea02576475f6f4af582958c3ba8a}
       \strng{authorfullhashraw}{9ed6ea02576475f6f4af582958c3ba8a}
+      \strng{editorbibnamehash}{e51d8adfa31c91e050ae1106e625556b}
+      \strng{editornamehash}{030f19bc7a52b401ad3aad5d214083fa}
+      \strng{editorfullhash}{e51d8adfa31c91e050ae1106e625556b}
+      \strng{editorfullhashraw}{e51d8adfa31c91e050ae1106e625556b}
       \field{sortinit}{J}
       \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
       \field{extradatescope}{labelyear}
@@ -2217,7 +2519,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Computer Vision -- ECCV 2012}
+      \field{booktitle}{Computer Vision -- ECCV 2012}
       \field{series}{Lecture Notes in Computer Science}
       \field{title}{Refractive calibration of underwater cameras}
       \field{volume}{7576}
@@ -2226,41 +2528,6 @@
       \range{pages}{14}
       \verb{doi}
       \verb 10.1007/978-3-642-33715-4_61
-      \endverb
-    \endentry
-    \entry{Lin1989}{article}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=0bf6ff23a73256f3096ebc762ac917f1}{%
-           family={Lin},
-           familyi={L\bibinitperiod},
-           given={Lawrence\bibnamedelima I-Kuei},
-           giveni={L\bibinitperiod\bibinitdelim I\bibinithyphendelim K\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{0bf6ff23a73256f3096ebc762ac917f1}
-      \strng{fullhash}{0bf6ff23a73256f3096ebc762ac917f1}
-      \strng{fullhashraw}{0bf6ff23a73256f3096ebc762ac917f1}
-      \strng{bibnamehash}{0bf6ff23a73256f3096ebc762ac917f1}
-      \strng{authorbibnamehash}{0bf6ff23a73256f3096ebc762ac917f1}
-      \strng{authornamehash}{0bf6ff23a73256f3096ebc762ac917f1}
-      \strng{authorfullhash}{0bf6ff23a73256f3096ebc762ac917f1}
-      \strng{authorfullhashraw}{0bf6ff23a73256f3096ebc762ac917f1}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Biometrics}
-      \field{number}{1}
-      \field{title}{A concordance correlation coefficient to evaluate reproducibility}
-      \field{volume}{45}
-      \field{year}{1989}
-      \field{pages}{255\bibrangedash 268}
-      \range{pages}{14}
-      \verb{doi}
-      \verb 10.2307/2532051
       \endverb
     \endentry
     \entry{Luczynski2017}{article}{}{}
@@ -2716,7 +2983,7 @@
       \verb https://www.engineeringletters.com/issues_v26/issue_4/EL_26_4_09.pdf
       \endverb
     \endentry
-    \entry{Seegraber2025}{article}{}{}
+    \entry{Seegraber2025}{inbook}{}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=3b895fd1856f48bbe55442455a79c7d6}{%
            family={Seegräber},
@@ -2761,7 +3028,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{2025 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)}
+      \field{booktitle}{2025 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)}
       \field{title}{A calibration tool for refractive underwater vision}
       \field{year}{2025}
       \field{pages}{2087\bibrangedash 2095}
@@ -2770,7 +3037,7 @@
       \verb 10.1109/ICCVW69036.2025.00218
       \endverb
     \endentry
-    \entry{Seibold2026}{article}{}{}
+    \entry{Seibold2026}{inbook}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=0e1cb2386a19fc57bfd75203441ccbc4}{%
            family={Seibold},
@@ -2809,7 +3076,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Proceedings of the 21st International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications -- Volume 3: VISAPP}
+      \field{booktitle}{Proceedings of the 21st International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications -- Volume 3: VISAPP}
       \field{title}{Non-invasive growth monitoring of small freshwater fish in home aquariums via stereo vision}
       \field{year}{2026}
       \field{pages}{639\bibrangedash 646}
@@ -3113,6 +3380,47 @@
       \range{pages}{16}
       \verb{doi}
       \verb 10.1109/34.159901
+      \endverb
+    \endentry
+    \entry{Willmott2005}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=7e389034db1c4f1ba99047863db850eb}{%
+           family={Willmott},
+           familyi={W\bibinitperiod},
+           given={Cort\bibnamedelima J.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=683ecc9a84dc4c42d3b77ac983b771ca}{%
+           family={Matsuura},
+           familyi={M\bibinitperiod},
+           given={Kenji},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{62fb2205b9983b6df20c51349d89b32d}
+      \strng{fullhash}{62fb2205b9983b6df20c51349d89b32d}
+      \strng{fullhashraw}{62fb2205b9983b6df20c51349d89b32d}
+      \strng{bibnamehash}{62fb2205b9983b6df20c51349d89b32d}
+      \strng{authorbibnamehash}{62fb2205b9983b6df20c51349d89b32d}
+      \strng{authornamehash}{62fb2205b9983b6df20c51349d89b32d}
+      \strng{authorfullhash}{62fb2205b9983b6df20c51349d89b32d}
+      \strng{authorfullhashraw}{62fb2205b9983b6df20c51349d89b32d}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Climate Research}
+      \field{number}{1}
+      \field{title}{Advantages of the mean absolute error ({MAE}) over the root mean square error ({RMSE}) in assessing average model performance}
+      \field{volume}{30}
+      \field{year}{2005}
+      \field{pages}{79\bibrangedash 82}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.3354/cr030079
       \endverb
     \endentry
     \entry{Yin2026}{article}{}{}
