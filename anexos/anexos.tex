@@ -6,7 +6,7 @@ Los anexos reúnen el material de respaldo del experimento: el registro visual d
 \chapter{Registro visual de capturas}
 \label{anx:capturas}
 
-La Figura~\ref{fig:A-1} reúne en una sola vista las capturas del experimento. Cada etiqueta indica la réplica, la repetición y la distancia nominal de la réplica al vidrio en milímetros; por ejemplo, \texttt{R1-REP1-50.jpg}. La vista permite comprobar la organización del conjunto y la correspondencia de cada captura con su posición. Las 72 imágenes originales están publicadas en el repositorio de datos (Anexo~\ref{anx:repositorio}).
+La Figura~\ref{fig:A-1} reúne en una sola vista las capturas del experimento. Cada etiqueta indica la réplica, la repetición y la posición nominal $z_0$ de la réplica, en milímetros; por ejemplo, \texttt{R1-REP1-50.jpg}. La vista permite comprobar la organización del conjunto y la correspondencia de cada captura con su posición. Las 72 imágenes originales están publicadas en el repositorio de datos (Anexo~\ref{anx:repositorio}).
 
 \begin{figure}[H]
 \centering
@@ -19,7 +19,7 @@ La Figura~\ref{fig:A-1} reúne en una sola vista las capturas del experimento. C
 \chapter{Configuración del puerto plano}
 \label{anx:flatport}
 
-La Figura~\ref{fig:B-1} reproduce la configuración del modelo de puerto plano, resumida en la Tabla~\ref{tab:puerto}: unidades en milímetros, normal de cámara $(0, 0, 1)$, distancia de la interfaz de 230~mm, vidrio de 4~mm de espesor e índices de refracción de 1,000 para el aire, 1,500 para el vidrio y 1,333 para el agua. El archivo deja constancia de que la distancia de la lente se midió desde su frente, como aproximación, y de que el agua, dulce, estaba a 22~\si{\celsius}.
+La Figura~\ref{fig:B-1} reproduce la configuración del modelo de puerto plano, resumida en la Tabla~\ref{tab:puerto}: unidades en milímetros, normal de cámara $(0, 0, 1)$, distancia cámara--vidrio $d$ de 230~mm, vidrio de 4~mm de espesor e índices de refracción de 1,000 para el aire, 1,500 para el vidrio y 1,333 para el agua. El archivo deja constancia de que $d$ se midió desde el frente de la lente, como aproximación, y de que el agua, dulce, estaba a 22~\si{\celsius}.
 
 \begin{figure}[H]
 \centering
@@ -103,7 +103,7 @@ views:
 \chapter{Referencia geométrica del riel para B}
 \label{anx:riel}
 
-El archivo \texttt{rail\_reference\_B.yaml} documenta el plano de referencia de B, obtenido a partir de dos posiciones del riel, 0 y 180~mm, con un error de reproyección de 0,270~px (umbral de 1,0~px). El ajuste informa un residuo lineal de $1{,}62 \times 10^{-13}$~mm, que es el residuo numérico de una recta por dos puntos y no representa la incertidumbre física; una dispersión de la normal de $0{,}337^{\circ}$ (umbral de $1{,}0^{\circ}$); y un error relativo de escala de 0,813~\% (umbral de 5~\%). El archivo registra además dos supuestos: los planos de las réplicas son paralelos al tablero, y el riel no es necesariamente perpendicular a él. La Tabla~\ref{tab:riel} resume los valores principales.
+El archivo \texttt{rail\_reference\_B.yaml} documenta el plano de referencia de B, obtenido a partir de dos lecturas del riel, 0 y 180~mm, con un error de reproyección de 0,270~px (umbral de 1,0~px). El ajuste informa un residuo lineal de $1{,}62 \times 10^{-13}$~mm, que es el residuo numérico de una recta por dos puntos y no representa la incertidumbre física; una dispersión de la normal de $0{,}337^{\circ}$ (umbral de $1{,}0^{\circ}$); y un error relativo de escala de 0,813~\% (umbral de 5~\%). El archivo registra además dos supuestos: los planos de las réplicas son paralelos al tablero, y el riel no es necesariamente perpendicular a él. La Tabla~\ref{tab:riel} resume los valores principales.
 
 \begin{lstlisting}[caption={Cabecera y plano de referencia del riel para B.},label={lst:riel}]
 plane_point_camera_mm:
